@@ -1,0 +1,604 @@
+value_labels:
+  labels0:
+    1: Yes, I already got the vaccine for the 2020-2021 flu season
+    2: Yes, I plan to get the vaccine for the 2020-2021 flu season
+    3: No, not this flu season
+    4: No, I never get the flu vaccine
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels1:
+    1: 'Yes'
+    2: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels2:
+    1: I already got vaccinated
+    2: Yes, I will get a coronavirus vaccine as soon as it is available to me
+    3: Yes, I will get a coronavirus vaccine, but I will wait until I see more proof
+      that it is safe and effective
+    4: No, I will not get a coronavirus vaccine
+    77: Not sure
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels3:
+    0: 'No'
+    1: 'Yes'
+  labels27:
+    1: 'No'
+    2: 'Yes'
+    77: "Don\u2019t know/unsure"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels29:
+    1: Yes, but I would also get it without the gift card
+    2: Yes, I would try to get the vaccine sooner
+    3: No, because I don't want to get it under any circumstances
+    4: No, because $50 is not enough
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels30:
+    7777: DON'T KNOW
+    9998: SKIPPED ON WEB
+    9999: REFUSED
+  labels38:
+    1: 'Yes'
+    2: 'No'
+    77: "Don\u2019t know"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels39:
+    777: DON'T KNOW
+    998: SKIPPED ON WEB
+    999: REFUSED
+  labels41:
+    1: Yes, I have tested positive at least once for COVID-19
+    2: Yes, I have never tested positive for COVID-19
+    3: Yes, but I do not know the result(s)
+    4: No, I have never been tested, but I experienced COVID-19 symptoms
+    5: No, I have never been tested and I have not had symptoms of COVID-19
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels58:
+    1: 'Yes'
+    2: 'No'
+    3: Not working in the past month
+    77: "Don\u2019t know"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels59:
+    1: No, I don't think it is necessary
+    2: No, I would like to but I cannot
+    3: 'Yes'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels65:
+    1: 'No'
+    2: 'Yes'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels80:
+    1: 'True'
+    2: 'False'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels90:
+    0: None true at Q21
+    1: 1 true at Q21
+    2: 2 or more true at Q21
+  labels91:
+    0: None false at Q21
+    1: 1 false at Q21
+    2: 2 or more false at Q21
+  labels92:
+    1: No, it will not change my mind
+    2: No, because I am alreadying doing it or have already done it
+    3: Yes, slightly more likely
+    4: Yes, somewhat more likely
+    5: Yes, a lot more likely
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels119:
+    1: Strongly disagree
+    2: Somewhat disagree
+    3: Neither disagree nor agree
+    4: Somewhat agree
+    5: Strongly agree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels136:
+    1: Once
+    2: Two or three times
+    3: Four or more times
+  labels159:
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels179:
+    1: Past 6 months
+    2: "7 \u2013 12 months ago"
+    3: 1-5 years ago
+    4: 5+ years ago
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels180:
+    1: Yes, within the last year
+    2: Yes, more than a year ago
+    3: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels185:
+    1: Employed full time (30 hours or more a week)
+    2: Employed part time (less than 30 hours a week)
+    3: Only temporarily laid off, sick leave or maternity leave
+    4: Looking for work, unemployed
+    5: Retired
+    6: Disabled, permanently or temporarily
+    7: Keeping house
+    8: Student
+    9: Other (Specify)
+    10: Prefer not to answer
+    77: Don't know
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels186:
+    1: None
+    2: Up to 1 hour
+    3: 1-2 hours
+    4: 3-4 hours
+    5: 5-6 hours
+    6: 7-8 hours
+    7: 9-10 hours
+    8: 11-12 hours
+    9: 12+ hours
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels187:
+    1: Every day I work
+    2: Most of the days I work
+    3: Some of the days I work
+    4: Rarely
+    5: Never
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels188:
+    1: Every day
+    2: Most of the days
+    3: Some of the days
+    4: Rarely
+    5: Never
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels189:
+    1: Never
+    2: Rarely
+    3: Sometimes
+    4: Most of the time
+    5: Always
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels197:
+    1: Democrat
+    2: Republican
+    3: Independent
+    4: None of these
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels198:
+    1: Strong Democrat
+    2: Not so strong Democrat
+    77: "DON\u2019T KNOW"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels199:
+    1: Strong Republican
+    2: Not so strong Republican
+    77: "DON\u2019T KNOW"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels200:
+    1: Lean Democrat
+    2: Lean Republican
+    3: "Don\u2019t lean"
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels201:
+    -1: Unknown
+    1: Democrat
+    2: Lean Democrat
+    3: Don't Lean/Independent/None
+    4: Lean Republican
+    5: Republican
+  labels202:
+    -1: Unknown
+    1: Strong Democrat
+    2: Not so strong Democrat
+    3: Lean Democrat
+    4: Don't Lean/Independent/None
+    5: Lean Republican
+    6: Not so strong Republican
+    7: Strong Republican
+  labels203:
+    -1: Unknown
+    1: Very liberal
+    2: Somewhat liberal
+    3: Moderate
+    4: Somewhat conservative
+    5: Very conservative
+  labels204:
+    1: Lesbian or gay
+    2: Straight, that is, not lesbian or gay
+    3: Bisexual
+    4: Something else
+    5: I don't know the answer
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels205:
+    1: A full-time college student
+    2: A part-time college student
+    3: Not a college student
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels207:
+    1: Phone interview
+    2: Web Interview
+  labels208:
+    1: English
+    2: Spanish
+  labels209:
+    0: Unknown
+    1: Male
+    2: Female
+  labels210:
+    1: 18-29
+    2: 30-44
+    3: 45-59
+    4: 60+
+    99: Under 18
+  labels211:
+    1: 18-24
+    2: 25-34
+    3: 35-44
+    4: 45-54
+    5: 55-64
+    6: 65-74
+    7: 75+
+    99: Under 18
+  labels212:
+    1: White, non-Hispanic
+    2: Black, non-Hispanic
+    3: Other, non-Hispanic
+    4: Hispanic
+    5: 2+, non-Hispanic
+    6: Asian, non-Hispanic
+  labels213:
+    1: Less than HS
+    2: HS graduate or equivalent
+    3: Vocational/tech school/some college/ associates
+    4: Bachelor's degree
+    5: Post grad study/professional degree
+  labels214:
+    1: Married
+    2: Widowed
+    3: Divorced
+    4: Separated
+    5: Never married
+    6: Living with partner
+  labels215:
+    1: Working - as a paid employee
+    2: Working - self-employed
+    3: Not working - on temporary layoff from a job
+    4: Not working - looking for work
+    5: Not working - retired
+    6: Not working - disabled
+    7: Not working - other
+  labels216:
+    1: Less than $30,000
+    2: $30,000 to under $60,000
+    3: $60,000 to under $100,000
+    4: $100,000 or more
+  labels217:
+    1: Northeast
+    2: Midwest
+    3: South
+    4: West
+  labels218:
+    0: Non-Metro Area
+    1: Metro Area
+  labels219:
+    0: Non-internet household
+    1: Internet Household
+  labels220:
+    1: Owned
+    2: Rented or occupied without payment
+  labels221:
+    1: A one-family house detached from any other house
+    2: A one-family house attached to one or more houses
+    3: Apartment building, mobile home or trailer, boat, RV, or other
+  labels222:
+    1: Landline telephone only
+    2: Have a landline, but mostly use cellphone
+    3: Have cellphone, but mostly use landline
+    4: Cellphone only
+    5: No telephone service
+  labels223:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: 3 or more
+  labels224:
+    0: '0'
+    1: '1'
+    2: 2 or more
+  labels225:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: '3'
+    4: '4'
+    5: '5'
+    6: 6 or more
+field_to_value_label:
+  fluvax: labels0
+  fluvax_employ: labels1
+  vaxplans: labels2
+  vax_protectfam: labels3
+  vax_protectcomm: labels3
+  vax_protectself: labels3
+  vax_docrec: labels3
+  vax_normallife: labels3
+  vax_mostpublic: labels3
+  vax_other: labels3
+  vax_dk: labels3
+  vax_skp: labels3
+  vax_ref: labels3
+  novax_allergic: labels3
+  novax_needles: labels3
+  novax_noconcern: labels3
+  novax_time: labels3
+  novax_getinfected: labels3
+  novax_sideeffect: labels3
+  novax_dontwork: labels3
+  novax_politics: labels3
+  novax_notserious: labels3
+  novax_mostpublic: labels3
+  novax_other: labels3
+  novax_willget: labels3
+  novax_dk: labels3
+  novax_skp: labels3
+  novax_ref: labels3
+  change_famous: labels3
+  change_friends: labels3
+  change_majpublic: labels3
+  change_free: labels3
+  change_docrec: labels3
+  change_studyresults: labels3
+  change_nothing: labels3
+  change_dk: labels3
+  change_skp: labels3
+  change_ref: labels3
+  change_doccall: labels27
+  change_healthdept: labels27
+  giftcard: labels29
+  giftcard_oe: labels30
+  ask_employer: labels1
+  ask_pcp: labels1
+  ask_physician: labels1
+  ask_family: labels1
+  ask_friend: labels1
+  ask_religious: labels1
+  ask_other: labels1
+  vaxreq_employ: labels38
+  chancecovid: labels39
+  deathcovid: labels39
+  personal_covidtest: labels41
+  hh_testpositive: labels3
+  hh_testnegative: labels3
+  hh_testunknown: labels3
+  hh_covidsymptoms: labels3
+  hh_nocovid: labels3
+  hh_nomembers: labels3
+  hh_dk: labels3
+  hh_skp: labels3
+  hh_ref: labels3
+  hh_covidpass: labels3
+  ff_covidpass: labels3
+  ac_covidpass: labels3
+  no_covidpass: labels3
+  covidpass_dk: labels3
+  covidpass_skp: labels3
+  covidpass_ref: labels3
+  essentialjob: labels58
+  washhands: labels59
+  avoidtransit: labels59
+  lessgroups10: labels59
+  sixfeet: labels59
+  wearmask: labels59
+  othermeasure: labels59
+  restaurant: labels65
+  visitors: labels65
+  gathering: labels65
+  shareditems: labels65
+  othersnomask: labels65
+  selfnomask: labels65
+  socdisbelief: labels3
+  covidunlikely: labels3
+  sicknessbelief: labels3
+  stayedoutside: labels3
+  socobligation: labels3
+  socdisother: labels3
+  socdis_dk: labels3
+  socdis_skp: labels3
+  socdis_ref: labels3
+  know_blood: labels80
+  know_aalesslikely: labels80
+  know_vaxavail: labels80
+  know_testtransmit: labels80
+  know_healthbehav: labels80
+  know_covidscheme: labels80
+  know_vaxfast: labels80
+  know_hivmed: labels80
+  know_maskspread: labels80
+  know_livecovid: labels80
+  dov_true: labels90
+  dov_false: labels91
+  nottrue_careful: labels92
+  nottrue_test: labels92
+  nottrue_vax: labels92
+  true_careful: labels92
+  true_test: labels92
+  true_vax: labels92
+  localprint: labels3
+  nationalprint: labels3
+  broadcasttv: labels3
+  cabletv: labels3
+  radionews: labels3
+  onlinenews: labels3
+  socialmedia: labels3
+  employerinfo: labels3
+  personalnetwork: labels3
+  statelocalgov: labels3
+  federalgov: labels3
+  trumpinfo: labels3
+  bideninfo: labels3
+  churchinfo: labels3
+  cboinfo: labels3
+  scijournal: labels3
+  otherinfo: labels3
+  noinfo: labels3
+  info_dk: labels3
+  info_skp: labels3
+  info_ref: labels3
+  race_whiteadvantage: labels119
+  race_successful: labels119
+  race_prison: labels119
+  race_socservices: labels119
+  race_opportunity: labels119
+  race_minadvantage: labels119
+  race_rich: labels119
+  race_whiteblame: labels119
+  disc_atschool: labels1
+  disc_hired: labels1
+  disc_atwork: labels1
+  disc_housing: labels1
+  disc_medcare: labels1
+  disc_restaurant: labels1
+  disc_credit: labels1
+  disc_street: labels1
+  disc_police: labels1
+  times_atschool: labels136
+  times_hired: labels136
+  times_atwork: labels136
+  times_housing: labels136
+  times_medcare: labels136
+  times_restaurant: labels136
+  times_credit: labels136
+  times_street: labels136
+  times_police: labels136
+  ps_a_medicaid: labels119
+  ps_b_naloxone: labels119
+  ps_c_mandatory: labels119
+  ps_d_govspend: labels119
+  ss_a_historywork: labels119
+  ss_c_currentwork: labels119
+  ss_d_currentmarry: labels119
+  ss_b_historymarry: labels119
+  ss_e_dangerous: labels119
+  ss_f_trust: labels119
+  ss_currentsteal: labels119
+  ss_historysteal: labels119
+  ss_currenthighrisk: labels119
+  ss_historyhighrisk: labels119
+  recovery_religious: labels159
+  recovery_spiritual: labels159
+  recovery_physicalmental: labels159
+  recovery_contributes: labels159
+  recovery_enhancedquality: labels159
+  recovery_profhelp: labels159
+  recovery_purpose: labels159
+  recovery_controlleduse: labels159
+  recovery_nodruguse: labels159
+  recovery_abstaining: labels159
+  recovhelp_pcp: labels159
+  recovhelp_inpatient: labels159
+  recovhelp_selfhelp: labels159
+  recovhelp_therapist: labels159
+  recovhelp_medication: labels159
+  recovhelp_talkfamily: labels159
+  recovhelp_naturalhealer: labels159
+  recovhelp_rehab: labels159
+  recovhelp_fbo: labels159
+  personaluse_ever: labels65
+  personaluse_last: labels179
+  personalconviction_ever: labels180
+  personalincarceration_ever: labels180
+  familyuse_ever: labels180
+  familyconviction_ever: labels180
+  familyincarceration_ever: labels180
+  employstatus: labels185
+  patientcontact: labels186
+  covidcontact: labels187
+  covidcontactrisk: labels188
+  facility_clothmasks: labels189
+  facility_medmasks: labels189
+  facility_respirator: labels189
+  facility_eyeprotect: labels189
+  facility_medgloves: labels189
+  facility_gowns: labels189
+  facility_physdist: labels189
+  facility_washhands: labels189
+  pid1: labels197
+  pida: labels198
+  pidb: labels199
+  pidi: labels200
+  partyid5: labels201
+  partyid7: labels202
+  ideo: labels203
+  lgbt: labels204
+  student_type: labels205
+  futurecontact: labels1
+  surv_mode: labels207
+  surv_lang: labels208
+  gender: labels209
+  age4: labels210
+  age7: labels211
+  racethnicity: labels212
+  educ5: labels213
+  marital: labels214
+  employ: labels215
+  income4: labels216
+  region4: labels217
+  metro: labels218
+  internet: labels219
+  housing: labels220
+  home_type: labels221
+  phoneservice: labels222
+  hh612: labels223
+  hh1317: labels224
+  hh18ov: labels225
+  personalmisuse_lifetime: labels3
+  famfriendmisuse_lifetime: labels3
+  personalmisuse_recent: labels3
+  personalcrimjust_ever: labels3
+  familycrimjust_ever: labels3
+  personalcrimjust_recent: labels3
+  familycrimjust_recent: labels3
+  hh05: labels223

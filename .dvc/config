@@ -1,0 +1,4 @@
+[core]
+    remote = box
+['remote "box"']
+    url = /Users/pschumm/Library/CloudStorage/Box-Box/JCOIN Data Submissions/NORC Stigma Surveys/dvc
