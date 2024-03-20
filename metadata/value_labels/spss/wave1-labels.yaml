@@ -26,8 +26,6 @@ value_labels:
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
-  labels87:
-    0: Under 1 minute
   labels88:
     1: Phone interview
     2: Web Interview
@@ -226,7 +224,6 @@ field_to_value_label:
   familyoverdose_ever: labels79
   familyconviction_ever: labels79
   familyincarceration_ever: labels79
-  duration_jcoin: labels87
   surv_mode: labels88
   surv_lang: labels89
   gender: labels90

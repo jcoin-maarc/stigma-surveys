@@ -934,9 +934,6 @@ fields:
 - name: duration_norcnd
   title: 'NORC-ND Omnibus Section: Interview duration in minutes'
   type: string
-  constraints:
-    enum:
-    - Under 1 minute
 - name: surv_mode
   title: Survey interview mode (online or phone)
   type: string

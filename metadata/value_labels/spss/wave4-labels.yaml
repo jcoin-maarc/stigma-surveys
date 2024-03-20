@@ -90,8 +90,6 @@ value_labels:
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
-  labels83:
-    0: Under 1 minute
   labels84:
     1: Phone interview
     2: Web Interview
@@ -333,7 +331,6 @@ field_to_value_label:
   familyuse_ever: labels78
   familyconviction_ever: labels78
   familyincarceration_ever: labels78
-  duration_jcoin: labels83
   surv_mode: labels84
   surv_lang: labels85
   gender: labels86

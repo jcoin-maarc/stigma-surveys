@@ -957,10 +957,7 @@ fields:
   type: datetime
 - name: duration_jcoin
   title: 'NORC-PH Omnibus Section: Interview duration in minutes'
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode (online or phone)
   type: string

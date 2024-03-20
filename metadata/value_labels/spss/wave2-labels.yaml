@@ -154,8 +154,6 @@ value_labels:
     77: "Don\u2019t know"
     98: SKIPPED ON WEB
     99: REFUSED
-  labels100:
-    0: Under 1 minute
   labels101:
     1: Phone interview
     2: Web Interview
@@ -381,7 +379,6 @@ field_to_value_label:
   familyoverdose_last: labels85
   familyconviction_ever: labels90
   familyincarceration_ever: labels90
-  duration_jcoin: labels100
   surv_mode: labels101
   surv_lang: labels102
   gender: labels103
