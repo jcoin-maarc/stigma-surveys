@@ -7,6 +7,8 @@ from utils import drop_excluded_fields, write_data_package
 from frictionless import Schema, Resource, Package
 import cleaning
 
+VERSION = '1.0'
+
 resources = []
 for w in range(1,3):
     df = (pd.read_csv(f'data/protocol1-omnibus/csv/wave{w}.csv', dtype='object')
@@ -32,10 +34,10 @@ package = Package(
     name='jcoin-protocol1-surveys',
     title='JCOIN Opioid Stigma Surveys',
     profile='tabular-data-package',
-    version='1.0',
+    version=VERSION,
     homepage='https://healdata.org/portal/discovery/1U2CDA050098-01_a',
     created=datetime.now(timezone.utc).astimezone().isoformat(),
     resources = resources
 )
 
-write_data_package(package)
+write_data_package(package, f'tmp/jcoin-protocol1-surveys-v{VERSION}')
