@@ -335,74 +335,74 @@ fields:
 - name: recovery_religious
   title: '[Religious in nature] Please rank the following statements corresponding
     to your'
-  type: string
+  type: integer
 - name: recovery_spiritual
   title: '[Spiritual in nature and has nothing to do with religion] Please rank the
     follow'
-  type: string
+  type: integer
 - name: recovery_physicalmental
   title: '[Physical and mental in nature and has nothing to do with spirituality or
     religi'
-  type: string
+  type: integer
 - name: recovery_contributes
   title: '[Living a life that contributes to society] Please rank the following statements'
-  type: string
+  type: integer
 - name: recovery_enhancedquality
   title: '[Enhanced quality of life] Please rank the following statements corresponding
     to'
-  type: string
+  type: integer
 - name: recovery_profhelp
   title: '[Seeking professional help] Please rank the following statements corresponding
     t'
-  type: string
+  type: integer
 - name: recovery_purpose
   title: '[Having a sense of purpose in life] Please rank the following statements
     corresp'
-  type: string
+  type: integer
 - name: recovery_controlleduse
   title: '[Moderate/controlled use of any drug and alcohol] Please rank the following
     stat'
-  type: string
+  type: integer
 - name: recovery_nodruguse
   title: '[No use of any drug] Please rank the following statements corresponding
     to your '
-  type: string
+  type: integer
 - name: recovery_abstaining
   title: '[Abstaining from any substance use] Please rank the following statements
     corresp'
-  type: string
+  type: integer
 - name: recovhelp_pcp
   title: '[Be referred to a Primary Care Physician] Please rank the following statements
     w'
-  type: string
+  type: integer
 - name: recovhelp_inpatient
   title: '[Be referred to an Intensive Inpatient Program] Please rank the following
     statem'
-  type: string
+  type: integer
 - name: recovhelp_selfhelp
   title: '[Be referred to a Self-help Group] Please rank the following statements
     what you'
-  type: string
+  type: integer
 - name: recovhelp_therapist
   title: '[Be referred to a Therapist/Psychologist/Social Worker] Please rank the
     followin'
-  type: string
+  type: integer
 - name: recovhelp_medication
   title: '[Be prescribed Medication] Please rank the following statements what you
     think i'
-  type: string
+  type: integer
 - name: recovhelp_talkfamily
   title: '[Talk to Family and Friends] Please rank the following statements what you
     think'
-  type: string
+  type: integer
 - name: recovhelp_naturalhealer
   title: '[Be referred to a spiritual or natural healer] Please rank the following
     stateme'
-  type: string
+  type: integer
 - name: recovhelp_fbo
   title: '[Be referred to a faith-based organization/institution] Please rank the
     followin'
-  type: string
+  type: integer
 - name: ps_a_medicaid
   title: "[I favor expanding Medicaid insurance benefits for low income families\u2026\
     ] Do yo"
