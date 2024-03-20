@@ -1,0 +1,5 @@
+outs:
+- md5: ce357b661b778b396c8467bbd98b00cc
+  size: 2245547
+  hash: md5
+  path: wave5.csv
