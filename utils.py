@@ -54,7 +54,7 @@ def drop_excluded_fields(schema, df):
     """Drop fields marked as 'exclude_from_release' from schema and df"""
 
     fields_to_drop = [f.name for f in schema.fields if f.to_dict().get('custom', {}).
-                      get('nshap', {}).get('exclude_from_release', False)]
+                      get('jcoin', {}).get('exclude_from_release', False)]
     for field in fields_to_drop:
         schema.remove_field(field)
     df.drop(columns=fields_to_drop, inplace=True)

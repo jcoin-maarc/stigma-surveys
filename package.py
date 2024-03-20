@@ -3,13 +3,14 @@
 import pandas as pd
 import yaml
 from datetime import datetime, timezone
-from utils import write_data_package
+from utils import drop_excluded_fields, write_data_package
 from frictionless import Schema, Resource, Package
 import cleaning
 
 resources = []
-for w in range(1,7):
+for w in range(1,3):
     df = (pd.read_csv(f'data/protocol1-omnibus/csv/wave{w}.csv', dtype='object')
+          .assign(caseid=lambda x: x.caseid.astype('int'))
           .set_index('caseid', verify_integrity=True)
           .sort_index()
          )
@@ -17,9 +18,13 @@ for w in range(1,7):
     with open(f'metadata/value_labels/spss/wave{w}-labels.yaml') as f:
         labels = yaml.safe_load(f)
 
-    rsrc = Resource(name=f'wave{w}', schema=schema, profile='tabular-data-resource')
+    # Clean data and drop any fields marked exclude_from_release
     f = getattr(cleaning, f'w{w}')
-    rsrc.df = f(df)
+    df = f(df)
+    drop_excluded_fields(schema, df)
+
+    rsrc = Resource(name=f'wave{w}', schema=schema, profile='tabular-data-resource')
+    rsrc.df = df
     rsrc.value_labels = labels
     resources.append(rsrc)
 

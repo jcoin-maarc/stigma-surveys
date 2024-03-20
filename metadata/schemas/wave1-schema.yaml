@@ -923,9 +923,15 @@ fields:
 - name: startdt_jcoin
   title: JCOIN section start date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: enddt_jcoin
   title: JCOIN section end date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: duration_jcoin
   title: 'JCOIN Omnibus Section: Interview duration in minutes'
   type: integer
