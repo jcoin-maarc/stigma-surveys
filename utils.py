@@ -1,88 +1,62 @@
-from sfi import Data, ValueLabel
+import contextlib
 from pathlib import Path
-import yaml
+import os
+import hashlib
+from dataforge.frictionless.utils import write_stata_script
 
-def _add_field(varname, label, vtype, schema, value_labels):
+@contextlib.contextmanager
+def _chdir(path):
+    """Context manager to change and restore working directory."""
 
-    ftype = None
-    enum = {}
-    missing_values = []
-    if varname in value_labels['field_to_value_label']:
-        ftype = 'string'
-        vlname = value_labels['field_to_value_label'][varname]
-        for k, v in value_labels['value_labels'][vlname].items():
-            if int(k) > 75:
-                missing_values.append(v)
-            else:
-                enum[k] = v
-    elif vtype in ['byte','int','long']:
-        ftype = 'integer'
-    elif vtype in ['float','double']:
-        ftype = 'number'
+    d = os.getcwd()
+    os.chdir(path)
 
-    field = {'name':varname}
-    if label:
-        pass
-        field['title'] = label
-    if ftype:
-        field['type'] = ftype
-    if enum:
-        field['constraints'] = {}
-        field['constraints']['enum'] = enum
+    try:
+        yield
+    finally:
+        os.chdir(d)
 
-    schema['fields'].append(field)
+def write_data_package(package, path=None):
+    """Write NSHAP data package."""
 
-    return missing_values
+    if not path:
+        path = Path('tmp') / package.name
+    else:
+        path = Path(path)
 
-def _prune_duplicates(value_labels):
+    # Change to data package directory to avoid error when setting rsrc.schema
+    os.makedirs(path, exist_ok=True)
+    with _chdir(path):
 
-    map = {}
-    seen = []
-    names = []
-    for k, v in value_labels['field_to_value_label'].items():
-        if value_labels['value_labels'][v] in seen:
-            map[k] = names[seen.index(value_labels['value_labels'][v])]
-        else:
-            map[k] = v
-            seen.append(value_labels['value_labels'][v])
-            names.append(v)
+        os.makedirs('data', exist_ok=True)
+        os.makedirs('scripts', exist_ok=True)
+        os.makedirs('schemas', exist_ok=True)
 
-    return {'value_labels':dict(zip(names, seen)),
-            'field_to_value_label':map}
+        for rsrc in package.resources:
+            rsrc.schema.to_json(Path('schemas') / f'{rsrc.name}.json')
+            rsrc.schema = f'schemas/{rsrc.name}.json'
+            rsrc.df.to_csv(Path('data') / f'{rsrc.name}.csv')
+            if not rsrc.path:
+                rsrc.path = f'data/{rsrc.name}.csv'
+            rsrc.format = 'csv'
+            rsrc.encoding = 'utf-8'
+            rsrc.bytes = os.stat(rsrc.path).st_size
+            rsrc.hash = hashlib.md5(open(rsrc.path,'rb').read()).hexdigest()
+            write_stata_script(rsrc, path=Path('scripts') / f'{rsrc.name}.do',
+                               value_labels=rsrc.value_labels,
+                               vl_from_enum=False, version=package.version,
+                               fld_list=([f for f in rsrc.df.index.names if f is not None]
+                                         + rsrc.df.columns.to_list()))
 
-def write_schema(schema_path, labels_path):
+        package.to_json('datapackage.json')
 
-    schema = {}
-    missing_values = []
-    value_labels = {}
+def drop_excluded_fields(schema, df):
+    """Drop fields marked as 'exclude_from_release' from schema and df"""
 
-    value_labels['value_labels'] = {}
-    for label in ValueLabel.getNames():
-        values = ValueLabel.getValues(label)
-        labels = ValueLabel.getLabels(label)
-        vlab = {values[i]: labels[i] for i in range(len(values))}
-        value_labels['value_labels'][label] = vlab
+    fields_to_drop = [f.name for f in schema.fields if f.to_dict().get('custom', {}).
+                      get('nshap', {}).get('exclude_from_release', False)]
+    for field in fields_to_drop:
+        schema.remove_field(field)
+    df.drop(columns=fields_to_drop, inplace=True)
 
-    schema['fields'] = []
-    value_labels['field_to_value_label'] = {}
-    nvars = Data.getVarCount()
-    for v in range(nvars):
-        varname = Data.getVarName(v)
-        label = Data.getVarLabel(varname)
-        vtype = Data.getVarType(varname)
-        vlabel = ValueLabel.getVarValueLabel(varname)
-        if vlabel:
-            value_labels['field_to_value_label'][varname] = vlabel
-        missing_values = (missing_values +
-                          _add_field(varname, label, vtype, schema, value_labels)
-                         )
-
-    schema['missingValues'] = list(dict.fromkeys(missing_values))
-
-    with open(schema_path, 'w') as f:
-        yaml.dump(schema, f, sort_keys=False)
-
-    if value_labels['value_labels']:
-        value_labels = _prune_duplicates(value_labels)
-        with open(labels_path, 'w') as f:
-            yaml.dump(value_labels, f, sort_keys=False)
+    return
