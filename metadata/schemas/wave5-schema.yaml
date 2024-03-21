@@ -337,7 +337,7 @@ fields:
 - name: giftcard_oe
   title: '[NUMBERBOX] What is the lowest amount that would be necessary to make a
     differen'
-  type: string
+  type: integer
 - name: ask_employer
   title: '[Employer] Have any of the following people asked you about any concerns
     you hav'
@@ -405,11 +405,11 @@ fields:
 - name: chancecovid
   title: 'Considering the next three months, on a scale of 0 to 100 percent, do you
     think '
-  type: string
+  type: integer
 - name: deathcovid
   title: If you do get the coronavirus, on a scale of 0 to 100 percent, do you think
     ther
-  type: string
+  type: integer
 - name: personal_covidtest
   title: Have you been tested for COVID-19 (coronavirus)? If so, what was the result?
   type: string
@@ -1448,76 +1448,76 @@ fields:
 - name: recovery_religious
   title: '[Religious in nature] Please rank the following statements with 1 most closely
     c'
-  type: string
+  type: integer
 - name: recovery_spiritual
   title: '[Spiritual in nature] Please rank the following statements with 1 most closely
     c'
-  type: string
+  type: integer
 - name: recovery_physicalmental
   title: '[Physical and mental in nature] Please rank the following statements with
     1 most'
-  type: string
+  type: integer
 - name: recovery_contributes
   title: '[Living a life that contributes to society] Please rank the following statements'
-  type: string
+  type: integer
 - name: recovery_enhancedquality
   title: '[Enhanced quality of life] Please rank the following statements with 1 most
     clos'
-  type: string
+  type: integer
 - name: recovery_profhelp
   title: '[Seeking professional help] Please rank the following statements with 1
     most clo'
-  type: string
+  type: integer
 - name: recovery_purpose
   title: '[Having a sense of purpose in life] Please rank the following statements
     with 1 '
-  type: string
+  type: integer
 - name: recovery_controlleduse
   title: '[Moderate/controlled use of any substance (drugs and/or alcohol)] Please
     rank th'
-  type: string
+  type: integer
 - name: recovery_nodruguse
   title: '[No use of any drug and moderate/controlled use of alcohol] Please rank
     the foll'
-  type: string
+  type: integer
 - name: recovery_abstaining
   title: '[No use of any substance (drugs or alcohol)] Please rank the following statement'
-  type: string
+  type: integer
 - name: recovhelp_pcp
   title: '[Primary Care Physician] Please rank the following statements with 1 being
     what '
-  type: string
+  type: integer
 - name: recovhelp_inpatient
   title: '[Intensive Inpatient Program] Please rank the following statements with
     1 being '
-  type: string
+  type: integer
 - name: recovhelp_selfhelp
   title: '[Self-help Group (for example, Alcoholics Anonymous)] Please rank the following '
-  type: string
+  type: integer
 - name: recovhelp_therapist
   title: '[Therapist/Psychologist/Social Worker] Please rank the following statements
     with'
-  type: string
+  type: integer
 - name: recovhelp_medication
   title: '[Prescription Medication] Please rank the following statements with 1 being
     what'
-  type: string
+  type: integer
 - name: recovhelp_talkfamily
   title: '[Family and Friends] Please rank the following statements with 1 being what
     you '
-  type: string
+  type: integer
 - name: recovhelp_naturalhealer
   title: '[Spiritual or natural healer] Please rank the following statements with
     1 being '
-  type: string
+  type: integer
 - name: recovhelp_rehab
   title: '[Rehab program] Please rank the following statements with 1 being what you
     think'
-  type: string
+  type: integer
 - name: recovhelp_fbo
   title: '[Faith-based organization/institution] Please rank the following statements
     with'
-  type: string
+  type: integer
 - name: personaluse_ever
   title: "Have you ever misused opioids of any kind \u2013 such as heroin, fentanyl,\
     \ or presc"
@@ -1533,7 +1533,7 @@ fields:
   constraints:
     enum:
     - Past 6 months
-    - "7 \u2013 12 months ago"
+    - 7-12 months ago
     - 1-5 years ago
     - 5+ years ago
 - name: personalconviction_ever
@@ -1753,7 +1753,7 @@ fields:
     enum:
     - Lean Democrat
     - Lean Republican
-    - "Don\u2019t lean"
+    - Don't lean
 - name: partyid5
   title: 'DATA-ONLY: Computed 5-level Party ID'
   type: string
@@ -1817,9 +1817,15 @@ fields:
 - name: startdt
   title: Start Date/Time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: enddt
   title: END Date/Time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: duration
   title: Time spent in survey, in minutes
   type: integer

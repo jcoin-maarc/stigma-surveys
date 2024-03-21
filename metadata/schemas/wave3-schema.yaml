@@ -614,7 +614,7 @@ fields:
   constraints:
     enum:
     - Past 6 months
-    - "6 \u2013 12 months ago"
+    - 6-12 months ago
     - 1-5 years ago
     - 5+ years ago
 - name: personaluse_first
@@ -697,6 +697,9 @@ fields:
 - name: treat_othertext
   title: '[TEXTBOX] Where did you receive treatment for your opioid/prescription pain
     medi'
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: treat_dk
   title: '[DON''T KNOW] Where did you receive treatment for your opioid/prescription
     pain m'
@@ -811,7 +814,7 @@ fields:
   constraints:
     enum:
     - Past 6 months
-    - "6 \u2013 12 months ago"
+    - 6-12 months ago
     - 1-5 years ago
     - 5+ years ago
 - name: narcan_personal
@@ -933,7 +936,7 @@ fields:
     - There is no one else living in my household
 - name: duration_norcnd
   title: 'NORC-ND Omnibus Section: Interview duration in minutes'
-  type: string
+  type: integer
 - name: surv_mode
   title: Survey interview mode (online or phone)
   type: string

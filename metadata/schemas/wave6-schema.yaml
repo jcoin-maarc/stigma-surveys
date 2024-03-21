@@ -858,7 +858,7 @@ fields:
     - December
 - name: covidyr
   title: '[Year] When did you first find out you had COVID-19?'
-  type: string
+  type: integer
 - name: covidstgma
   title: 'Have you experienced any stigma, or poor treatment, because people knew
     you had '
@@ -1838,10 +1838,6 @@ missingValues:
 - SKIPPED ON WEB
 - REFUSED
 - Not sure
-- '2019'
-- '2020'
-- '2021'
-- '2022'
 - "Don\u2019t know"
 - Under 18
 - ''

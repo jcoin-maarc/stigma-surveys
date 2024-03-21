@@ -20,7 +20,7 @@ value_labels:
     99: REFUSED
   labels67:
     1: Past 6 months
-    2: "6 \u2013 12 months ago"
+    2: 6-12 months ago
     3: 1-5 years ago
     4: 5+ years ago
     77: DON'T KNOW

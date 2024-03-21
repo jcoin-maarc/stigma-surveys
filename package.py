@@ -10,7 +10,7 @@ import cleaning
 VERSION = '1.0'
 
 resources = []
-for w in range(1,3):
+for w in range(1,7):
     df = (pd.read_csv(f'data/protocol1-omnibus/csv/wave{w}.csv', dtype='object')
           .assign(caseid=lambda x: x.caseid.astype('int'))
           .set_index('caseid', verify_integrity=True)

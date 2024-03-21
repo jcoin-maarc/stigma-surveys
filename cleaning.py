@@ -13,7 +13,10 @@ def w2(df):
 def w3(df):
     """Clean Wave 3 data."""
 
-    return df
+    return(df
+           .replace({'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
+                     'duration_norcnd':{'Under 1 minute':'0'}})
+    )
 
 def w4(df):
     """Clean Wave 4 data."""
@@ -34,7 +37,9 @@ def w5(df):
                                                   '99':'REFUSED'},
                       'personalmisuse_recent':{'77':"DON'T KNOW",
                                                '98':'SKIPPED ON WEB',
-                                               '99':'REFUSED'}}
+                                               '99':'REFUSED'},
+                      'personaluse_last':{'7 – 12 months ago':'7-12 months ago'},
+                      'pidi':{"Don’t lean":"Don't lean"}}
                     )
     )
 

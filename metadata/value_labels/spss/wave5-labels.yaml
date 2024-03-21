@@ -127,7 +127,7 @@ value_labels:
     99: REFUSED
   labels179:
     1: Past 6 months
-    2: "7 \u2013 12 months ago"
+    2: 7-12 months ago
     3: 1-5 years ago
     4: 5+ years ago
     77: DON'T KNOW
@@ -217,7 +217,7 @@ value_labels:
   labels200:
     1: Lean Democrat
     2: Lean Republican
-    3: "Don\u2019t lean"
+    3: Don't lean
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED

@@ -62,10 +62,6 @@ value_labels:
     98: SKIPPED ON WEB
     99: REFUSED
   labels81:
-    2019: '2019'
-    2020: '2020'
-    2021: '2021'
-    2022: '2022'
     7777: DON'T KNOW
     9998: SKIPPED ON WEB
     9999: REFUSED

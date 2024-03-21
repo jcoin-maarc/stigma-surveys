@@ -1100,9 +1100,15 @@ fields:
 - name: startdt_jcoin
   title: NORC-PH NIDA/JCOIN W4 Omnibus Section start date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: enddt_jcoin
   title: NORC-PH NIDA/JCOIN W4 Omnibus Section end date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: duration_jcoin
   title: 'NORC-PH NIDA/JCOIN W4 Omnibus Section: Interview duration in minutes'
   type: integer
