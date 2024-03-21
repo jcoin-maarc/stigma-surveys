@@ -1076,6 +1076,10 @@ fields:
 - name: q19a_15_oe
   title: '[TEXTBOX] Which of the following are reasons you would wait to vaccinate
     your ch'
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: q19a_dk
   title: '[DON''T KNOW] Which of the following are reasons you would wait to vaccinate
     your'
@@ -1113,6 +1117,10 @@ fields:
 - name: covidpass_oe
   title: '[TEXTBOX] Do you personally know anyone who has passed away/died because
     of gett'
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: covidreg_private
   title: '[Private companies should have the authority to require their employees
     to be va'
@@ -1373,6 +1381,10 @@ fields:
 - name: employ1_oe
   title: '[TEXTBOX] We would like to know about what you do -- Are you working now,
     lookin'
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: employtype
   title: 'Which of the following categories best describes the type of work you do
     now in '
@@ -1408,6 +1420,10 @@ fields:
 - name: q29_oe
   title: '[TEXTBOX] Which of the following categories best describes the type of work
     you '
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: employchng
   title: Have you switched jobs since the beginning of the COVID-19 pandemic, i.e.,
     March

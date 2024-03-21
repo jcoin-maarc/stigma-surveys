@@ -199,6 +199,10 @@ fields:
 - name: novax_other_oe
   title: '[TEXTBOX] Which of the following are reasons you would not get a coronavirus
     vac'
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: novax_willget
   title: '[I will get the coronavirus vaccine, these reasons do not outweigh the benefit
     o'
@@ -708,6 +712,10 @@ fields:
 - name: socdis_other_oe
   title: '[TEXTBOX] Please select all the reason(s) why you did not social distance
     in the'
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: socdis_dk
   title: '[DON''T KNOW] Please select all the reason(s) why you did not social distance
     in '

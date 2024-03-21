@@ -771,6 +771,10 @@ fields:
     - 'Yes'
 - name: mat_othertext
   title: '[TEXTBOX] How is your Medication Assisted Treatment given to you?'
+  type: string
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: mat_dk
   title: '[DON''T KNOW] How is your Medication Assisted Treatment given to you?'
   type: string
