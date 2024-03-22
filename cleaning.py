@@ -8,7 +8,9 @@ def w1(df):
 def w2(df):
     """Clean Wave 2 data."""
 
-    return df
+    return (df
+            .replace({'familyuse_ever':{'Don’t know':"DON'T KNOW"}})
+    )
 
 def w3(df):
     """Clean Wave 3 data."""

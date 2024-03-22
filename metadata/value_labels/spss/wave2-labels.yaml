@@ -64,7 +64,7 @@ value_labels:
   labels51:
     1: 'Yes'
     2: 'No'
-    77: "Don\u2019t know"
+    77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
   labels53:
