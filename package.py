@@ -7,26 +7,28 @@ from utils import drop_excluded_fields, write_data_package
 from frictionless import Schema, Resource, Package
 import cleaning
 
-VERSION = '1.0'
+VERSION = '2.0'
+DATASETS = [{'name':'survey1',
+             'filename':'omnibus_survey1_2020-02_072821'}]
 
 resources = []
-for w in range(1,7):
-    df = (pd.read_csv(f'data/protocol1-omnibus/csv/wave{w}.csv', dtype='object')
+for dataset in DATASETS:
+    df = (pd.read_csv(f'data/protocol1-omnibus/csv/{dataset["filename"]}.csv', dtype='object')
           .assign(caseid=lambda x: x.caseid.astype('int'))
           .set_index('caseid', verify_integrity=True)
           .sort_index()
          )
-    schema = Schema.from_descriptor(f'metadata/schemas/wave{w}-schema.yaml')
-    with open(f'metadata/value_labels/spss/wave{w}-labels.yaml') as f:
+    schema = Schema.from_descriptor(f'metadata/schemas/{dataset["filename"]}-schema.yaml')
+    with open(f'metadata/value_labels/spss/{dataset["filename"]}-labels.yaml') as f:
         labels = yaml.safe_load(f)
 
     # Clean data and drop any fields marked exclude_from_release
-    f = getattr(cleaning, f'w{w}')
+    f = getattr(cleaning, dataset['name'])
     df = f(df)
     drop_excluded_fields(schema, df)
 
-    rsrc = Resource(name=f'wave{w}', schema=schema, profile='tabular-data-resource')
-    rsrc.df = df
+    rsrc = Resource(df, name=dataset['name'], schema=schema,
+                    profile='tabular-data-resource')
     rsrc.value_labels = labels
     resources.append(rsrc)
 

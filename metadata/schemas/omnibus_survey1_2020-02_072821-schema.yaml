@@ -923,15 +923,18 @@ fields:
 - name: startdt_jcoin
   title: JCOIN section start date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: enddt_jcoin
   title: JCOIN section end date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: duration_jcoin
   title: 'JCOIN Omnibus Section: Interview duration in minutes'
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode (online or phone)
   type: string
@@ -961,6 +964,7 @@ fields:
   type: string
   constraints:
     enum:
+    - Under 18
     - 18-29
     - 30-44
     - 45-59
@@ -970,6 +974,7 @@ fields:
   type: string
   constraints:
     enum:
+    - Under 18
     - 18-24
     - 25-34
     - 35-44
@@ -1013,11 +1018,11 @@ fields:
   type: string
   constraints:
     enum:
-    - "Working \u2013 as a paid employee"
-    - "Working \u2013 self employed"
-    - "Not working \u2013 looking for work or on temporary layoff"
-    - "Not working \u2013 retired"
-    - "Not working \u2013 disabled"
+    - Working - as a paid employee
+    - Working - self employed
+    - Not working - looking for work or on temporary layoff
+    - Not working - retired
+    - Not working - disabled
     - Not working - other
 - name: region4
   title: 4-level region
@@ -1736,4 +1741,5 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- Under 18
+- ''
+primaryKey: caseid

@@ -35,7 +35,7 @@ def write_data_package(package, path=None):
         for rsrc in package.resources:
             rsrc.schema.to_json(Path('schemas') / f'{rsrc.name}.json')
             rsrc.schema = f'schemas/{rsrc.name}.json'
-            rsrc.df.to_csv(Path('data') / f'{rsrc.name}.csv')
+            rsrc.data.to_csv(Path('data') / f'{rsrc.name}.csv')
             if not rsrc.path:
                 rsrc.path = f'data/{rsrc.name}.csv'
             rsrc.format = 'csv'
@@ -45,8 +45,9 @@ def write_data_package(package, path=None):
             write_stata_script(rsrc, path=Path('scripts') / f'{rsrc.name}.do',
                                value_labels=rsrc.value_labels,
                                vl_from_enum=False, version=package.version,
-                               fld_list=([f for f in rsrc.df.index.names if f is not None]
-                                         + rsrc.df.columns.to_list()))
+                               fld_list=([f for f in rsrc.data.index.names if f is not None]
+                                         + rsrc.data.columns.to_list()))
+            rsrc.data = None
 
         package.to_json('datapackage.json')
 

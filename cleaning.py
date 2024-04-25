@@ -1,9 +1,11 @@
 # Data cleaning
 
-def w1(df):
-    """Clean Wave 1 data."""
+def survey1(df):
+    """Clean Survey 1 data."""
 
-    return df
+    return (df
+            .assign(employ=df.employ.str.replace('–','-'))
+    )
 
 def w2(df):
     """Clean Wave 2 data."""
