@@ -1,0 +1,5 @@
+outs:
+- md5: 49d58e86015b8d35b3553eea6f72ed9c
+  size: 2539510
+  hash: md5
+  path: omnibus_survey8_2022-12.csv

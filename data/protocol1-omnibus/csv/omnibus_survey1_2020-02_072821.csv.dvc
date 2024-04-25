@@ -1,0 +1,5 @@
+outs:
+- md5: 833a31d0cbe839b31a4529d135da6a77
+  size: 3241157
+  hash: md5
+  path: omnibus_survey1_2020-02_072821.csv

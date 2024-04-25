@@ -1,0 +1,2114 @@
+fields:
+- name: caseid
+  title: Case ID
+  type: integer
+- name: weight
+  title: Post-stratification weights - 18+ general population (N=1,007)
+  type: number
+- name: rnd_01
+  title: 'DATA-ONLY VARIABLE: Controls randomization at Q2_3'
+  type: string
+  constraints:
+    enum:
+    - '0'
+    - '1'
+- name: ps_a_medicaid
+  title: '[I favor expanding Medicaid insurance benefits for low-income families to
+    provid'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_b_naloxone
+  title: '[I favor making naloxone..., a medication that can quickly reverse the effects
+    o'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_c_mandatory
+  title: '[I believe that making treatment mandatory is an effective way to help people
+    wi'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_d_govspend
+  title: '[I favor increasing government spending to improve treatment of opioid use
+    disor'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_treatment
+  title: '[I favor passing laws to protect people from criminal charges for drug related
+    c'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_l_jailtreatment
+  title: '[I believe that people in jail/prison with an opioid use disorder should
+    be allo'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: req_treat_prob
+  title: '[Individuals who are on parole or probation with an opioid use disorder
+    should b'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_jailhelp
+  title: '[Jailing someone with an opioid use disorder for at least a few days will
+    help t'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_b_anyuse
+  title: '[Anyone who uses opioids long-term for pain has an opioid use disorder.]
+    Do you '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_stopbreath
+  title: '[Using opioids can slow your breathing or even cause you to stop breathing
+    entir'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_medcondition
+  title: '[Opioid use disorder is a medical condition like other chronic health conditions'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_fda
+  title: '[Approved medications that are effective (or successful) in treating opioid
+    use '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_recover
+  title: '[Some forms of substance use treatment are effective (or successful) at
+    helping '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_easyfind
+  title: '[Effective treatment for an opioid use disorder is easy to find.] Do you
+    disagre'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: treatment_separate_healthcare
+  title: '[Treatment for opioid use disorder should be delivered separately from general
+    h'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: generalhcp_treatment
+  title: '[General health care providers should not be responsible for treating individual'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: generalhcp_trained
+  title: '[General health care providers should be required to receive training on
+    treatme'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_recovcont
+  title: '[Recovery (from opioid use disorder) is a continuous process that never
+    ends.] D'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: recovery_common
+  title: '[Recovery is the most common outcome for individuals with an opioid use
+    disorder'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: failing_common
+  title: '[Multiple failed attempts (for example, relapse) are a common characteristic
+    of '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_rockbottom
+  title: "[Most people struggling with an opioid use disorder must hit \u201Crock\
+    \ bottom\u201D b"
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_c_selfcontrol
+  title: '[Most people who develop and/or struggle with an opioid use disorder lack
+    self-c'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_e_quitanytime
+  title: '[A person struggling with an opioid use disorder can choose to quit using
+    opioid'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_usemore
+  title: '[People with an opioid use disorder will use more opioids if they know they
+    have'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_heroinppm
+  title: '[Individuals with an opioid use disorder specific to prescription pain medicatio'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_seekprofessional
+  title: '[People with an opioid use disorder should seek professional help.] Do you
+    disag'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_longterm
+  title: '[People with an opioid use disorder require long-term treatment in order
+    to reco'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_medsrecov
+  title: '[People with an opioid use disorder need medications in order to recover.]
+    Do yo'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: heroin_seektreatment
+  title: '[Individuals with an opioid use disorder specific to heroin are more likely
+    to s'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: heroin_recover
+  title: '[Individuals with an opioid use disorder specific to heroin are more likely
+    to r'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: heroin_moretreatment
+  title: '[Individuals with an opioid use disorder specific to heroin will require
+    more tr'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: family_know_treatment
+  title: '[I would want my friends and family to know if I sought treatment for an
+    opioid '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: friend_tell_treatment
+  title: '[I would want my friend to tell me if they sought treatment for an opioid
+    use di'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: encourage_friend_treatment
+  title: '[I would encourage my friend to seek treatment if they had an opioid use
+    disorde'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: generalhcp_notreat
+  title: '[I would not want my general health care provider to treat individuals with
+    an o'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: opinion_changed
+  title: '[My opinions about opioid use disorder have changed over the last 5 years.]
+    Do y'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: at_risk
+  title: '[Given my family history and/or prior experience with opioids, I think I
+    would b'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_a_historywork
+  title: '[I would be willing to have a person with a past history of opioid use disorder '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_c_currentwork
+  title: '[I would be willing to have a person with a current opioid use disorder
+    start wo'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_d_currentmarry
+  title: '[I would be comfortable having a person with a current opioid use disorder
+    marry'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_b_historymarry
+  title: '[I am comfortable having a person with a past history of opioid use disorder
+    mar'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_e_dangerous
+  title: '[People with a current opioid use disorder are more dangerous than the general
+    p'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_f_trust
+  title: '[A person who currently has an opioid use disorder cannot be trusted.] Do
+    you di'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_currentsteal
+  title: '[A person who currently has an opioid use disorder would be willing to steal
+    mon'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_historysteal
+  title: '[A person who has a past history of opioid use disorder might be tempted
+    to take'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_currenthighrisk
+  title: '[A person who currently has an opioid use disorder is likely to experience
+    perso'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_historyhighrisk
+  title: '[A person who has a past history of opioid use disorder is likely to experience '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: personaluse_feelgood
+  title: Have you ever taken a prescription opioid medication... in a way other than
+    as d
+  type: string
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: personaloverdose_ever
+  title: Have you ever overdosed (i.e., taken a high dose of opioids leading to the
+    slowi
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: alc_year
+  title: '[Yes, within the last year][Alcohol] Have you ever used any of the following
+    sub'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: alc_life
+  title: '[Yes, more than a year ago][Alcohol ] Have you ever used any of the following
+    su'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: alc_never
+  title: '[No][Alcohol] Have you ever used any of the following substances in your
+    life?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5a_dk
+  title: '[DON''T KNOW][Alcohol] Have you ever used any of the following substances
+    in your'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5a_skp
+  title: '[SKIPPED ON WEB][Alcohol] Have you ever used any of the following substances
+    in '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5a_ref
+  title: '[REFUSED][Alcohol] Have you ever used any of the following substances in
+    your li'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: cann_year
+  title: '[Yes, within the last year][Cannabis products such as marijuana] Have you
+    ever u'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: cann_life
+  title: '[Yes, more than a year ago][Cannabis products such as marijuana] Have you
+    ever u'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: cann_never
+  title: '[No][Cannabis products such as marijuana] Have you ever used any of the
+    followin'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5b_dk
+  title: '[DON''T KNOW][Cannabis products such as marijuana] Have you ever used any
+    of the '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5b_skp
+  title: '[SKIPPED ON WEB][Cannabis products such as marijuana] Have you ever used
+    any of '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5b_ref
+  title: '[REFUSED][Cannabis products such as marijuana] Have you ever used any of
+    the fol'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: heroin_year
+  title: '[Yes, within the last year][Heroin] Have you ever used any of the following
+    subs'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: heroin_life
+  title: '[Yes, more than a year ago][Heroin] Have you ever used any of the following
+    subs'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: heroin_never
+  title: '[No][Heroin] Have you ever used any of the following substances in your
+    life?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5c_dk
+  title: '[DON''T KNOW][Heroin] Have you ever used any of the following substances
+    in your '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5c_skp
+  title: '[SKIPPED ON WEB][Heroin] Have you ever used any of the following substances
+    in y'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5c_ref
+  title: '[REFUSED][Heroin] Have you ever used any of the following substances in
+    your lif'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: fent_year
+  title: '[Yes, within the last year][Fentanyl] Have you ever used any of the following
+    su'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: fent_life
+  title: '[Yes, more than a year ago][Fentanyl] Have you ever used any of the following
+    su'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: fent_never
+  title: '[No][Fentanyl] Have you ever used any of the following substances in your
+    life?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5d_dk
+  title: '[DON''T KNOW][Fentanyl] Have you ever used any of the following substances
+    in you'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5d_skp
+  title: '[SKIPPED ON WEB][Fentanyl] Have you ever used any of the following substances
+    in'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5d_ref
+  title: '[REFUSED][Fentanyl] Have you ever used any of the following substances in
+    your l'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: othop_year
+  title: '[Yes, within the last year][Other opioids] Have you ever used any of the
+    followi'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: othop_life
+  title: '[Yes, more than a year ago][Other opioids] Have you ever used any of the
+    followi'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: othop_never
+  title: '[No][Other opioids] Have you ever used any of the following substances in
+    your l'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5e_dk
+  title: '[DON''T KNOW][Other opioids] Have you ever used any of the following substances
+    i'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5e_skp
+  title: '[SKIPPED ON WEB][Other opioids] Have you ever used any of the following
+    substanc'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5e_ref
+  title: '[REFUSED][Other opioids] Have you ever used any of the following substances
+    in y'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: crack_year
+  title: '[Yes, within the last year][Crack or other forms of cocaine] Have you ever
+    used '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: crack_life
+  title: '[Yes, more than a year ago][Crack or other forms of cocaine] Have you ever
+    used '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: crack_never
+  title: '[No][Crack or other forms of cocaine] Have you ever used any of the following
+    su'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5f_dk
+  title: '[DON''T KNOW][Crack or other forms of cocaine] Have you ever used any of
+    the foll'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5f_skp
+  title: '[SKIPPED ON WEB][Crack or other forms of cocaine] Have you ever used any
+    of the '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5f_ref
+  title: '[REFUSED][Crack or other forms of cocaine] Have you ever used any of the
+    followi'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: meth_year
+  title: '[Yes, within the last year] [Methamphetamines, amphetamines or other forms
+    of sp'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: meth_life
+  title: '[Yes, more than a year ago] [Methamphetamines, amphetamines or other forms
+    of sp'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: meth_never
+  title: '[No] [Methamphetamines, amphetamines or other forms of speed] Have you ever
+    used'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5g_dk
+  title: '[DON''T KNOW][Methamphetamines, amphetamines or other forms of speed] Have
+    you ev'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5g_skp
+  title: '[SKIPPED ON WEB] [Methamphetamines, amphetamines or other forms of speed]
+    Have y'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5g_ref
+  title: '[REFUSED] [Methamphetamines, amphetamines or other forms of speed] Have
+    you ever'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: xan_year
+  title: '[Yes, within the last year] [Xanax, benzodiazepines, or other antianxiety
+    drugs '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: xan_life
+  title: '[Yes, more than a year ago] [Xanax, benzodiazepines, or other antianxiety
+    drugs '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: xan_never
+  title: '[No] [Xanax, benzodiazepines, or other antianxiety drugs or tranquilizers]
+    Have '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5h_dk
+  title: '[DON''T KNOW] [Xanax, benzodiazepines, or other antianxiety drugs or tranquilizer'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5h_skp
+  title: '[SKIPPED ON WEB] [Xanax, benzodiazepines, or other antianxiety drugs or
+    tranquil'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5h_ref
+  title: '[REFUSED] [Xanax, benzodiazepines, or other antianxiety drugs or tranquilizers] '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: othsub_year
+  title: '[Yes, within the last year] [Other, please specify:] Have you ever used
+    any of t'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: othsub_life
+  title: '[Yes, more than a year ago][ Other, please specify:] Have you ever used
+    any of t'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: othsub_never
+  title: '[No][Other, please specify:] Have you ever used any of the following substances '
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5i_dk
+  title: '[DON''T KNOW][Other, please specify:] Have you ever used any of the following
+    sub'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5i_skp
+  title: '[SKIPPED ON WEB][Other, please specify:] Have you ever used any of the following'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5i_ref
+  title: '[REFUSED][Other, please specify:] Have you ever used any of the following
+    substa'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: nosub
+  title: '[None of the above] Have you ever used any of the following substances in
+    your l'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5_1_dk
+  title: '[DON''T KNOW] Have you ever used any of the following substances in your
+    life?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5_1_skp
+  title: '[SKIPPED ON WEB] Have you ever used any of the following substances in your
+    life'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: q5_1_ref
+  title: '[REFUSED] Have you ever used any of the following substances in your life?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: alcohol_month
+  title: '[Drank alcohol] Over the past 30 days, what is your best estimate of the
+    number '
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: cannabis_month
+  title: '[Used cannabis products such as marijuana] Over the past 30 days, what is
+    your b'
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: heroin_month
+  title: '[Used Heroin] Over the past 30 days, what is your best estimate of the number
+    of'
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: fentanyl_month
+  title: '[Used Fentanyl] Over the past 30 days, what is your best estimate of the
+    number '
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: opioids_month
+  title: '[Used other opioids] Over the past 30 days, what is your best estimate of
+    the nu'
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: cocaine_month
+  title: '[Used Crack or other forms of cocaine] Over the past 30 days, what is your
+    best '
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: meth_month
+  title: '[Used Methamphetamines, amphetamines or other forms of speed] Over the past
+    30 d'
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: xanax_month
+  title: '[Used Xanax, benzodiazepines, or other antianxiety drugs or tranquilizers]
+    Over '
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: other_month
+  title: '[Used some other drug: [Q5I_OE_TEXT]] Over the past 30 days, what is your
+    best e'
+  type: string
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: familyoud
+  title: Have any family members or close friends ever had an opioid use disorder
+    or misu
+  type: string
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: familyoverdose_ever
+  title: Has a family member or close friend ever overdosed (i.e., taken a high dose
+    of o
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: familyoverdose_died
+  title: Has a family member or close friend ever died from an opioid overdose?
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: recproc_help
+  title: Have you helped anyone with their recovery from opioid use misuse/disorder?
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: recproc_involve
+  title: "How involved were you with this person\u2019s recovery process?"
+  type: string
+  constraints:
+    enum:
+    - Very involved
+    - Somewhat involved
+    - A little bit involved
+- name: recproc_exp
+  title: "Was being involved in this person\u2019s recovery process a negative or\
+    \ positive ex"
+  type: string
+  constraints:
+    enum:
+    - Very negative
+    - Somewhat negative
+    - Neither negative nor positive
+    - Somewhat positive
+    - Very positive
+- name: recproc_success
+  title: "Based on your experience in another person\u2019s recovery process, do you\
+    \ think pe"
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+    - It depends on the person
+- name: personalconviction_ever
+  title: Have you ever been convicted of any misdemeanor or felony crime?
+  type: string
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: personalincarceration_ever
+  title: Have you ever been incarcerated in jail or prison?
+  type: string
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: familyconviction_ever
+  title: Have any of your family members or close friends ever been convicted of any
+    misd
+  type: string
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: familyincarceration_ever
+  title: 'Have any of your family members or close friends ever been incarcerated
+    in jail '
+  type: string
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: mud_c_currentwork
+  title: '[I would be willing to have a person with a current meth use disorder start
+    work'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_a_historywork
+  title: '[I would be willing to have a person with a past history of meth use disorder
+    st'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_d_currentmarry
+  title: '[I would be comfortable having a person with a current meth use disorder
+    marry i'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_b_historymarry
+  title: '[I am comfortable having a person with a past history of meth use disorder
+    marry'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_e_dangerous
+  title: '[People with a current meth use disorder are more dangerous than the general
+    pop'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_f_trust
+  title: '[A person who currently has a meth use disorder cannot be trusted.] Do you
+    disag'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_currentsteal
+  title: '[A person who currently has a meth use disorder would be willing to steal
+    money '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_currenthighrisk
+  title: '[A person who currently has a meth use disorder is likely to experience
+    personal'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_historysteal
+  title: '[A person who has a past history of meth use disorder would be willing to
+    steal '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: mud_historyhighrisk
+  title: '[A person who has a past history of meth use disorder is likely to experience
+    pe'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_c_currentwork
+  title: '[I would be willing to have a person with a current crack cocaine use disorder
+    s'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_a_historywork
+  title: '[I would be willing to have a person with a past history of crack cocaine
+    use di'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_d_currentmarry
+  title: '[I would be comfortable having a person with a current crack cocaine use
+    disorde'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_b_historymarry
+  title: '[I am comfortable having a person with a past history of crack cocaine use
+    disor'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_e_dangerous
+  title: '[People with a current crack cocaine use disorder are more dangerous than
+    the ge'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_f_trust
+  title: '[A person who currently has a crack cocaine use disorder cannot be trusted.]
+    Do '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_currentsteal
+  title: '[A person who currently has a crack cocaine use disorder would be willing
+    to ste'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_currenthighrisk
+  title: '[A person who currently has a crack cocaine use disorder is likely to experience'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_historysteal
+  title: '[ A person who has a past history of crack cocaine use disorder would be
+    willing'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: cc_historyhighrisk
+  title: '[A person who has a past history of crack cocaine use disorder is likely
+    to expe'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_c_currentwork
+  title: '[I would be willing to have a person with a current alcohol use disorder
+    start w'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_a_historywork
+  title: '[I would be willing to have a person with a past history of alcohol use
+    disorder'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_d_currentmarry
+  title: '[I would be comfortable having a person with a current alcohol use disorder
+    marr'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_b_historymarry
+  title: '[I comfortable having a person with a past history of alcohol use disorder
+    marry'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_e_dangerous
+  title: '[People with a current alcohol use disorder are more dangerous than the
+    general '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_f_trust
+  title: '[A person who currently has a alcohol use disorder cannot be trusted.] Do
+    you di'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_currentsteal
+  title: '[A person who currently has a alcohol use disorder would be willing to steal
+    mon'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_currenthighrisk
+  title: '[A person who currently has a alcohol use disorder is likely to experience
+    perso'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_historysteal
+  title: '[ A person who has a past history of alcohol use disorder would be willing
+    to st'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: aud_historyhighrisk
+  title: '[A person who has a past history of alcohol use disorder is likely to experience'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_discrimination
+  title: '[Mainly due to discrimination?] On the average, data show that in America,
+    Black'
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_learnability
+  title: '[Because most Black people have less in-born ability to learn?] On the average, '
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_education
+  title: '[Because most Black people don''t have the chance for education that it
+    takes to '
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_motivation
+  title: '[Because most Black people just don''t have the motivation or will power
+    to pull '
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_whiteadvantage
+  title: '[White people in the U.S. have certain advantages because of the color of
+    their '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_successful
+  title: '[Race is very important in determining who is successful and who is not.]
+    Do you'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_prison
+  title: '[Race plays an important role in who gets sent to prison.] Do you disagree
+    or ag'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_socservices
+  title: '[Race plays a major role in the type of social services (such as type of
+    health '
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_opportunity
+  title: '[Racial and ethnic minorities do not have the same opportunities as white
+    people'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_minadvantage
+  title: '[Racial and ethnic minorities in the U.S. have certain advantages because
+    of the'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_rich
+  title: '[Everyone who works hard, no matter what race they are, has an equal chance
+    to b'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_whiteblame
+  title: '[White people are more to blame for racial discrimination than racial and
+    ethnic'
+  type: string
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: nervous_pastmonth
+  title: '[Been a very nervous person] Over the past month, how often have you:'
+  type: string
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: downhearted_pastmonth
+  title: '[Felt downhearted and blue] Over the past month, how often have you:'
+  type: string
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: calm_pastmonth
+  title: '[Felt calm and peaceful] Over the past month, how often have you:'
+  type: string
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: dumps_pastmonth
+  title: '[Felt so down in the dumps that nothing could cheer you up] Over the past
+    month,'
+  type: string
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: happy_pastmonth
+  title: '[Been a happy person] Over the past month, how often have you:'
+  type: string
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: are_monkeypox
+  title: How concerned are you about monkeypox affecting your life?
+  type: string
+  constraints:
+    enum:
+    - Extremely concerned
+    - Very concerned
+    - Somewhat concerned
+    - A little bit concerned
+    - Not concerned at all
+- name: pid1
+  title: Do you consider yourself a Democrat, a Republican, an Independent or none
+    of the
+  type: string
+  constraints:
+    enum:
+    - Democrat
+    - Republican
+    - Independent
+    - None of these
+- name: pida
+  title: Do you consider yourself a strong or not so strong Democrat?
+  type: string
+  constraints:
+    enum:
+    - Strong Democrat
+    - Not so strong Democrat
+- name: pidb
+  title: Do you consider yourself a strong or not so strong Republican?
+  type: string
+  constraints:
+    enum:
+    - Strong Republican
+    - Not so strong Republican
+- name: pidi
+  title: Do you lean more toward the Democrats or the Republicans?
+  type: string
+  constraints:
+    enum:
+    - Lean Democrat
+    - Lean Republican
+    - "Don\u2019t lean"
+- name: partyid7
+  title: 'DATA-ONLY: Computed 7-level Party ID'
+  type: string
+  constraints:
+    enum:
+    - Unknown
+    - Strong Democrat
+    - Not so strong Democrat
+    - Lean Democrat
+    - Don't Lean/Independent/None
+    - Lean Republican
+    - Not so strong Republican
+    - Strong Republican
+- name: partyid5
+  title: 'DATA-ONLY: Computed 5-level Party ID'
+  type: string
+  constraints:
+    enum:
+    - Unknown
+    - Democrat
+    - Lean Democrat
+    - Don't Lean/Independent/None
+    - Lean Republican
+    - Republican
+- name: pid2
+  title: '[INS_PID2]'
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: pid2a_1
+  title: '[Democrat] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pid2a_2
+  title: '[Republican] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pid2a_3
+  title: '[Independent] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pid2a_4
+  title: '[Something else, please specify:] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pid2a_dk
+  title: '[DON''T KNOW] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pid2a_skp
+  title: '[SKIPPED ON WEB] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pid2a_ref
+  title: '[REFUSED] Select all that apply.'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: surv_mode
+  title: Survey interview mode (online or phone)
+  type: string
+  constraints:
+    enum:
+    - Phone interview
+    - Web Interview
+- name: surv_lang
+  title: Survey Interview Language
+  type: string
+  constraints:
+    enum:
+    - English
+    - Spanish
+- name: device
+  title: Device
+- name: gender
+  title: Respondent gender
+  type: string
+  constraints:
+    enum:
+    - Unknown
+    - Male
+    - Female
+- name: age4
+  title: Age - 4 Categories
+  type: string
+  constraints:
+    enum:
+    - 18-29
+    - 30-44
+    - 45-59
+    - 60+
+- name: age7
+  title: Age - 7 Categories
+  type: string
+  constraints:
+    enum:
+    - 18-24
+    - 25-34
+    - 35-44
+    - 45-54
+    - 55-64
+    - 65-74
+    - 75+
+- name: racethnicity
+  title: Combined Race/Ethnicity
+  type: string
+  constraints:
+    enum:
+    - White, non-Hispanic
+    - Black, non-Hispanic
+    - Other, non-Hispanic
+    - Hispanic
+    - 2+, non-Hispanic
+    - Asian-Pacific Islander, non-Hispanic
+- name: educ5
+  title: 5-level education
+  type: string
+  constraints:
+    enum:
+    - Less than HS
+    - HS graduate or equivalent
+    - Vocational/tech school/some college/ associates
+    - Bachelor's degree
+    - Post grad study/professional degree
+- name: marital
+  title: Marital Status
+  type: string
+  constraints:
+    enum:
+    - Married
+    - Widowed
+    - Divorced
+    - Separated
+    - Never married
+- name: employ
+  title: Current Employment Status
+  type: string
+  constraints:
+    enum:
+    - "Working \u2013 as a paid employee"
+    - "Working \u2013 self employed"
+    - "Not working \u2013 looking for work or on temporary layoff"
+    - "Not working \u2013 retired"
+    - "Not working \u2013 disabled"
+    - Not working - other
+- name: income4
+  title: 4-level Household Income
+  type: string
+  constraints:
+    enum:
+    - Less than $30,000
+    - $30,000 to under $60,000
+    - $60,000 to under $100,000
+    - $100,000 or more
+- name: region4
+  title: 4-level region
+  type: string
+  constraints:
+    enum:
+    - Northeast
+    - Midwest
+    - South
+    - West
+- name: metro
+  title: Metropolitan area flag
+  type: string
+  constraints:
+    enum:
+    - Non-Metro Area
+    - Metro Area
+- name: internet
+  title: HH internet access via dial-up, DSL, or cable broadband at home
+  type: string
+  constraints:
+    enum:
+    - Non-internet household
+    - Internet Household
+- name: housing
+  title: Home Ownership
+  type: string
+  constraints:
+    enum:
+    - Owned
+    - Rented or occupied without payment
+- name: home_type
+  title: Type of building of panelists' residence
+  type: string
+  constraints:
+    enum:
+    - A one-family house detached from any other house
+    - A one-family house attached to one or more houses
+    - Apartment building, mobile home or trailer, boat, RV, or other
+- name: phoneservice
+  title: Telephone service for the household
+  type: string
+  constraints:
+    enum:
+    - Landline telephone only
+    - Have a landline, but mostly use cellphone
+    - Have cellphone, but mostly use landline
+    - Cellphone only
+    - No telephone service
+- name: hhsize
+  title: Household size (including children)
+  type: string
+  constraints:
+    enum:
+    - 6 or more
+- name: hh05
+  type: string
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - 2 or more
+- name: hh612
+  title: Number of HH members age 6-12
+  type: string
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - 3 or more
+- name: hh1317
+  title: Number of HH members age 13-17
+  type: string
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - 2 or more
+- name: hh18ov
+  title: Number of HH members age 18+
+  type: string
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - 5 or more
+- name: personaluse_yn
+  title: Personal history of ever misusing opioids
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: persod_yn
+  title: Personal history of ever overdosing from opioids
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: famuse_yn
+  title: Family or friend history of ever misusing opioids
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: famod
+  title: Family or friend history of ever overdosing from opioids
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: famod_death
+  title: Family or friend history of ever dying from from an opioid overdose
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: personalcrimjust_ever
+  title: Personal history of ever being convicted or incarcerated
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: familycrimjust_ever
+  title: Family/friend history of ever being convicted or incarcerated
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: personalcrimjust_recent
+  title: Personal history of being convicted or incarcerated within the last year
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: familycrimjust_recent
+  title: Family/friend history of being convicted or incarcerated within the last
+    year
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: policyscale_4item
+  type: number
+- name: stigma_scale_score
+  type: number
+- name: expanded_10item_stigma
+  type: number
+- name: meth_stigma
+  type: number
+- name: cc_stigma
+  type: number
+- name: aud_stigma
+  type: number
+- name: cobras_scale
+  type: number
+- name: mhi5_scale
+  type: number
+- name: mentalhealth_mean
+  type: number
+- name: mhi_100scale
+  type: number
+- name: policyscale_7item
+  type: number
+missingValues:
+- DON'T KNOW
+- SKIPPED ON WEB
+- REFUSED
+- "DON\u2019T KNOW"
+- Under 18

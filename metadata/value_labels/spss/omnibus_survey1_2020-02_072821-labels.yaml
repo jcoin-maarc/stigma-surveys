@@ -1,0 +1,262 @@
+value_labels:
+  labels0:
+    0: '0'
+    1: '1'
+  labels1:
+    1: Strongly disagree
+    2: Somewhat disagree
+    3: Neither disagree nor agree
+    4: Somewhat agree
+    5: Strongly agree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels13:
+    1: Do not agree at all
+    2: Slightly agree
+    3: Somewhat agree
+    4: Strongly agree
+    5: Completely agree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels79:
+    1: 'Yes'
+    2: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels87:
+    0: Under 1 minute
+  labels88:
+    1: Phone interview
+    2: Web Interview
+  labels89:
+    1: English
+    2: Spanish
+  labels90:
+    0: Unknown
+    1: Male
+    2: Female
+  labels91:
+    1: 18-29
+    2: 30-44
+    3: 45-59
+    4: 60+
+    99: Under 18
+  labels92:
+    1: 18-24
+    2: 25-34
+    3: 35-44
+    4: 45-54
+    5: 55-64
+    6: 65-74
+    7: 75+
+    99: Under 18
+  labels93:
+    1: White, non-Hispanic
+    2: Black, non-Hispanic
+    3: Other, non-Hispanic
+    4: Hispanic
+    5: 2+, non-Hispanic
+    6: Asian, non-Hispanic
+  labels94:
+    1: No HS diploma
+    2: HS graduate or equivalent
+    3: Some college
+    4: BA or above
+  labels95:
+    1: Married
+    2: Widowed
+    3: Divorced
+    4: Separated
+    5: Never married
+    6: Living with partner
+  labels96:
+    1: "Working \u2013 as a paid employee"
+    2: "Working \u2013 self employed"
+    3: "Not working \u2013 looking for work or on temporary layoff"
+    4: "Not working \u2013 retired"
+    5: "Not working \u2013 disabled"
+    6: Not working - other
+  labels97:
+    1: Northeast
+    2: Midwest
+    3: South
+    4: West
+  labels98:
+    0: Non-Metro Area
+    1: Metro Area
+  labels99:
+    0: Non-internet household
+    1: Internet Household
+  labels100:
+    1: Owned
+    2: Rented or occupied without payment
+  labels101:
+    1: A one-family house detached from any other house
+    2: A one-family house attached to one or more houses
+    3: Apartment building, mobile home or trailer, boat, RV, or other
+  labels102:
+    1: Landline telephone only
+    2: Have a landline, but mostly use cellphone
+    3: Have cellphone, but mostly use landline
+    4: Cellphone only
+    5: No telephone service
+  labels103:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: 3 or more
+  labels104:
+    0: '0'
+    1: '1'
+    2: 2 or more
+  labels105:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: '3'
+    4: '4'
+    5: '5'
+    6: 6 or more
+  labels106:
+    0: Incorrect
+    1: Correct
+  labels116:
+    1: Below median
+    2: Above median
+  labels117:
+    1: Expansion Implemented
+    2: Not implemented
+  labels118:
+    1: 'Yes'
+    2: 'No'
+  labels121:
+    1: < $30,000
+    2: $30,000-59,999
+    3: $60,000-99,999
+    4: $100,000+
+field_to_value_label:
+  rnd_01: labels0
+  ps_a_medicaid_bi: labels1
+  ps_b_naloxone_bi: labels1
+  ps_c_mandatory_bi: labels1
+  ps_d_govspend_bi: labels1
+  ds_e_schools_bi: labels1
+  ds_f_physicians_bi: labels1
+  ds_g_employers_bi: labels1
+  ds_h_landlords_bi: labels1
+  ps_i_seekmedical_bi: labels1
+  ps_j_jailhealth_bi: labels1
+  ps_k_jailoverdose_bi: labels1
+  ps_l_jailtreatment_bi: labels1
+  ps_a_medicaid_uni: labels13
+  ps_b_naloxone_uni: labels13
+  ps_c_mandatory_uni: labels13
+  ps_d_govspend_uni: labels13
+  ds_e_schools_uni: labels13
+  ds_f_physicians_uni: labels13
+  ds_g_employers_uni: labels13
+  ds_h_landlords_uni: labels13
+  ps_i_seekmedical_uni: labels13
+  ps_j_jailhealth_uni: labels13
+  ps_k_jailoverdose_uni: labels13
+  ps_l_jailtreatment_uni: labels13
+  ss_a_historywork_bi: labels1
+  ss_b_historymarry_bi: labels1
+  ss_c_currentwork_bi: labels1
+  ss_d_currentmarry_bi: labels1
+  ss_e_dangerous_bi: labels1
+  ss_f_trust_bi: labels1
+  ss_a_historywork_uni: labels13
+  ss_b_historymarry_uni: labels13
+  ss_c_currentwork_uni: labels13
+  ss_d_currentmarry_uni: labels13
+  ss_e_dangerous_uni: labels13
+  ss_f_trust_uni: labels13
+  cs_a_obtain_bi: labels1
+  cs_b_use_bi: labels1
+  cs_c_sentencedjail_bi: labels1
+  cs_d_incarceratedaccess_bi: labels1
+  cs_e_paroleaccess_bi: labels1
+  cs_a_obtain_uni: labels13
+  cs_b_use_uni: labels13
+  cs_c_sentencedjail_uni: labels13
+  cs_d_incarceratedaccess_uni: labels13
+  cs_e_paroleaccess_uni: labels13
+  kb_a_definition_bi: labels1
+  kb_b_anyuse_bi: labels1
+  kb_c_selfcontrol_bi: labels1
+  kb_d_moralfail_bi: labels1
+  kb_e_quitanytime_bi: labels1
+  kb_f_stopbreathing_bi: labels1
+  kb_g_recover_bi: labels1
+  kb_h_medicalcondition_bi: labels1
+  kb_i_rockbottom_bi: labels1
+  kb_j_easyfind_bi: labels1
+  kb_k_fda_bi: labels1
+  kb_l_jailhelps_bi: labels1
+  kb_m_medhoax_bi: labels1
+  kb_n_medabuse_bi: labels1
+  kb_o_longterm_bi: labels1
+  kb_p_responsible_bi: labels1
+  kb_a_definition_uni: labels13
+  kb_b_anyuse_uni: labels13
+  kb_c_selfcontrol_uni: labels13
+  kb_d_moralfail_uni: labels13
+  kb_e_quitanytime_uni: labels13
+  kb_f_stopbreathing_uni: labels13
+  kb_g_recover_uni: labels13
+  kb_h_medicalcondition_uni: labels13
+  kb_i_rockbottom_uni: labels13
+  kb_j_easyfind_uni: labels13
+  kb_k_fda_uni: labels13
+  kb_l_jailhelps_uni: labels13
+  kb_m_medhoax_uni: labels13
+  kb_n_medabuse_uni: labels13
+  kb_o_longterm_uni: labels13
+  kb_p_responsible_uni: labels13
+  personaluse_ever: labels79
+  personaloverdose_ever: labels79
+  personalconviction_ever: labels79
+  personalincarceration_ever: labels79
+  familyuse_ever: labels79
+  familyoverdose_ever: labels79
+  familyconviction_ever: labels79
+  familyincarceration_ever: labels79
+  duration_jcoin: labels87
+  surv_mode: labels88
+  surv_lang: labels89
+  gender: labels90
+  age4: labels91
+  age7: labels92
+  racethnicity: labels93
+  educ4: labels94
+  marital: labels95
+  employ: labels96
+  region4: labels97
+  metro: labels98
+  internet: labels99
+  housing: labels100
+  home_type: labels101
+  phoneservice: labels102
+  hh612: labels103
+  hh1317: labels104
+  hh18ov: labels105
+  kb_b_anyuse_correct: labels106
+  kb_e_quitanytime_correct: labels106
+  kb_i_rockbottom_correct: labels106
+  kb_j_easyfind_correct: labels106
+  kb_n_medabuse_correct: labels106
+  kb_a_definition_correct: labels106
+  kb_f_stopbreathing_correct: labels106
+  kb_g_recover_correct: labels106
+  kb_h_medicalcondition_correct: labels106
+  kb_k_fda_correct: labels106
+  income_relativemedian: labels116
+  medicaidexpansionstate: labels117
+  crimjustexp_personal: labels118
+  crimjustexp_family: labels118
+  hh05: labels103
+  income4: labels121

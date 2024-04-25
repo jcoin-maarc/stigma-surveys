@@ -1,0 +1,444 @@
+value_labels:
+  labels0:
+    0: '0'
+    1: '1'
+  labels1:
+    1: Strongly disagree
+    2: Somewhat disagree
+    3: Neither disagree nor agree
+    4: Somewhat agree
+    5: Strongly agree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels48:
+    1: Yes, within the last year
+    2: Yes, more than a year ago
+    3: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels49:
+    1: 'Yes'
+    2: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels50:
+    0: 'No'
+    1: 'Yes'
+  labels108:
+    1: 1 or 2 days
+    2: 3 to 5 days
+    3: 6 to 9 days
+    4: 10 to 19 days
+    5: 20 to 29 days
+    6: All 30 days
+    7: Have not used in the past 30 days
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels121:
+    1: Very involved
+    2: Somewhat involved
+    3: A little bit involved
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels122:
+    1: Very negative
+    2: Somewhat negative
+    3: Neither negative nor positive
+    4: Somewhat positive
+    5: Very positive
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels123:
+    1: 'Yes'
+    2: 'No'
+    3: It depends on the person
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels170:
+    1: All of the time
+    2: Most of the time
+    3: A good bit of the time
+    4: Some of the time
+    5: A little of the time
+    6: None of the time
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels175:
+    1: Extremely concerned
+    2: Very concerned
+    3: Somewhat concerned
+    4: A little bit concerned
+    5: Not concerned at all
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels176:
+    1: Democrat
+    2: Republican
+    3: Independent
+    4: None of these
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels177:
+    1: Strong Democrat
+    2: Not so strong Democrat
+    77: "DON\u2019T KNOW"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels178:
+    1: Strong Republican
+    2: Not so strong Republican
+    77: "DON\u2019T KNOW"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels179:
+    1: Lean Democrat
+    2: Lean Republican
+    3: "Don\u2019t lean"
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels180:
+    -1: Unknown
+    1: Strong Democrat
+    2: Not so strong Democrat
+    3: Lean Democrat
+    4: Don't Lean/Independent/None
+    5: Lean Republican
+    6: Not so strong Republican
+    7: Strong Republican
+  labels181:
+    -1: Unknown
+    1: Democrat
+    2: Lean Democrat
+    3: Don't Lean/Independent/None
+    4: Lean Republican
+    5: Republican
+  labels190:
+    1: Phone interview
+    2: Web Interview
+  labels191:
+    1: English
+    2: Spanish
+  labels192:
+    0: Unknown
+    1: Male
+    2: Female
+  labels193:
+    1: 18-29
+    2: 30-44
+    3: 45-59
+    4: 60+
+    99: Under 18
+  labels194:
+    1: 18-24
+    2: 25-34
+    3: 35-44
+    4: 45-54
+    5: 55-64
+    6: 65-74
+    7: 75+
+    99: Under 18
+  labels195:
+    1: White, non-Hispanic
+    2: Black, non-Hispanic
+    3: Other, non-Hispanic
+    4: Hispanic
+    5: 2+, non-Hispanic
+    6: Asian-Pacific Islander, non-Hispanic
+  labels196:
+    1: Less than HS
+    2: HS graduate or equivalent
+    3: Vocational/tech school/some college/ associates
+    4: Bachelor's degree
+    5: Post grad study/professional degree
+  labels197:
+    1: Married
+    2: Widowed
+    3: Divorced
+    4: Separated
+    5: Never married
+  labels198:
+    1: "Working \u2013 as a paid employee"
+    2: "Working \u2013 self employed"
+    3: "Not working \u2013 looking for work or on temporary layoff"
+    4: "Not working \u2013 retired"
+    5: "Not working \u2013 disabled"
+    6: Not working - other
+  labels199:
+    1: Less than $30,000
+    2: $30,000 to under $60,000
+    3: $60,000 to under $100,000
+    4: $100,000 or more
+  labels200:
+    1: Northeast
+    2: Midwest
+    3: South
+    4: West
+  labels201:
+    0: Non-Metro Area
+    1: Metro Area
+  labels202:
+    0: Non-internet household
+    1: Internet Household
+  labels203:
+    1: Owned
+    2: Rented or occupied without payment
+  labels204:
+    1: A one-family house detached from any other house
+    2: A one-family house attached to one or more houses
+    3: Apartment building, mobile home or trailer, boat, RV, or other
+  labels205:
+    1: Landline telephone only
+    2: Have a landline, but mostly use cellphone
+    3: Have cellphone, but mostly use landline
+    4: Cellphone only
+    5: No telephone service
+  labels206:
+    6: 6 or more
+  labels207:
+    0: '0'
+    1: '1'
+    2: 2 or more
+  labels208:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: 3 or more
+  labels210:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: '3'
+    4: '4'
+    5: 5 or more
+field_to_value_label:
+  rnd_01: labels0
+  ps_a_medicaid: labels1
+  ps_b_naloxone: labels1
+  ps_c_mandatory: labels1
+  ps_d_govspend: labels1
+  ps_treatment: labels1
+  ps_l_jailtreatment: labels1
+  req_treat_prob: labels1
+  kb_jailhelp: labels1
+  kb_b_anyuse: labels1
+  kb_stopbreath: labels1
+  kb_medcondition: labels1
+  kb_fda: labels1
+  kb_recover: labels1
+  kb_easyfind: labels1
+  treatment_separate_healthcare: labels1
+  generalhcp_treatment: labels1
+  generalhcp_trained: labels1
+  kb_recovcont: labels1
+  recovery_common: labels1
+  failing_common: labels1
+  kb_rockbottom: labels1
+  kb_c_selfcontrol: labels1
+  kb_e_quitanytime: labels1
+  kb_usemore: labels1
+  kb_heroinppm: labels1
+  kb_seekprofessional: labels1
+  kb_longterm: labels1
+  kb_medsrecov: labels1
+  heroin_seektreatment: labels1
+  heroin_recover: labels1
+  heroin_moretreatment: labels1
+  family_know_treatment: labels1
+  friend_tell_treatment: labels1
+  encourage_friend_treatment: labels1
+  generalhcp_notreat: labels1
+  opinion_changed: labels1
+  at_risk: labels1
+  ss_a_historywork: labels1
+  ss_c_currentwork: labels1
+  ss_d_currentmarry: labels1
+  ss_b_historymarry: labels1
+  ss_e_dangerous: labels1
+  ss_f_trust: labels1
+  ss_currentsteal: labels1
+  ss_historysteal: labels1
+  ss_currenthighrisk: labels1
+  ss_historyhighrisk: labels1
+  personaluse_feelgood: labels48
+  personaloverdose_ever: labels49
+  alc_year: labels50
+  alc_life: labels50
+  alc_never: labels50
+  q5a_dk: labels50
+  q5a_skp: labels50
+  q5a_ref: labels50
+  cann_year: labels50
+  cann_life: labels50
+  cann_never: labels50
+  q5b_dk: labels50
+  q5b_skp: labels50
+  q5b_ref: labels50
+  heroin_year: labels50
+  heroin_life: labels50
+  heroin_never: labels50
+  q5c_dk: labels50
+  q5c_skp: labels50
+  q5c_ref: labels50
+  fent_year: labels50
+  fent_life: labels50
+  fent_never: labels50
+  q5d_dk: labels50
+  q5d_skp: labels50
+  q5d_ref: labels50
+  othop_year: labels50
+  othop_life: labels50
+  othop_never: labels50
+  q5e_dk: labels50
+  q5e_skp: labels50
+  q5e_ref: labels50
+  crack_year: labels50
+  crack_life: labels50
+  crack_never: labels50
+  q5f_dk: labels50
+  q5f_skp: labels50
+  q5f_ref: labels50
+  meth_year: labels50
+  meth_life: labels50
+  meth_never: labels50
+  q5g_dk: labels50
+  q5g_skp: labels50
+  q5g_ref: labels50
+  xan_year: labels50
+  xan_life: labels50
+  xan_never: labels50
+  q5h_dk: labels50
+  q5h_skp: labels50
+  q5h_ref: labels50
+  othsub_year: labels50
+  othsub_life: labels50
+  othsub_never: labels50
+  q5i_dk: labels50
+  q5i_skp: labels50
+  q5i_ref: labels50
+  nosub: labels50
+  q5_1_dk: labels50
+  q5_1_skp: labels50
+  q5_1_ref: labels50
+  alcohol_month: labels108
+  cannabis_month: labels108
+  heroin_month: labels108
+  fentanyl_month: labels108
+  opioids_month: labels108
+  cocaine_month: labels108
+  meth_month: labels108
+  xanax_month: labels108
+  other_month: labels108
+  familyoud: labels48
+  familyoverdose_ever: labels49
+  familyoverdose_died: labels49
+  recproc_help: labels49
+  recproc_involve: labels121
+  recproc_exp: labels122
+  recproc_success: labels123
+  personalconviction_ever: labels48
+  personalincarceration_ever: labels48
+  familyconviction_ever: labels48
+  familyincarceration_ever: labels48
+  mud_c_currentwork: labels1
+  mud_a_historywork: labels1
+  mud_d_currentmarry: labels1
+  mud_b_historymarry: labels1
+  mud_e_dangerous: labels1
+  mud_f_trust: labels1
+  mud_currentsteal: labels1
+  mud_currenthighrisk: labels1
+  mud_historysteal: labels1
+  mud_historyhighrisk: labels1
+  cc_c_currentwork: labels1
+  cc_a_historywork: labels1
+  cc_d_currentmarry: labels1
+  cc_b_historymarry: labels1
+  cc_e_dangerous: labels1
+  cc_f_trust: labels1
+  cc_currentsteal: labels1
+  cc_currenthighrisk: labels1
+  cc_historysteal: labels1
+  cc_historyhighrisk: labels1
+  aud_c_currentwork: labels1
+  aud_a_historywork: labels1
+  aud_d_currentmarry: labels1
+  aud_b_historymarry: labels1
+  aud_e_dangerous: labels1
+  aud_f_trust: labels1
+  aud_currentsteal: labels1
+  aud_currenthighrisk: labels1
+  aud_historysteal: labels1
+  aud_historyhighrisk: labels1
+  race_discrimination: labels49
+  race_learnability: labels49
+  race_education: labels49
+  race_motivation: labels49
+  race_whiteadvantage: labels1
+  race_successful: labels1
+  race_prison: labels1
+  race_socservices: labels1
+  race_opportunity: labels1
+  race_minadvantage: labels1
+  race_rich: labels1
+  race_whiteblame: labels1
+  nervous_pastmonth: labels170
+  downhearted_pastmonth: labels170
+  calm_pastmonth: labels170
+  dumps_pastmonth: labels170
+  happy_pastmonth: labels170
+  are_monkeypox: labels175
+  pid1: labels176
+  pida: labels177
+  pidb: labels178
+  pidi: labels179
+  partyid7: labels180
+  partyid5: labels181
+  pid2: labels49
+  pid2a_1: labels50
+  pid2a_2: labels50
+  pid2a_3: labels50
+  pid2a_4: labels50
+  pid2a_dk: labels50
+  pid2a_skp: labels50
+  pid2a_ref: labels50
+  surv_mode: labels190
+  surv_lang: labels191
+  gender: labels192
+  age4: labels193
+  age7: labels194
+  racethnicity: labels195
+  educ5: labels196
+  marital: labels197
+  employ: labels198
+  income4: labels199
+  region4: labels200
+  metro: labels201
+  internet: labels202
+  housing: labels203
+  home_type: labels204
+  phoneservice: labels205
+  hhsize: labels206
+  hh05: labels207
+  hh612: labels208
+  hh1317: labels207
+  hh18ov: labels210
+  personaluse_yn: labels50
+  persod_yn: labels50
+  famuse_yn: labels50
+  famod: labels50
+  famod_death: labels50
+  personalcrimjust_ever: labels50
+  familycrimjust_ever: labels50
+  personalcrimjust_recent: labels50
+  familycrimjust_recent: labels50
