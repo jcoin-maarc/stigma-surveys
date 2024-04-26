@@ -50,3 +50,13 @@ def survey5(df):
                       'pidi':{"Don’t lean":"Don't lean"}}
                     )
     )
+
+def survey7(df):
+    """Clean Survey 7 data."""
+
+    return df
+
+def survey8(df):
+    """Clean Survey 8 data."""
+
+    return df

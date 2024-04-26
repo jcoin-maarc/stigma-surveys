@@ -1984,6 +1984,11 @@ fields:
   type: string
   constraints:
     enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
     - 6 or more
 - name: hh05
   type: string
@@ -2112,3 +2117,5 @@ missingValues:
 - REFUSED
 - "DON\u2019T KNOW"
 - Under 18
+- ''
+primaryKey: caseid

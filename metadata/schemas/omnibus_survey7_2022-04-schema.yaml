@@ -907,15 +907,15 @@ fields:
 - name: q26aa
   title: '[Summer 2021 (May, June, July)] Please indicate/estimate the number of new
     partn'
-  type: string
+  type: integer
 - name: q26ab
   title: '[Fall 2021 (Aug, September, October)] Please indicate/estimate the number
     of new'
-  type: string
+  type: integer
 - name: q26ac
   title: '[Winter 2021/2022 (December, January, February)] Please indicate/estimate
     the nu'
-  type: string
+  type: integer
 - name: q27
   title: During the past month, did you kiss anyone that lives outside your home?
   type: string
@@ -925,7 +925,7 @@ fields:
     - 'Yes'
 - name: q27a
   title: How many people did you kiss that live outside your home?
-  type: string
+  type: integer
 - name: q28
   title: During the past month, did you have in-person oral, vaginal, or anal sex
     with an
@@ -944,7 +944,7 @@ fields:
 - name: q28b
   title: How many people did you have in-person oral, vaginal, or anal sex with that
     live
-  type: string
+  type: integer
 - name: employ1
   title: We would like to know about what you do -- Are you working now, looking for
     work
@@ -1348,10 +1348,8 @@ missingValues:
 - SKIPPED ON WEB
 - REFUSED
 - Not sure
-- '2019'
-- '2020'
-- '2021'
-- '2022'
 - I don't know
 - "Don\u2019t know"
 - Under 18
+- ''
+primaryKey: caseid
