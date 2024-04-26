@@ -64,7 +64,7 @@ value_labels:
   labels51:
     1: 'Yes'
     2: 'No'
-    77: "Don\u2019t know"
+    77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
   labels53:
@@ -154,8 +154,6 @@ value_labels:
     77: "Don\u2019t know"
     98: SKIPPED ON WEB
     99: REFUSED
-  labels100:
-    0: Under 1 minute
   labels101:
     1: Phone interview
     2: Web Interview
@@ -216,11 +214,11 @@ value_labels:
     5: Never married
     6: Living with partner
   labels110:
-    1: "Working \u2013 as a paid employee"
-    2: "Working \u2013 self employed"
-    3: "Not working \u2013 looking for work or on temporary layoff"
-    4: "Not working \u2013 retired"
-    5: "Not working \u2013 disabled"
+    1: Working - as a paid employee
+    2: Working - self employed
+    3: Not working - looking for work or on temporary layoff
+    4: Not working - retired
+    5: Not working - disabled
     6: Not working - other
   labels111:
     1: Northeast
@@ -380,7 +378,6 @@ field_to_value_label:
   familyoverdose_last: labels85
   familyconviction_ever: labels90
   familyincarceration_ever: labels90
-  duration_jcoin: labels100
   surv_mode: labels101
   surv_lang: labels102
   gender: labels103

@@ -7,19 +7,21 @@ def survey1(df):
             .assign(employ=df.employ.str.replace('–','-'))
     )
 
-def w2(df):
-    """Clean Wave 2 data."""
+def survey2(df):
+    """Clean Survey 2 data."""
 
     return (df
+            .assign(employ=df.employ.str.replace('–','-'))
             .replace({'familyuse_ever':{'Don’t know':"DON'T KNOW"}})
     )
 
-def w3(df):
-    """Clean Wave 3 data."""
+def survey3(df):
+    """Clean Survey 3 data."""
 
-    return(df
-           .replace({'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
-                     'duration_norcnd':{'Under 1 minute':'0'}})
+    return (df
+            .assign(employ=df.employ.str.replace('–','-'))
+            .replace({'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
+                      'duration_norcnd':{'Under 1 minute':'0'}})
     )
 
 def w4(df):

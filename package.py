@@ -9,7 +9,11 @@ import cleaning
 
 VERSION = '2.0'
 DATASETS = [{'name':'survey1',
-             'filename':'omnibus_survey1_2020-02_072821'}]
+             'filename':'omnibus_survey1_2020-02_072821'},
+            {'name':'survey2',
+             'filename':'omnibus_survey2_2020-04_072821'},
+            {'name':'survey3',
+             'filename':'omnibus_survey3_2020-06_072821'}]
 
 resources = []
 for dataset in DATASETS:
