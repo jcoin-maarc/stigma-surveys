@@ -13,7 +13,11 @@ DATASETS = [{'name':'survey1',
             {'name':'survey2',
              'filename':'omnibus_survey2_2020-04_072821'},
             {'name':'survey3',
-             'filename':'omnibus_survey3_2020-06_072821'}]
+             'filename':'omnibus_survey3_2020-06_072821'},
+            {'name':'survey4',
+             'filename':'omnibus_survey4_2020-10_072821'},
+            {'name':'survey5',
+             'filename':'omnibus_survey5_2021-02_072821'}]
 
 resources = []
 for dataset in DATASETS:

@@ -24,17 +24,19 @@ def survey3(df):
                       'duration_norcnd':{'Under 1 minute':'0'}})
     )
 
-def w4(df):
-    """Clean Wave 4 data."""
+def survey4(df):
+    """Clean Survey 4 data."""
 
     return (df
+            .assign(employ=df.employ.str.replace('–','-'))
             .replace({'familyuse_ever':{'0':'No'}})
     )
 
-def w5(df):
-    """Clean Wave 5 data."""
+def survey5(df):
+    """Clean Survey 5 data."""
 
     return (df
+            .assign(employ=df.employ.str.replace('–','-'))
             .replace({'personalmisuse_lifetime':{'77':"DON'T KNOW",
                                                  '98':'SKIPPED ON WEB',
                                                  '99':'REFUSED'},
@@ -48,8 +50,3 @@ def w5(df):
                       'pidi':{"Don’t lean":"Don't lean"}}
                     )
     )
-
-def w6(df):
-    """Clean Wave 6 data."""
-
-    return df

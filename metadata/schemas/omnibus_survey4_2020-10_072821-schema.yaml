@@ -1100,15 +1100,18 @@ fields:
 - name: startdt_jcoin
   title: NORC-PH NIDA/JCOIN W4 Omnibus Section start date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: enddt_jcoin
   title: NORC-PH NIDA/JCOIN W4 Omnibus Section end date/time
   type: datetime
+  custom:
+    jcoin:
+      exclude_from_release: true
 - name: duration_jcoin
   title: 'NORC-PH NIDA/JCOIN W4 Omnibus Section: Interview duration in minutes'
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode (online or phone)
   type: string
@@ -1191,11 +1194,11 @@ fields:
   type: string
   constraints:
     enum:
-    - "Working \u2013 as a paid employee"
-    - "Working \u2013 self employed"
-    - "Not working \u2013 looking for work or on temporary layoff"
-    - "Not working \u2013 retired"
-    - "Not working \u2013 disabled"
+    - Working - as a paid employee
+    - Working - self employed
+    - Not working - looking for work or on temporary layoff
+    - Not working - retired
+    - Not working - disabled
     - Not working - other
 - name: region4
   title: 4-level region
@@ -1463,3 +1466,5 @@ missingValues:
 - Refused
 - DontKnow
 - Under 18
+- ''
+primaryKey: caseid
