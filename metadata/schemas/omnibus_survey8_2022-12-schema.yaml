@@ -2115,7 +2115,5 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- "DON\u2019T KNOW"
-- Under 18
 - ''
 primaryKey: caseid

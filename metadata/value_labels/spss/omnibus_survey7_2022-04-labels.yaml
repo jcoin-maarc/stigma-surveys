@@ -26,7 +26,6 @@ value_labels:
     2: Yes, but was not tested
     3: No, and tested negative
     4: No, never had symptoms and never tested
-    77: Not sure
     98: SKIPPED ON WEB
     99: REFUSED
   labels18:
@@ -110,7 +109,6 @@ value_labels:
     3: No, I will not allow him/her/them to get a COVID-19 vaccine
     4: Some of my children under 5 will get the vaccine and at least one of my children
       will not
-    77: Not sure
     98: SKIPPED ON WEB
     99: REFUSED
   labels30:

@@ -2136,13 +2136,8 @@ fields:
     - 2 or more
 missingValues:
 - DON'T KNOW
+- NOT SURE
 - SKIPPED ON WEB
 - REFUSED
-- Not sure
-- "Don\u2019t know/unsure"
-- "Don\u2019t know"
-- Don't know
-- "DON\u2019T KNOW"
-- Under 18
 - ''
 primaryKey: caseid

@@ -29,7 +29,8 @@ def survey4(df):
 
     return (df
             .assign(employ=df.employ.str.replace('–','-'))
-            .replace({'familyuse_ever':{'0':'No'}})
+            .replace({'familyuse_ever':{'0':'No'},
+                      'vaxplans':{'DontKnow':"DON'T KNOW"}})
     )
 
 def survey5(df):
@@ -47,7 +48,8 @@ def survey5(df):
                                                '98':'SKIPPED ON WEB',
                                                '99':'REFUSED'},
                       'personaluse_last':{'7 – 12 months ago':'7-12 months ago'},
-                      'pidi':{"Don’t lean":"Don't lean"}}
+                      'pidi':{"Don’t lean":"Don't lean"},
+                      'vaxplans':{'Not sure':'NOT SURE'}}
                     )
     )
 

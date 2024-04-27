@@ -19,7 +19,7 @@ value_labels:
     3: Yes, I will get a coronavirus vaccine, but I will wait until I see more proof
       that it is safe and effective
     4: No, I will not get a coronavirus vaccine
-    77: Not sure
+    77: NOT SURE
     98: SKIPPED ON WEB
     99: REFUSED
   labels3:

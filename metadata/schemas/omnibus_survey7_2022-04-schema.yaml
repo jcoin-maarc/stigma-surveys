@@ -1347,9 +1347,5 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- Not sure
-- I don't know
-- "Don\u2019t know"
-- Under 18
 - ''
 primaryKey: caseid

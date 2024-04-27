@@ -38,7 +38,7 @@ value_labels:
     1: Yes, I will get a coronavirus vaccine as soon as it is available to me
     2: Yes, I will get a coronavirus vaccine, but I will wait until it is proven to
       be safe and effective
-    77: DontKnow
+    77: DON'T KNOW
   labels62:
     1: Yes, I already got the vaccine this year
     2: Yes, I plan to get the vaccine this year
