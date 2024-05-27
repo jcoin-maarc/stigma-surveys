@@ -10,7 +10,8 @@ SURVEYS = {1:'omnibus_survey1_2020-02_072821-schema.yaml',
            4:'omnibus_survey4_2020-10_072821-schema.yaml',
            5:'omnibus_survey5_2021-02_072821-schema.yaml',
            7:'omnibus_survey7_2022-04-schema.yaml',
-           8:'omnibus_survey8_2022-12-schema.yaml'}
+           8:'omnibus_survey8_2022-12-schema.yaml',
+           9:'omnibus_survey9_2023-05-schema.yaml'}
 
 fields = {}
 for s in SURVEYS:
