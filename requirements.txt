@@ -1,0 +1,4 @@
+frictionless
+git+https://gitlab.com/pschumm/data-forge.git # latest pypi version doesn't have write_to_stata function
+pandas
+dvc
