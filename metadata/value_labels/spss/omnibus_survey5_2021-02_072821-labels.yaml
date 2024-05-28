@@ -19,15 +19,12 @@ value_labels:
     3: Yes, I will get a coronavirus vaccine, but I will wait until I see more proof
       that it is safe and effective
     4: No, I will not get a coronavirus vaccine
-    77: NOT SURE
+    77: Not sure
     98: SKIPPED ON WEB
     99: REFUSED
   labels3:
     0: 'No'
     1: 'Yes'
-    77: DON'T KNOW
-    98: SKIPPED ON WEB
-    99: REFUSED
   labels27:
     1: 'No'
     2: 'Yes'
@@ -127,7 +124,7 @@ value_labels:
     99: REFUSED
   labels179:
     1: Past 6 months
-    2: 7-12 months ago
+    2: "7 \u2013 12 months ago"
     3: 1-5 years ago
     4: 5+ years ago
     77: DON'T KNOW
@@ -217,7 +214,7 @@ value_labels:
   labels200:
     1: Lean Democrat
     2: Lean Republican
-    3: Don't lean
+    3: "Don\u2019t lean"
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
@@ -306,11 +303,11 @@ value_labels:
     5: Never married
     6: Living with partner
   labels215:
-    1: Working - as a paid employee
-    2: Working - self employed
-    3: Not working - looking for work or on temporary layoff
-    4: Not working - retired
-    5: Not working - disabled
+    1: "Working \u2013 as a paid employee"
+    2: "Working \u2013 self employed"
+    3: "Not working \u2013 looking for work or on temporary layoff"
+    4: "Not working \u2013 retired"
+    5: "Not working \u2013 disabled"
     6: Not working - other
   labels216:
     1: Less than $30,000
@@ -358,6 +355,23 @@ value_labels:
     4: '4'
     5: '5'
     6: 6 or more
+  labels234:
+    1: Several hours
+    2: Several days(<1 week)
+    3: Several weeks (<1 month)
+    4: Several months
+    77: I don't know
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels248:
+    1: Always
+    2: Sometimes
+    3: Never
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels256:
+    1: AnswerCode
 field_to_value_label:
   fluvax: labels0
   fluvax_employ: labels1
@@ -604,3 +618,35 @@ field_to_value_label:
   personalcrimjust_recent: labels3
   familycrimjust_recent: labels3
   hh05: labels224
+  q23: labels65
+  q22a: labels65
+  q24: labels65
+  q24a: labels65
+  q24b: labels65
+  q24b1: labels234
+  q24c_1: labels3
+  q24c_2: labels3
+  q24c_3: labels3
+  q24c_dk: labels3
+  q24c_skp: labels3
+  q24c_ref: labels3
+  q24c1_1: labels3
+  q24c1_2: labels3
+  q24c1_3: labels3
+  q24c1_4: labels3
+  q24c1_dk: labels3
+  q24c1_skp: labels3
+  q24c1_ref: labels3
+  q24c2a: labels248
+  q24c2b: labels248
+  q24c2c: labels248
+  q24c2d: labels248
+  q24c2e: labels248
+  q24c2f: labels248
+  q24c2g: labels248
+  q24c2h: labels248
+  q24c2h_oe: labels256
+  q25: labels65
+  q25a: labels39
+  q26: labels65
+  q26a: labels39

@@ -38,7 +38,7 @@ value_labels:
     1: Yes, I will get a coronavirus vaccine as soon as it is available to me
     2: Yes, I will get a coronavirus vaccine, but I will wait until it is proven to
       be safe and effective
-    77: DON'T KNOW
+    77: DontKnow
   labels62:
     1: Yes, I already got the vaccine this year
     2: Yes, I plan to get the vaccine this year
@@ -90,6 +90,8 @@ value_labels:
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
+  labels83:
+    0: Under 1 minute
   labels84:
     1: Phone interview
     2: Web Interview
@@ -136,11 +138,11 @@ value_labels:
     5: Never married
     6: Living with partner
   labels92:
-    1: Working - as a paid employee
-    2: Working - self employed
-    3: Not working - looking for work or on temporary layoff
-    4: Not working - retired
-    5: Not working - disabled
+    1: "Working \u2013 as a paid employee"
+    2: "Working \u2013 self employed"
+    3: "Not working \u2013 looking for work or on temporary layoff"
+    4: "Not working \u2013 retired"
+    5: "Not working \u2013 disabled"
     6: Not working - other
   labels93:
     1: Northeast
@@ -330,6 +332,7 @@ field_to_value_label:
   familyuse_ever: labels78
   familyconviction_ever: labels78
   familyincarceration_ever: labels78
+  duration_jcoin: labels83
   surv_mode: labels84
   surv_lang: labels85
   gender: labels86

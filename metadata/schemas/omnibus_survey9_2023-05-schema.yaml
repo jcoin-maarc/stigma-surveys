@@ -1,0 +1,2775 @@
+fields:
+- name: caseid
+  type: number
+  title: Case ID
+- name: weight
+  type: number
+  title: Post-stratification weights - 18+ general population (N=1,239)
+- name: ps_a_medicaid
+  type: string
+  title: '[I favor expanding Medicaid insurance benefits for low-income families to
+    provide coverage for treatment of opioid use disorders.] Do you disagree or agree
+    with the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_prevent
+  type: string
+  title: '[The government should spend more money to support opioid prevention programs,
+    such as educating students about the impacts of opioid addiction.] Do you disagree
+    or agree with the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_minors
+  type: string
+  title: '[The government should spend more money on making treatment for opioid use
+    disorder available and accessible to minors with an opioid use disorder.] Do you
+    disagree or agree with the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_otc
+  type: string
+  title: '[I support the FDA approving the first over the counter (i.e., without a
+    prescription) naloxone nasal spray...] Do you disagree or agree with the following
+    statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_c_mandatory
+  type: string
+  title: '[I believe that making treatment mandatory is an effective way to help people
+    with an opioid use disorder.] Do you disagree or agree with the following statements
+    on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_treatment
+  type: string
+  title: '[I favor passing laws to protect people from criminal charges for drug related
+    crimes if they attend substance use treatment.] Do you disagree or agree with
+    the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ps_l_jailtreatment
+  type: string
+  title: '[I believe that people in jail/prison with an opioid use disorder should
+    be allowed access to medication for their opioid use disorder...] Do you disagree
+    or agree with the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: req_treat_prob
+  type: string
+  title: '[Individuals who are on parole or probation with an opioid use disorder
+    should be required to attend substance use treatment.] Do you disagree or agree
+    with the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_jailhelp
+  type: string
+  title: '[Jailing someone with an opioid use disorder for at least a few days will
+    help them by reducing their risk for an overdose.] Do you disagree or agree with
+    the following statements on opioid policy?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_b_anyuse
+  type: string
+  title: '[Anyone who uses opioids long-term for pain has an opioid use disorder.]
+    Do you disagree or agree with the following statements about opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_f_stopbreath
+  type: string
+  title: '[Using opioids can slow your breathing or even cause you to stop breathing
+    entirely and lead to an overdose or death.] Do you disagree or agree with the
+    following statements about opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_h_medicalcondition
+  type: string
+  title: '[Opioid use disorder is a medical condition like other chronic health conditions.]
+    Do you disagree or agree with the following statements about opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_fentanyl
+  type: string
+  title: '[Fentanyl is a big problem in my community.] Do you disagree or agree with
+    the following statements about opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_fda
+  type: string
+  title: '[Approved medications that are effective (or successful) in treating opioid
+    use disorder exist.] Do you disagree or agree with the following statements about
+    treatment for opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_recover
+  type: string
+  title: '[Some forms of substance use treatment are effective (or successful) at
+    helping people recover from an opioid use disorder.] Do you disagree or agree
+    with the following statements about treatment for opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_easyfind
+  type: string
+  title: '[Effective (or successful) treatment for an opioid use disorder is easy
+    to find.] Do you disagree or agree with the following statements about treatment
+    for opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_recovcont
+  type: string
+  title: '[Recovery (from opioid use disorder) is a continuous process that never
+    ends.] Do you disagree or agree with the following statements about recovery from
+    opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: recovery_common
+  type: string
+  title: '[Recovery is the most common outcome for individuals with an opioid use
+    disorder.] Do you disagree or agree with the following statements about recovery
+    from opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: failing_common
+  type: string
+  title: '[Multiple failed attempts (for example, relapse) are a common characteristic
+    of recovery from opioid use disorder.] Do you disagree or agree with the following
+    statements about recovery from opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: inst_blame
+  type: string
+  title: '[A person with an opioid use disorder only has themselves to blame for their
+    problems.] Do you disagree or agree with the following statements about people
+    who have an opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_c_selfcontrol
+  type: string
+  title: '[Most people who develop an opioid use disorder lack self-control.] Do you
+    disagree or agree with the following statements about people who have an opioid
+    use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_e_quitanytime
+  type: string
+  title: '[A person struggling with an opioid use disorder can choose to quit using
+    opioids at any time if they put their mind to it.] Do you disagree or agree with
+    the following statements about people who have an opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_seekprofessional
+  type: string
+  title: '[People with an opioid use disorder should seek professional help.] Do you
+    disagree or agree with the following statements about people who have an opioid
+    use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_longterm
+  type: string
+  title: '[People with an opioid use disorder require long-term treatment in order
+    to recover.] Do you disagree or agree with the following statements about people
+    who have an opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: kb_medsrecov
+  type: string
+  title: '[People with an opioid use disorder need medications in order to recover.]
+    Do you disagree or agree with the following statements about people who have an
+    opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: family_know_treatment
+  type: string
+  title: '[I would want my friends and family to know if I sought treatment for an
+    opioid use disorder.] Do you disagree or agree with the following statements about
+    you in relation to opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: friend_know_respond
+  type: string
+  title: '[If a friend had a problem with opioid addiction, I would know how to respond.]
+    Do you disagree or agree with the following statements about you in relation to
+    opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: friend_tell_treatment
+  type: string
+  title: '[I would want my friend to tell me if they sought treatment for an opioid
+    use disorder.] Do you disagree or agree with the following statements about you
+    in relation to opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: encourage_friend_treatment
+  type: string
+  title: '[I would encourage my friend to seek treatment if they had an opioid use
+    disorder.] Do you disagree or agree with the following statements about you in
+    relation to opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: generalhcp_notreat
+  type: string
+  title: '[I would not want my general health care provider to treat individuals with
+    an opioid use disorder.] Do you disagree or agree with the following statements
+    about you in relation to opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: opinion_changed
+  type: string
+  title: '[My opinions about opioid use disorder have changed over the last 5 years.]
+    Do you disagree or agree with the following statements about you in relation to
+    opioid use disorder?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: at_risk
+  type: string
+  title: "[Given my family history and/or prior experience...I think I would be considered\
+    \ \u201Cat risk\u201D for developing an opioid use disorder.] Do you disagree\
+    \ or agree with the following statements about you in relation to opioid use disorder?"
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: how_opinions_changed
+  type: string
+  title: How have your opinions about opioid use disorder changed over the past 5
+    years, and what are some things that influence/influenced your views around opioids
+    and opioid use disorder?
+  constraints:
+    enum:
+    - DON'T KNOW
+    - SKIPPED ON WEB
+    - REFUSED
+- name: ss_a_historywork
+  type: string
+  title: '[I would be willing to have a person with a past history of opioid use disorder
+    start working closely with me on a job.] Do you disagree or agree with the following
+    statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_c_currentwork
+  type: string
+  title: '[I would be willing to have a person with a current opioid use disorder
+    start working closely with me on a job.] Do you disagree or agree with the following
+    statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_d_currentmarry
+  type: string
+  title: '[I would be comfortable having a person with a current opioid use disorder
+    marry into my close or immediate family.] Do you disagree or agree with the following
+    statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_b_historymarry
+  type: string
+  title: '[I am comfortable having a person with a past history of opioid use disorder
+    marry into my close or immediate family.] Do you disagree or agree with the following
+    statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_e_dangerous
+  type: string
+  title: '[People with a current opioid use disorder are more dangerous than the general
+    population.] Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_f_trust
+  type: string
+  title: '[A person who currently has an opioid use disorder cannot be trusted.] Do
+    you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_currentsteal
+  type: string
+  title: '[A person who currently has an opioid use disorder would be willing to steal
+    money or valuable items in order to get drugs.] Do you disagree or agree with
+    the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_historysteal
+  type: string
+  title: '[A person who has a past history of opioid use disorder might be tempted
+    to take money or valuable items out of desperation to get drugs.] Do you disagree
+    or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_currenthighrisk
+  type: string
+  title: '[A person who currently has an opioid use disorder is likely to experience
+    personal problems that would make them a high-risk employee in my workplace.]
+    Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: ss_historyhighrisk
+  type: string
+  title: '[A person who has a past history of opioid use disorder is likely to experience
+    personal problems that would make them a high-risk employee in my workplace.]
+    Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_white
+  type: number
+  title: '[White] Out of 100 people with an opioid use disorder, how many do you think
+    are:'
+- name: race_black
+  type: number
+  title: '[Black] Out of 100 people with an opioid use disorder, how many do you think
+    are:'
+- name: race_latino
+  type: number
+  title: '[Latino] Out of 100 people with an opioid use disorder, how many do you
+    think are:'
+- name: race_asian
+  type: number
+  title: '[Asian] Out of 100 people with an opioid use disorder, how many do you think
+    are:'
+- name: race_americanindian_alaskannative
+  type: number
+  title: '[American Indian/Alaskan Native] Out of 100 people with an opioid use disorder,
+    how many do you think are:'
+- name: personaluse_feelgood
+  type: string
+  title: "Have you ever taken a prescription opioid medication in a way other than\
+    \ as directed by a medical provider or non-prescribed/illegal opioids, for example,\
+    \ to feel good/get high or because you would get sick if you didn\u2019t take\
+    \ it?"
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: personaloverdose_ever
+  type: string
+  title: Have you ever overdosed (i.e., taken a high dose of opioids leading to the
+    slowing or stopping of breathing) from using opioids?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: personalmisuse_recovering
+  type: string
+  title: Are you currently recovering or have you recovered from opioid use disorder/misuse?
+  constraints:
+    enum:
+    - Yes, I am currently recovering
+    - Yes, I recovered in the past
+    - Yes, I am currently recovering and I have in the past
+    - 'No'
+- name: personalhelp_others
+  type: string
+  title: Have you received help from others in your [past recovery/current recovery]
+    from opioid use disorder?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: parent_helped
+  type: string
+  title: '[Parent] Who [helped/is helping] you in your recovery from opioid use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sibling_helped
+  type: string
+  title: '[Sibling] Who [helped/is helping] you in your recovery from opioid use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: child_helped
+  type: string
+  title: '[Child] Who [helped/is helping] you in your recovery from opioid use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: otherrelative_helped
+  type: string
+  title: '[Other relative] Who [helped/is helping] you in your recovery from opioid
+    use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: closefriend_helped
+  type: string
+  title: '[Close friend] Who [helped/is helping] you in your recovery from opioid
+    use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spouse_helped
+  type: string
+  title: '[Spouse/romantic partner] Who [helped/is helping] you in your recovery from
+    opioid use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: other_helped
+  type: string
+  title: '[Other] Who [helped/is helping] you in your recovery from opioid use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: noanswer_helped
+  type: string
+  title: '[Prefer not to answer] Who [helped/is helping] you in your recovery from
+    opioid use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: dontknow_helped
+  type: string
+  title: '[DON''T KNOW] Who [helped/is helping] you in your recovery from opioid use
+    disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: skipped_helped
+  type: string
+  title: '[SKIPPED ON WEB] Who [helped/is helping] you in your recovery from opioid
+    use disorder?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: fin_assist
+  type: string
+  title: '[Financial assistance] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: housing_assist
+  type: string
+  title: '[Housing assistance/place to live] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: transp_assist
+  type: string
+  title: '[Transportation to medical or other appointments] What sort of assistance
+    did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: legal_assist
+  type: string
+  title: '[Assistance with legal difficulties] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: childcare_assist
+  type: string
+  title: '[Child care or other help so I could go to my appointments] What sort of
+    assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: emotional_support
+  type: string
+  title: '[Emotional support] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: log_medassist
+  type: string
+  title: '[Logistical help to begin or continue medication for opioid use disorder
+    treatment] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: log_progassist
+  type: string
+  title: '[Logistical help to begin or continue twelve-step or mutual help programs
+    like Narcotics Anonymous] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: log_harmreduc
+  type: string
+  title: '[Logistical help to begin or continue harm reduction services such as needle
+    exchange to reduce the risk of blood-borne infection] What sort of assistance
+    did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: assistprov_naloxnarc
+  type: string
+  title: '[Access to naloxone/Narcan to reduce the risk of fatal overdose] What sort
+    of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: assistprov_other
+  type: string
+  title: '[Other, please specify] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: assistprov_textbox
+  type: null
+  title: '[TEXTBOX] What sort of assistance did they provide?'
+- name: assistprov_dontknow
+  type: string
+  title: '[DON''T KNOW] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: assistprov_skipped
+  type: string
+  title: '[SKIPPED ON WEB] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: assistprov_refused
+  type: string
+  title: '[REFUSED] What sort of assistance did they provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: assistreceive_financial
+  type: string
+  title: '[Financial assistance] From the people who supported you in your recovery,
+    what sort of assistance did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_housing
+  type: string
+  title: '[Housing assistance/place to live] From the people who supported you in
+    your recovery, what sort of assistance did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_transpo
+  type: string
+  title: '[Transportation to medical or other appointments] From the people who supported
+    you in your recovery, what sort of assistance did you most require or hope to
+    receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_legal
+  type: string
+  title: '[Assistance with legal difficulties] From the people who supported you in
+    your recovery, what sort of assistance did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_childcare
+  type: string
+  title: '[Child care or other help so you could go to your appointments] From the
+    people who supported you in your recovery, what sort of assistance did you most
+    require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_emotionalsupp
+  type: string
+  title: '[Emotional support] From the people who supported you in your recovery,
+    what sort of assistance did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_medication
+  type: string
+  title: '[Logistical help to begin or continue medication for opioid use disorder
+    treatment] From the people who supported you in your recovery, what sort of assistance
+    did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_helpprog
+  type: string
+  title: '[Logistical help to begin or continue twelve-step or mutual help programs
+    like Narcotics Anonymous] From the people who supported you in your recovery,
+    what sort of assistance did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_harmred
+  type: string
+  title: '[Logistical help to begin or continue harm reduction services such as needle
+    exchange to reduce the risk of blood-borne infection] From the people who supported
+    you in your recovery, what sort of assistance did you most require or hope to
+    receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_naloxnarc
+  type: string
+  title: '[Access to naloxone/Narcan to reduce the risk of fatal overdose] From the
+    people who supported you in your recovery, what sort of assistance did you most
+    require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_other
+  type: string
+  title: '[Other, please specify] From the people who supported you in your recovery,
+    what sort of assistance did you most require or hope to receive?'
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: assistreceive_textbox
+  type: null
+  title: '[TEXTBOX] From the people who supported you in your recovery, what sort
+    of assistance did you most require or hope to receive?'
+- name: successful_support
+  type: string
+  title: How effective or successful was their help in assisting your recovery?
+  constraints:
+    enum:
+    - Very effective
+    - Relatively effective
+    - Helpful, though at times less effective than I had hoped
+    - Relatively ineffective
+    - Very ineffective
+- name: burden_support
+  type: string
+  title: How much of a burden do you think they experienced providing you with their
+    support?
+  constraints:
+    enum:
+    - Not very much of a burden
+    - A mild burden
+    - Moderate burden
+    - Heavy burden
+    - A very heavy burden
+- name: satisfying_support
+  type: string
+  title: What would you say was the most satisfying or helpful aspect for you in receiving
+    their support?
+  constraints:
+    enum:
+    - DON'T KNOW
+    - SKIPPED ON WEB
+    - REFUSED
+- name: frustrating_support
+  type: string
+  title: What would you say was the most frustrating or disappointing aspect for you
+    in receiving their support?
+  constraints:
+    enum:
+    - DON'T KNOW
+    - SKIPPED ON WEB
+    - REFUSED
+- name: contact_supporter
+  type: string
+  title: Are you still in contact with your supporter(s)?
+  constraints:
+    enum:
+    - Very frequent contact
+    - Regular contact
+    - Occasional contact
+    - Very little contact
+    - No contact at all
+- name: suppsys_work
+  type: string
+  title: "[Work] What activities, groups, or organizations have provided you with\
+    \ a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_school
+  type: string
+  title: "[School] What activities, groups, or organizations have provided you with\
+    \ a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_volunteerwork
+  type: string
+  title: "[Volunteer work] What activities, groups, or organizations have provided\
+    \ you with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_church
+  type: string
+  title: "[Church/faith organization] What activities, groups, or organizations have\
+    \ provided you with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_supportgroup
+  type: string
+  title: "[Support groups] What activities, groups, or organizations have provided\
+    \ you with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_counseling
+  type: string
+  title: "[Counseling] What activities, groups, or organizations have provided you\
+    \ with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_other
+  type: string
+  title: "[Other, please specify] What activities, groups, or organizations have provided\
+    \ you with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_textbox
+  type: null
+  title: "[TEXTBOX] What activities, groups, or organizations have provided you with\
+    \ a recovery support\_system?"
+- name: suppsys_donthave
+  type: string
+  title: "[I don\u2019t have a support system for recovery] What activities, groups,\
+    \ or organizations have provided you with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_dontknow
+  type: string
+  title: "[DON'T KNOW] What activities, groups, or organizations have provided you\
+    \ with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_skipped
+  type: string
+  title: "[SKIPPED ON WEB] What activities, groups, or organizations have provided\
+    \ you with a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: suppsys_refused
+  type: string
+  title: "[REFUSED] What activities, groups, or organizations have provided you with\
+    \ a recovery support\_system?"
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: alcoholuse
+  type: string
+  title: '[Alcohol] Have you ever used any of the following substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: cannabisuse
+  type: string
+  title: '[Cannabis products such as marijuana] Have you ever used any of the following
+    substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: heroinuse
+  type: string
+  title: '[Heroin] Have you ever used any of the following substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: fentanyluse
+  type: string
+  title: '[Fentanyl] Have you ever used any of the following substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: otheropioiduse
+  type: string
+  title: '[Other opioids, such as prescription pain medication] Have you ever used
+    any of the following substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: crackuse
+  type: string
+  title: '[Crack or other forms of cocaine] Have you ever used any of the following
+    substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: methuse
+  type: string
+  title: '[Methamphetamines, amphetamines or other forms of speed] Have you ever used
+    any of the following substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: xanaxuse
+  type: string
+  title: '[Xanax, benzodiazepines, or other antianxiety drugs or tranquilizers] Have
+    you ever used any of the following substances in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: otheruse
+  type: string
+  title: '[Other, please specify] Have you ever used any of the following substances
+    in your life?'
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: textboxuse
+  type: null
+  title: '[TEXTBOX] Have you ever used any of the following substances in your life?'
+- name: nouse
+  type: string
+  title: '[NONE] Have you ever used any of the following substances in your life?'
+  constraints:
+    enum:
+    - None of the above
+- name: alcohol_month
+  type: string
+  title: '[Drank alcohol] Over the past 30 days, what is your best estimate of the
+    number of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: cannabis_month
+  type: string
+  title: '[Used cannabis products such as marijuana] Over the past 30 days, what is
+    your best estimate of the number of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: heroin_month
+  type: string
+  title: '[Used heroin] Over the past 30 days, what is your best estimate of the number
+    of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: fentanyl_month
+  type: string
+  title: '[Used fentanyl] Over the past 30 days, what is your best estimate of the
+    number of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: opioids_month
+  type: string
+  title: '[Used other opioids] Over the past 30 days, what is your best estimate of
+    the number of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: cocaine_month
+  type: string
+  title: '[Used crack or other forms of cocaine] Over the past 30 days, what is your
+    best estimate of the number of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: meth_month
+  type: string
+  title: '[Used methamphetamines, amphetamines or other forms of speed] Over the past
+    30 days, what is your best estimate of the number of days that you did each of
+    the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: xanax_month
+  type: string
+  title: '[Used Xanax, benzodiazepines, or other antianxiety drugs or tranquilizers]
+    Over the past 30 days, what is your best estimate of the number of days that you
+    did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: other_month
+  type: string
+  title: '[Used some other drug] Over the past 30 days, what is your best estimate
+    of the number of days that you did each of the following activities?'
+  constraints:
+    enum:
+    - 1 or 2 days
+    - 3 to 5 days
+    - 6 to 9 days
+    - 10 to 19 days
+    - 20 to 29 days
+    - All 30 days
+    - Have not used in the past 30 days
+- name: familyoud
+  type: string
+  title: Have any family members or close friends ever had an opioid use disorder
+    or misused opioids?
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: familyoverdose_ever
+  type: string
+  title: Has a family member or close friend ever overdosed from using opioids?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: familyoverdose_died
+  type: string
+  title: Has a family member or close friend ever died from an opioid overdose?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: recproc_help
+  type: string
+  title: Have you helped anyone with their recovery from opioid use misuse/disorder?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: recproc_when
+  type: string
+  title: When did you help someone with their recovery? If you helped multiple people,
+    please answer for the person you most recently helped.
+  constraints:
+    enum:
+    - Currently
+    - Within past year
+    - Within past 2 years
+    - Within 3-5 years
+    - Over 5 years ago
+- name: recproc_who
+  type: string
+  title: Who [did you help/are you helping] with their recovery from opioid use disorder/misuse?
+    If you helped multiple people, please answer for the person you most recently
+    helped.
+  constraints:
+    enum:
+    - Parent
+    - Sibling
+    - Child
+    - Other relative
+    - Close friend
+    - Spouse/romantic partner
+    - Other
+    - Prefer not to answer
+- name: recasst_finance
+  type: string
+  title: '[Financial assistance] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_hous
+  type: string
+  title: '[Housing assistance/place to live] What sort of assistance were you able
+    to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_trans
+  type: string
+  title: '[Transportation to medical or other appointments] What sort of assistance
+    were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_legal
+  type: string
+  title: '[Assistance with legal difficulties] What sort of assistance were you able
+    to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_child
+  type: string
+  title: '[Child care or other help so they could go to their appointments] What sort
+    of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_emsppt
+  type: string
+  title: '[Emotional support] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_med
+  type: string
+  title: '[Logistical help to begin or continue medication for opioid use disorder
+    treatment] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_12stp
+  type: string
+  title: '[Logistical help to begin or continue twelve-step or mutual help programs
+    like Narcotics Anonymous] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_hrmrdct
+  type: string
+  title: '[Logistical help to begin or continue harm reduction services such as needle
+    exchange to reduce the risk of blood-borne infection] What sort of assistance
+    were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_narcn
+  type: string
+  title: '[Access to naloxone/Narcan to reduce the risk of fatal overdose] What sort
+    of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_othr
+  type: string
+  title: '[Other] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_oe
+  type: null
+  title: '[TEXTBOX] What sort of assistance were you able to provide?'
+- name: recasst_dk
+  type: string
+  title: '[DON''T KNOW] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_skp
+  type: string
+  title: '[SKIPPED ON WEB] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: recasst_ref
+  type: string
+  title: '[REFUSED] What sort of assistance were you able to provide?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: req_finance
+  type: string
+  title: "[Financial assistance] What sort of assistance did this person most require?\
+    \ Please rank the top 3. Select \u20181\u2019 for your top choice, \u20182\u2019\
+    \ for your second choice, and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_hous
+  type: string
+  title: "[Housing assistance/place to live] What sort of assistance did this person\
+    \ most require? Please rank the top 3. Select \u20181\u2019 for your top choice,\
+    \ \u20182\u2019 for your second choice, and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_trans
+  type: string
+  title: "[Transportation to medical or other appointments] What sort of assistance\
+    \ did this person most require? Please rank the top 3. Select \u20181\u2019 for\
+    \ your top choice, \u20182\u2019 for your second choice, and a \u20183\u2019 for\
+    \ your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_legal
+  type: string
+  title: "[Assistance with legal difficulties] What sort of assistance did this person\
+    \ most require? Please rank the top 3. Select \u20181\u2019 for your top choice,\
+    \ \u20182\u2019 for your second choice, and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_child
+  type: string
+  title: "[Child care or other help so they could go to their appointments] What sort\
+    \ of assistance did this person most require? Please rank the top 3. Select \u2018\
+    1\u2019 for your top choice, \u20182\u2019 for your second choice, and a \u2018\
+    3\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_emsppt
+  type: string
+  title: "[Emotional support] What sort of assistance did this person most require?\
+    \ Please rank the top 3. Select \u20181\u2019 for your top choice, \u20182\u2019\
+    \ for your second choice, and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_med
+  type: string
+  title: "[Logistical help to begin or continue medication...] What sort of assistance\
+    \ did this person most require? Please rank the top 3. Select \u20181\u2019 for\
+    \ your top choice, \u20182\u2019 for your second choice, and a \u20183\u2019 for\
+    \ your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_12step
+  type: string
+  title: "[Logistical help to begin or continue twelve-step or mutual help programs...]\
+    \ What sort of assistance did this person most require? Please rank the top 3.\
+    \ Select \u20181\u2019 for your top choice, \u20182\u2019 for your second choice,\
+    \ and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_hrmrdct
+  type: string
+  title: "[Logistical help to begin or continue harm reduction services...] What sort\
+    \ of assistance did this person most require? Please rank the top 3. Select \u2018\
+    1\u2019 for your top choice, \u20182\u2019 for your second choice, and a \u2018\
+    3\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_narcn
+  type: string
+  title: "[Access to naloxone/Narcan...] What sort of assistance did this person most\
+    \ require? Please rank the top 3. Select \u20181\u2019 for your top choice, \u2018\
+    2\u2019 for your second choice, and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_othr
+  type: string
+  title: "[Other] What sort of assistance did this person most require? Please rank\
+    \ the top 3. Select \u20181\u2019 for your top choice, \u20182\u2019 for your\
+    \ second choice, and a \u20183\u2019 for your third choice."
+  constraints:
+    enum:
+    - '1'
+    - '2'
+    - '3'
+- name: req_oe
+  type: null
+  title: "[TEXTBOX] What sort of assistance did this person most require? Please rank\
+    \ the top 3. Select \u20181\u2019 for your top choice, \u20182\u2019 for your\
+    \ second choice, and a \u20183\u2019 for your third choice."
+- name: recasst_eff
+  type: string
+  title: "How effective do you believe your help was in assisting this person\u2019\
+    s recovery?"
+  constraints:
+    enum:
+    - Very effective
+    - Relatively effective
+    - Helpful, though at times less effective than I had hoped
+    - Relatively ineffective
+    - Very ineffective
+- name: recasst_brdn
+  type: string
+  title: How much of a burden did you experience providing this assistance?
+  constraints:
+    enum:
+    - Not very much of a burden
+    - A mild burden
+    - Moderate burden
+    - Heavy burden
+    - A very heavy burden
+- name: recasst_stsfy
+  type: string
+  title: What would you say was the most satisfying aspect of helping this person
+    with their recovery?
+  constraints:
+    enum:
+    - DON'T KNOW
+    - SKIPPED ON WEB
+    - REFUSED
+- name: recasst_dis
+  type: string
+  title: What would you say was the most frustrating or disappointing aspect of helping
+    this person with their recovery?
+  constraints:
+    enum:
+    - DON'T KNOW
+    - SKIPPED ON WEB
+    - REFUSED
+- name: recasst_contact
+  type: string
+  title: Are you still in contact with this person?
+  constraints:
+    enum:
+    - Very frequent contact
+    - Regular contact
+    - Occasional contact
+    - Very little contact
+    - No contact at all
+- name: personalconviction_ever
+  type: string
+  title: "[Have you ever been convicted of any misdemeanor or felony crime?] Please\
+    \ indicate \u201Cyes, within the last year\u201D, \u201Cyes, over a year ago\u201D\
+    , or \u201Cno\u201D in response to each question below:"
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: personalincarceration_ever
+  type: string
+  title: "[Have you ever been incarcerated in jail or prison?] Please indicate \u201C\
+    yes, within the last year\u201D, \u201Cyes, over a year ago\u201D, or \u201Cno\u201D\
+    \ in response to each question below:"
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: familyconviction_ever
+  type: string
+  title: "[Have any of your family members or close friends ever been convicted of\
+    \ any misdemeanor or felony crime?] Please indicate \u201Cyes, within the last\
+    \ year\u201D, \u201Cyes, over a year ago\u201D, or \u201Cno\u201D in response\
+    \ to each question below:"
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: familyincarceration_ever
+  type: string
+  title: "[Have any of your family members or close friends ever been incarcerated\
+    \ in jail or prison?] Please indicate \u201Cyes, within the last year\u201D, \u201C\
+    yes, over a year ago\u201D, or \u201Cno\u201D in response to each question below:"
+  constraints:
+    enum:
+    - Yes, within the last year
+    - Yes, more than a year ago
+    - 'No'
+- name: info_opepid
+  type: string
+  title: Thinking about the past 12 months, did you actively look for information
+    about the ongoing opioid epidemic from doctors, from other people, or from the
+    media?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: info_doc
+  type: string
+  title: '[Doctors or other medical professionals] From whom/where did you get your
+    information on the opioid epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_fam
+  type: string
+  title: '[Family, friends, or coworkers] From whom/where did you get your information
+    on the opioid epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_tv
+  type: string
+  title: '[Television] From whom/where did you get your information on the opioid
+    epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_radio
+  type: string
+  title: '[Radio] From whom/where did you get your information on the opioid epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_nwspr
+  type: string
+  title: '[Newspapers, magazines, or newsletters] From whom/where did you get your
+    information on the opioid epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_intsrch
+  type: string
+  title: '[Internet searches] From whom/where did you get your information on the
+    opioid epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_socmed
+  type: string
+  title: '[Social media] From whom/where did you get your information on the opioid
+    epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_othr
+  type: string
+  title: '[Other sources] From whom/where did you get your information on the opioid
+    epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_oe
+  type: null
+  title: '[TEXTBOX] From whom/where did you get your information on the opioid epidemic?'
+- name: info_dk
+  type: string
+  title: '[DON''T KNOW] From whom/where did you get your information on the opioid
+    epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_skp
+  type: string
+  title: '[SKIPPED ON WEB] From whom/where did you get your information on the opioid
+    epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: info_ref
+  type: string
+  title: '[REFUSED] From whom/where did you get your information on the opioid epidemic?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: rely_doc
+  type: string
+  title: '[I rely on doctors or other medical professionals for accurate information
+    on the opioid epidemic] Do you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_fam
+  type: string
+  title: '[I rely on family, friends, or coworkers for accurate information on the
+    opioid epidemic] Do you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_tv
+  type: string
+  title: '[I rely on television for accurate information on the opioid epidemic] Do
+    you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_radio
+  type: string
+  title: '[I rely on radio for accurate information on the opioid epidemic] Do you
+    agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_nwspr
+  type: string
+  title: '[I rely on newspapers, magazines, or newsletters for accurate information
+    on the opioid epidemic] Do you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_intsrch
+  type: string
+  title: '[I rely on internet searches for accurate information on the opioid epidemic]
+    Do you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_socmed
+  type: string
+  title: '[I rely on social media for accurate information on the opioid epidemic]
+    Do you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: rely_othr
+  type: string
+  title: '[I rely on other sources for accurate information on the opioid epidemic]
+    Do you agree or disagree with each of the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Disagree
+    - Neither agree nor disagree
+    - Agree
+    - Strongly agree
+- name: hearinfo
+  type: string
+  title: Thinking about the past 12 months, did you hear or come across information
+    about the ongoing opioid epidemic from doctors, from other people, or from the
+    media even when you were not actively looking for it?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: hear_doc
+  type: string
+  title: '[Doctors or other medical professionals] How many times did you hear or
+    come across information about the ongoing opioid epidemic from each of the following
+    sources when you were not actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_fam
+  type: string
+  title: '[Family, friends, or coworkers] How many times did you hear or come across
+    information about the ongoing opioid epidemic from each of the following sources
+    when you were not actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_tv
+  type: string
+  title: '[Television] How many times did you hear or come across information about
+    the ongoing opioid epidemic from each of the following sources when you were not
+    actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_radio
+  type: string
+  title: '[Radio] How many times did you hear or come across information about the
+    ongoing opioid epidemic from each of the following sources when you were not actively
+    looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_nwspr
+  type: string
+  title: '[Newspapers, magazines, or newsletters] How many times did you hear or come
+    across information about the ongoing opioid epidemic from each of the following
+    sources when you were not actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_intsrch
+  type: string
+  title: '[Internet searches] How many times did you hear or come across information
+    about the ongoing opioid epidemic from each of the following sources when you
+    were not actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_socmed
+  type: string
+  title: '[Social media] How many times did you hear or come across information about
+    the ongoing opioid epidemic from each of the following sources when you were not
+    actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: hear_othr
+  type: string
+  title: '[Other sources] How many times did you hear or come across information about
+    the ongoing opioid epidemic from each of the following sources when you were not
+    actively looking for it?'
+  constraints:
+    enum:
+    - Not at all
+    - One or two times
+    - Three times or more
+- name: race_discrimination
+  type: string
+  title: '[Mainly due to discrimination?] On the average, data show that in America,
+    Black people have worse jobs, income, and housing than white people. Do you think
+    these differences are...'
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_learnability
+  type: string
+  title: '[Because most Black people have less in-born ability to learn?] On the average,
+    data show that in America, Black people have worse jobs, income, and housing than
+    white people. Do you think these differences are...'
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_education
+  type: string
+  title: '[Because most Black people don''t have the chance for education that it
+    takes to rise out of poverty?] On the average, data show that in America, Black
+    people have worse jobs, income, and housing than white people. Do you think these
+    differences are...'
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_motivation
+  type: string
+  title: '[Because most Black people just don''t have the motivation or will power
+    to pull themselves up...?]On the average, data show that in America, Black people
+    have worse jobs, income, and housing than white people. Do you think these differences
+    are...'
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: race_whiteadvantage
+  type: string
+  title: '[White people in the U.S. have certain advantages because of the color of
+    their skin.] Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_successful
+  type: string
+  title: '[Race is very important in determining who is successful and who is not.]
+    Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_prison
+  type: string
+  title: '[Race plays an important role in who gets sent to prison.] Do you disagree
+    or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_socservices
+  type: string
+  title: '[Race plays a major role in the type of social services (such as type of
+    health care or day care) that people receive in the U.S.] Do you disagree or agree
+    with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_opportunity
+  type: string
+  title: '[Racial and ethnic minorities do not have the same opportunities as white
+    people in the U.S.] Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_minadvantage
+  type: string
+  title: '[Racial and ethnic minorities in the U.S. have certain advantages because
+    of the color of their skin.] Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_rich
+  type: string
+  title: '[Everyone who works hard, no matter what race they are, has an equal chance
+    to become rich.] Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: race_whiteblame
+  type: string
+  title: '[White people are more to blame for racial discrimination than racial and
+    ethnic minorities.] Do you disagree or agree with the following statements?'
+  constraints:
+    enum:
+    - Strongly disagree
+    - Somewhat disagree
+    - Neither disagree nor agree
+    - Somewhat agree
+    - Strongly agree
+- name: nervous_pastmonth
+  type: string
+  title: '[Been a very nervous person] Over the past month, how often have you:'
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: downhearted_pastmonth
+  type: string
+  title: '[Felt downhearted and blue] Over the past month, how often have you:'
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: calm_pastmonth
+  type: string
+  title: '[Felt calm and peaceful] Over the past month, how often have you:'
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: dumps_pastmonth
+  type: string
+  title: '[Felt so down in the dumps that nothing could cheer you up] Over the past
+    month, how often have you:'
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: happy_pastmonth
+  type: string
+  title: '[Been a happy person] Over the past month, how often have you:'
+  constraints:
+    enum:
+    - All of the time
+    - Most of the time
+    - A good bit of the time
+    - Some of the time
+    - A little of the time
+    - None of the time
+- name: sppt_mthr
+  type: string
+  title: '[Mother] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_fthr
+  type: string
+  title: '[Father] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_prtnr
+  type: string
+  title: '[Intimate partner] Who would you say provides you the most support in your
+    life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_chldrn
+  type: string
+  title: '[Child(ren)] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_othrrel
+  type: string
+  title: '[Other relatives] Who would you say provides you the most support in your
+    life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_frnds
+  type: string
+  title: '[Friend(s)] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_crrctnsprf
+  type: string
+  title: '[Corrections professional] Who would you say provides you the most support
+    in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_grp
+  type: string
+  title: '[Support group] Who would you say provides you the most support in your
+    life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_cowrkr
+  type: string
+  title: '[Coworkers] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_othr
+  type: string
+  title: '[Other] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_oe
+  type: null
+  title: '[TEXTBOX] Who would you say provides you the most support in your life?'
+- name: sppt_dk
+  type: string
+  title: '[DON''T KNOW] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_skp
+  type: string
+  title: '[SKIPPED ON WEB] Who would you say provides you the most support in your
+    life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sppt_ref
+  type: string
+  title: '[REFUSED] Who would you say provides you the most support in your life?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec
+  type: string
+  title: '[Did you/Do you] have family members or friends who [were/are] supportive
+    of your recovery?'
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: spptrec_mthr
+  type: string
+  title: '[Mother] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_fthr
+  type: string
+  title: '[Father] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_prtnr
+  type: string
+  title: '[Intimate partner] After you were released from incarceration, who helped
+    you not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_chldrn
+  type: string
+  title: '[Child(ren)] After you were released from incarceration, who helped you
+    not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_othrrel
+  type: string
+  title: '[Other relatives] After you were released from incarceration, who helped
+    you not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_frnds
+  type: string
+  title: '[Friend(s)] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_crrctnsprf
+  type: string
+  title: '[Corrections professional] After you were released from incarceration, who
+    helped you not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_grp
+  type: string
+  title: '[Support group] After you were released from incarceration, who helped you
+    not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_cowrkr
+  type: string
+  title: '[Coworkers] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_othr
+  type: string
+  title: '[Other] After you were released from incarceration, who helped you not go
+    back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_oe
+  type: null
+  title: '[TEXTBOX] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+- name: spptrec_none
+  type: string
+  title: '[No one] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_dk
+  type: string
+  title: '[DON''T KNOW] After you were released from incarceration, who helped you
+    not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_skp
+  type: string
+  title: '[SKIPPED ON WEB] After you were released from incarceration, who helped
+    you not go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: spptrec_ref
+  type: string
+  title: '[REFUSED] After you were released from incarceration, who helped you not
+    go back to incarceration?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: talk_physical
+  type: string
+  title: Do you have family members or friends you can talk to when you are concerned
+    about your physical health?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: talk_mental
+  type: string
+  title: Do you have family members or friends you can talk to when you are concerned
+    about your mental health?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: avoid_mthr
+  type: string
+  title: '[Mother] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_fthr
+  type: string
+  title: '[Father] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_prtnr
+  type: string
+  title: '[Intimate partner] Who in your life encourages you to avoid using alcohol
+    or drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_chldrn
+  type: string
+  title: '[Child(ren)] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_othrrel
+  type: string
+  title: '[Other relatives] Who in your life encourages you to avoid using alcohol
+    or drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_frnds
+  type: string
+  title: '[Friend(s)] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_crrctnsprf
+  type: string
+  title: '[Corrections professional] Who in your life encourages you to avoid using
+    alcohol or drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_grp
+  type: string
+  title: '[Support group] Who in your life encourages you to avoid using alcohol or
+    drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_cowrkr
+  type: string
+  title: '[Coworkers] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_othr
+  type: string
+  title: '[Other] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_oe
+  type: null
+  title: '[TEXTBOX] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+- name: avoid_none
+  type: string
+  title: '[No one] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_dk
+  type: string
+  title: '[DON''T KNOW] Who in your life encourages you to avoid using alcohol or
+    drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_skp
+  type: string
+  title: '[SKIPPED ON WEB] Who in your life encourages you to avoid using alcohol
+    or drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: avoid_ref
+  type: string
+  title: '[REFUSED] Who in your life encourages you to avoid using alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_mthr
+  type: string
+  title: '[Mother] Who in your life encourages you to use alcohol or drugs in a problematic
+    way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_fthr
+  type: string
+  title: '[Father] Who in your life encourages you to use alcohol or drugs in a problematic
+    way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_prtnr
+  type: string
+  title: '[Intimate partner] Who in your life encourages you to use alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_chldrn
+  type: string
+  title: '[Child(ren)] Who in your life encourages you to use alcohol or drugs in
+    a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_othrrel
+  type: string
+  title: '[Other relatives] Who in your life encourages you to use alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_frnds
+  type: string
+  title: '[Friend(s)] Who in your life encourages you to use alcohol or drugs in a
+    problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_crrctnsprf
+  type: string
+  title: '[Corrections professional] Who in your life encourages you to use alcohol
+    or drugs in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_grp
+  type: string
+  title: '[Support group] Who in your life encourages you to use alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_cowrkr
+  type: string
+  title: '[Coworkers] Who in your life encourages you to use alcohol or drugs in a
+    problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_othr
+  type: string
+  title: '[Other] Who in your life encourages you to use alcohol or drugs in a problematic
+    way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_oe
+  type: null
+  title: '[TEXTBOX] Who in your life encourages you to use alcohol or drugs in a problematic
+    way?'
+- name: use_none
+  type: string
+  title: '[No one] Who in your life encourages you to use alcohol or drugs in a problematic
+    way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_dk
+  type: string
+  title: '[DON''T KNOW] Who in your life encourages you to use alcohol or drugs in
+    a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_skp
+  type: string
+  title: '[SKIPPED ON WEB] Who in your life encourages you to use alcohol or drugs
+    in a problematic way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: use_ref
+  type: string
+  title: '[REFUSED] Who in your life encourages you to use alcohol or drugs in a problematic
+    way?'
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: pcp_have
+  type: string
+  title: "Do you have a primary care provider \u2013 that is, a doctor, nurse practitioner,\
+    \ or other health professional that you usually go to for checkups, if you are\
+    \ sick, or if you need advice about your health?"
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+    - More than one place
+- name: pcp_visit
+  type: string
+  title: During the past 12 months, did you visit your primary care provider for any
+    reason?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: pcp_treatoud
+  type: string
+  title: To the best of your knowledge, can primary care physicians treat people with
+    an opioid use disorder by prescribing them a medication for their disorder?
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+- name: pcp_referoud
+  type: string
+  title: Think of your own primary care physician... or the last doctor you went to
+    for a routine checkup. If somebody you cared about had an opioid use disorder,
+    would you feel comfortable referring them to that doctor for treatment for opioid
+    use disorder?
+  constraints:
+    enum:
+    - Very comfortable
+    - Somewhat comfortable
+    - Somewhat uncomfortable
+    - Very uncomfortable
+- name: pcp_seektreat
+  type: string
+  title: Think of your own primary care physician... or the last doctor you went to
+    for a routine checkup. If you were seeking treatment for an opioid use disorder,
+    would you feel comfortable seeking treatment from that doctor?
+  constraints:
+    enum:
+    - Very comfortable
+    - Somewhat comfortable
+    - Somewhat uncomfortable
+    - Very uncomfortable
+- name: pcp_agreetreat
+  type: string
+  title: 'Please rate how much you agree or disagree with the following statement:
+    The office of a primary care physician should be a place where people can receive
+    treatment for an opioid use disorder.'
+  constraints:
+    enum:
+    - Strongly agree
+    - Agree
+    - Disagree
+    - Strongly disagree
+- name: partyid5
+  type: string
+  title: 'DATA-ONLY: Computed 5-level Party ID'
+  constraints:
+    enum:
+    - Unknown
+    - Democrat
+    - Lean Democrat
+    - Don't Lean/Independent/None
+    - Lean Republican
+    - Republican
+- name: partyid7
+  type: string
+  title: 'DATA-ONLY: Computed 7-level Party ID'
+  constraints:
+    enum:
+    - Unknown
+    - Strong Democrat
+    - Not so strong Democrat
+    - Lean Democrat
+    - Don't Lean/Independent/None
+    - Lean Republican
+    - Not so strong Republican
+    - Strong Republican
+- name: gender
+  type: string
+  title: Respondent gender
+  constraints:
+    enum:
+    - Unknown
+    - Male
+    - Female
+- name: age4
+  type: string
+  title: Age - 4 Categories
+  constraints:
+    enum:
+    - 18-29
+    - 30-44
+    - 45-59
+    - 60+
+- name: educ5
+  type: string
+  title: 5-level education
+  constraints:
+    enum:
+    - Less than HS
+    - HS graduate or equivalent
+    - Some college/ associates degree
+    - Bachelor's degree
+    - Post grad study/professional degree
+- name: marital
+  type: string
+  title: Marital Status
+  constraints:
+    enum:
+    - Married
+    - Widowed
+    - Divorced
+    - Separated
+    - Never married
+- name: income
+  type: string
+  title: Household Income
+  constraints:
+    enum:
+    - Less than $5,000
+    - $5,000 to $9,999
+    - $10,000 to $14,999
+    - $15,000 to $19,999
+    - $20,000 to $24,999
+    - $25,000 to $29,999
+    - $30,000 to $34,999
+    - $35,000 to $39,999
+    - $40,000 to $49,999
+    - $50,000 to $59,999
+    - $60,000 to $74,999
+    - $75,000 to $84,999
+    - $85,000 to $99,999
+    - $100,000 to $124,999
+    - $125,000 to $149,999
+    - $150,000 to $174,999
+    - $175,000 to $199,999
+    - $200,000 or more
+- name: income4
+  type: string
+  title: 4-level Household Income
+  constraints:
+    enum:
+    - Less than $30,000
+    - $30,000 to under $60,000
+    - $60,000 to under $100,000
+    - $100,000 or more
+- name: region4
+  type: string
+  title: 4-level region
+  constraints:
+    enum:
+    - Northeast
+    - Midwest
+    - South
+    - West
+- name: metro
+  type: string
+  title: Metropolitan area flag
+  constraints:
+    enum:
+    - Non-Metro Area
+    - Metro Area
+- name: housing
+  type: string
+  title: Home Ownership
+  constraints:
+    enum:
+    - Owned
+    - Rented or occupied without payment
+- name: home_type
+  type: string
+  title: Type of building of panelists' residence
+  constraints:
+    enum:
+    - A one-family house detached from any other house
+    - A one-family house attached to one or more houses
+    - Apartment building, mobile home or trailer, boat, RV, or other
+- name: hhsize
+  type: number
+  title: Household size (including children)
+- name: hh05
+  type: string
+  title: Known Number of HH members age 0-5
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - 2 or more
+- name: hh612
+  type: string
+  title: Known Number of HH members age 6-12
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - 2 or more
+- name: hh1317
+  type: string
+  title: Known Number of HH members age 13-17
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - 2 or more
+- name: hh18ov
+  type: string
+  title: Known Number of HH members age 18+
+  constraints:
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - 6 or more
+- name: personalcrimjust_ever
+  type: number
+- name: familycrimjust_ever
+  type: number
+- name: personalcrimjust_recent
+  type: number
+- name: familycrimjust_recent
+  type: number
+- name: race_5cat
+  type: string
+  constraints:
+    enum:
+    - White
+    - Black
+    - Other or 2+ or more
+    - Hispanic
+    - Asian
+- name: stigma_scale_score
+  type: number
+- name: employ_2
+  type: string
+  title: Employment status
+  constraints:
+    enum:
+    - Employed
+    - Not employed or retired
+missingValues:
+- SKIPPED ON WEB
+- DON'T KNOW
+- REFUSED
+- I don't know
+- "I don\u2019t recall"
+- "I don\u2019t know"
+- Under 18

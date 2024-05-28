@@ -20,7 +20,7 @@ value_labels:
     99: REFUSED
   labels67:
     1: Past 6 months
-    2: 6-12 months ago
+    2: "6 \u2013 12 months ago"
     3: 1-5 years ago
     4: 5+ years ago
     77: DON'T KNOW
@@ -127,11 +127,11 @@ value_labels:
     5: Never married
     6: Living with partner
   labels115:
-    1: Working - as a paid employee
-    2: Working - self employed
-    3: Not working - looking for work or on temporary layoff
-    4: Not working - retired
-    5: Not working - disabled
+    1: "Working \u2013 as a paid employee"
+    2: "Working \u2013 self employed"
+    3: "Not working \u2013 looking for work or on temporary layoff"
+    4: "Not working \u2013 retired"
+    5: "Not working \u2013 disabled"
     6: Not working - other
   labels116:
     1: Northeast
