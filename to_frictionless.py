@@ -44,13 +44,18 @@ def write_schema(df, meta, schema_path, labels_path):
             ftype = "datetime"
         elif vformat.startswith("DATE"):
             ftype = "date"
-        elif varname in value_labels["field_to_value_label"]: #NOTE: could also do varname == 'category' with pyreadstat
+        elif varname in value_labels["field_to_value_label"]:
             ftype = "string"
             vlname = value_labels["field_to_value_label"][varname]
+            _missing_values = []
+            for vals in meta.missing_ranges.get(varname,[]):
+                if vals["lo"] == vals["hi"]:
+                    _missing_values.append(vals["lo"])
+                else:
+                    raise Exception("Only discrete missing values are currently supported")
+
             for k, v in value_labels["value_labels"][vlname].items():
-                if (
-                    int(k) > 75
-                ):  # NOTE: isn't this an assumption? shouldn't we use missing_ranges?
+                if k in _missing_values:
                     missing_values.append(v)
                 else:
                     enum.append(v)
