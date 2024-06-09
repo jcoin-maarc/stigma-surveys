@@ -62,3 +62,10 @@ def survey8(df):
     """Clean Survey 8 data."""
 
     return df
+
+
+def survey9(df):
+    """ Clean Survey 9. """
+
+
+    return df
