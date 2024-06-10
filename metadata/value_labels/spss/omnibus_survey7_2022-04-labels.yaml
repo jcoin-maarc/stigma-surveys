@@ -307,26 +307,26 @@ field_to_value_label:
   ps_b_naloxone: labels0
   ps_c_mandatory: labels0
   ps_d_govspend: labels0
-  ps_treatment: labels0
+  laws_protect_treatment: labels0
   ps_l_jailtreatment: labels0
   req_treat_prob: labels0
   kb_b_anyuse: labels0
   kb_c_selfcontrol: labels0
   kb_e_quitanytime: labels0
-  kb_stopbreath: labels0
-  kb_medcondition: labels0
-  kb_rockbottom: labels0
+  kb_f_stopbreathing: labels0
+  kb_h_medicalcondition: labels0
+  kb_i_rockbottom: labels0
   kb_painmeds_dangerous: labels0
   opinion_changed: labels0
   at_risk: labels0
-  kb_jailhelp: labels0
-  kb_fda: labels0
-  kb_recover: labels0
-  kb_easyfind: labels0
+  kb_l_jailhelps: labels0
+  kb_medicationsexist: labels0
+  kb_treat_recover: labels0
+  kb_j_easyfind: labels0
   kb_seekprofessional: labels0
   kb_longterm: labels0
   kb_medsrecov: labels0
-  kb_recovcont: labels0
+  kb_recovery_no_end: labels0
   heroin_seektreatment: labels0
   heroin_recover: labels0
   heroin_moretreatment: labels0
@@ -443,51 +443,51 @@ field_to_value_label:
   q23b_dk: labels93
   q23b_skp: labels93
   q23b_ref: labels93
-  q24: labels63
-  q24a: labels63
-  q25: labels63
-  q25a: labels63
-  q25a1: labels63
-  q25a2: labels63
-  q25b: labels63
-  q25b1: labels144
-  q25b2: labels145
-  q25b3: labels145
-  q25c_1: labels93
-  q25c_2: labels93
-  q25c_3: labels93
-  q25c_dk: labels93
-  q25c_skp: labels93
-  q25c_ref: labels93
-  q25c1_1: labels93
-  q25c1_2: labels93
-  q25c1_3: labels93
-  q25c1_4: labels93
-  q25c1_5: labels93
-  q25c1_6: labels93
-  q25c1_7: labels93
-  q25c1_8: labels93
-  q25c1_dk: labels93
-  q25c1_skp: labels93
-  q25c1_ref: labels93
-  q26_1: labels93
-  q26_2: labels93
-  q26_3: labels93
-  q26_dk: labels93
-  q26_skp: labels93
-  q26_ref: labels93
-  q26aa: labels170
-  q26ab: labels170
-  q26ac: labels170
-  q27: labels63
-  q27a: labels174
-  q28: labels63
-  q28a: labels63
-  q28b: labels174
-  q30b_dk: labels93
-  q30b_skp: labels93
-  q30b_ref: labels93
-  q30c: labels181
+  sb_partnerw2: labels63
+  sb_live_with_partnerw2: labels63
+  sb_seek_partnerw2: labels63
+  sb_new_partner_onlinew2: labels63
+  sb_online_dating_profile: labels63
+  sb_online_dating_profile_vax_status: labels63
+  sb_new_partner_in_personw2: labels63
+  sb_new_partner_time_before_inpersonw2: labels144
+  sb_new_partner_know_their_hiv_status: labels145
+  sb_new_partner_have_covid_vax: labels145
+  sb_new_partner_had_sex_now2: labels93
+  sb_new_partner_had_sex_virtuallyw2: labels93
+  sb_new_partner_had_sex_inpersonw2: labels93
+  sb_new_partner_had_sex_dkw2: labels93
+  sb_new_partner_had_sex_skippedw2: labels93
+  sb_new_partner_had_sex_refusedw2: labels93
+  sb_new_partner_discuss_partner_history: labels93
+  sb_new_partner_discuss_std: labels93
+  sb_new_partner_discuss_condoms: labels93
+  sb_new_partner_get_hiv_std_tested: labels93
+  sb_new_partner_discuss_precautionw2: labels93
+  sb_new_partner_minimize_outside_contactw2: labels93
+  sb_new_partner_either_get_covid_tested: labels93
+  sb_new_partner_covid_vax_booster: labels93
+  sb_new_partner_activities_dkw2: labels93
+  sb_new_partner_skippedw2: labels93
+  sb_new_partner_refusedw2: labels93
+  sb_new_partner_timeframe1: labels93
+  sb_new_partner_timeframe2: labels93
+  sb_new_partner_timeframe3: labels93
+  sb_new_partner_timeframe_dk: labels93
+  sb_new_partner_timeframe_skipped: labels93
+  sb_new_partner_timeframe_refused: labels93
+  sb_new_partner_timeframe1_count: labels170
+  sb_new_partner_timeframe2_count: labels170
+  sb_new_partner_timeframe3_count: labels170
+  sb_past_month_kissw2: labels63
+  sb_past_month_kiss_numw2: labels174
+  sb_past_month_sexw2: labels63
+  sb_past_month_sex_condoms: labels63
+  sb_past_month_sex_numw2: labels174
+  demographics_unemployed_reason_dk: labels93
+  demographics_unemployed_reason_skipped: labels93
+  demographics_unemployed_reason_refused: labels93
+  easy_find_job_in_6_months: labels181
   partyid5: labels182
   partyid7: labels183
   surv_mode: labels184

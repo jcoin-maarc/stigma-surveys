@@ -1,15 +1,17 @@
 fields:
 - name: caseid
+  title: Unique respondent ID
+  description: Respondent ID, respondent can have participated in multiple surveys
   type: number
-  title: Case ID
 - name: weight
+  title: Survey weight
+  description: Post-stratification weights - 18+ general population
   type: number
-  title: Post-stratification weights - 18+ general population (N=1,007)
 - name: kb_a_definition
+  title: Opioid definition negative consequences
+  description: 'Opioid addiction is defined by a person continuing to use opioids
+    despite negative consequences. '
   type: string
-  title: '[Opioid use disorder is defined as a person continuing to use opioids despite
-    negative consequences.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -18,9 +20,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_b_anyuse
+  title: Opioid definition long-term pain use
+  description: 'Anyone who uses opioids long-term for pain has an [S1: opioid addiction;
+    Survey 3/7/8/9/10: opioid use disorder].'
   type: string
-  title: '[Anyone who uses opioids long-term for pain has an opioid use disorder.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -29,10 +32,12 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_c_selfcontrol
+  title: People with OUD lack self-control
+  description: 'Most people who develop and/or struggle with opioid use disorder/addiction
+    lack self-control. [Survey 6/7/8: delete addiction]
+
+    [Survey 9/10 wording]: Most people who develop an opioid use disorder lack self-control'
   type: string
-  title: '[Most people who develop and/or struggle with an opioid use disorder lack
-    self-control.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -41,10 +46,13 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_e_quitanytime
+  title: Quit anytime
+  description: 'A person struggling with opioid use disorder/addiction can quit using
+    anytime if they choose.
+
+    [Survey 3/7/8/9/10 wording]: A person struggling with an opioid use disorder can
+    choose to quit using at any time if they put their mind to it.'
   type: string
-  title: '[A person struggling with an opioid use disorder can choose to quit using
-    at any time if they put their mind to it.] Do you disagree or agree with the following
-    statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -53,10 +61,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_f_stopbreathing
-  type: string
-  title: '[Using opioids can slow your breathing or even cause you to stop breathing
+  title: Opioid definition slow breathing
+  description: '[Using opioids can slow your breathing or even cause you to stop breathing
     entirely and lead to an overdose or death.] Do you disagree or agree with the
     following statements about opioid use disorder?'
+  type: string
   constraints:
     enum:
     - Strongly disagree
@@ -65,10 +74,16 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_treat_recover
+  title: Effective treatment for OUD recovery
+  description: 'Evidence-based treatments for opioid use disorder can recover people
+    from opioid addiction.
+
+    [Survey 6/10 wording]: Evidence-based treatments for opioid use disorder can help
+    people recover from opioid use disorder
+
+    * [Survey 3/7/8 wording]: Some forms of substance use treatment are effective
+    [Survey 8/9: (or successful)] at helping people recover from an opioid use disorder. '
   type: string
-  title: '[Some forms of substance use treatment is effective at helping people recover
-    from an opioid use disorder.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -77,10 +92,13 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_h_medicalcondition
+  title: OUD chronic condition
+  description: 'Opioid use disorder is a medical condition like other chronic health
+    conditions. [Survey 6]
+
+    * [Survey 3, 7-10 wording: Opioid use disorder is a medical condition like other
+    chronic health conditions (for example, diabetes, high blood pressure).] '
   type: string
-  title: '[Opioid use disorder is a medical condition like other chronic health conditions
-    (for example, diabetes, high blood pressure).] Do you disagree or agree with the
-    following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -89,10 +107,12 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_i_rockbottom
+  title: Rock bottom accept treatment
+  description: "A person struggling with opioid use disorder/addiction must hit rock\
+    \ bottom before they are ready to accept treatment.\n[Survey 3, 7 Wording]: A\
+    \ person struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
+    \ before they are willing to accept or attend treatment. "
   type: string
-  title: "[A person struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
-    \ before they are willing to accept or attend treatment.] Do you disagree or agree\
-    \ with the following statements about opioid use disorder?"
   constraints:
     enum:
     - Strongly disagree
@@ -101,9 +121,12 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_j_easyfind
+  title: Treatment easy to find
+  description: ' It is easy to find good opioid use disorder treatment.
+
+    * [Survey 3/7/8/9/10 wording]: Effective [Survey 8/9/10: (or successful)] treatment
+    for an opioid use disorder is easy to find.'
   type: string
-  title: '[Effective treatment for an opioid use disorder is easy to find.] Do you
-    disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -112,10 +135,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_medicationsexist
+  title: Approved medication are effective
+  description: '[Survey 3/7/8/9 wording]: Approved medications that are effective
+    in treating opioid use disorder exist. '
   type: string
-  title: '[Approved medications that are effective in treating opioid use disorder
-    exist.] Do you disagree or agree with the following statements about opioid use
-    disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -124,10 +147,12 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_l_jailhelps
+  title: Jail prevent overdose
+  description: 'Jailing someone with an opioid use disorder for at least a few days
+    will help them by reducing their risk for an overdose.
+
+    '
   type: string
-  title: '[Jailing someone with an opioid use disorder for at least a few days will
-    help them by reducing their risk for an overdose.] Do you disagree or agree with
-    the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -136,9 +161,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_seekprofessional
+  title: People with OUD should seek professional help
+  description: People with an opioid use disorder should seek professional help.
   type: string
-  title: '[People with an opioid use disorder should seek professional help.] Do you
-    disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -147,10 +172,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_longterm
+  title: Long-term treatment required for OUD
+  description: People with an opioid use disorder require long-term treatment in order
+    to recover.
   type: string
-  title: '[People with an opioid use disorder require long-term treatment in order
-    to recover.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -158,10 +183,10 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_medications_recover
+- name: kb_medsrecov
+  title: Medications needed for OUD recovery
+  description: People with an opioid use disorder need medications in order to recover.
   type: string
-  title: '[People with an opioid use disorder need medications in order to recover.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -170,9 +195,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_recovery_no_end
+  title: OUD recovery never ends
+  description: 'Recovery [Survey 7/8/9/10: from opioid use disoder] is a continuous
+    process that never ends. '
   type: string
-  title: '[Recovery is a continuous process that never ends.] Do you disagree or agree
-    with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -181,10 +207,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_painmeds_dangerous
+  title: Pain medication disorder more dangerous than heroin disorder
+  description: 'Individuals with an opioid use disorder specific to prescription pain
+    medications are more dangerous than individuals with an opioid use disorder specific
+    to heroin. '
   type: string
-  title: '[Individuals with an opioid use disorder specific to prescription pain medications
-    are more dangerous.] Do you disagree or agree with the following statements about
-    opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -193,10 +220,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: heroin_seektreatment
+  title: Heroin users more likely to seek treatment
+  description: Individuals with an opioid use disorder specific to heroin are more
+    likely to seek treatment.
   type: string
-  title: '[Individuals with an opioid use disorder specific to heroin are more likely
-    to seek treatment.] Do you disagree or agree with the following statements about
-    opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -205,10 +232,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: heroin_recover
+  title: Heroin users more likely to recover
+  description: 'Individuals with an opioid use disorder specific to heroin are more
+    likely to recover. '
   type: string
-  title: '[Individuals with an opioid use disorder specific to heroin are more likely
-    to recover.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -217,10 +244,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: heroin_moretreatment
+  title: Heroin users need more treatment for recovery
+  description: Individuals with an opioid use disorder specific to heroin will require
+    more treatment in their attempt at recovery.
   type: string
-  title: '[Individuals with an opioid use disorder specific to heroin will require
-    more treatment in their attempt at recovery.] Do you disagree or agree with the
-    following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -229,10 +256,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: family_know_treatment
+  title: Want family to know if sought treatment
+  description: I would want my friends and family to know if I sought treatment for
+    an opioid use disorder.
   type: string
-  title: '[I would want my friends and family to know if I sought treatment for an
-    opioid use disorder.] Do you disagree or agree with the following statements about
-    opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -241,10 +268,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: friend_tell_treatment
+  title: Want friend to tell me about treatment
+  description: I would want my friend to tell me if they sought treatment for an opioid
+    use disorder.
   type: string
-  title: '[I would want my friend to tell me if they sought treatment for an opioid
-    use disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -253,10 +280,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: encourage_friend_treatment
+  title: Encourage friend to seek treatment
+  description: I would encourage my friend to seek treatment if they had an opioid
+    use disorder.
   type: string
-  title: '[I would encourage my friend to seek treatment if they had an opioid use
-    disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -265,10 +292,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: treatment_separate_healthcare
+  title: OUD treatment separate from general health
+  description: 'Treatment for opioid use disorder should be delivered separately from
+    general health care services (for example, hospitals, clinics, primary care practices). '
   type: string
-  title: '[Treatment for opioid use disorder should be delivered separately from general
-    health care services.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -277,10 +304,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: generalhcp_treatment
+  title: General providers not responsible for OUD treatment
+  description: 'General health care providers should not be responsible for treating
+    individuals with an opioid use disorder. '
   type: string
-  title: '[General health care providers should not be responsible for treating individuals
-    with an opioid use disorder.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -289,10 +316,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: generalhcp_trained
+  title: General providers required training for OUD treatment
+  description: General health care providers should be required to receive training
+    on treatment for opioid use disorders.
   type: string
-  title: '[General health care providers should be required to receive training on
-    treatment for opioid use disorders.] Do you disagree or agree with the following
-    statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -301,10 +328,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: generalhcp_notreat
+  title: Don't want my provider to treat OUD
+  description: I would not want my general health care provider to treat individuals
+    with an opioid use disorder.
   type: string
-  title: '[I would not want my general health care provider to treat individuals with
-    an opioid use disorder.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -313,9 +340,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: opinion_changed
+  title: Opinions about OUD changed
+  description: My opinions about opioid use disorder have changed over the last 5
+    years.
   type: string
-  title: '[My opinions about opioid use disorder have changed over the last 5 years.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -324,10 +352,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: at_risk
+  title: Family history puts me at risk for OUD
+  description: Given my family history and/or prior experience with opioids, I think
+    I would be considered "at risk" for developing an opioid use disorder.
   type: string
-  title: "[\u2026I think I would be considered \u201Cat risk\u201D for developing\
-    \ an opioid use disorder.] Do you disagree or agree with the following statements\
-    \ about opioid use disorder?"
   constraints:
     enum:
     - Strongly disagree
@@ -336,10 +364,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: recovery_common
+  title: Recovery common for OUD
+  description: Recovery is the most common outcome for individuals with an opioid
+    use disorder.
   type: string
-  title: '[Recovery is the most common outcome for individuals with an opioid use
-    disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -348,10 +376,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: failing_common
+  title: Multiple failed attempt common for OUD recovery
+  description: Multiple failed attempts (for example, relapse) is a common characteristic
+    of recovery from opioid use disorder.
   type: string
-  title: '[Multiple failed attempts is a common characteristic of recovery from opioid
-    use disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -360,82 +388,185 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: recovery_religious
+  title: Recovery definition_religious in nature
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Religious in nature]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Religious in nature] Please rank the following statements corresponding
-    to your personal definition of recovery.'
 - name: recovery_spiritual
+  title: Recovery definition_Spiritual in nature not religion
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Spiritual in nature and has nothing
+    to do with religion]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Spiritual in nature and has nothing to do with religion] Please rank the
-    following statements corresponding to your personal definition of recovery.'
 - name: recovery_physicalmental
+  title: Recovery definition_Physical and mental in nature
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Physical and mental in nature and has
+    nothing to do with spirituality or religion [Survey 6/10 wording:"physical and
+    mental in nature"]]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Physical and mental in nature and has nothing to do with spirituality or
-    religion] Please rank the following statements corresponding to your personal
-    definition of recovery.'
 - name: recovery_contributes
+  title: Recovery definition_Living a life that contributes to society
+  description: "Please rank the following statements with 1 most closely corresponding\
+    \ to your personal definition of recovery and 10 being what you think least corresponds\
+    \ to your personal definition of recovery. [Living a life that contributes to\
+    \ society] \n\n[Survey 5/6/10] Please rank the following statements with 1 most\
+    \ closely corresponding to your personal definition of substance use recovery\
+    \ and 10 being what you think least corresponds to your personal definition of\
+    \ substance use recovery."
   type: string
-  title: '[Living a life that contributes to society] Please rank the following statements
-    corresponding to your personal definition of recovery.'
 - name: recovery_enhancedquality
+  title: Recovery definition_Enhanced quality of life
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Enhanced quality of life]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Enhanced quality of life] Please rank the following statements corresponding
-    to your personal definition of recovery.'
 - name: recovery_profhelp
+  title: Recovery definition_Seeking professional help
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Seeking professional help]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Seeking professional help] Please rank the following statements corresponding
-    to your personal definition of recovery.'
 - name: recovery_purpose
+  title: Recovery definition_Having a sense of purpose in life
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Having a sense of purpose in life]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Having a sense of purpose in life] Please rank the following statements
-    corresponding to your personal definition of recovery.'
 - name: recovery_controlleduse
+  title: Recovery definition_Moderate/controlled use of any drug and alcohol
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Moderate/controlled use of any drug
+    and alcohol]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Moderate/controlled use of any drug and alcohol] Please rank the following
-    statements corresponding to your personal definition of recovery.'
 - name: recovery_nodruguse
+  title: Recovery definition_No use of any drug
+  description: "Please rank the following statements with 1 most closely corresponding\
+    \ to your personal definition of recovery and 10 being what you think least corresponds\
+    \ to your personal definition of recovery. [No use of any drug] \n\n[Survey 5/6/10]\
+    \ Please rank the following statements with 1 most closely corresponding to your\
+    \ personal definition of substance use recovery and 10 being what you think least\
+    \ corresponds to your personal definition of substance use recovery."
   type: string
-  title: '[No use of any drug] Please rank the following statements corresponding
-    to your personal definition of recovery.'
 - name: recovery_abstaining
+  title: Recovery definition_Abstaining from any substance use
+  description: 'Please rank the following statements with 1 most closely corresponding
+    to your personal definition of recovery and 10 being what you think least corresponds
+    to your personal definition of recovery. [Abstaining from any substance use]
+
+
+    [Survey 5/6/10] Please rank the following statements with 1 most closely corresponding
+    to your personal definition of substance use recovery and 10 being what you think
+    least corresponds to your personal definition of substance use recovery.'
   type: string
-  title: '[Abstaining from any substance use] Please rank the following statements
-    corresponding to your personal definition of recovery.'
 - name: recovhelp_pcp
+  title: Helpful for recovery_referred to a Primary Care Physician
+  description: 'Please rank the following statements with 1 being what you think is
+    most helpful for recovery and 8/9 being what you think is the least helpful for
+    substance use recovery. [Be referred to a Primary Care Physician]
+
+
+    '
   type: string
-  title: '[Be referred to a Primary Care Physician] Please rank the following statements
-    what you think is most helpful for recovery.'
 - name: recovhelp_inpatient
+  title: Helpful for recovery_ referred to an Intensive Inpatient Program
+  description: "Please rank the following statements with 1 being what you think is\
+    \ most helpful for recovery and 8/9 being what you think is the least helpful\
+    \ for substance use recovery. [Be referred to an Intensive Inpatient Program]\
+    \ \n\n"
   type: string
-  title: '[Be referred to an Intensive Inpatient Program] Please rank the following
-    statements what you think is most helpful for recovery.'
 - name: recovhelp_selfhelp
+  title: Helpful for recovery_referred to a Self-help Group
+  description: "Please rank the following statements with 1 being what you think is\
+    \ most helpful for recovery and 8/9 being what you think is the least helpful\
+    \ for substance use recovery.  [Be referred to a Self-help Group] \n\n"
   type: string
-  title: '[Be referred to a Self-help Group] Please rank the following statements
-    what you think is most helpful for recovery.'
 - name: recovhelp_therapist
+  title: Helpful for recovery_ referred to a Therapist/Psychologist/Social Worker
+  description: "Please rank the following statements with 1 being what you think is\
+    \ most helpful for recovery and 8/9 being what you think is the least helpful\
+    \ for substance use recovery.  [Be referred to a Therapist/Psychologist/Social\
+    \ Worker] \n\n"
   type: string
-  title: '[Be referred to a Therapist/Psychologist/Social Worker] Please rank the
-    following statements what you think is most helpful for recovery.'
 - name: recovhelp_medication
+  title: Helpful for recovery_prescribed Medication
+  description: "Please rank the following statements with 1 being what you think is\
+    \ most helpful for recovery and 8/9 being what you think is the least helpful\
+    \ for substance use recovery. [Be prescribed Medication] \n\n"
   type: string
-  title: '[Be prescribed Medication] Please rank the following statements what you
-    think is most helpful for recovery.'
 - name: recovhelp_talkfamily
+  title: Helpful for recovery_Talk to Family and Friends
+  description: "Please rank the following statements with 1 being what you think is\
+    \ most helpful for recovery and 8/9 being what you think is the least helpful\
+    \ for substance use recovery. [Talk to Family and Friends] \n\n"
   type: string
-  title: '[Talk to Family and Friends] Please rank the following statements what you
-    think is most helpful for recovery.'
 - name: recovhelp_naturalhealer
+  title: Helpful for recovery_referred to a spiritual or natural healer
+  description: 'Please rank the following statements with 1 being what you think is
+    most helpful for recovery and 8/9 being what you think is the least helpful for
+    substance use recovery. [Be referred to a spiritual or natural healer]
+
+
+    '
   type: string
-  title: '[Be referred to a spiritual or natural healer] Please rank the following
-    statements what you think is most helpful for recovery.'
 - name: recovhelp_fbo
+  title: Helpful for recovery_referred to a faith-based organization/institution
+  description: 'Please rank the following statements with 1 being what you think is
+    most helpful for recovery and 8/9 being what you think is the least helpful for
+    substance use recovery. [Be referred to a faith-based organization/institution]
+
+
+    '
   type: string
-  title: '[Be referred to a faith-based organization/institution] Please rank the
-    following statements what you think is most helpful for recovery.'
 - name: ps_a_medicaid
+  title: Policy scale_expand Medicaid for OUD treatment
+  description: '[Survey 1/2/5/6/10] I favor expanding Medicaid  insurance benefits
+    for low income families to provide coverage for treatment of opioid use disorders/addiction
+    problems, including addiction to prescription pain medications.
+
+
+    [Survey 3/4/7/8/9 wording]: I favor expanding Medicaid insurance benefits for
+    low income families to provide coverage for treatment of opioid use disorders. '
   type: string
-  title: "[I favor expanding Medicaid insurance benefits for low income families\u2026\
-    ] Do you disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -444,9 +575,17 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_b_naloxone
+  title: Policy scale_Naloxone availability
+  description: "I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
+    \ that can quickly reverse the effects of a person experiencing an opioid overdose\
+    \ [Survey 7/8: (i.e., taken a high dose of opioids leading to the slowing or stopping\
+    \ of breathing)], widely available and affordable without a prescription.\n[Survey\
+    \ 9, 10 wording]: I support the FDA approving the first over the counter (i.e.,\
+    \ without a prescription) naloxone nasal spray (also known as \"Narcan\u201D),\
+    \ a medication that can quickly reverse the effects of a person experiencing an\
+    \ opioid overdose (i.e., taken a high dose of opioids leading to the slowing or\
+    \ stopping of breathing)."
   type: string
-  title: "[I favor making naloxone\u2026widely available and affordable without a\
-    \ prescription.] Do you disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -455,9 +594,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_c_mandatory
+  title: Policy scale_mandatory drug treatment
+  description: I believe that making drug treatment mandatory is an effective way
+    to help people with an opioid use disorder
   type: string
-  title: "[I believe that making treatment mandatory is an effective way to\u2026\
-    ] Do you disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -466,9 +606,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_d_govspend
+  title: Policy scale_increase govt spend for OUD treatment
+  description: "I favor increasing government spending to improve treatment of opioid\
+    \ use disorder/addiction \n[Survey 3/4/7/8/9: deleted addiction]."
   type: string
-  title: '[I favor increasing government spending to improve treatment of opioid use
-    disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -477,9 +618,15 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: laws_protect_treatment
+  title: '[I favor passing laws to protect people from criminal charges for drug related
+    c'
+  description: 'I favor passing laws to protect people from criminal charges for drug
+    crimes if they seek medical help for experiencing an opioid/prescription pain
+    medication problem.
+
+    [Survey 3/4/7/8/9 wording]: I favor passing laws to protect people from criminal
+    charges for drug related crimes if they attend substance use treatment.'
   type: string
-  title: "[I favor passing laws to protect people from criminal charges for drug related\
-    \ crimes\u2026] Do you disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -487,11 +634,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: access_med_jail
+- name: ps_l_jailtreatment
+  title: Detainees access to medication for OUD
+  description: 'I believe that people in jail/prison with an opioid use disorder/addiction
+    problem  [Survey 7/8/9/10: deleted addiction problem] should get access [Survey
+    3/4/7/8/9/10: be allowed access] to medication for their opioid use disorder (e.g.,
+    methadone, buprenorphine, or naltrexone)*'
   type: string
-  title: "[I believe that people in jail/prison with an opioid use disorder should\
-    \ be allowed access to medication\u2026] Do you disagree or agree with the following\
-    \ statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -500,10 +649,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: req_treat_prob
+  title: Require parolees to get treatment
+  description: Individuals who are on parole or probation with an opioid use disorder
+    should be required to attend substance use treatment.
   type: string
-  title: '[Individuals who are on parole or probation with an opioid use disorder
-    should be required to attend substance use treatment.] Do you disagree or agree
-    with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -512,10 +661,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_a_historywork
+  title: Stigma scale_history OUD work with me
+  description: 'I would be willing to have a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction]start working closely
+    with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a past history of opioid use disorder
-    start working closely with me on a job.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -524,10 +674,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_c_currentwork
+  title: Stigma scale_current OUD work with me
+  description: 'I would be willing to have a person with a current opioid use disorder/addiction
+    [Survey 7/8/9/10: deleted addiction] start working closely with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a current opioid use disorder
-    start working closely with me on a job.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -536,9 +686,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_d_currentmarry
+  title: Stigma scale_current OUD marry into family
+  description: 'I would be comfortable to have a person with a current opioid use
+    disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my [Survey
+    4/5/6/7/8/9: close or immediate] family.'
   type: string
-  title: '[I would be comfortable having a person with a current opioid use disorder
-    marry into my family.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -547,9 +699,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_b_historymarry
+  title: Stigma scale_history OUD marry into family
+  description: 'I would be comfortable having a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my  [Survey
+    4/5/6/7/8/9: close or immediate]family.'
   type: string
-  title: '[I am comfortable having a person with a past history of opioid use disorder
-    marry into my family.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -558,9 +712,16 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_e_dangerous
+  title: Stigma scale_Current OUD more dangerous
+  description: 'People with a current addiction to opioids/prescription pain medications
+    are more dangerous than the general population.
+
+
+    Survey 7/8/9/10:
+
+    People with a current opioid use disorder are more dangerous than the general
+    population.'
   type: string
-  title: '[People with a current opioid use disorder are more dangerous than the general
-    population.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -569,9 +730,15 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_f_trust
+  title: Stigma scale_Can't trust current OUD
+  description: 'A person who is currently addicted to opioids/prescription pain medication
+    cannot be trusted.
+
+
+    Survey 7/8/9/10:
+
+    A person who currently has an opioid use disorder cannot be trusted.'
   type: string
-  title: '[A person who currently has an opioid use disorder cannot be trusted.] Do
-    you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -580,9 +747,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: oud_functionwell
+  title: People with OUD function well
+  description: Individuals with an opioid use disorder can generally function well
+    in their daily lives.
   type: string
-  title: '[Individuals with an opioid use disorder can generally function well in
-    their daily lives.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -591,9 +759,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: know_where_help
+  title: Know where for friend with OUD
+  description: I would know where to go if I needed to find help for a friend with
+    an opioid use disorder.
   type: string
-  title: '[I would know where to go if I needed to find help for a friend with an
-    opioid use disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -602,9 +771,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: oudresources_adequate
+  title: Community has resources for OUD
+  description: Our community has adequate resources to help individuals with an opioid
+    use disorder
   type: string
-  title: '[Our community has adequate resources to help individuals with an opioid
-    use disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -613,9 +783,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: news_influence
+  title: News media influence OUD opinions
+  description: The news media has influenced my opinions of individuals with an opioid
+    use disorder.
   type: string
-  title: '[The news media has influenced my opinions of individuals with an opioid
-    use disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -624,9 +795,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: media_influence
+  title: Popular media influence OUD opinions
+  description: Popular media (including reality TV) has influenced my opinions of
+    individuals with an opioid use disorder.
   type: string
-  title: '[Popular media has influenced my opinions of individuals with an opioid
-    use disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -635,16 +807,25 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: personaluse_ever
+  title: OUD misuse ever_option 1
+  description: "Have you ever used opioids/prescription pain medication illicitly\
+    \ obtained or used in a way not prescribed by a doctor?* \n[Survey 3/4/5 wording]:\
+    \ Have you ever misused opioids of any kind \u2013 such as heroin, fentanyl, or\
+    \ prescription pain medications other than exactly as prescribed for you? \n[Survey\
+    \ 6 wording: Have you ever misused (i.e., used other than exactly as prescribed\
+    \ for you) opioids of any kind \u2013 such as heroin, fentanyl, or other prescription\
+    \ pain medications?]"
   type: string
-  title: Have you ever misused opioids of any kind?
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: personaluse_last
+  title: Last time personal opioid use
+  description: "[If indicated personal use of opioids/prescription pain medication]\
+    \ When was the last time? \n\n[Survey 6]: When was the last time you used heroin,\
+    \ other illegally obtained opioids, or prescription opioids?"
   type: string
-  title: When was the last time you used heroin or opioids illicitly obtained or used
-    in a way not prescribed by a doctor?
   constraints:
     enum:
     - Past 6 months
@@ -652,116 +833,131 @@ fields:
     - 1-5 years ago
     - 5+ years ago
 - name: personaluse_first
+  title: COVID_first time using opioids
+  description: '[If the last time used was in the past 6 months] Is this your first
+    time misusing opioids/prescription pain medications? '
   type: string
-  title: Since you used heroin or opioids in the past 6 months, is this your first
-    time misusing opioids/prescription pain medications?
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_6mos
-  type: string
-  title: During the past 6 months, have you received treatment for your opioid/prescription
+  title: Received treatment for OUD past 6 months
+  description: During the past 6 months, have you received treatment for your opioid/prescription
     pain medication misuse?
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_hospital
+  title: Recent treatment location_Hospital
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Hospital] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_rehabfac
+  title: Recent treatment location_Rehabilitation facility
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Rehabilitation facility] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_mhcenter
+  title: Recent treatment location_Mental health center or facility
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Mental health center or facility] Where did you receive treatment for your
-    opioid/prescription pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_er
+  title: Recent treatment location_Emergency room
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Emergency room] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_privatedoc
+  title: Recent treatment location_Private doctor's office
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Private doctor''s office] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_selfhelp
+  title: Recent treatment location_Self-help group
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Self-help group] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_communitybased
+  title: Community-based recovery support
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[Community-based recovery support] Where did you receive treatment for your
-    opioid/prescription pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_other
+  title: 'Recent treatment location_Other '
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: "[Other \u2013 please specify:] Where did you receive treatment for your\
-    \ opioid/prescription pain medication misuse in the past 6 months?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_othertext
+  title: Recent treatment location_Other textbox
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: null
-  title: '[TEXTBOX] Where did you receive treatment for your opioid/prescription pain
-    medication misuse in the past 6 months?'
 - name: treat_dk
+  title: Recent treatment location_DON'T KNOW
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[DON''T KNOW] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_skp
+  title: Recent treatment location_SKIPPED ON WEB
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[SKIPPED ON WEB] Where did you receive treatment for your opioid/prescription
-    pain medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_ref
+  title: Recent treatment location_REFUSED
+  description: Where did you receive treatment for your opioid/prescription pain medication
+    misuse in the past 6 months?
   type: string
-  title: '[REFUSED] Where did you receive treatment for your opioid/prescription pain
-    medication misuse in the past 6 months?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: treat_mat
+  title: Received MAT
+  description: Have you received Medication Assisted Treatment (MAT)?
   type: string
-  title: Have you received Medication Assisted Treatment (MAT)?
   constraints:
     enum:
     - 'No'
@@ -770,70 +966,85 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: mat_methadone
+  title: Receive MAT_Methadone
+  description: '[Methadone] How is your Medication Assisted Treatment given to you?'
   type: string
-  title: '[Methadone] How is your Medication Assisted Treatment given to you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_oralbup
+  title: Receive MAT_Oral buprenorphine
+  description: '[Oral Buprenorphine] How is your Medication Assisted Treatment given
+    to you?'
   type: string
-  title: '[Oral Buprenorphine] How is your Medication Assisted Treatment given to
-    you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_injectbup
+  title: Receive MAT_injectable buprenorphine
+  description: '[Injectable Buprenorphine] How is your Medication Assisted Treatment
+    given to you?'
   type: string
-  title: '[Injectable Buprenorphine] How is your Medication Assisted Treatment given
-    to you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_naltrexone
+  title: Receive MAT_naltrexone
+  description: '[Naltrexone] How is your Medication Assisted Treatment given to you?'
   type: string
-  title: '[Naltrexone] How is your Medication Assisted Treatment given to you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_other
-  type: string
-  title: "[Other \u2013 please specify:] How is your Medication Assisted Treatment\
+  title: Receive MAT_other
+  description: "[Other \u2013 please specify:] How is your Medication Assisted Treatment\
     \ given to you?"
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_othertext
+  title: Receive MAT_textbox
+  description: '[TEXTBOX] How is your Medication Assisted Treatment given to you?'
   type: null
-  title: '[TEXTBOX] How is your Medication Assisted Treatment given to you?'
 - name: mat_dk
+  title: Receive MAT_don't know
+  description: '[DON''T KNOW] How is your Medication Assisted Treatment given to you?'
   type: string
-  title: '[DON''T KNOW] How is your Medication Assisted Treatment given to you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_skp
+  title: Receive MAT_skipped on web
+  description: '[SKIPPED ON WEB] How is your Medication Assisted Treatment given to
+    you?'
   type: string
-  title: '[SKIPPED ON WEB] How is your Medication Assisted Treatment given to you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mat_ref
+  title: Receive MAT_refused
+  description: '[REFUSED] How is your Medication Assisted Treatment given to you?'
   type: string
-  title: '[REFUSED] How is your Medication Assisted Treatment given to you?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: personaloverdose_ever
+  title: OUD overdose
+  description: 'Have you ever overdosed from opioids/prescription pain medication?
+    [Survey 6: deleted prescription pain medication]
+
+    [Survey 7/8/9/10 wording: Have you ever overdosed (i.e., taken a high dose of
+    opioids leading to the slowing or stopping of breathing) from using opioids?]'
   type: string
-  title: Have you ever overdosed from using opioids?
   constraints:
     enum:
     - 'No'
@@ -842,8 +1053,9 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: personaloverdose_times
+  title: Number of times overdosed
+  description: How many times have you ever overdosed after taking opioids?
   type: string
-  title: How many times have you ever overdosed after taking opioids?
   constraints:
     enum:
     - Once
@@ -854,8 +1066,9 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: personaloverdose_last
+  title: Last time overdosed
+  description: When was the last time you overdosed after taking opioids?
   type: string
-  title: When was the last time you overdosed after taking opioids?
   constraints:
     enum:
     - Past 6 months
@@ -866,8 +1079,10 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: narcan_personal
+  title: Someone administer Narcan after overdose
+  description: To your knowledge, did someone administer naloxone (Narcan) to revive
+    you?
   type: string
-  title: To your knowledge, did someone administer naloxone (Narcan) to revive you?
   constraints:
     enum:
     - 'No'
@@ -876,27 +1091,31 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: personalconviction_ever
+  title: Personal conviction ever
+  description: Have you ever been convicted of any misdemeanor or felony crime?
   type: string
-  title: '[Have you ever been convicted of any misdemeanor or felony crime?] Please
-    answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - ' Yes, more than a year ago'
     - ' No'
 - name: personalincarceration_ever
+  title: Personal incarcerated ever
+  description: Have you ever been incarcerated in jail or prison?
   type: string
-  title: '[Have you ever been incarcerated in jail or prison?] Please answer yes or
-    no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - ' Yes, more than a year ago'
     - ' No'
 - name: familyoud
+  title: Family member or friend with OUD
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: '[Have any family members or close friends ever had an opioid use disorder
-    or misused opioids?] Please answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
@@ -904,35 +1123,43 @@ fields:
     - ' No'
     - REFUSED
 - name: familyoverdose_ever
+  title: OUD overdose family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: '[Have any of your family members or close friends ever overdosed from using
-    opioids? ] Please answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - ' Yes, more than a year ago'
     - ' No'
 - name: familyconviction_ever
+  title: Family friend conviction ever
+  description: Have any of your family members or close friends ever been convicted
+    of any misdemeanor or felony crime?
   type: string
-  title: '[Have any of your family members or close friends ever been convicted of
-    any misdemeanor or felony crime?] Please answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - ' Yes, more than a year ago'
     - ' No'
 - name: familyincarceration_ever
+  title: Family friend incarcerated ever
+  description: Have any of your family members or close friends ever been incarcerated
+    in jail or prison?
   type: string
-  title: '[Have any of your family members or close friends ever been incarcerated
-    in jail or prison?] Please answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - ' Yes, more than a year ago'
     - ' No'
 - name: narcan_family
+  title: Someone administer Narcan after family/friend overdose
+  description: To your knowledge, did someone administer naloxone (Narcan) to revive
+    them?
   type: string
-  title: To your knowledge, did someone administer naloxone (Narcan) to revive them?
   constraints:
     enum:
     - 'No'
@@ -941,9 +1168,10 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: protest_participant
-  type: string
-  title: In the past month, have you participated in a public protest or gathering
+  title: COVID_Participated in public protest
+  description: In the past month, have you participated in a public protest or gathering
     of more than 50 people?
+  type: string
   constraints:
     enum:
     - 'Yes'
@@ -952,8 +1180,9 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: protest_arrested
+  title: COVID_Arrested after protest participation
+  description: Were you arrested as a part of your participation?
   type: string
-  title: Were you arrested as a part of your participation?
   constraints:
     enum:
     - 'Yes'
@@ -962,8 +1191,9 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: primarycare_last
+  title: Last PCP visit
+  description: When is the last time you saw a primary care doctor?
   type: string
-  title: When is the last time you saw a primary care doctor?
   constraints:
     enum:
     - Past month
@@ -977,8 +1207,10 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: personal_covidtest
+  title: COVID_Tested for COVID
+  description: Have you been tested for COVID-19 (coronavirus)? If so, what was the
+    result?
   type: string
-  title: Have you been tested for COVID-19 (coronavirus)? If so, what was the result?
   constraints:
     enum:
     - I have been tested and I tested positive (I had coronavirus)
@@ -990,9 +1222,10 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: household_covidtest
+  title: COVID_Anyone in household COVID tested
+  description: Has anyone else in your household (not counting yourself) been tested
+    for COVID-19 (coronavirus)?
   type: string
-  title: Has anyone else in your household (not counting yourself) been tested for
-    COVID-19 (coronavirus)?
   constraints:
     enum:
     - They have been tested and they tested positive (They had coronavirus)
@@ -1004,40 +1237,47 @@ fields:
     - DON'T KNOW
     - SKIPPED ON WEB
     - REFUSED
-- name: duration_norcnd
+- name: duration_jcoin
+  title: Time spent in survey, in minutes
+  description: Time to complete survey
   type: string
-  title: 'NORC-ND Omnibus Section: Interview duration in minutes'
   constraints:
     enum:
     - Under 1 minute
 - name: surv_mode
+  title: Survey interview mode
+  description: Survey completed via web or phone
   type: string
-  title: Survey interview mode (online or phone)
   constraints:
     enum:
     - Phone interview
     - Web Interview
 - name: surv_lang
-  type: string
   title: Survey Interview Language
+  description: Language survey completed in (i.e., English, Spanish)
+  type: string
   constraints:
     enum:
     - English
     - Spanish
 - name: device
-  type: null
   title: Device
+  type: null
+  custom:
+    exclude_from_release: true
 - name: gender
+  title: Respondent male/female sex
+  description: Unknown, male, sex
   type: string
-  title: Respondent gender
   constraints:
     enum:
     - Unknown
     - Male
     - Female
 - name: age4
-  type: string
   title: Age - 4 Categories
+  description: 'Categories: 18-29, 30-44, 45-59, 60+'
+  type: string
   constraints:
     enum:
     - 18-29
@@ -1046,8 +1286,9 @@ fields:
     - 60+
     - Under 18
 - name: age7
-  type: string
   title: Age - 7 Categories
+  description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
+  type: string
   constraints:
     enum:
     - 18-24
@@ -1059,8 +1300,10 @@ fields:
     - 75+
     - Under 18
 - name: racethnicity
-  type: string
   title: Combined Race/Ethnicity
+  description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
+    non-Hispanic, Other, non-Hispanic, Hispanic, 2+, non-Hispanic, Asian, non-Hispanic'
+  type: string
   constraints:
     enum:
     - White, non-Hispanic
@@ -1070,8 +1313,10 @@ fields:
     - 2+, non-Hispanic
     - Asian, non-Hispanic
 - name: educ4
-  type: string
   title: 4-level education
+  description: 'Highest degree received: No HS diploma, HS graduate or equivalent,
+    Some college, BA or above'
+  type: string
   constraints:
     enum:
     - No HS diploma
@@ -1079,8 +1324,9 @@ fields:
     - Some college
     - BA or above
 - name: marital
-  type: string
   title: Marital Status
+  description: Married, Widowed, Divorced, Separated, Never married, Living with partner
+  type: string
   constraints:
     enum:
     - Married
@@ -1090,8 +1336,11 @@ fields:
     - Never married
     - Living with partner
 - name: employ
+  title: Demographic_Employment Status
+  description: Working - as a paid employee, Working - self employed, Not working
+    - on temporary layoff from a job or looking for work, Not working - retired, Not
+    working - disabled, Not working - other
   type: string
-  title: Current Employment Status
   constraints:
     enum:
     - "Working \u2013 as a paid employee"
@@ -1101,8 +1350,9 @@ fields:
     - "Not working \u2013 disabled"
     - Not working - other
 - name: region4
-  type: string
   title: 4-level region
+  description: Northeast, Midwest, South West
+  type: string
   constraints:
     enum:
     - Northeast
@@ -1110,37 +1360,46 @@ fields:
     - South
     - West
 - name: metro
-  type: string
   title: Metropolitan area flag
+  description: Metro Area, Non-Metro Area
+  type: string
   constraints:
     enum:
     - Non-Metro Area
     - Metro Area
 - name: internet
+  title: Internet
+  description: HH internet access via dial-up, DSL, or cable broadband at home
   type: string
-  title: HH internet access via dial-up, DSL, or cable broadband at home
   constraints:
     enum:
     - Non-internet household
     - Internet Household
 - name: housing
-  type: string
   title: Home Ownership
+  description: Owned or being bought by you or someone in your household, Rented for
+    cash, Occupied without payment of cash rent
+  type: string
   constraints:
     enum:
     - Owned
     - Rented or occupied without payment
 - name: home_type
-  type: string
   title: Type of building of panelists' residence
+  description: A one-family house detached from any other house, A one-family house
+    attached to one or more houses, A building with 2 or more apartment, A mobile
+    home or trailer; Boat, RV, van, etc.
+  type: string
   constraints:
     enum:
     - A one-family house detached from any other house
     - A one-family house attached to one or more houses
     - Apartment building, mobile home or trailer, boat, RV, or other
 - name: phoneservice
-  type: string
   title: Telephone service for the household
+  description: Landline telephone only; Have a landline, but mostly use cellphone;
+    Have cellphone, but mostly use landline; Cellphone only; No telephone service
+  type: string
   constraints:
     enum:
     - Landline telephone only
@@ -1149,11 +1408,13 @@ fields:
     - Cellphone only
     - No telephone service
 - name: hhsize
-  type: number
   title: Household size (including children)
+  description: Number of people in household
+  type: number
 - name: hh612
-  type: string
   title: Number of HH members age 6-12
+  description: Number of people in household age 6-12
+  type: string
   constraints:
     enum:
     - '0'
@@ -1161,16 +1422,18 @@ fields:
     - '2'
     - 3 or more
 - name: hh1317
-  type: string
   title: Number of HH members age 13-17
+  description: Number of people in household ages 13-17
+  type: string
   constraints:
     enum:
     - '0'
     - '1'
     - 2 or more
 - name: hh18ov
-  type: string
   title: Number of HH members age 18+
+  description: Number of people in household ages 18+
+  type: string
   constraints:
     enum:
     - '0'
@@ -1181,162 +1444,230 @@ fields:
     - '5'
     - 6 or more
 - name: positive_covidtest
+  title: Either self or household tested postivie.
   type: string
-  title: Tested positively for COVID.
   constraints:
     enum:
     - Not tested/negative
     - Positive COVID Test
+  custom:
+    exclude_from_release: true
 - name: personalcrimjust_ever
+  title: Coded_personal criminal justice involvement ever
+  description: Yes to either Have you ever been convicted of any misdemeanor or felony
+    crime? OR Have you ever been incarcerated in jail or prison?
   type: string
-  title: Combined personal conviction or incarceration.
   constraints:
     enum:
     - No criminal justice history
     - Yes criminal justice history
 - name: familycrimjust_ever
+  title: Coded_family friend criminal justice involvement ever
+  description: 'Yes to either Have any of your family members or close friends ever
+    been convicted of any misdemeanor or felony crime? OR Have any of your family
+    members or close friends ever been incarcerated in jail or prison? '
   type: string
-  title: Combined family/friend conviction or incarceration.
   constraints:
     enum:
     - No family/friend criminal justice history
     - Family/friend criminal justice history
 - name: any_covidtest
+  title: Either self or household member tested for COVID.
   type: string
-  title: Self or household tested for COVID
   constraints:
     enum:
     - self/household not tested
     - self/household tested
+  custom:
+    exclude_from_release: true
 - name: income_relativemedian
+  title: Income variable coded into approximately above and below the median for their
+    state.
   type: string
-  title: Income above or below median for state
   constraints:
     enum:
     - Below median
     - Above median
+  custom:
+    exclude_from_release: true
 - name: familyuse_ever
+  title: OUD misuse family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: Family or friend opioid use disorder
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: stigma_scale_score
+  title: Stigma scale score
+  description: Average score of 6 stigma items; higher scores indicate higher stigma
   type: number
-  title: Average stigma score
 - name: policy_4item_scale
   type: number
-  title: Average 4-item policy score
+  custom:
+    exclude_from_release: true
 - name: personalmisuse_lifetime
+  title: Personal history of every misusing opioids
   type: string
-  title: Lifetime personal opioid misuse
   constraints:
     enum:
     - No Opioid Misuse
     - Opioid Misuse History
+  custom:
+    exclude_from_release: true
 - name: personalmisuse_recent
+  title: Personal misuse within the last 12 months
   type: number
-  title: Personal opioid misuse in past 12 months
+  custom:
+    exclude_from_release: true
 - name: personaloverdose_lifetime
+  title: Personal history of overdose from opioids
   type: number
-  title: Lifetime personal opioid overdose
+  custom:
+    exclude_from_release: true
 - name: personaloverdose_recent
+  title: Personal overdose from opioids in last 12 months
   type: number
-  title: Personal opioid overdose in past 12 months
+  custom:
+    exclude_from_release: true
 - name: famfriendmisuse_lifetime
+  title: Have family or friends that have ever misused opioids
   type: number
-  title: Lifetime family or friend opioid misuse
+  custom:
+    exclude_from_release: true
 - name: famfriendmisuse_recent
+  title: Family or friend has misused opiods in the past 12 months
   type: number
-  title: Family or friend opioid misuse in past 12 months
+  custom:
+    exclude_from_release: true
 - name: famfriendoverdose_lifetime
+  title: Have family member or friend that has ever overdosed
   type: number
-  title: Lifetime family or friend opioid overdose
+  custom:
+    exclude_from_release: true
 - name: famfriendoverdose_recent
+  title: Family or friend overdosed in past 12 months
   type: number
-  title: Family or friend opioid overdose in past 12 months
+  custom:
+    exclude_from_release: true
 - name: personalcrimjust_recent
   type: number
-  title: Personal conviction or incarceration within past 12 months
+  custom:
+    exclude_from_release: true
 - name: familycrimjust_recent
   type: number
-  title: Family or friend conviction or incarceration within past 12 months
+  custom:
+    exclude_from_release: true
 - name: selfhousehold_covidtested
   type: number
-  title: Self or household member tested for COVID
+  custom:
+    exclude_from_release: true
 - name: selfhousehold_covidpositive
   type: number
-  title: Self or household member tested positively for COVID
+  custom:
+    exclude_from_release: true
 - name: hotspot_survey
   type: number
-  title: Lived in a hotspot state during survey
+  custom:
+    exclude_from_release: true
 - name: education_college
-  type: number
   title: At least some college education
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employed_vs_not
   type: number
-  title: Self-employed or paid employee
+  custom:
+    exclude_from_release: true
 - name: zkb_medications_recover
-  type: number
   title: 'Zscore:  [People with an opioid use disorder need medications in order to
     recover.] Do you disagree or agree with the following statements about opioid
     use disorder?'
-- name: zkb_treat_recover
   type: number
+  custom:
+    exclude_from_release: true
+- name: zkb_treat_recover
   title: 'Zscore:  [Some forms of substance use treatment is effective at helping
     people recover from an opioid use disorder.] Do you disagree or agree with the
     following statements about opioid use disorder?'
-- name: zkb_e_quitanytime
   type: number
+  custom:
+    exclude_from_release: true
+- name: zkb_e_quitanytime
   title: 'Zscore:  [A person struggling with an opioid use disorder can choose to
     quit using at any time if they put their mind to it.] Do you disagree or agree
     with the following statements about opioid use disorder?'
-- name: zkb_c_selfcontrol
   type: number
+  custom:
+    exclude_from_release: true
+- name: zkb_c_selfcontrol
   title: 'Zscore:  [Most people who develop and/or struggle with an opioid use disorder
     lack self-control.] Do you disagree or agree with the following statements about
     opioid use disorder?'
-- name: zlaws_protect_treatment
   type: number
+  custom:
+    exclude_from_release: true
+- name: zlaws_protect_treatment
   title: "Zscore:  [I favor passing laws to protect people from criminal charges for\
     \ drug related crimes\u2026] Do you disagree or agree with the following statements?"
-- name: zaccess_med_jail
   type: number
+  custom:
+    exclude_from_release: true
+- name: zaccess_med_jail
   title: "Zscore:  [I believe that people in jail/prison with an opioid use disorder\
     \ should be allowed access to medication\u2026] Do you disagree or agree with\
     \ the following statements?"
-- name: zreq_treat_prob
   type: number
+  custom:
+    exclude_from_release: true
+- name: zreq_treat_prob
   title: 'Zscore:  [Individuals who are on parole or probation with an opioid use
     disorder should be required to attend substance use treatment.] Do you disagree
     or agree with the following statements?'
-- name: zrecovery_common
   type: number
+  custom:
+    exclude_from_release: true
+- name: zrecovery_common
   title: 'Zscore:  [Recovery is the most common outcome for individuals with an opioid
     use disorder.] Do you disagree or agree with the following statements about opioid
     use disorder?'
-- name: zfailing_common
   type: number
+  custom:
+    exclude_from_release: true
+- name: zfailing_common
   title: 'Zscore:  [Multiple failed attempts is a common characteristic of recovery
     from opioid use disorder.] Do you disagree or agree with the following statements
     about opioid use disorder?'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: incomedummy_less25k
   type: number
-  title: Income less than $25,000
+  custom:
+    exclude_from_release: true
 - name: incomedummy_25to49k
   type: number
-  title: Income $25,000-49,999
+  custom:
+    exclude_from_release: true
 - name: incomedummy_50to84k
   type: number
-  title: Income $50,000-84,999
+  custom:
+    exclude_from_release: true
 - name: incomedummy_85to150k
   type: number
-  title: Income $85,000-150,000
+  custom:
+    exclude_from_release: true
 - name: incomedummy_over150k
   type: number
-  title: Income over $150,000
+  custom:
+    exclude_from_release: true
 - name: hh05
+  title: Number of HH members age 0-5
+  description: Number of household members age 0-5
   type: string
   constraints:
     enum:
@@ -1345,8 +1676,9 @@ fields:
     - '2'
     - 3 or more
 - name: income4
-  type: string
   title: Household income (4 categories)
+  description: Less than $30,000; $30,000-$59,000; $60,000-$99,999; $100,000+
+  type: string
   constraints:
     enum:
     - < $30,000

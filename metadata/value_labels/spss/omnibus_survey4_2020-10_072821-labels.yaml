@@ -217,7 +217,7 @@ field_to_value_label:
   ps_b_naloxone: labels0
   ps_c_mandatory: labels0
   ps_d_govspend: labels0
-  ps_treatment: labels0
+  laws_protect_treatment: labels0
   ps_l_jailtreatment: labels0
   ps_j_jailhealth: labels0
   ps_k_jailoverdose: labels0
@@ -261,7 +261,7 @@ field_to_value_label:
   hh_dk: labels31
   hh_skp: labels31
   hh_ref: labels31
-  hh_coviddeath: labels27
+  hh_death_covid: labels27
   washhands: labels41
   avoidtransit: labels41
   lessgroups10: labels41

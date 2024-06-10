@@ -1,23 +1,30 @@
 fields:
 - name: caseid
+  title: Unique respondent ID
+  description: Respondent ID, respondent can have participated in multiple surveys
   type: number
-  title: Case ID
 - name: weight
+  title: Survey weight
+  description: Post-stratification weights - 18+ general population
   type: number
-  title: Post-stratification weights - 18+ general population (N=1,036)
 - name: rnd_01
-  type: string
   title: 'RANDOM: Randomization variable used for scripting'
+  description: 0 or 1
+  type: string
   constraints:
     enum:
     - '0'
     - '1'
-- name: ps_a_medicaid_bi
+- name: ps_a_medicaid
+  title: Expand Medicaid for treatment
+  description: '[Survey 1/2/5/6/10] I favor expanding Medicaid  insurance benefits
+    for low income families to provide coverage for treatment of opioid use disorders/addiction
+    problems, including addiction to prescription pain medications.
+
+
+    [Survey 3/4/7/8/9 wording]: I favor expanding Medicaid insurance benefits for
+    low income families to provide coverage for treatment of opioid use disorders. '
   type: string
-  title: '[I favor expanding Medicaid insurance benefits for low income families to
-    provide coverage for treatment of opioid use disorders/addiction problems, including
-    addiction to prescription pain medications. ] Do you disagree or agree with the
-    following stateme'
   constraints:
     enum:
     - Strongly disagree
@@ -25,12 +32,18 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_b_naloxone_bi
+- name: ps_b_naloxone
+  title: Nalaxone availability
+  description: "I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
+    \ that can quickly reverse the effects of a person experiencing an opioid overdose\
+    \ [Survey 7/8: (i.e., taken a high dose of opioids leading to the slowing or stopping\
+    \ of breathing)], widely available and affordable without a prescription.\n[Survey\
+    \ 9, 10 wording]: I support the FDA approving the first over the counter (i.e.,\
+    \ without a prescription) naloxone nasal spray (also known as \"Narcan\u201D),\
+    \ a medication that can quickly reverse the effects of a person experiencing an\
+    \ opioid overdose (i.e., taken a high dose of opioids leading to the slowing or\
+    \ stopping of breathing)."
   type: string
-  title: '[I favor making naloxone (also known as ''Narcan''), a medication that can
-    quickly reverse the effects of a person experiencing an opioid overdose, widely
-    available and affordable without a prescription.] Do you disagree or agree with
-    the following statement'
   constraints:
     enum:
     - Strongly disagree
@@ -38,11 +51,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_c_mandatory_bi
+- name: ps_c_mandatory
+  title: Treament mandatory
+  description: I believe that making drug treatment mandatory is an effective way
+    to help people with an opioid use disorder
   type: string
-  title: '[I believe that making drug treatment mandatory is an effective way to help
-    people with an opioid use disorder.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -50,10 +63,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_d_govspend_bi
+- name: ps_d_govspend
+  title: Increase government spending for treatment
+  description: "I favor increasing government spending to improve treatment of opioid\
+    \ use disorder/addiction \n[Survey 3/4/7/8/9: deleted addiction]."
   type: string
-  title: '[I favor increasing government spending to improve treatment of opioid use
-    disorder/addiction.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -61,11 +75,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ds_e_schools_bi
+- name: ds_e_schools
+  title: High school and colleges expel OUD
+  description: 'High schools and colleges should be allowed to dismiss or expel a
+    person with an opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: string
-  title: '[High schools and colleges should be allowed to dismiss or expel a person
-    with an opioid use disorder/addiction.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -73,11 +87,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ds_f_physicians_bi
+- name: ds_f_physicians
+  title: Healthcare provide refuse treatment
+  description: 'Physicians and other healthcare providers should be allowed to refuse
+    to treat a person with an opioid use disorder/addiction. [Survey 6/10: deleted
+    addiction]'
   type: string
-  title: '[Physicians and other healthcare providers should be allowed to refuse to
-    treat a person with an opioid use disorder/addiction.] Do you disagree or agree
-    with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -85,10 +100,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ds_g_employers_bi
+- name: ds_g_employers
+  title: Employers can deny employement
+  description: 'Employers should be allowed to deny employment to a person with a
+    current opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: string
-  title: '[Employers should be allowed to deny employment to a person with a current
-    opioid use disorder/addiction.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -96,10 +112,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ds_h_landlords_bi
+- name: ds_h_landlords
+  title: Landlords deny housing
+  description: 'Landlords should be allowed to deny housing to a person with a current
+    opioid use disorder/addiction.  [Survey 6/10: deleted addiction]'
   type: string
-  title: '[Landlords should be allowed to deny housing to a person with a current
-    opioid use disorder/addiction.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -107,11 +124,15 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_i_seekmedical_bi
+- name: ps_i_seekmedical
+  title: Protect from criminal charges if seek help
+  description: 'I favor passing laws to protect people from criminal charges for drug
+    crimes if they seek medical help for experiencing an opioid/prescription pain
+    medication problem.
+
+    [Survey 3/4/7/8/9 wording]: I favor passing laws to protect people from criminal
+    charges for drug related crimes if they attend substance use treatment.'
   type: string
-  title: '[I favor passing laws to protect people from criminal charges for drug crimes
-    if they seek medical help for experiencing an opioid/prescription pain medication
-    problem.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -119,11 +140,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_j_jailhealth_bi
+- name: ps_j_jailhealth
+  title: Jail can improve health
+  description: I believe that incarceration/jail is an effective way to improve the
+    health of people with an opioid use disorder.
   type: string
-  title: '[I believe that incarceration/jail is an effective way to improve the health
-    of people with an opioid use disorder.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -131,11 +152,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_k_jailoverdose_bi
+- name: ps_k_jailoverdose
+  title: Jail can reduce overdose risk
+  description: I believe that incarceration/jail is an effective way to reduce the
+    risk of overdosing for people with an opioid use disorder.
   type: string
-  title: '[I believe that incarceration/jail is an effective way to reduce the risk
-    of overdosing for people with an opioid use disorder.] Do you disagree or agree
-    with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -143,11 +164,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_l_jailtreatment_bi
+- name: ps_l_jailtreatment
+  title: Detainees access to medication for OUD
+  description: 'I believe that people in jail/prison with an opioid use disorder/addiction
+    problem  [Survey 7/8/9/10: deleted addiction problem] should get access [Survey
+    3/4/7/8/9/10: be allowed access] to medication for their opioid use disorder (e.g.,
+    methadone, buprenorphine, or naltrexone)*'
   type: string
-  title: '[I believe that people in jail/prison with an opioid use disorder/addiction
-    problem should get access to medication for opioid use disorder (e.g., methadone,
-    buprenorphine, or naltrexone).] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -156,11 +179,15 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_a_medicaid_uni
+  title: Expand Medicaid for treatment-univariate scale
+  description: '[Survey 1/2/5/6/10] I favor expanding Medicaid  insurance benefits
+    for low income families to provide coverage for treatment of opioid use disorders/addiction
+    problems, including addiction to prescription pain medications.
+
+
+    [Survey 3/4/7/8/9 wording]: I favor expanding Medicaid insurance benefits for
+    low income families to provide coverage for treatment of opioid use disorders. '
   type: string
-  title: '[I favor expanding Medicaid insurance benefits for low income families to
-    provide coverage for treatment of opioid use disorders/addiction problems, including
-    addiction to prescription pain medications. ] Do you agree with the following
-    statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -169,11 +196,17 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_b_naloxone_uni
+  title: Nalaxone availability-univariate scale
+  description: "I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
+    \ that can quickly reverse the effects of a person experiencing an opioid overdose\
+    \ [Survey 7/8: (i.e., taken a high dose of opioids leading to the slowing or stopping\
+    \ of breathing)], widely available and affordable without a prescription.\n[Survey\
+    \ 9, 10 wording]: I support the FDA approving the first over the counter (i.e.,\
+    \ without a prescription) naloxone nasal spray (also known as \"Narcan\u201D),\
+    \ a medication that can quickly reverse the effects of a person experiencing an\
+    \ opioid overdose (i.e., taken a high dose of opioids leading to the slowing or\
+    \ stopping of breathing)."
   type: string
-  title: '[I favor making naloxone (also known as ''Narcan''), a medication that can
-    quickly reverse the effects of a person experiencing an opioid overdose, widely
-    available and affordable without a prescription.] Do you agree with the following
-    statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -182,9 +215,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_c_mandatory_uni
+  title: Treament mandatory-univariate scale
+  description: I believe that making drug treatment mandatory is an effective way
+    to help people with an opioid use disorder
   type: string
-  title: '[I believe that making drug treatment mandatory is an effective way to help
-    people with an opioid use disorder.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -193,9 +227,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_d_govspend_uni
+  title: Increase government spending for treatment-univariate scale
+  description: "I favor increasing government spending to improve treatment of opioid\
+    \ use disorder/addiction \n[Survey 3/4/7/8/9: deleted addiction]."
   type: string
-  title: '[I favor increasing government spending to improve treatment of opioid use
-    disorder/addiction.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -204,9 +239,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ds_e_schools_uni
+  title: High school and colleges expel OUD-univariate scale
+  description: 'High schools and colleges should be allowed to dismiss or expel a
+    person with an opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: string
-  title: '[High schools and colleges should be allowed to dismiss or expel a person
-    with an opioid use disorder/addiction.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -215,10 +251,11 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ds_f_physicians_uni
+  title: Healthcare provide refuse treatment-univariate scale
+  description: 'Physicians and other healthcare providers should be allowed to refuse
+    to treat a person with an opioid use disorder/addiction. [Survey 6/10: deleted
+    addiction]'
   type: string
-  title: '[Physicians and other healthcare providers should be allowed to refuse to
-    treat a person with an opioid use disorder/addiction.] Do you agree with the following
-    statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -227,9 +264,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ds_g_employers_uni
+  title: Employers can deny employement-univariate scale
+  description: 'Employers should be allowed to deny employment to a person with a
+    current opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: string
-  title: '[Employers should be allowed to deny employment to a person with a current
-    opioid use disorder/addiction.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -238,9 +276,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ds_h_landlords_uni
+  title: Landlords deny housing-univariate scale
+  description: 'Landlords should be allowed to deny housing to a person with a current
+    opioid use disorder/addiction.  [Survey 6/10: deleted addiction]'
   type: string
-  title: '[Landlords should be allowed to deny housing to a person with a current
-    opioid use disorder/addiction. ] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -249,10 +288,14 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_i_seekmedical_uni
+  title: Protect from criminal charges if seek help-univariate scale
+  description: 'I favor passing laws to protect people from criminal charges for drug
+    crimes if they seek medical help for experiencing an opioid/prescription pain
+    medication problem.
+
+    [Survey 3/4/7/8/9 wording]: I favor passing laws to protect people from criminal
+    charges for drug related crimes if they attend substance use treatment.'
   type: string
-  title: '[I favor passing laws to protect people from criminal charges for drug crimes
-    if they seek medical help for experiencing an opioid/prescription pain medication
-    problem.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -261,9 +304,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_j_jailhealth_uni
+  title: Jail can improve health-univariate scale
+  description: I believe that incarceration/jail is an effective way to improve the
+    health of people with an opioid use disorder.
   type: string
-  title: '[I believe that incarceration/jail is an effective way to improve the health
-    of people with an opioid use disorder.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -272,10 +316,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_k_jailoverdose_uni
+  title: Jail can reduce overdose risk-univariate scale
+  description: I believe that incarceration/jail is an effective way to reduce the
+    risk of overdosing for people with an opioid use disorder.
   type: string
-  title: '[I believe that incarceration/jail is an effective way to reduce the risk
-    of overdosing for people with an opioid use disorder.] Do you agree with the following
-    statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -284,10 +328,12 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ps_l_jailtreatment_uni
+  title: Access to medication for OUD in jails-univariate scale
+  description: 'I believe that people in jail/prison with an opioid use disorder/addiction
+    problem  [Survey 7/8/9/10: deleted addiction problem] should get access [Survey
+    3/4/7/8/9/10: be allowed access] to medication for their opioid use disorder (e.g.,
+    methadone, buprenorphine, or naltrexone)*'
   type: string
-  title: '[I believe that people in jail/prison with an opioid use disorder/addiction
-    problem should get access to medication for opioid use disorder (e.g., methadone,
-    buprenorphine, or naltrexone).] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -295,11 +341,12 @@ fields:
     - Somewhat agree
     - Strongly agree
     - Completely agree
-- name: ss_a_historywork_bi
+- name: ss_a_historywork
+  title: Stigma scale_History of OUD work with me
+  description: 'I would be willing to have a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction]start working closely
+    with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a past history of opioid use disorder/addiction
-    start working closely with me on a job.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -307,10 +354,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ss_b_historymarry_bi
+- name: ss_b_historymarry
+  title: Stigma scale_History of OUD marry into family
+  description: 'I would be comfortable having a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my  [Survey
+    4/5/6/7/8/9: close or immediate]family.'
   type: string
-  title: '[I am comfortable having a person with a past history of opioid use disorder/addiction
-    marry into my family.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -318,11 +367,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ss_c_currentwork_bi
+- name: ss_c_currentwork
+  title: Stigma scale_Current OUD work with me
+  description: 'I would be willing to have a person with a current opioid use disorder/addiction
+    [Survey 7/8/9/10: deleted addiction] start working closely with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a current opioid use disorder/addiction
-    start working closely with me on a job.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -330,10 +379,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ss_d_currentmarry_bi
+- name: ss_d_currentmarry
+  title: Stigma scale_Current OUD marry into family
+  description: 'I would be comfortable to have a person with a current opioid use
+    disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my [Survey
+    4/5/6/7/8/9: close or immediate] family.'
   type: string
-  title: '[I would be comfortable having a person with a current opioid use disorder/addiction
-    marry into my family.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -341,11 +392,17 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ss_e_dangerous_bi
+- name: ss_e_dangerous
+  title: Stigma scale_Current OUD more dangerous
+  description: 'People with a current addiction to opioids/prescription pain medications
+    are more dangerous than the general population.
+
+
+    Survey 7/8/9/10:
+
+    People with a current opioid use disorder are more dangerous than the general
+    population.'
   type: string
-  title: '[People with a current addiction to opioids/prescription pain medications
-    are more dangerous than the general population.] Do you disagree or agree with
-    the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -353,10 +410,16 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ss_f_trust_bi
+- name: ss_f_trust
+  title: Stigma scale_Current OUD cannot trust
+  description: 'A person who is currently addicted to opioids/prescription pain medication
+    cannot be trusted.
+
+
+    Survey 7/8/9/10:
+
+    A person who currently has an opioid use disorder cannot be trusted.'
   type: string
-  title: '[A person who is currently addicted to opioids/prescription pain medication
-    cannot be trusted.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -365,9 +428,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_a_historywork_uni
+  title: Stigma scale_History of OUD work with me-univariate scale
+  description: 'I would be willing to have a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction]start working closely
+    with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a past history of opioid use disorder/addiction
-    start working closely with me on a job.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -376,9 +441,11 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ss_b_historymarry_uni
+  title: Stigma scale_History of OUD marry into family-univariate scale
+  description: 'I would be comfortable having a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my  [Survey
+    4/5/6/7/8/9: close or immediate]family.'
   type: string
-  title: '[I am comfortable having a person with a past history of opioid use disorder/addiction
-    marry into my family.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -387,9 +454,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ss_c_currentwork_uni
+  title: Stigma scale_Current OUD work with me-univariate scale
+  description: 'I would be willing to have a person with a current opioid use disorder/addiction
+    [Survey 7/8/9/10: deleted addiction] start working closely with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a current opioid use disorder/addiction
-    start working closely with me on a job.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -398,9 +466,11 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ss_d_currentmarry_uni
+  title: Stigma scale_Current OUD marry into family-univariate scale
+  description: 'I would be comfortable to have a person with a current opioid use
+    disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my [Survey
+    4/5/6/7/8/9: close or immediate] family.'
   type: string
-  title: '[I would be comfortable having a person with a current opioid use disorder/addiction
-    marry into my family.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -409,10 +479,16 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ss_e_dangerous_uni
+  title: Stigma scale_Current OUD more dangerous-univariate scale
+  description: 'People with a current addiction to opioids/prescription pain medications
+    are more dangerous than the general population.
+
+
+    Survey 7/8/9/10:
+
+    People with a current opioid use disorder are more dangerous than the general
+    population.'
   type: string
-  title: '[People with a current addiction to opioids/prescription pain medications
-    are more dangerous than the general population.] Do you agree with the following
-    statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -421,9 +497,15 @@ fields:
     - Strongly agree
     - Completely agree
 - name: ss_f_trust_uni
+  title: Stigma scale_Current OUD cannot trust-univariate scale
+  description: 'A person who is currently addicted to opioids/prescription pain medication
+    cannot be trusted.
+
+
+    Survey 7/8/9/10:
+
+    A person who currently has an opioid use disorder cannot be trusted.'
   type: string
-  title: '[A person who is currently addicted to opioids/prescription pain medication
-    cannot be trusted.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -431,11 +513,11 @@ fields:
     - Somewhat agree
     - Strongly agree
     - Completely agree
-- name: cs_a_obtain_bi
+- name: cs_a_obtain
+  title: Arrest for non medical opioids
+  description: I favor arresting and prosecuting people who obtain opioids/pain medication
+    from sources other than a medical provider.
   type: string
-  title: '[I favor arresting and prosecuting people who obtain opioids/pain medication
-    from sources other than a medical provider.] Do you disagree or agree with the
-    following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -443,10 +525,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: cs_b_use_bi
+- name: cs_b_use
+  title: Arrest for non medical opioid use
+  description: 'I favor arresting and prosecuting people who use opioids in a way
+    not [Survey 10: in ways other than] as prescribed by a doctor [Survey 6/10: medical
+    provider].'
   type: string
-  title: '[I favor arresting and prosecuting people who use opioids in a way not as
-    prescribed by a doctor.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -454,11 +538,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: cs_c_sentencedjail_bi
+- name: cs_c_sentencedjail
+  title: Jail for opioid misuse
+  description: People found guilty of misuse of opioids/prescription pain medication
+    need to be sentenced to jail or prison.
   type: string
-  title: '[People found guilty of misuse of opioids/prescription pain medication need
-    to be sentenced to jail or prison.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -466,11 +550,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: cs_d_incarceratedaccess_bi
+- name: cs_d_incarceratedaccess
+  title: Access to EBP in jail
+  description: Individuals who are incarcerated with an opioid use disorder/addiction
+    should get access to evidence-based treatment while incarcerated.
   type: string
-  title: '[Individuals who are incarcerated with an opioid use disorder/addiction
-    should get access to evidence-based treatment while incarcerated.] Do you disagree
-    or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -478,11 +562,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: cs_e_paroleaccess_bi
+- name: cs_e_paroleaccess
+  title: Access to EBP on parole
+  description: Individuals who are on parole or probation with an opioid use disorder/addiction
+    should get access to evidence-based treatment.
   type: string
-  title: '[Individuals who are on parole or probation with an opioid use disorder/addiction
-    should get access to evidence-based treatment.] Do you disagree or agree with
-    the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -491,9 +575,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: cs_a_obtain_uni
+  title: Arrest for non medical opioids-univariate scale
+  description: I favor arresting and prosecuting people who obtain opioids/pain medication
+    from sources other than a medical provider.
   type: string
-  title: '[I favor arresting and prosecuting people who obtain opioids/pain medication
-    from sources other than a medical provider.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -502,9 +587,11 @@ fields:
     - Strongly agree
     - Completely agree
 - name: cs_b_use_uni
+  title: Arrest for non medical opioid use-univariate scale
+  description: 'I favor arresting and prosecuting people who use opioids in a way
+    not [Survey 10: in ways other than] as prescribed by a doctor [Survey 6/10: medical
+    provider].'
   type: string
-  title: '[I favor arresting and prosecuting people who use opioids in a way not as
-    prescribed by a doctor.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -513,9 +600,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: cs_c_sentencedjail_uni
+  title: Jail for opioid misuse-univariate scale
+  description: People found guilty of misuse of opioids/prescription pain medication
+    need to be sentenced to jail or prison.
   type: string
-  title: '[People found guilty of misuse of opioids/prescription pain medication need
-    to be sentenced to jail or prison.] Do you agree with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -524,10 +612,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: cs_d_incarceratedaccess_uni
+  title: Access to EBP in jail-univariate scale
+  description: Individuals who are incarcerated with an opioid use disorder/addiction
+    should get access to evidence-based treatment while incarcerated.
   type: string
-  title: '[Individuals who are incarcerated with an opioid use disorder/addiction
-    should get access to evidence-based treatment while incarcerated.] Do you agree
-    with the following statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -536,10 +624,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: cs_e_paroleaccess_uni
+  title: Access to EBP on parole-univariate scale
+  description: Individuals who are on parole or probation with an opioid use disorder/addiction
+    should get access to evidence-based treatment.
   type: string
-  title: '[Individuals who are on parole or probation with an opioid use disorder/addiction
-    should get access to evidence-based treatment.] Do you agree with the following
-    statements?'
   constraints:
     enum:
     - Do not agree at all
@@ -547,11 +635,11 @@ fields:
     - Somewhat agree
     - Strongly agree
     - Completely agree
-- name: kb_a_definition_bi
+- name: kb_a_definition
+  title: Opioid definition negative consequences
+  description: Opioid addiction is defined by a person continuing to use opioids despite
+    negative consequences.
   type: string
-  title: '[Opioid addiction is defined by a person continuing to use opioids despite
-    negative consequences.] Answer whether you disagree or agree with the following
-    statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -559,10 +647,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_b_anyuse_bi
+- name: kb_b_anyuse
+  title: Opioid definition long-term pain use
+  description: 'Anyone who uses opioids long-term for pain has an [S1: opioid addiction;
+    Survey 3/7/8/9/10: opioid use disorder].'
   type: string
-  title: '[Anyone who uses opioids long-term for pain has an opioid addiction.] Answer
-    whether you disagree or agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -570,11 +659,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_c_selfcontrol_bi
+- name: kb_c_selfcontrol
+  title: People with OUD lack self-control
+  description: 'Most people who develop and/or struggle with opioid use disorder/addiction
+    lack self-control. [Survey 6/7/8: delete addiction]
+
+    [Survey 9/10 wording]: Most people who develop an opioid use disorder lack self-control'
   type: string
-  title: '[Most people who develop and/or struggle with opioid use disorder/addiction
-    lack self-control.] Answer whether you disagree or agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -583,9 +674,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_d_moralfail_bi
+  title: Opioid misuse moral failing
+  description: Misuse of opioids is a moral failing.
   type: string
-  title: '[Misuse of opioids is a moral failing.] Answer whether you disagree or agree
-    with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -593,11 +684,14 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_e_quitanytime_bi
+- name: kb_e_quitanytime
+  title: Quit anytime
+  description: 'A person struggling with opioid use disorder/addiction can quit using
+    anytime if they choose.
+
+    [Survey 3/7/8/9/10 wording]: A person struggling with an opioid use disorder can
+    choose to quit using at any time if they put their mind to it.'
   type: string
-  title: '[A person struggling with opioid use disorder/addiction can quit using anytime
-    if they choose.] Answer whether you disagree or agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -605,11 +699,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_f_stopbreathing_bi
+- name: kb_f_stopbreathing
+  title: Opioid definition slow breathing
+  description: '[Using opioids can slow your breathing or even cause you to stop breathing
+    entirely and lead to an overdose or death.] Do you disagree or agree with the
+    following statements about opioid use disorder?'
   type: string
-  title: '[When misused, opioids can slow your breathing or even cause you to stop
-    breathing entirely and lead to an overdose or death.] Answer whether you disagree
-    or agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -617,11 +712,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_g_recover_bi
+- name: kb_g_recover
+  title: EBT for OUD recovery
+  description: Evidence-based treatments for opioid use disorder can recover people
+    from opioid addiction.
   type: string
-  title: '[Evidence-based treatments for opioid use disorder can recover people from
-    opioid addiction.] Answer whether you disagree or agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -629,11 +724,14 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_h_medicalcondition_bi
+- name: kb_h_medicalcondition
+  title: OUD chronic condition
+  description: 'Opioid use disorder is a medical condition like other chronic health
+    conditions. [Survey 6]
+
+    * [Survey 3, 7-10 wording: Opioid use disorder is a medical condition like other
+    chronic health conditions (for example, diabetes, high blood pressure).] '
   type: string
-  title: '[Opioid use disorder is a medical condition like other chronic health conditions.]
-    Answer whether you disagree or agree with the following statements about opioid
-    use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -641,11 +739,15 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_i_rockbottom_bi
+- name: kb_i_rockbottom
+  title: Rock bottom accept treatment
+  description: "A person struggling with opioid use disorder/addiction must hit rock\
+    \ bottom before they are ready to accept treatment.\n[Survey 3, 7 Wording]: A\
+    \ person struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
+    \ before they are willing to accept or attend treatment. \n[Survey 8 Wording]:\
+    \ Most people struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
+    \ before they are willing to accept or attend treatment."
   type: string
-  title: '[A person struggling with opioid use disorder/addiction must hit rock bottom
-    before they are ready to accept treatment.] Answer whether you disagree or agree
-    with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -653,10 +755,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_j_easyfind_bi
+- name: kb_j_easyfind
+  title: Treatment easy to find
+  description: ' It is easy to find good opioid use disorder treatment.
+
+    * [Survey 3/7/8/9/10 wording]: Effective [Survey 8/9/10: (or successful)] treatment
+    for an opioid use disorder is easy to find.'
   type: string
-  title: '[It is easy to find good opioid use disorder treatment.] Answer whether
-    you disagree or agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -665,10 +770,13 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_k_fda_bi
+  title: Approved medication exist
+  description: 'The FDA has approved medications that are effective in treating opioid
+    use disorder/addiction. [Survey 6/10]
+
+    *[Survey 3/7/8 wording]: Approved medications that are effective in treating opioid
+    use disorder exist. '
   type: string
-  title: '[The FDA has approved medications that are effective in treating opioid
-    use disorder/addiction.] Answer whether you disagree or agree with the following
-    statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -676,11 +784,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_l_jailhelps_bi
+- name: kb_l_jailhelps
+  title: Jail prevent overdose
+  description: 'Jailing someone with an opioid use disorder for at least a few days
+    will help them by reducing their risk for an overdose.
+
+    '
   type: string
-  title: '[Jailing someone with an opioid use disorder for at least a few days will
-    help them by reducing their risk for an overdose.] Answer whether you disagree
-    or agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -689,10 +799,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_m_medhoax_bi
+  title: MOUD is hoax
+  description: 'Medication for opioid use disorder (e.g., methadone, buprenorphine,
+    or naltrexone) is a hoax. '
   type: string
-  title: '[Medication for opioid use disorder (e.g., methadone, buprenorphine, or
-    naltrexone) is a hoax.] Answer whether you disagree or agree with the following
-    statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -701,11 +811,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_n_medabuse_bi
-  type: string
-  title: '[Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
+  title: MOUD is another drug
+  description: Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
     or naltrexone/vivitrol) is just substituting one form of drug abuse for another
-    type of drug abuse.] Answer whether you disagree or agree with the following statements
-    about opio'
+    type of drug abuse.
+  type: string
   constraints:
     enum:
     - Strongly disagree
@@ -714,10 +824,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_o_longterm_bi
+  title: long-term treatment needed
+  description: People with an opioid use disorder/addiction need long-term treatment
+    with medications.
   type: string
-  title: '[People with an opioid use disorder/addiction need long-term treatment with
-    medications.] Answer whether you disagree or agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -726,10 +836,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_p_responsible_bi
+  title: Misuse and function
+  description: People who misuse opioids can function as responsible members of society.
   type: string
-  title: '[People who misuse opioids can function as responsible members of society.]
-    Answer whether you disagree or agree with the following statements about opioid
-    use disorder/addiction.'
   constraints:
     enum:
     - Strongly disagree
@@ -738,10 +847,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_a_definition_uni
+  title: Opioid definition negative consequences-univariate scale
+  description: Opioid addiction is defined by a person continuing to use opioids despite
+    negative consequences.
   type: string
-  title: '[Opioid addiction is defined by a person continuing to use opioids despite
-    negative consequences.] Answer whether you agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -750,9 +859,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_b_anyuse_uni
+  title: Opioid definition long-term pain use-univariate scale
+  description: 'Anyone who uses opioids long-term for pain has an [S1: opioid addiction;
+    Survey 3/7/8/9/10: opioid use disorder].'
   type: string
-  title: '[Anyone who uses opioids long-term for pain has an opioid addiction.] Answer
-    whether you agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -761,10 +871,12 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_c_selfcontrol_uni
+  title: People with OUD lack self-control-univariate scale
+  description: 'Most people who develop and/or struggle with opioid use disorder/addiction
+    lack self-control. [Survey 6/7/8: delete addiction]
+
+    [Survey 9/10 wording]: Most people who develop an opioid use disorder lack self-control'
   type: string
-  title: '[Most people who develop and/or struggle with opioid use disorder/addiction
-    lack self-control.] Answer whether you agree with the following statements about
-    opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -773,9 +885,9 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_d_moralfail_uni
+  title: Opioid misuse moral failing-univariate scale
+  description: Misuse of opioids is a moral failing.
   type: string
-  title: '[Misuse of opioids is a moral failing.] Answer whether you agree with the
-    following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -784,10 +896,13 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_e_quitanytime_uni
+  title: Quit anytime-univariate scale
+  description: 'A person struggling with opioid use disorder/addiction can quit using
+    anytime if they choose.
+
+    [Survey 3/7/8/9/10 wording]: A person struggling with an opioid use disorder can
+    choose to quit using at any time if they put their mind to it.'
   type: string
-  title: '[A person struggling with opioid use disorder/addiction can quit using anytime
-    if they choose.] Answer whether you agree with the following statements about
-    opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -796,10 +911,14 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_f_stopbreathing_uni
+  title: Opioid definition slow breathing-univariate scale
+  description: 'When misused, opioids can slow your breathing or even cause you to
+    stop breathing entirely and lead to an overdose or death. [Survey 6]
+
+
+    [Survey 3, 7-10]: Using opioids can slow your breathing or even cause you to stop
+    breathing entirely and lead to an overdose or death. '
   type: string
-  title: '[When misused, opioids can slow your breathing or even cause you to stop
-    breathing entirely and lead to an overdose or death.] Answer whether you agree
-    with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -808,10 +927,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_g_recover_uni
+  title: EBT for OUD recovery-univariate scale
+  description: Evidence-based treatments for opioid use disorder can recover people
+    from opioid addiction.
   type: string
-  title: '[Evidence-based treatments for opioid use disorder can recover people from
-    opioid addiction.] Answer whether you agree with the following statements about
-    opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -820,9 +939,13 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_h_medicalcondition_uni
+  title: OUD chronic condition-univariate scale
+  description: 'Opioid use disorder is a medical condition like other chronic health
+    conditions. [Survey 6]
+
+    * [Survey 3, 7-10 wording: Opioid use disorder is a medical condition like other
+    chronic health conditions (for example, diabetes, high blood pressure).] '
   type: string
-  title: '[Opioid use disorder is a medical condition like other chronic health conditions.]
-    Answer whether you agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -831,10 +954,14 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_i_rockbottom_uni
+  title: Rock bottom accept treatment-univariate scale
+  description: "A person struggling with opioid use disorder/addiction must hit rock\
+    \ bottom before they are ready to accept treatment.\n[Survey 3, 7 Wording]: A\
+    \ person struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
+    \ before they are willing to accept or attend treatment. \n[Survey 8 Wording]:\
+    \ Most people struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
+    \ before they are willing to accept or attend treatment."
   type: string
-  title: '[A person struggling with opioid use disorder/addiction must hit rock bottom
-    before they are ready to accept treatment.] Answer whether you agree with the
-    following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -843,9 +970,12 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_j_easyfind_uni
+  title: Treatment easy to find-univariate scale
+  description: ' It is easy to find good opioid use disorder treatment.
+
+    * [Survey 3/7/8/9/10 wording]: Effective [Survey 8/9/10: (or successful)] treatment
+    for an opioid use disorder is easy to find.'
   type: string
-  title: '[It is easy to find good opioid use disorder treatment.] Answer whether
-    you agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -854,10 +984,13 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_k_fda_uni
+  title: Approved medication exist-univariate scale
+  description: 'The FDA has approved medications that are effective in treating opioid
+    use disorder/addiction. [Survey 6/10]
+
+    *[Survey 3/7/8 wording]: Approved medications that are effective in treating opioid
+    use disorder exist. '
   type: string
-  title: '[The FDA has approved medications that are effective in treating opioid
-    use disorder/addiction.] Answer whether you agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -866,10 +999,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_l_jailhelps_uni
+  title: Jail prevent overdose-univariate scale
+  description: Jailing someone with an opioid use disorder for at least a few days
+    will help them by reducing their risk for an overdose.
   type: string
-  title: '[Jailing someone with an opioid use disorder for at least a few days will
-    help them by reducing their risk for an overdose.] Answer whether you agree with
-    the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -878,10 +1011,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_m_medhoax_uni
+  title: MOUD is hoax-univariate scale
+  description: 'Medication for opioid use disorder (e.g., methadone, buprenorphine,
+    or naltrexone) is a hoax. '
   type: string
-  title: '[Medication for opioid use disorder (e.g., methadone, buprenorphine, or
-    naltrexone) is a hoax.] Answer whether you agree with the following statements
-    about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -890,11 +1023,11 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_n_medabuse_uni
-  type: string
-  title: '[Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
+  title: MOUD is another drug-univariate scale
+  description: Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
     or naltrexone/vivitrol) is just substituting one form of drug abuse for another
-    type of drug abuse.] Answer whether you agree with the following statements about
-    opioid use disor'
+    type of drug abuse.
+  type: string
   constraints:
     enum:
     - Do not agree at all
@@ -903,10 +1036,10 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_o_longterm_uni
+  title: long-term treatment needed-univariate scale
+  description: People with an opioid use disorder/addiction need long-term treatment
+    with medications.
   type: string
-  title: '[People with an opioid use disorder/addiction need long-term treatment with
-    medications.] Answer whether you agree with the following statements about opioid
-    use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -915,9 +1048,9 @@ fields:
     - Strongly agree
     - Completely agree
 - name: kb_p_responsible_uni
+  title: Misuse and function-univariate scale
+  description: People who misuse opioids can function as responsible members of society.
   type: string
-  title: '[People who misuse opioids can function as responsible members of society.]
-    Answer whether you agree with the following statements about opioid use disorder/addiction.'
   constraints:
     enum:
     - Do not agree at all
@@ -926,119 +1059,140 @@ fields:
     - Strongly agree
     - Completely agree
 - name: personaluse_ever
+  title: OUD misuse ever_option 1
+  description: "Have you ever used opioids/prescription pain medication illicitly\
+    \ obtained or used in a way not prescribed by a doctor?* \n[Survey 3/4/5 wording]:\
+    \ Have you ever misused opioids of any kind \u2013 such as heroin, fentanyl, or\
+    \ prescription pain medications other than exactly as prescribed for you? \n[Survey\
+    \ 6 wording: Have you ever misused (i.e., used other than exactly as prescribed\
+    \ for you) opioids of any kind \u2013 such as heroin, fentanyl, or other prescription\
+    \ pain medications?]"
   type: string
-  title: '[Have you ever used opioids/prescription pain medication illicitly obtained
-    or used in a way not prescribed by a doctor?] The next set of questions are about
-    your own personal experiences or the experiences of any family members or close
-    friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: personaloverdose_ever
+  title: OUD overdose
+  description: 'Have you ever overdosed from opioids/prescription pain medication?
+    [Survey 6: deleted prescription pain medication]
+
+    [Survey 7/8/9/10 wording: Have you ever overdosed (i.e., taken a high dose of
+    opioids leading to the slowing or stopping of breathing) from using opioids?]'
   type: string
-  title: '[Have you ever overdosed from opioids/prescription pain medication?] The
-    next set of questions are about your own personal experiences or the experiences
-    of any family members or close friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: personalconviction_ever
+  title: Personal conviction ever
+  description: Have you ever been convicted of any misdemeanor or felony crime?
   type: string
-  title: '[Have you ever been convicted of any misdemeanor or felony crime?] The next
-    set of questions are about your own personal experiences or the experiences of
-    any family members or close friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: personalincarceration_ever
+  title: Personal incarcerated ever
+  description: Have you ever been incarcerated in jail or prison?
   type: string
-  title: '[Have you ever been incarcerated in jail or prison?] The next set of questions
-    are about your own personal experiences or the experiences of any family members
-    or close friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyuse_ever
+  title: OUD misuse family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: '[Have any family members or close friends you know ever used opioids/prescription
-    pain medication illicitly obtained or used in a way not prescribed by a doctor?]
-    The next set of questions are about your own personal experiences or the experiences
-    of any f'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyoverdose_ever
+  title: OUD overdose family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: '[Have any of your family members or close friends ever overdosed from opioids/prescription
-    pain medication?] The next set of questions are about your own personal experiences
-    or the experiences of any family members or close friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyconviction_ever
+  title: Family friend conviction ever
+  description: Have any of your family members or close friends ever been convicted
+    of any misdemeanor or felony crime?
   type: string
-  title: '[Have any of your family members or close friends ever been convicted of
-    any misdemeanor or felony crime?] The next set of questions are about your own
-    personal experiences or the experiences of any family members or close friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyincarceration_ever
+  title: Family friend incarcerated ever
+  description: Have any of your family members or close friends ever been incarcerated
+    in jail or prison?
   type: string
-  title: '[Have any of your family members or close friends ever been incarcerated
-    in jail or prison?] The next set of questions are about your own personal experiences
-    or the experiences of any family members or close friends.'
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: startdt_jcoin
-  type: datetime
   title: JCOIN section start date/time
-- name: enddt_jcoin
   type: datetime
+  custom:
+    exclude_from_release: true
+- name: enddt_jcoin
   title: JCOIN section end date/time
+  type: datetime
+  custom:
+    exclude_from_release: true
 - name: duration_jcoin
+  title: Time spent in survey, in minutes
+  description: Time to complete survey
   type: string
-  title: 'JCOIN Omnibus Section: Interview duration in minutes'
   constraints:
     enum:
     - Under 1 minute
 - name: surv_mode
+  title: Survey interview mode
+  description: Survey completed via web or phone
   type: string
-  title: Survey interview mode (online or phone)
   constraints:
     enum:
     - Phone interview
     - Web Interview
 - name: surv_lang
-  type: string
   title: Survey Interview Language
+  description: Language survey completed in (i.e., English, Spanish)
+  type: string
   constraints:
     enum:
     - English
     - Spanish
 - name: device
-  type: null
   title: Device
+  type: null
+  custom:
+    exclude_from_release: true
 - name: gender
-  type: string
   title: Respondent male/female sex
+  description: Unknown, male, sex
+  type: string
   constraints:
     enum:
     - Unknown
     - Male
     - Female
 - name: age4
-  type: string
   title: Age - 4 Categories
+  description: 'Categories: 18-29, 30-44, 45-59, 60+'
+  type: string
   constraints:
     enum:
     - 18-29
@@ -1047,8 +1201,9 @@ fields:
     - 60+
     - Under 18
 - name: age7
-  type: string
   title: Age - 7 Categories
+  description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
+  type: string
   constraints:
     enum:
     - 18-24
@@ -1060,8 +1215,10 @@ fields:
     - 75+
     - Under 18
 - name: racethnicity
-  type: string
   title: Combined Race/Ethnicity
+  description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
+    non-Hispanic, Other, non-Hispanic, Hispanic, 2+, non-Hispanic, Asian, non-Hispanic'
+  type: string
   constraints:
     enum:
     - White, non-Hispanic
@@ -1071,8 +1228,10 @@ fields:
     - 2+, non-Hispanic
     - Asian, non-Hispanic
 - name: educ4
-  type: string
   title: 4-level education
+  description: 'Highest degree received: No HS diploma, HS graduate or equivalent,
+    Some college, BA or above'
+  type: string
   constraints:
     enum:
     - No HS diploma
@@ -1080,8 +1239,9 @@ fields:
     - Some college
     - BA or above
 - name: marital
-  type: string
   title: Marital Status
+  description: Married, Widowed, Divorced, Separated, Never married, Living with partner
+  type: string
   constraints:
     enum:
     - Married
@@ -1091,8 +1251,11 @@ fields:
     - Never married
     - Living with partner
 - name: employ
+  title: Demographic_Employment Status
+  description: Working - as a paid employee, Working - self employed, Not working
+    - on temporary layoff from a job or looking for work, Not working - retired, Not
+    working - disabled, Not working - other
   type: string
-  title: Current Employment Status
   constraints:
     enum:
     - "Working \u2013 as a paid employee"
@@ -1102,8 +1265,9 @@ fields:
     - "Not working \u2013 disabled"
     - Not working - other
 - name: region4
-  type: string
   title: 4-level region
+  description: Northeast, Midwest, South West
+  type: string
   constraints:
     enum:
     - Northeast
@@ -1111,37 +1275,46 @@ fields:
     - South
     - West
 - name: metro
-  type: string
   title: Metropolitan area flag
+  description: Metro Area, Non-Metro Area
+  type: string
   constraints:
     enum:
     - Non-Metro Area
     - Metro Area
 - name: internet
+  title: Internet
+  description: HH internet access via dial-up, DSL, or cable broadband at home
   type: string
-  title: HH internet access via dial-up, DSL, or cable broadband at home
   constraints:
     enum:
     - Non-internet household
     - Internet Household
 - name: housing
-  type: string
   title: Home Ownership
+  description: Owned or being bought by you or someone in your household, Rented for
+    cash, Occupied without payment of cash rent
+  type: string
   constraints:
     enum:
     - Owned
     - Rented or occupied without payment
 - name: home_type
-  type: string
   title: Type of building of panelists' residence
+  description: A one-family house detached from any other house, A one-family house
+    attached to one or more houses, A building with 2 or more apartment, A mobile
+    home or trailer; Boat, RV, van, etc.
+  type: string
   constraints:
     enum:
     - A one-family house detached from any other house
     - A one-family house attached to one or more houses
     - Apartment building, mobile home or trailer, boat, RV, or other
 - name: phoneservice
-  type: string
   title: Telephone service for the household
+  description: Landline telephone only; Have a landline, but mostly use cellphone;
+    Have cellphone, but mostly use landline; Cellphone only; No telephone service
+  type: string
   constraints:
     enum:
     - Landline telephone only
@@ -1150,11 +1323,13 @@ fields:
     - Cellphone only
     - No telephone service
 - name: hhsize
-  type: number
   title: Household size (including children)
+  description: Number of people in household
+  type: number
 - name: hh612
-  type: string
   title: Number of HH members age 6-12
+  description: Number of people in household age 6-12
+  type: string
   constraints:
     enum:
     - '0'
@@ -1162,16 +1337,18 @@ fields:
     - '2'
     - 3 or more
 - name: hh1317
-  type: string
   title: Number of HH members age 13-17
+  description: Number of people in household ages 13-17
+  type: string
   constraints:
     enum:
     - '0'
     - '1'
     - 2 or more
 - name: hh18ov
-  type: string
   title: Number of HH members age 18+
+  description: Number of people in household ages 18+
+  type: string
   constraints:
     enum:
     - '0'
@@ -1182,640 +1359,1012 @@ fields:
     - '5'
     - 6 or more
 - name: stigma_scale_score
+  title: Stigma scale score
+  description: Average score of 6 stigma items; higher scores indicate higher stigma
   type: number
-  title: 'Stigma scale: average score of 6 stigma items; higher scores indicate higher
-    stigma.'
 - name: kb_b_anyuse_correct
-  type: string
   title: 'Anyone who uses opioids long-term for pain has an opioid addiction [False]:
     disagreement coded as "correct"'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_e_quitanytime_correct
-  type: string
   title: 'A person struggling with opioid use disorder/addiction can quit using anytime
     if they choose [False]: disagreement coded as "correct"'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_i_rockbottom_correct
-  type: string
   title: 'A person struggling with opioid use disorder/addiction must hit rock bottom
     before they are ready to accept treatment [False]: disagreement coded as "correct"'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_j_easyfind_correct
-  type: string
   title: 'It is easy to find good opioid use disorder treatment [False]: disagreement
     coded as "correct"'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_n_medabuse_correct
-  type: string
   title: 'Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
     or naltrexone/vivitrol) is just substituting one form of drug abuse for another
     type of drug abuse [False]: disagreement coded as "correct"'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_a_definition_correct
-  type: string
   title: 'Opioid addiction is defined by a person continuing to use opioids despite
     negative consequences [True]: agreement coded as correct'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_f_stopbreathing_correct
-  type: string
   title: 'When misused, opioids can slow your breathing or even cause you to stop
     breathing entirely and lead to an overdose or death [True]: agreement coded as
     correct'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_g_recover_correct
-  type: string
   title: 'Evidence-based treatments for opioid use disorder can recover people from
     opioid addiction [True]: agreement coded as correct'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_h_medicalcondition_correct
-  type: string
   title: 'Opioid use disorder is a medical condition like other chronic health conditions
     [True]: agreement coded as correct'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: kb_k_fda_correct
-  type: string
   title: 'The FDA has approved medications that are effective in treating opioid use
     disorder/addiction [True]: agreement coded as correct'
+  type: string
   constraints:
     enum:
     - Incorrect
     - Correct
+  custom:
+    exclude_from_release: true
 - name: policy_attitudes_scale
-  type: number
   title: Policy attitudes scale score from average of eight items. Higher scores indicate
     more support for policies benefitting those with OUD.
-- name: discrimination_scale_score
   type: number
+  custom:
+    exclude_from_release: true
+- name: discrimination_scale_score
   title: Acceptance of discrimination scale score from average of four items. Higher
     scores indicate more acceptance of discrimination.
+  type: number
+  custom:
+    exclude_from_release: true
 - name: knowledgescore_new
-  type: number
   title: Sum of 10 knowledge-based items, with higher scores indicating more knowledge.
-- name: criminality_scale_score
   type: number
+  custom:
+    exclude_from_release: true
+- name: criminality_scale_score
   title: Perceptions of criminality scale score. Average of five items with higher
     scores indicating more perceived criminality toward those with OUD.
-- name: ps_a_medicaid
   type: number
-  title: I favor expanding Medicaid insurance benefits for low income families to
-    provide coverage for treatment of opioid use disorders/addiction problems, including
-    addiction to prescription pain medications
-- name: ps_b_naloxone
+  custom:
+    exclude_from_release: true
+- name: ps_a_medicaid_combo
+  title: Policy scale_expand Medicaid for OUD treatment
+  description: '[Survey 1/2/5/6/10] I favor expanding Medicaid  insurance benefits
+    for low income families to provide coverage for treatment of opioid use disorders/addiction
+    problems, including addiction to prescription pain medications.
+
+
+    [Survey 3/4/7/8/9 wording]: I favor expanding Medicaid insurance benefits for
+    low income families to provide coverage for treatment of opioid use disorders. '
   type: number
-  title: I favor making naloxone (also known as 'Narcan'), a medication that can quickly
-    reverse the effects of a person experiencing an opioid overdose, widely available
-    and affordable without a prescription
-- name: ps_c_mandatory
+- name: ps_b_naloxone_combo
+  title: Policy scale_Naloxone availability
+  description: "I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
+    \ that can quickly reverse the effects of a person experiencing an opioid overdose\
+    \ [Survey 7/8: (i.e., taken a high dose of opioids leading to the slowing or stopping\
+    \ of breathing)], widely available and affordable without a prescription.\n[Survey\
+    \ 9, 10 wording]: I support the FDA approving the first over the counter (i.e.,\
+    \ without a prescription) naloxone nasal spray (also known as \"Narcan\u201D),\
+    \ a medication that can quickly reverse the effects of a person experiencing an\
+    \ opioid overdose (i.e., taken a high dose of opioids leading to the slowing or\
+    \ stopping of breathing)."
   type: number
-  title: I believe that making drug treatment mandatory is an effective way to help
-    people with an opioid use disorder
-- name: ps_d_govspend
+- name: ps_c_mandatory_combo
+  title: Policy scale_mandatory drug treatment
+  description: I believe that making drug treatment mandatory is an effective way
+    to help people with an opioid use disorder
   type: number
-  title: I favor increasing government spending to improve treatment of opioid use
-    disorder/addiction
-- name: ds_e_schools
+- name: ps_d_govspend_combo
+  title: Policy scale_increase govt spend for OUD treatment
+  description: "I favor increasing government spending to improve treatment of opioid\
+    \ use disorder/addiction \n[Survey 3/4/7/8/9: deleted addiction]."
   type: number
-  title: High schools and colleges should be allowed to dismiss or expel a person
-    with an opioid use disorder/addiction
-- name: ds_f_physicians
+- name: ds_e_schools_combo
+  title: Discrimination scale_schools can dismiss or expel
+  description: 'High schools and colleges should be allowed to dismiss or expel a
+    person with an opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: number
-  title: Physicians and other healthcare providers should be allowed to refuse to
-    treat a person with an opioid use disorder/addiction
-- name: ds_g_employers
+- name: ds_f_physicians_combo
+  title: Discrimination scale_physicians can refuse to treat OUD
+  description: 'Physicians and other healthcare providers should be allowed to refuse
+    to treat a person with an opioid use disorder/addiction. [Survey 6/10: deleted
+    addiction]'
   type: number
-  title: Employers should be allowed to deny employment to a person with a current
-    opioid use disorder/addiction
-- name: ds_h_landlords
+- name: ds_g_employers_combo
+  title: Discrimination scale_employers can deny because OUD
+  description: 'Employers should be allowed to deny employment to a person with a
+    current opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: number
-  title: Landlords should be allowed to deny housing to a person with a current opioid
-    use disorder/addiction
-- name: ps_i_seekmedical
+- name: ds_h_landlords_combo
+  title: Discrimination scale_landlords can deny because OUD
+  description: 'Landlords should be allowed to deny housing to a person with a current
+    opioid use disorder/addiction.  [Survey 6/10: deleted addiction]'
   type: number
-  title: I favor passing laws to protect people from criminal charges for drug crimes
-    if they seek medical help for experiencing an opioid/prescription pain medication
-    problem
-- name: ps_j_jailhealth
+- name: ps_i_seekmedical_combo
+  title: Protect from charges if seek help uni and bi scales combined
+  description: I favor passing laws to protect people from criminal charges for drug
+    crimes if they seek medical help for experiencing an opioid/prescription pain
+    medication problem.
   type: number
-  title: I believe that incarceration/jail is an effective way to improve the health
-    of people with an opioid use disorder
-- name: ps_k_jailoverdose
+- name: ps_j_jailhealth_combo
+  title: Incarceration helps health
+  description: I believe that incarceration/jail is an effective way to improve the
+    health of people with an opioid use disorder.
   type: number
-  title: I believe that incarceration/jail is an effective way to reduce the risk
-    of overdosing for people with an opioid use disorder
-- name: ps_l_jailtreatment
+- name: ps_k_jailoverdose_combo
+  title: Incarcerations prevents overdose
+  description: I believe that incarceration/jail is an effective way to reduce the
+    risk of overdosing for people with an opioid use disorder.
   type: number
-  title: I believe that people in jail/prison with an opioid use disorder/addiction
-    problem should get access to medication for opioid use disorder (e.g., methadone,
-    buprenorphine, or naltrexone)
-- name: ss_e_dangerous
+- name: ps_l_jailtreatment_combo
+  title: Detainees access to MAT
+  description: 'I believe that people in jail/prison with an opioid use disorder/addiction
+    problem  [Survey 7/8/9/10: deleted addiction problem] should get access [Survey
+    3/4/7/8/9/10: be allowed access] to medication for their opioid use disorder (e.g.,
+    methadone, buprenorphine, or naltrexone)*'
   type: number
-  title: People with a current addiction to opioids/prescription pain medications
-    are more dangerous than the general population
-- name: ss_f_trust
+- name: ss_e_dangerous_combo
+  title: Stigma scale_Current OUD more dangerous
+  description: 'People with a current addiction to opioids/prescription pain medications
+    are more dangerous than the general population.
+
+
+    Survey 7/8/9/10:
+
+    People with a current opioid use disorder are more dangerous than the general
+    population.'
   type: number
-  title: A person who is currently addicted to opioids/prescription pain medication
-    cannot be trusted
-- name: ss_a_historywork
+- name: ss_f_trust_combo
+  title: Stigma scale_Can't trust current OUD
+  description: 'A person who is currently addicted to opioids/prescription pain medication
+    cannot be trusted.
+
+
+    Survey 7/8/9/10:
+
+    A person who currently has an opioid use disorder cannot be trusted.'
   type: number
-  title: I would be willing to have a person with a past history of opioid use disorder/addiction
-    start working closely with me on a job
-- name: ss_b_historymarry
+- name: ss_a_historywork_combo
+  title: Stigma scale_history OUD work with me
+  description: 'I would be willing to have a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction]start working closely
+    with me on a job. '
   type: number
-  title: I am comfortable having a person with a past history of opioid use disorder/addiction
-    marry into my family
-- name: ss_c_currentwork
+- name: ss_b_historymarry_combo
+  title: Stigma scale_history OUD marry into family
+  description: 'I would be comfortable having a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my  [Survey
+    4/5/6/7/8/9: close or immediate]family.'
   type: number
-  title: I would be willing to have a person with a current opioid use disorder/addiction
-    start working closely with me on a job
-- name: ss_d_currentmarry
+- name: ss_c_currentwork_combo
+  title: Stigma scale_current OUD work with me
+  description: 'I would be willing to have a person with a current opioid use disorder/addiction
+    [Survey 7/8/9/10: deleted addiction] start working closely with me on a job. '
   type: number
-  title: I would be comfortable having a person with a current opioid use disorder/addiction
-    marry into my family
-- name: cs_a_obtain
+- name: ss_d_currentmarry_combo
+  title: Stigma scale_current OUD marry into family
+  description: 'I would be comfortable to have a person with a current opioid use
+    disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my [Survey
+    4/5/6/7/8/9: close or immediate] family.'
   type: number
-  title: I favor arresting and prosecuting people who obtain opioids/pain medication
-    from sources other than a medical provider
-- name: cs_b_use
+- name: cs_a_obtain_combo
+  title: Arrest for non medical opioids uni and bi scales combined
+  description: I favor arresting and prosecuting people who obtain opioids/pain medication
+    from sources other than a medical provider. Univariate and bivariate response
+    scales combined
   type: number
-  title: I favor arresting and prosecuting people who use opioids in a way not as
-    prescribed by a doctor
-- name: cs_c_sentencedjail
+- name: cs_b_use_combo
+  title: Arrest for non medical opioid use uni and bi scales combined
+  description: 'I favor arresting and prosecuting people who use opioids in a way
+    not [Survey 10: in ways other than] as prescribed by a doctor.  Univariate and
+    bivariate response scales combined'
   type: number
-  title: People found guilty of misuse of opioids/prescription pain medication need
-    to be sentenced to jail or prison
-- name: cs_d_incarceratedaccess
+- name: cs_c_sentencedjail_combo
+  title: Jail for opioid misuse uni and bi scales combined
+  description: People found guilty of misuse of opioids/prescription pain medication
+    need to be sentenced to jail or prison.  Univariate and bivariate response scales
+    combined
   type: number
-  title: Individuals who are incarcerated with an opioid use disorder/addiction should
-    get access to evidence-based treatment while incarcerated
-- name: cs_e_paroleaccess
+- name: cs_d_incarceratedaccess_combo
+  title: Access to EBP in jail uni and bi scales combined
+  description: Individuals who are incarcerated with an opioid use disorder/addiction
+    should get access to evidence-based treatment while incarcerated.  Univariate
+    and bivariate response scales combined
   type: number
-  title: Individuals who are on parole or probation with an opioid use disorder/addiction
-    should get access to evidence-based treatment
-- name: kb_a_definition
+- name: cs_e_paroleaccess_combo
+  title: Access to EBP on parole uni and bi scales combined
+  description: Individuals who are on parole or probation with an opioid use disorder/addiction
+    should get access to evidence-based treatment.  Univariate and bivariate response
+    scales combined
   type: number
-  title: Opioid addiction is defined by a person continuing to use opioids despite
-    negative consequences
-- name: kb_b_anyuse
+- name: kb_a_definition_combo
+  title: Opioid definition negative consequences
+  description: 'Opioid addiction is defined by a person continuing to use opioids
+    despite negative consequences. '
   type: number
-  title: Anyone who uses opioids long-term for pain has an opioid addiction
-- name: kb_c_selfcontrol
+- name: kb_b_anyuse_combo
+  title: Opioid definition long-term pain use
+  description: 'Anyone who uses opioids long-term for pain has an [S1: opioid addiction;
+    Survey 3/7/8/9/10: opioid use disorder].'
   type: number
-  title: Most people who develop and/or struggle with opioid use disorder/addiction
-    lack self-control
-- name: kb_d_moralfail
+- name: kb_c_selfcontrol_combo
+  title: People with OUD lack self-control
+  description: 'Most people who develop and/or struggle with opioid use disorder/addiction
+    lack self-control. [Survey 6/7/8: delete addiction]
+
+    [Survey 9/10 wording]: Most people who develop an opioid use disorder lack self-control'
   type: number
-  title: Misuse of opioids is a moral failing
-- name: kb_e_quitanytime
+- name: kb_d_moralfail_combo
+  title: Opioid misuse moral failing uni and bi scales combined
+  description: Misuse of opioids is a moral failing. Univariate and bivariate response
+    scales combined
   type: number
-  title: A person struggling with opioid use disorder/addiction can quit using anytime
-    if they choose
-- name: kb_f_stopbreathing
+- name: kb_e_quitanytime_combo
+  title: Quit anytime
+  description: 'A person struggling with opioid use disorder/addiction can quit using
+    anytime if they choose.
+
+    [Survey 3/7/8/9/10 wording]: A person struggling with an opioid use disorder can
+    choose to quit using at any time if they put their mind to it.'
   type: number
-  title: When misused, opioids can slow your breathing or even cause you to stop breathing
-    entirely and lead to an overdose or death
-- name: kb_g_recover
+- name: kb_f_stopbreathing_combo
+  title: Opioid definition slow breathing
+  description: 'When misused, opioids can slow your breathing or even cause you to
+    stop breathing entirely and lead to an overdose or death. [Survey 6]
+
+
+    [Survey 3, 7-10]: Using opioids can slow your breathing or even cause you to stop
+    breathing entirely and lead to an overdose or death. '
   type: number
-  title: Evidence-based treatments for opioid use disorder can recover people from
-    opioid addiction
-- name: kb_h_medicalcondition
+- name: kb_g_recover_combo
+  title: EBT for OUD recovery uni and bi scales combined
+  description: Evidence-based treatments for opioid use disorder can recover people
+    from opioid addiction. Univariate and bivariate response scales combined
   type: number
-  title: Opioid use disorder is a medical condition like other chronic health conditions
-- name: kb_i_rockbottom
+- name: kb_h_medicalcondition_combo
+  title: OUD chronic condition
+  description: 'Opioid use disorder is a medical condition like other chronic health
+    conditions. [Survey 6]
+
+    * [Survey 3, 7-10 wording: Opioid use disorder is a medical condition like other
+    chronic health conditions (for example, diabetes, high blood pressure).] '
   type: number
-  title: A person struggling with opioid use disorder/addiction must hit rock bottom
-    before they are ready to accept treatment
-- name: kb_j_easyfind
+- name: kb_i_rockbottom_combo
+  title: Rock bottom accept treatment
+  description: "A person struggling with opioid use disorder/addiction must hit rock\
+    \ bottom before they are ready to accept treatment.\n[Survey 3, 7 Wording]: A\
+    \ person struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
+    \ before they are willing to accept or attend treatment. "
   type: number
-  title: It is easy to find good opioid use disorder treatment
-- name: kb_k_fda
+- name: kb_j_easyfind_combo
+  title: Treatment easy to find
+  description: 'It is easy to find good opioid use disorder treatment.
+
+    * [Survey 3/7/8/9/10 wording]: Effective [Survey 8/9/10: (or successful)] treatment
+    for an opioid use disorder is easy to find.'
   type: number
-  title: The FDA has approved medications that are effective in treating opioid use
-    disorder/addiction
-- name: kb_l_jailhelps
+- name: kb_k_fda_combo
+  title: Approved medication exist uni and bi scales combined
+  description: The FDA has approved medications that are effective in treating opioid
+    use disorder/addiction. Univariate and bivariate response scales combined
   type: number
-  title: Jailing someone with an opioid use disorder for at least a few days will
-    help them by reducing their risk for an overdose
-- name: kb_m_medhoax
+- name: kb_l_jailhelps_combo
+  title: Jail prevent overdose
+  description: Jailing someone with an opioid use disorder for at least a few days
+    will help them by reducing their risk for an overdose.
   type: number
-  title: Medication for opioid use disorder (e.g., methadone, buprenorphine, or naltrexone)
-    is a hoax
-- name: kb_n_medabuse
+- name: kb_m_medhoax_combo
+  title: MOUD is hoax uni and bi scales combined
+  description: Medication for opioid use disorder (e.g., methadone, buprenorphine,
+    or naltrexone) is a hoax.  Univariate and bivariate response scales combined
   type: number
-  title: Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
+- name: kb_n_medabuse_combo
+  title: MOUD is another drug uni and bi scales combined
+  description: Medication for opioid use disorder (e.g., methadone, buprenorphine/suboxone,
     or naltrexone/vivitrol) is just substituting one form of drug abuse for another
-    type of drug abuse
-- name: kb_o_longterm
+    type of drug abuse. Univariate and bivariate response scales combined
   type: number
-  title: People with an opioid use disorder/addiction need long-term treatment with
-    medications
-- name: kb_p_responsible
+- name: kb_o_longterm_combo
+  title: long-term treatment needed uni and bi scales combined
+  description: People with an opioid use disorder/addiction need long-term treatment
+    with medications. Univariate and bivariate response scales combined
   type: number
-  title: People who misuse opioids can function as responsible members of society
+- name: kb_p_responsible_combo
+  title: Misuse and function-bivariate scale
+  description: People who misuse opioids can function as responsible members of society.
+    Univariate and bivariate response scales combined
+  type: number
 - name: ps_a_medicaid_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ps_b_naloxone_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ps_d_govspend_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ps_l_jailtreatment_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ps_j_jailhealth_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ps_k_jailoverdose_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ss_a_historywork_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ss_b_historymarry_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ss_c_currentwork_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ss_d_currentmarry_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: cs_d_incarceratedaccess_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: cs_e_paroleaccess_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: kb_a_definition_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: kb_f_stopbreathing_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: kb_g_recover_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: kb_h_medicalcondition_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: kb_k_fda_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: kb_p_responsible_rev
-  type: number
   title: Reverse Coded Variable
+  type: number
+  custom:
+    exclude_from_release: true
 - name: income_relativemedian
-  type: string
   title: Income variable coded into approximately above and below the median for their
     state.
+  type: string
   constraints:
     enum:
     - Below median
     - Above median
+  custom:
+    exclude_from_release: true
 - name: medicaidexpansionstate
-  type: string
   title: State medicaid expansion status
+  type: string
   constraints:
     enum:
     - Expansion Implemented
     - Not implemented
+  custom:
+    exclude_from_release: true
 - name: crimjustexp_personal
-  type: string
   title: Personal incarceration and conviction combined.
-  constraints:
-    enum:
-    - 'Yes'
-    - 'No'
-- name: crimjustexp_family
   type: string
-  title: Family/friend incarceration or conviction combined.
   constraints:
     enum:
     - 'Yes'
     - 'No'
+  custom:
+    exclude_from_release: true
+- name: crimjustexp_family
+  title: Family/friend incarceration or conviction combined.
+  type: string
+  constraints:
+    enum:
+    - 'Yes'
+    - 'No'
+  custom:
+    exclude_from_release: true
 - name: incarceration_foroud
-  type: number
   title: Incarceration for OUD factor analysis scale, with higher scores indicating
     more support for incarcerating those who misuse opioids.
-- name: justicebased_intervention
   type: number
+  custom:
+    exclude_from_release: true
+- name: justicebased_intervention
   title: Justice based interventions for OUD factor analysis scale, with higher scores
     indicating more agreement with interventions for OUD involving the justice system
+  type: number
+  custom:
+    exclude_from_release: true
 - name: opioidmisandcrimjust_personal
-  type: number
   title: Personal opioid misuse and criminal justice experience.
-- name: stigma_bipolarscaleonly
   type: number
+  custom:
+    exclude_from_release: true
+- name: stigma_bipolarscaleonly
   title: Stigma scale score of ONLY cases that completed the survey with the bipolar
     scale
-- name: stigma_unipolarscaleonly
   type: number
+  custom:
+    exclude_from_release: true
+- name: stigma_unipolarscaleonly
   title: Stigma scale score of ONLY cases that completed the survey with the unipolar
     scale
-- name: discrimination_unipolarscaleonly
   type: number
+  custom:
+    exclude_from_release: true
+- name: discrimination_unipolarscaleonly
   title: Discrimination scale score of ONLY cases that completed the survey with the
     bipolar scale
-- name: discrimination_bipolarscaleonly
   type: number
+  custom:
+    exclude_from_release: true
+- name: discrimination_bipolarscaleonly
   title: Discrimination scale score of ONLY caes that completed the survey with the
     unipolar scale
-- name: disregardofoud
   type: number
+  custom:
+    exclude_from_release: true
+- name: disregardofoud
   title: Disregard of OUD factor analysis scale, with higher scores indicating more
     disregard of OUD as a medical condition
+  type: number
+  custom:
+    exclude_from_release: true
 - name: racedummy_white1
   type: number
+  custom:
+    exclude_from_release: true
 - name: racedummy_black1
   type: number
+  custom:
+    exclude_from_release: true
 - name: racedummy_other1
   type: number
+  custom:
+    exclude_from_release: true
 - name: racedummy_hispanic1
   type: number
+  custom:
+    exclude_from_release: true
 - name: racedummy_multi1
   type: number
+  custom:
+    exclude_from_release: true
 - name: racedummy_asian1
   type: number
+  custom:
+    exclude_from_release: true
 - name: sex01
   type: number
+  custom:
+    exclude_from_release: true
 - name: educationdichot_college1
   type: number
+  custom:
+    exclude_from_release: true
 - name: employdichot_employed1
   type: number
+  custom:
+    exclude_from_release: true
 - name: incomedichot_abovemed1
   type: number
+  custom:
+    exclude_from_release: true
 - name: personalopioidmisuse_yes1
   type: number
+  custom:
+    exclude_from_release: true
 - name: familyopioidmisuse_yes1
   type: number
+  custom:
+    exclude_from_release: true
 - name: anycrimjustpersonal_yes1
   type: number
+  custom:
+    exclude_from_release: true
 - name: anycrimjustfamily_yes1
   type: number
+  custom:
+    exclude_from_release: true
 - name: educationdummy_lesshs1
   type: number
+  custom:
+    exclude_from_release: true
 - name: educationdummy_somecollege1
   type: number
+  custom:
+    exclude_from_release: true
 - name: educationdummy_hsdiploma1
   type: number
+  custom:
+    exclude_from_release: true
 - name: educationdummy_collegedegree1
   type: number
+  custom:
+    exclude_from_release: true
 - name: incomedummy_less25k
   type: number
+  custom:
+    exclude_from_release: true
 - name: incomedummy_25to49k
   type: number
+  custom:
+    exclude_from_release: true
 - name: incomedummy_50to84k
   type: number
+  custom:
+    exclude_from_release: true
 - name: incomedummy_85to150k
   type: number
+  custom:
+    exclude_from_release: true
 - name: incomedummy_over150k
   type: number
+  custom:
+    exclude_from_release: true
 - name: race_1
-  type: number
   title: RACETHNICITY=1.0
+  type: number
+  custom:
+    exclude_from_release: true
 - name: race_2
-  type: number
   title: RACETHNICITY=2.0
+  type: number
+  custom:
+    exclude_from_release: true
 - name: race_3
-  type: number
   title: RACETHNICITY=3.0
+  type: number
+  custom:
+    exclude_from_release: true
 - name: race_4
-  type: number
   title: RACETHNICITY=4.0
+  type: number
+  custom:
+    exclude_from_release: true
 - name: race_5
-  type: number
   title: RACETHNICITY=5.0
+  type: number
+  custom:
+    exclude_from_release: true
 - name: race_6
-  type: number
   title: RACETHNICITY=6.0
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_1
-  type: number
   title: EMPLOY=Working - as a paid employee
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_2
-  type: number
   title: EMPLOY=Working - self-employed
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_3
-  type: number
   title: EMPLOY=Not working - on temporary layoff from a job
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_4
-  type: number
   title: EMPLOY=Not working - looking for work
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_5
-  type: number
   title: EMPLOY=Not working - retired
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_6
-  type: number
   title: EMPLOY=Not working - disabled
+  type: number
+  custom:
+    exclude_from_release: true
 - name: employment_7
-  type: number
   title: EMPLOY=Not working - other
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_1
-  type: number
   title: 'Zscore:  EMPLOY=Working - as a paid employee'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_2
-  type: number
   title: 'Zscore:  EMPLOY=Working - self-employed'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_3
-  type: number
   title: 'Zscore:  EMPLOY=Not working - on temporary layoff from a job'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_4
-  type: number
   title: 'Zscore:  EMPLOY=Not working - looking for work'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_5
-  type: number
   title: 'Zscore:  EMPLOY=Not working - retired'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_6
-  type: number
   title: 'Zscore:  EMPLOY=Not working - disabled'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zemployment_7
-  type: number
   title: 'Zscore:  EMPLOY=Not working - other'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zincomedummy_less25k
-  type: number
   title: Zscore(incomedummy_LESS25K)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zincomedummy_25to49k
-  type: number
   title: Zscore(incomedummy_25to49K)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zincomedummy_50to84k
-  type: number
   title: Zscore(incomedummy_50to84K)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zincomedummy_85to150k
-  type: number
   title: Zscore(incomedummy_85to150K)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zincomedummy_over150k
-  type: number
   title: Zscore(incomedummy_OVER150K)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zpersonalopioidmisuse_yes1
-  type: number
   title: Zscore(PersonalOpioidMisuse_YES1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zfamilyopioidmisuse_yes1
-  type: number
   title: Zscore(FamilyOpioidMisuse_YES1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zanycrimjustpersonal_yes1
-  type: number
   title: Zscore(AnyCrimJustPersonal_YES1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zanycrimjustfamily_yes1
-  type: number
   title: Zscore(AnyCrimJustFamily_YES1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zeducationdummy_lesshs1
-  type: number
   title: Zscore(educationdummy_LESSHS1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zeducationdummy_somecollege1
-  type: number
   title: Zscore(educationdummy_SOMECOLLEGE1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zeducationdummy_hsdiploma1
-  type: number
   title: Zscore(educationdummy_HSDIPLOMA1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zeducationdummy_collegedegree1
-  type: number
   title: Zscore(educationdummy_COLLEGEDEGREE1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zsex01
-  type: number
   title: Zscore(SEX01)
-- name: zdisregardofoud
   type: number
+  custom:
+    exclude_from_release: true
+- name: zdisregardofoud
   title: 'Zscore:  Disregard of OUD factor analysis scale, with higher scores indicating
     more disregard of OUD as a medical condition'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zracedummy_white1
-  type: number
   title: Zscore(racedummy_WHITE1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zracedummy_black1
-  type: number
   title: Zscore(racedummy_BLACK1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zracedummy_other1
-  type: number
   title: Zscore(racedummy_OTHER1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zracedummy_hispanic1
-  type: number
   title: Zscore(racedummy_HISPANIC1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zracedummy_multi1
-  type: number
   title: Zscore(racedummy_MULTI1)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: zracedummy_asian1
-  type: number
   title: Zscore(racedummy_ASIAN1)
-- name: zcriminality_scale_score
   type: number
+  custom:
+    exclude_from_release: true
+- name: zcriminality_scale_score
   title: 'Zscore:  Perceptions of criminality scale score. Average of five items with
     higher scores indicating more perceived criminality toward those with OUD.'
-- name: zdiscrimination_scale_score
   type: number
+  custom:
+    exclude_from_release: true
+- name: zdiscrimination_scale_score
   title: 'Zscore:  Acceptance of discrimination scale score from average of four items.
     Higher scores indicate more acceptance of discrimination.'
-- name: zpolicy_attitudes_scale
   type: number
+  custom:
+    exclude_from_release: true
+- name: zpolicy_attitudes_scale
   title: 'Zscore:  Policy attitudes scale score from average of eight items. Higher
     scores indicate more support for policies benefitting those with OUD.'
-- name: zstigma_scale_score
   type: number
+  custom:
+    exclude_from_release: true
+- name: zstigma_scale_score
   title: 'Zscore:  Stigma scale: average score of 6 stigma items; higher scores indicate
     higher stigma.'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: age4_1
-  type: number
   title: AGE4=18-29
+  type: number
+  custom:
+    exclude_from_release: true
 - name: age4_2
-  type: number
   title: AGE4=30-44
+  type: number
+  custom:
+    exclude_from_release: true
 - name: age4_3
-  type: number
   title: AGE4=45-59
-- name: age4_4
   type: number
+  custom:
+    exclude_from_release: true
+- name: age4_4
   title: AGE4=60+
+  type: number
+  custom:
+    exclude_from_release: true
 - name: ps_i_seekmedical_bi_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: ps_i_seekmedical_uni_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: zps_i_seekmedical_uni_rev
-  type: number
   title: Zscore(PS_I_SeekMedical_Uni_REV)
-- name: zps_i_seekmedical_bi_rev
   type: number
+  custom:
+    exclude_from_release: true
+- name: zps_i_seekmedical_bi_rev
   title: Zscore(PS_I_SeekMedical_Bi_REV)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: z_ps_i_seekmedical_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: ps_i_seekmedical_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: ps_c_mandatory_bi_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: ps_c_mandatory_uni_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: zps_c_mandatory_uni_rev
-  type: number
   title: Zscore(PS_C_Mandatory_Uni_REV)
-- name: zps_c_mandatory_bi_rev
   type: number
+  custom:
+    exclude_from_release: true
+- name: zps_c_mandatory_bi_rev
   title: Zscore(PS_C_Mandatory_Bi_REV)
+  type: number
+  custom:
+    exclude_from_release: true
 - name: z_ps_c_mandatory_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: ps_c_mandatory_rev
   type: number
+  custom:
+    exclude_from_release: true
 - name: new_policy_scale_rev
-  type: number
   title: Policy scale coded so higher scores indicate less endorsement of supportive
     policies
-- name: znew_policy_scale_rev
   type: number
+  custom:
+    exclude_from_release: true
+- name: znew_policy_scale_rev
   title: 'Zscore:  Policy scale coded so higher scores indicate less endorsement of
     supportive policies'
-- name: zsco01
   type: number
+  custom:
+    exclude_from_release: true
+- name: zsco01
   title: Zscore(NEW_Policy_Scale_rev)  Policy scale coded so higher scores indicate
     less endorsement of supportive policies
-- name: zsco02
   type: number
+  custom:
+    exclude_from_release: true
+- name: zsco02
   title: Zscore(Discrimination_Scale_Score)  Acceptance of discrimination scale score
     from average of four items. Higher scores indicate more acceptance of discrimination.
-- name: zsco03
   type: number
+  custom:
+    exclude_from_release: true
+- name: zsco03
   title: 'Zscore(Stigma_Scale_Score)  Stigma scale: average score of 6 stigma items;
     higher scores indicate higher stigma.'
-- name: zsco04
   type: number
+  custom:
+    exclude_from_release: true
+- name: zsco04
   title: Zscore(Criminality_Scale_Score)  Perceptions of criminality scale score.
     Average of five items with higher scores indicating more perceived criminality
     toward those with OUD.
-- name: zsco05
   type: number
+  custom:
+    exclude_from_release: true
+- name: zsco05
   title: Zscore(DisregardofOUD)  Disregard of OUD factor analysis scale, with higher
     scores indicating more disregard of OUD as a medical condition
-- name: zss_f_trust_bi
   type: number
+  custom:
+    exclude_from_release: true
+- name: zss_f_trust_bi
   title: 'Zscore:  [A person who is currently addicted to opioids/prescription pain
     medication cannot be trusted.] Do you disagree or agree with the following statements?'
+  type: number
+  custom:
+    exclude_from_release: true
 - name: personalcrimjust_ever
+  title: Coded_personal criminal justice involvement ever
+  description: Yes to either Have you ever been convicted of any misdemeanor or felony
+    crime? OR Have you ever been incarcerated in jail or prison?
   type: number
 - name: familycrimjust_ever
+  title: Coded_family friend criminal justice involvement ever
+  description: 'Yes to either Have any of your family members or close friends ever
+    been convicted of any misdemeanor or felony crime? OR Have any of your family
+    members or close friends ever been incarcerated in jail or prison? '
   type: number
 - name: hh05
+  title: Number of HH members age 0-5
+  description: Number of household members age 0-5
   type: string
   constraints:
     enum:
@@ -1824,8 +2373,9 @@ fields:
     - '2'
     - 3 or more
 - name: income4
-  type: string
   title: Household income (4 categories)
+  description: Less than $30,000; $30,000-$59,000; $60,000-$99,999; $100,000+
+  type: string
   constraints:
     enum:
     - < $30,000

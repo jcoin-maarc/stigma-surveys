@@ -139,18 +139,18 @@ value_labels:
     4: $100,000+
 field_to_value_label:
   rnd_01: labels0
-  ps_a_medicaid_bi: labels1
-  ps_b_naloxone_bi: labels1
-  ps_c_mandatory_bi: labels1
-  ps_d_govspend_bi: labels1
-  ds_e_schools_bi: labels1
-  ds_f_physicians_bi: labels1
-  ds_g_employers_bi: labels1
-  ds_h_landlords_bi: labels1
-  ps_i_seekmedical_bi: labels1
-  ps_j_jailhealth_bi: labels1
-  ps_k_jailoverdose_bi: labels1
-  ps_l_jailtreatment_bi: labels1
+  ps_a_medicaid: labels1
+  ps_b_naloxone: labels1
+  ps_c_mandatory: labels1
+  ps_d_govspend: labels1
+  ds_e_schools: labels1
+  ds_f_physicians: labels1
+  ds_g_employers: labels1
+  ds_h_landlords: labels1
+  ps_i_seekmedical: labels1
+  ps_j_jailhealth: labels1
+  ps_k_jailoverdose: labels1
+  ps_l_jailtreatment: labels1
   ps_a_medicaid_uni: labels13
   ps_b_naloxone_uni: labels13
   ps_c_mandatory_uni: labels13
@@ -163,40 +163,40 @@ field_to_value_label:
   ps_j_jailhealth_uni: labels13
   ps_k_jailoverdose_uni: labels13
   ps_l_jailtreatment_uni: labels13
-  ss_a_historywork_bi: labels1
-  ss_b_historymarry_bi: labels1
-  ss_c_currentwork_bi: labels1
-  ss_d_currentmarry_bi: labels1
-  ss_e_dangerous_bi: labels1
-  ss_f_trust_bi: labels1
+  ss_a_historywork: labels1
+  ss_b_historymarry: labels1
+  ss_c_currentwork: labels1
+  ss_d_currentmarry: labels1
+  ss_e_dangerous: labels1
+  ss_f_trust: labels1
   ss_a_historywork_uni: labels13
   ss_b_historymarry_uni: labels13
   ss_c_currentwork_uni: labels13
   ss_d_currentmarry_uni: labels13
   ss_e_dangerous_uni: labels13
   ss_f_trust_uni: labels13
-  cs_a_obtain_bi: labels1
-  cs_b_use_bi: labels1
-  cs_c_sentencedjail_bi: labels1
-  cs_d_incarceratedaccess_bi: labels1
-  cs_e_paroleaccess_bi: labels1
+  cs_a_obtain: labels1
+  cs_b_use: labels1
+  cs_c_sentencedjail: labels1
+  cs_d_incarceratedaccess: labels1
+  cs_e_paroleaccess: labels1
   cs_a_obtain_uni: labels13
   cs_b_use_uni: labels13
   cs_c_sentencedjail_uni: labels13
   cs_d_incarceratedaccess_uni: labels13
   cs_e_paroleaccess_uni: labels13
-  kb_a_definition_bi: labels1
-  kb_b_anyuse_bi: labels1
-  kb_c_selfcontrol_bi: labels1
+  kb_a_definition: labels1
+  kb_b_anyuse: labels1
+  kb_c_selfcontrol: labels1
   kb_d_moralfail_bi: labels1
-  kb_e_quitanytime_bi: labels1
-  kb_f_stopbreathing_bi: labels1
-  kb_g_recover_bi: labels1
-  kb_h_medicalcondition_bi: labels1
-  kb_i_rockbottom_bi: labels1
-  kb_j_easyfind_bi: labels1
+  kb_e_quitanytime: labels1
+  kb_f_stopbreathing: labels1
+  kb_g_recover: labels1
+  kb_h_medicalcondition: labels1
+  kb_i_rockbottom: labels1
+  kb_j_easyfind: labels1
   kb_k_fda_bi: labels1
-  kb_l_jailhelps_bi: labels1
+  kb_l_jailhelps: labels1
   kb_m_medhoax_bi: labels1
   kb_n_medabuse_bi: labels1
   kb_o_longterm_bi: labels1

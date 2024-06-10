@@ -1,15 +1,22 @@
 fields:
 - name: caseid
+  title: Unique respondent ID
+  description: Respondent ID, respondent can have participated in multiple surveys
   type: number
-  title: Case ID
 - name: weight
+  title: Survey weight
+  description: Post-stratification weights - 18+ general population
   type: number
-  title: Post-stratification weights - 18+ general population (N=1,233)
 - name: ps_a_medicaid
+  title: Policy scale_expand Medicaid for OUD treatment
+  description: '[Survey 1/2/5/6/10] I favor expanding Medicaid  insurance benefits
+    for low income families to provide coverage for treatment of opioid use disorders/addiction
+    problems, including addiction to prescription pain medications.
+
+
+    [Survey 3/4/7/8/9 wording]: I favor expanding Medicaid insurance benefits for
+    low income families to provide coverage for treatment of opioid use disorders. '
   type: string
-  title: '[I favor expanding Medicaid insurance benefits for low income families to
-    provide coverage for treatment of opioid use disorders.] Do you disagree or agree
-    with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -18,10 +25,17 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_b_naloxone
+  title: Policy scale_Naloxone availability
+  description: "I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
+    \ that can quickly reverse the effects of a person experiencing an opioid overdose\
+    \ [Survey 7/8: (i.e., taken a high dose of opioids leading to the slowing or stopping\
+    \ of breathing)], widely available and affordable without a prescription.\n[Survey\
+    \ 9, 10 wording]: I support the FDA approving the first over the counter (i.e.,\
+    \ without a prescription) naloxone nasal spray (also known as \"Narcan\u201D),\
+    \ a medication that can quickly reverse the effects of a person experiencing an\
+    \ opioid overdose (i.e., taken a high dose of opioids leading to the slowing or\
+    \ stopping of breathing)."
   type: string
-  title: "[I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
-    \ that can quickly reverse the effects of a person experiencing an opiod overdose\u2026\
-    ] Do you disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -30,9 +44,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_c_mandatory
+  title: Policy scale_mandatory drug treatment
+  description: I believe that making drug treatment mandatory is an effective way
+    to help people with an opioid use disorder
   type: string
-  title: '[I believe that making treatment mandatory is an effective way to help people
-    with an opioid use disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -41,9 +56,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_d_govspend
+  title: Policy scale_increase govt spend for OUD treatment
+  description: "I favor increasing government spending to improve treatment of opioid\
+    \ use disorder/addiction \n[Survey 3/4/7/8/9: deleted addiction]."
   type: string
-  title: '[I favor increasing government spending to improve treatment of opioid use
-    disorder.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -51,11 +67,16 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: ps_treatment
-  type: string
+- name: laws_protect_treatment
   title: '[I favor passing laws to protect people from criminal charges for drug related
-    crimes if they attend substance use treatment.] Do you disagree or agree with
-    the following statements?'
+    c'
+  description: 'I favor passing laws to protect people from criminal charges for drug
+    crimes if they seek medical help for experiencing an opioid/prescription pain
+    medication problem.
+
+    [Survey 3/4/7/8/9 wording]: I favor passing laws to protect people from criminal
+    charges for drug related crimes if they attend substance use treatment.'
+  type: string
   constraints:
     enum:
     - Strongly disagree
@@ -64,10 +85,12 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_l_jailtreatment
+  title: Detainees access to medication for OUD
+  description: 'I believe that people in jail/prison with an opioid use disorder/addiction
+    problem  [Survey 7/8/9/10: deleted addiction problem] should get access [Survey
+    3/4/7/8/9/10: be allowed access] to medication for their opioid use disorder (e.g.,
+    methadone, buprenorphine, or naltrexone)*'
   type: string
-  title: "[I believe that people in jail/prison with an opioid use disorder should\
-    \ be allowed access to medication for their opioid use disorder\u2026] Do you\
-    \ disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -76,10 +99,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: req_treat_prob
+  title: Require parolees to get treatment
+  description: Individuals who are on parole or probation with an opioid use disorder
+    should be required to attend substance use treatment.
   type: string
-  title: '[Individuals who are on parole or probation with an opioid use disorder
-    should be required to attend substance use treatment.] Do you disagree or agree
-    with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -88,9 +111,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_b_anyuse
+  title: Opioid definition long-term pain use
+  description: 'Anyone who uses opioids long-term for pain has an [S1: opioid addiction;
+    Survey 3/7/8/9/10: opioid use disorder].'
   type: string
-  title: '[Anyone who uses opioids long-term for pain has an opioid use disorder.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -99,10 +123,12 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_c_selfcontrol
+  title: People with OUD lack self-control
+  description: 'Most people who develop and/or struggle with opioid use disorder/addiction
+    lack self-control. [Survey 6/7/8: delete addiction]
+
+    [Survey 9/10 wording]: Most people who develop an opioid use disorder lack self-control'
   type: string
-  title: '[Most people who develop and/or struggle with an opioid use disorder lack
-    self-control.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -111,10 +137,13 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_e_quitanytime
+  title: Quit anytime
+  description: 'A person struggling with opioid use disorder/addiction can quit using
+    anytime if they choose.
+
+    [Survey 3/7/8/9/10 wording]: A person struggling with an opioid use disorder can
+    choose to quit using at any time if they put their mind to it.'
   type: string
-  title: '[A person struggling with an opioid use disorder can choose to quit using
-    opioids at any time if they put their mind to it.] Do you disagree or agree with
-    the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -122,11 +151,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_stopbreath
-  type: string
-  title: '[Using opioids can slow your breathing or even cause you to stop breathing
+- name: kb_f_stopbreathing
+  title: Opioid definition slow breathing
+  description: '[Using opioids can slow your breathing or even cause you to stop breathing
     entirely and lead to an overdose or death.] Do you disagree or agree with the
     following statements about opioid use disorder?'
+  type: string
   constraints:
     enum:
     - Strongly disagree
@@ -134,11 +164,14 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_medcondition
+- name: kb_h_medicalcondition
+  title: OUD chronic condition
+  description: 'Opioid use disorder is a medical condition like other chronic health
+    conditions. [Survey 6]
+
+    * [Survey 3, 7-10 wording: Opioid use disorder is a medical condition like other
+    chronic health conditions (for example, diabetes, high blood pressure).] '
   type: string
-  title: '[Opioid use disorder is a medical condition like other chronic health conditions
-    (for example, diabetes, high blood pressure).] Do you disagree or agree with the
-    following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -146,11 +179,12 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_rockbottom
+- name: kb_i_rockbottom
+  title: Rock bottom accept treatment
+  description: "[A person struggling with an opioid use disorder must hit \u201Crock\
+    \ bottom\u201D before they are willing to accept or attend treatment.] Do you\
+    \ disagree or agree with the following statements about opioid use disorder?"
   type: string
-  title: "[A person struggling with an opioid use disorder must hit \u201Crock bottom\u201D\
-    \ before they are willing to accept or attend treatment.] Do you disagree or agree\
-    \ with the following statements about opioid use disorder?"
   constraints:
     enum:
     - Strongly disagree
@@ -159,10 +193,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_painmeds_dangerous
+  title: Pain medication disorder more dangerous than heroin disorder
+  description: 'Individuals with an opioid use disorder specific to prescription pain
+    medications are more dangerous than individuals with an opioid use disorder specific
+    to heroin. '
   type: string
-  title: '[Individuals with an opioid use disorder specific to prescription pain medications
-    are more dangerous than individuals with an opioid use disorder specific to heroin.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -171,9 +206,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: opinion_changed
+  title: Opinions about OUD changed
+  description: My opinions about opioid use disorder have changed over the last 5
+    years.
   type: string
-  title: '[My opinions about opioid use disorder have changed over the last 5 years.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -182,10 +218,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: at_risk
+  title: Family history puts me at risk for OUD
+  description: Given my family history and/or prior experience with opioids, I think
+    I would be considered "at risk" for developing an opioid use disorder.
   type: string
-  title: "[Given my family history and/or prior experience with opioids, I think I\
-    \ would be considered \u201Cat risk\u201D for developing an opioid use disorder.]\
-    \ Do you disagree or agree with the following statements about opioid use disorder?"
   constraints:
     enum:
     - Strongly disagree
@@ -193,11 +229,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_jailhelp
+- name: kb_l_jailhelps
+  title: Jail prevent overdose
+  description: 'Jailing someone with an opioid use disorder for at least a few days
+    will help them by reducing their risk for an overdose.
+
+    '
   type: string
-  title: '[Jailing someone with an opioid use disorder for at least a few days will
-    help them by reducing their risk for an overdose.] Do you disagree or agree with
-    the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -205,11 +243,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_fda
+- name: kb_medicationsexist
+  title: Approved medication are effective
+  description: '[Survey 3/7/8/9 wording]: Approved medications that are effective
+    in treating opioid use disorder exist. '
   type: string
-  title: '[Approved medications that are effective in treating opioid use disorder
-    exist.] Do you disagree or agree with the following statements about opioid use
-    disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -217,11 +255,17 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_recover
+- name: kb_treat_recover
+  title: Effective treatment for OUD recovery
+  description: 'Evidence-based treatments for opioid use disorder can recover people
+    from opioid addiction.
+
+    [Survey 6/10 wording]: Evidence-based treatments for opioid use disorder can help
+    people recover from opioid use disorder
+
+    * [Survey 3/7/8 wording]: Some forms of substance use treatment are effective
+    [Survey 8/9: (or successful)] at helping people recover from an opioid use disorder. '
   type: string
-  title: '[Some forms of substance use treatment are effective at helping people recover
-    from an opioid use disorder.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -229,10 +273,13 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_easyfind
+- name: kb_j_easyfind
+  title: Treatment easy to find
+  description: ' It is easy to find good opioid use disorder treatment.
+
+    * [Survey 3/7/8/9/10 wording]: Effective [Survey 8/9/10: (or successful)] treatment
+    for an opioid use disorder is easy to find.'
   type: string
-  title: '[Effective treatment for an opioid use disorder is easy to find.] Do you
-    disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -241,9 +288,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_seekprofessional
+  title: People with OUD should seek professional help
+  description: People with an opioid use disorder should seek professional help.
   type: string
-  title: '[People with an opioid use disorder should seek professional help.] Do you
-    disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -252,10 +299,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_longterm
+  title: Long-term treatment required for OUD
+  description: People with an opioid use disorder require long-term treatment in order
+    to recover.
   type: string
-  title: '[People with an opioid use disorder require long-term treatment in order
-    to recover.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -264,9 +311,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: kb_medsrecov
+  title: Medications needed for OUD recovery
+  description: People with an opioid use disorder need medications in order to recover.
   type: string
-  title: '[People with an opioid use disorder need medications in order to recover.]
-    Do you disagree or agree with the following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -274,11 +321,11 @@ fields:
     - Neither disagree nor agree
     - Somewhat agree
     - Strongly agree
-- name: kb_recovcont
+- name: kb_recovery_no_end
+  title: OUD recovery never ends
+  description: 'Recovery [Survey 7/8/9/10: from opioid use disoder] is a continuous
+    process that never ends. '
   type: string
-  title: '[Recovery [from opioid use disorder] is a continuous process that never
-    ends.] Do you disagree or agree with the following statements about opioid use
-    disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -287,10 +334,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: heroin_seektreatment
+  title: Heroin users more likely to seek treatment
+  description: Individuals with an opioid use disorder specific to heroin are more
+    likely to seek treatment.
   type: string
-  title: '[Individuals with an opioid use disorder specific to heroin are more likely
-    to seek treatment.] Do you disagree or agree with the following statements about
-    opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -299,10 +346,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: heroin_recover
+  title: Heroin users more likely to recover
+  description: 'Individuals with an opioid use disorder specific to heroin are more
+    likely to recover. '
   type: string
-  title: '[Individuals with an opioid use disorder specific to heroin are more likely
-    to recover.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -311,10 +358,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: heroin_moretreatment
+  title: Heroin users need more treatment for recovery
+  description: Individuals with an opioid use disorder specific to heroin will require
+    more treatment in their attempt at recovery.
   type: string
-  title: '[Individuals with an opioid use disorder specific to heroin will require
-    more treatment in their attempt at recovery.] Do you disagree or agree with the
-    following statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -323,10 +370,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: family_know_treatment
+  title: Want family to know if sought treatment
+  description: I would want my friends and family to know if I sought treatment for
+    an opioid use disorder.
   type: string
-  title: '[I would want my friends and family to know if I sought treatment for an
-    opioid use disorder.] Do you disagree or agree with the following statements about
-    opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -335,10 +382,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: friend_tell_treatment
+  title: Want friend to tell me about treatment
+  description: I would want my friend to tell me if they sought treatment for an opioid
+    use disorder.
   type: string
-  title: '[I would want my friend to tell me if they sought treatment for an opioid
-    use disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -347,10 +394,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: encourage_friend_treatment
+  title: Encourage friend to seek treatment
+  description: I would encourage my friend to seek treatment if they had an opioid
+    use disorder.
   type: string
-  title: '[I would encourage my friend to seek treatment if they had an opioid use
-    disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -359,10 +406,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: treatment_separate_healthcare
+  title: OUD treatment separate from general health
+  description: 'Treatment for opioid use disorder should be delivered separately from
+    general health care services (for example, hospitals, clinics, primary care practices). '
   type: string
-  title: "[Treatment for opioid use disorder should be delivered separately from general\
-    \ health care services\u2026] Do you disagree or agree with the following statements\
-    \ about opioid use disorder?"
   constraints:
     enum:
     - Strongly disagree
@@ -371,10 +418,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: generalhcp_treatment
+  title: General providers not responsible for OUD treatment
+  description: 'General health care providers should not be responsible for treating
+    individuals with an opioid use disorder. '
   type: string
-  title: '[General health care providers should not be responsible for treating individuals
-    with an opioid use disorder.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -383,10 +430,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: generalhcp_notreat
+  title: Don't want my provider to treat OUD
+  description: I would not want my general health care provider to treat individuals
+    with an opioid use disorder.
   type: string
-  title: '[I would not want my general health care provider to treat individuals with
-    an opioid use disorder.] Do you disagree or agree with the following statements
-    about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -395,10 +442,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: recovery_common
+  title: Recovery common for OUD
+  description: Recovery is the most common outcome for individuals with an opioid
+    use disorder.
   type: string
-  title: '[Recovery is the most common outcome for individuals with an opioid use
-    disorder.] Do you disagree or agree with the following statements about opioid
-    use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -407,10 +454,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: failing_common
+  title: Multiple failed attempt common for OUD recovery
+  description: Multiple failed attempts (for example, relapse) is a common characteristic
+    of recovery from opioid use disorder.
   type: string
-  title: '[Multiple failed attempts (for example, relapse) is a common characteristic
-    of recovery from opioid use disorder.] Do you disagree or agree with the following
-    statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -419,10 +466,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: generalhcp_trained
+  title: General providers required training for OUD treatment
+  description: General health care providers should be required to receive training
+    on treatment for opioid use disorders.
   type: string
-  title: '[General health care providers should be required to receive training on
-    treatment for opioid use disorders.] Do you disagree or agree with the following
-    statements about opioid use disorder?'
   constraints:
     enum:
     - Strongly disagree
@@ -431,10 +478,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_a_historywork
+  title: Stigma scale_history OUD work with me
+  description: 'I would be willing to have a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction]start working closely
+    with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a past history of opioid use disorder
-    start working closely with me on a job.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -443,10 +491,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_c_currentwork
+  title: Stigma scale_current OUD work with me
+  description: 'I would be willing to have a person with a current opioid use disorder/addiction
+    [Survey 7/8/9/10: deleted addiction] start working closely with me on a job. '
   type: string
-  title: '[I would be willing to have a person with a current opioid use disorder
-    start working closely with me on a job.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -455,10 +503,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_d_currentmarry
+  title: Stigma scale_current OUD marry into family
+  description: 'I would be comfortable to have a person with a current opioid use
+    disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my [Survey
+    4/5/6/7/8/9: close or immediate] family.'
   type: string
-  title: '[I would be comfortable having a person with a current opioid use disorder
-    marry into my close or immediate family.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -467,10 +516,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_b_historymarry
+  title: Stigma scale_history OUD marry into family
+  description: 'I would be comfortable having a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my  [Survey
+    4/5/6/7/8/9: close or immediate]family.'
   type: string
-  title: '[I am comfortable having a person with a past history of opioid use disorder
-    marry into my close or immediate family.] Do you disagree or agree with the following
-    statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -479,9 +529,16 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_e_dangerous
+  title: Stigma scale_Current OUD more dangerous
+  description: 'People with a current addiction to opioids/prescription pain medications
+    are more dangerous than the general population.
+
+
+    Survey 7/8/9/10:
+
+    People with a current opioid use disorder are more dangerous than the general
+    population.'
   type: string
-  title: '[People with a current opioid use disorder are more dangerous than the general
-    population.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -490,9 +547,15 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_f_trust
+  title: Stigma scale_Can't trust current OUD
+  description: 'A person who is currently addicted to opioids/prescription pain medication
+    cannot be trusted.
+
+
+    Survey 7/8/9/10:
+
+    A person who currently has an opioid use disorder cannot be trusted.'
   type: string
-  title: '[A person who currently has an opioid use disorder cannot be trusted.] Do
-    you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -501,10 +564,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_currentsteal
+  title: Stigma scale_Current OUD steal drugs
+  description: A person who currently has an opioid use disorder would be willing
+    to steal money or valuable items in order to get drugs.
   type: string
-  title: '[A person who currently has an opioid use disorder would be willing to steal
-    money or valuable items in order to get drugs.] Do you disagree or agree with
-    the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -513,10 +576,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_historysteal
+  title: Stigma scale_History OUD steal drugs
+  description: 'A person who has a past history of opioid use disorder would be willing
+    to steal [Survey 7/8/9: might be tempted to take] money or valuable items in order
+    [Survey 9: deleted in order, added out of desperation] to get drugs.'
   type: string
-  title: '[A person who has a past history of opioid use disorder might be tempted
-    to take money or valuable items out of desperation to get drugs.] Do you disagree
-    or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -525,10 +589,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_currenthighrisk
+  title: Stigma scale_Current OUD workplace problems
+  description: A person who currently has an opioid use disorder is likely to experience
+    personal problems that would make them a high-risk employee in my workplace.
   type: string
-  title: '[A person who currently has an opioid use disorder is likely to experience
-    personal problems that would make them a high-risk employee in my workplace.]
-    Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -537,10 +601,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_historyhighrisk
+  title: Stigma scale_History OUD workplace problems
+  description: A person who has a past history of opioid use disorder is likely to
+    experience personal problems that would make them a high-risk employee in my workplace.
   type: string
-  title: '[A person who has a past history of opioid use disorder is likely to experience
-    personal problems that would make them a high-risk employee in my workplace.]
-    Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -549,10 +613,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: blme_pploud
+  title: Blame opioid epidemic people with OUD
+  description: '[People who have/had an opioid use disorder or misuse of opioids]
+    Do you think any of the following groups or people are to blame for the opioid
+    epidemic in the United States?'
   type: string
-  title: '[People who have/had an opioid use disorder or misuse of opioids] Do you
-    think any of the following groups or people are to blame for the opioid epidemic
-    in the United States?'
   constraints:
     enum:
     - Not at all to blame
@@ -561,9 +626,11 @@ fields:
     - Moderately to blame
     - Completely to blame
 - name: blme_hcp
+  title: Blame opioid epidemic health care providers
+  description: '[Health care providers who prescribed opioids] Do you think any of
+    the following groups or people are to blame for the opioid epidemic in the United
+    States?'
   type: string
-  title: '[Health care providers who prescribed opioids] Do you think any of the following
-    groups or people are to blame for the opioid epidemic in the United States?'
   constraints:
     enum:
     - Not at all to blame
@@ -572,10 +639,11 @@ fields:
     - Moderately to blame
     - Completely to blame
 - name: blme_fam
+  title: Blame opioid epidemic people who introduce opioids
+  description: '[Friends/family members who introduce their friends/family members
+    to opioids] Do you think any of the following groups or people are to blame for
+    the opioid epidemic in the United States?'
   type: string
-  title: '[Friends/family members who introduce their friends/family members to opioids]
-    Do you think any of the following groups or people are to blame for the opioid
-    epidemic in the United States?'
   constraints:
     enum:
     - Not at all to blame
@@ -584,10 +652,11 @@ fields:
     - Moderately to blame
     - Completely to blame
 - name: blme_pharma
+  title: Blame opioid epidemic pharmaceuticals
+  description: '[Pharmaceutical companies that produced opioids] Do you think any
+    of the following groups or people are to blame for the opioid epidemic in the
+    United States?'
   type: string
-  title: '[Pharmaceutical companies that produced opioids] Do you think any of the
-    following groups or people are to blame for the opioid epidemic in the United
-    States?'
   constraints:
     enum:
     - Not at all to blame
@@ -596,9 +665,10 @@ fields:
     - Moderately to blame
     - Completely to blame
 - name: blme_insur
+  title: Blame opioid epidemic health insurance companies
+  description: '[Health Insurance companies] Do you think any of the following groups
+    or people are to blame for the opioid epidemic in the United States?'
   type: string
-  title: '[Health Insurance companies] Do you think any of the following groups or
-    people are to blame for the opioid epidemic in the United States?'
   constraints:
     enum:
     - Not at all to blame
@@ -607,9 +677,10 @@ fields:
     - Moderately to blame
     - Completely to blame
 - name: more_poor
+  title: More likely misuse drugs poor people
+  description: '[People who have money problems (i.e., who I think are poor) are more
+    likely to start misusing drugs] Do you disagree or agree with the following statements?'
   type: string
-  title: '[People who have money problems (i.e., who I think are poor) are more likely
-    to start misusing drugs] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -618,9 +689,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: more_crime
+  title: More likely misuse drugs people in high crime neighborhoods
+  description: '[People who grow up in high crime neighborhoods are more likely to
+    start misusing drugs] Do you disagree or agree with the following statements?'
   type: string
-  title: '[People who grow up in high crime neighborhoods are more likely to start
-    misusing drugs] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -629,9 +701,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: more_prescribed
+  title: More likely misuse drugs people prescribed drugs
+  description: '[People who have been prescribed opioid pain medications are more
+    likely to start misusing opioids] Do you disagree or agree with the following
+    statements?'
   type: string
-  title: '[People who have been prescribed opioid pain medications are more likely
-    to start misusing opioids] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -640,10 +714,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: rec_rehab
+  title: Recommend family friend with OUD to residentail rehab
+  description: "[They should find a residential rehab program\u2026] If a friend or\
+    \ family member had an opioid use disorder and needed help, which of the following\
+    \ would you be most likely to suggest to them? Please rank your top 3 choices"
   type: string
-  title: "[They should find a residential rehab program\u2026] If a friend or family\
-    \ member had an opioid use disorder and needed help, which of the following would\
-    \ you be most likely to suggest to them?"
   constraints:
     enum:
     - '1'
@@ -653,10 +728,11 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_inpatient
+  title: Recommend family friend with OUD to inpatient programs
+  description: "[They should find a hospital inpatient program\u2026] If a friend\
+    \ or family member had an opioid use disorder and needed help, which of the following\
+    \ would you be most likely to suggest to them? Please rank your top 3 choices"
   type: string
-  title: "[They should find a hospital inpatient program\u2026] If a friend or family\
-    \ member had an opioid use disorder and needed help, which of the following would\
-    \ you be most likely to suggest to them?"
   constraints:
     enum:
     - '1'
@@ -666,11 +742,12 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_pcp
-  type: string
-  title: "[They should talk to their primary care doctor about getting a prescription\
+  title: Recommend family friend with OUD to PCP
+  description: "[They should talk to their primary care doctor about getting a prescription\
     \ for buprenorphine or Suboxone\u2026] If a friend or family member had an opioid\
     \ use disorder and needed help, which of the following would you be most likely\
-    \ to suggest to them?"
+    \ to suggest to them? Please rank your top 3 choices"
+  type: string
   constraints:
     enum:
     - '1'
@@ -680,10 +757,12 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_cnslr
+  title: Recommend family friend with OUD to one-on-one
+  description: "[They should find a counselor, social worker, or psychologist\u2026\
+    ] If a friend or family member had an opioid use disorder and needed help, which\
+    \ of the following would you be most likely to suggest to them? Please rank your\
+    \ top 3 choices"
   type: string
-  title: "[They should find a counselor, social worker, or psychologist\u2026] If\
-    \ a friend or family member had an opioid use disorder and needed help, which\
-    \ of the following would you be most likely to suggest to them?"
   constraints:
     enum:
     - '1'
@@ -693,10 +772,11 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_methadone
+  title: Recommend family friend with OUD to methadone program
+  description: '[They should contact a local methadone program] If a friend or family
+    member had an opioid use disorder and needed help, which of the following would
+    you be most likely to suggest to them? Please rank your top 3 choices'
   type: string
-  title: '[They should contact a local methadone program] If a friend or family member
-    had an opioid use disorder and needed help, which of the following would you be
-    most likely to suggest to them?'
   constraints:
     enum:
     - '1'
@@ -706,10 +786,11 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_outptnt
+  title: Recommend family friend with OUD to outpatient program
+  description: "[They should find a group outpatient program\u2026] If a friend or\
+    \ family member had an opioid use disorder and needed help, which of the following\
+    \ would you be most likely to suggest to them? Please rank your top 3 choices"
   type: string
-  title: "[They should find a group outpatient program\u2026] If a friend or family\
-    \ member had an opioid use disorder and needed help, which of the following would\
-    \ you be most likely to suggest to them?"
   constraints:
     enum:
     - '1'
@@ -719,10 +800,11 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_mtlhlp
+  title: Recommend family friend with OUD to help group
+  description: "[They should find a mutual help group\u2026] If a friend or family\
+    \ member had an opioid use disorder and needed help, which of the following would\
+    \ you be most likely to suggest to them? Please rank your top 3 choices"
   type: string
-  title: "[They should find a mutual help group\u2026] If a friend or family member\
-    \ had an opioid use disorder and needed help, which of the following would you\
-    \ be most likely to suggest to them?"
   constraints:
     enum:
     - '1'
@@ -732,10 +814,12 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: rec_fthldr
-  type: string
-  title: '[They should talk to their church pastor, rabbi, or other faith leader]
+  title: Recommend family friend to faith
+  description: '[They should talk to their church pastor, rabbi, or other faith leader]
     If a friend or family member had an opioid use disorder and needed help, which
-    of the following would you be most likely to suggest to them?'
+    of the following would you be most likely to suggest to them? Please rank your
+    top 3 choices'
+  type: string
   constraints:
     enum:
     - '1'
@@ -745,88 +829,105 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: personaluse_feelgood
+  title: OUD misuse ever_option 2
+  description: "Have you ever taken a prescription opioid medication (e.g., fentanyl,\
+    \ oxycodone [OxyContin, Percocet], hydrocodone [Vicodin], methadone, buprenorphine,\
+    \ etc.) in a way other than directed by a medical provider, for example to feel\
+    \ good/get high or because you would get sick if you didn\u2019t take it? "
   type: string
-  title: Have you ever taken a prescription opioid medication... in a way other than
-    as directed by a medical provider or non-prescribed/illegal opioids...?
   constraints:
     enum:
     - Yes, within the last year
     - Yes, more than a year ago
     - 'No'
 - name: personaloverdose_ever
+  title: OUD overdose
+  description: 'Have you ever overdosed from opioids/prescription pain medication?
+    [Survey 6: deleted prescription pain medication]
+
+    [Survey 7/8/9/10 wording: Have you ever overdosed (i.e., taken a high dose of
+    opioids leading to the slowing or stopping of breathing) from using opioids?]'
   type: string
-  title: Have you ever overdosed (i.e., taken a high dose of opioids leading to the
-    slowing or stopping of breathing) from using opioids?
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: familyoud
+  title: Family member or friend with OUD
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: Have any family members or close friends ever had an opioid use disorder
-    or misused opioids (for example, used in a way other than prescribed/intended
-    or developed a problem with them)?
   constraints:
     enum:
     - Yes, within the last year
     - Yes, more than a year ago
     - 'No'
 - name: familyoverdose_ever
+  title: OUD overdose family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: Has a family member or close friend ever overdosed (i.e., taken a high dose
-    of opioids leading to the slowing or stopping of breathing and sometimes death)
-    from using opioids?
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: familyoverdose_died
+  title: OUD overdose family member friend died
+  description: Has a family member or close friend ever died from an opioid overdose?
   type: string
-  title: Has a family member or close friend ever died from an opioid overdose?
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: personalconviction_ever
+  title: Personal conviction ever
+  description: Have you ever been convicted of any misdemeanor or felony crime?
   type: string
-  title: '[Have you ever been convicted of any misdemeanor or felony crime?] Please
-    answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - Yes, more than a year ago
     - 'No'
 - name: personalincarceration_ever
+  title: Personal incarcerated ever
+  description: Have you ever been incarcerated in jail or prison?
   type: string
-  title: '[Have you ever been incarcerated in jail or prison?] Please answer yes or
-    no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - Yes, more than a year ago
     - 'No'
 - name: familyconviction_ever
+  title: Family friend conviction ever
+  description: Have any of your family members or close friends ever been convicted
+    of any misdemeanor or felony crime?
   type: string
-  title: '[Have any of your family members or close friends ever been convicted of
-    any misdemeanor or felony crime?] Please answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - Yes, more than a year ago
     - 'No'
 - name: familyincarceration_ever
+  title: Family friend incarcerated ever
+  description: Have any of your family members or close friends ever been incarcerated
+    in jail or prison?
   type: string
-  title: '[Have any of your family members or close friends ever been incarcerated
-    in jail or prison?] Please answer yes or no to the following questions:'
   constraints:
     enum:
     - Yes, within the last year
     - Yes, more than a year ago
     - 'No'
 - name: race_whiteadvantage
+  title: CoBRAS_White people have advantages
+  description: '[White people in the U.S. have certain advantages because of the color
+    of their skin.] Do you disagree or agree with the following statements?'
   type: string
-  title: '[White people in the U.S. have certain advantages because of the color of
-    their skin.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -835,9 +936,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_successful
+  title: CoBRAS_Race determines success
+  description: '[Race is very important in determining who is successful and who is
+    not.] Do you disagree or agree with the following statements?'
   type: string
-  title: '[Race is very important in determining who is successful and who is not.]
-    Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -846,9 +948,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_prison
+  title: CoBRAS_Race important for prison
+  description: '[Race plays an important role in who gets sent to prison.] Do you
+    disagree or agree with the following statements?'
   type: string
-  title: '[Race plays an important role in who gets sent to prison.] Do you disagree
-    or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -857,9 +960,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_socservices
+  title: CoBRAS_Race role in social services received
+  description: '[Race plays a major role in the type of social services (such as type
+    of health care or day care) that people receive in the U.S.] Do you disagree or
+    agree with the following statements?'
   type: string
-  title: "[Race plays a major role in the type of social services\u2026 that people\
-    \ receive in the U.S.] Do you disagree or agree with the following statements?"
   constraints:
     enum:
     - Strongly disagree
@@ -868,9 +973,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_opportunity
+  title: CoBRAS_Minorities and White people same opportunities
+  description: '[Racial and ethnic minorities do not have the same opportunities as
+    white people in the U.S.] Do you disagree or agree with the following statements?'
   type: string
-  title: '[Racial and ethnic minorities do not have the same opportunities as white
-    people in the U.S.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -879,9 +985,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_minadvantage
+  title: CoBRAS_Minorities have advantages
+  description: '[Racial and ethnic minorities in the U.S. have certain advantages
+    because of the color of their skin.] Do you disagree or agree with the following
+    statements?'
   type: string
-  title: '[Racial and ethnic minorities in the U.S. have certain advantages because
-    of the color of their skin.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -890,9 +998,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_rich
+  title: CoBRAS_Anyone work hard to be rich
+  description: '[Everyone who works hard, no matter what race they are, has an equal
+    chance to become rich.] Do you disagree or agree with the following statements?'
   type: string
-  title: '[Everyone who works hard, no matter what race they are, has an equal chance
-    to become rich.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -901,9 +1010,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: race_whiteblame
+  title: CoBRAS_White people to blame for discrimination
+  description: '[White people are more to blame for racial discrimination than racial
+    and ethnic minorities.] Do you disagree or agree with the following statements?'
   type: string
-  title: '[White people are more to blame for racial discrimination than racial and
-    ethnic minorities.] Do you disagree or agree with the following statements?'
   constraints:
     enum:
     - Strongly disagree
@@ -912,8 +1022,11 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: hadcovid
+  title: COVID_Have/ever had COVID
+  description: '[SURVEY 6] Do you or have you had COVID-19?
+
+    [SURVEY 7] Have you ever had COVID-19?'
   type: string
-  title: Have you ever had COVID-19?
   constraints:
     enum:
     - Yes, had positive test result
@@ -921,8 +1034,9 @@ fields:
     - No, and tested negative
     - No, never had symptoms and never tested
 - name: covidmnth
+  title: COVID_First find out had COVID month
+  description: '[Month] When did you first find out you had COVID-19?'
   type: string
-  title: '[Month] When did you first find out you had COVID-19?'
   constraints:
     enum:
     - January
@@ -938,8 +1052,9 @@ fields:
     - November
     - December
 - name: covidyr
+  title: COVID_First find out had COVID year
+  description: '[Year] When did you first find out you had COVID-19?'
   type: string
-  title: '[Year] When did you first find out you had COVID-19?'
   constraints:
     enum:
     - '2019'
@@ -950,16 +1065,18 @@ fields:
     - SKIPPED ON WEB
     - REFUSED
 - name: covidstgma
+  title: COVID_stigma for COVID
+  description: Have you experienced any stigma, or poor treatment, because people
+    knew you had COVID-19?
   type: string
-  title: Have you experienced any stigma, or poor treatment, because people knew you
-    had COVID-19?
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: gotvax
+  title: COVID_at least one dose vaccine
+  description: 'Have you received at least one dose of a COVID-19 vaccine? '
   type: string
-  title: Have you received at least one dose of a COVID-19 vaccine?
   constraints:
     enum:
     - Yes, I got one dose/shot
@@ -967,8 +1084,10 @@ fields:
     - Yes, I got three doses/shots
     - No, I have not received any doses
 - name: vaxdate
+  title: COVID_date range received vaccine
+  description: Approximately when did you receive your first dose/shot of a COVID-19
+    vaccine?
   type: string
-  title: Approximately when did you receive your first dose/shot of a COVID-19 vaccine?
   constraints:
     enum:
     - Before March 1, 2021
@@ -980,33 +1099,37 @@ fields:
     - "March \u2013 April 2022"
     - "I don\u2019t remember"
 - name: vaxreq
+  title: COVID_employer require COVID vaccine
+  description: Does your employer require you to be vaccinated against COVID-19?
   type: string
-  title: Does your employer require you to be vaccinated against COVID-19?
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: vaxreq_infl
+  title: COVID_employer require vaccine influence decision
+  description: Did your employer requiring vaccination against COVID-19 influence
+    your decision to get vaccinated?
   type: string
-  title: Did your employer requiring vaccination against COVID-19 influence your decision
-    to get vaccinated?
   constraints:
     enum:
     - It had no effect on my decision to get vaccinated
     - It had some effect on my decision to get vaccinated
     - It was the only reason why I got vaccinated
 - name: covidvaxdis
+  title: COVID_no vaccine face discrimination
+  description: 'Do you believe people who choose to NOT receive the COVID-19 vaccine
+    face discrimination in your community? '
   type: string
-  title: Do you believe people who choose to  NOT receive the COVID-19 vaccine face
-    discrimination in your community?
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: freetests
+  title: COVID_know government free tests
+  description: Do you know you can sign up for the government to send you at-home
+    testing kits for free?
   type: string
-  title: Do you know you can sign up for the government to send you at-home testing
-    kits for free?
   constraints:
     enum:
     - Yes, I have signed up/received mine
@@ -1014,34 +1137,40 @@ fields:
     - "Yes, but I couldn\u2019t sign up"
     - "No, I didn\u2019t know there were free tests"
 - name: parent
+  title: Demographic_parent or legal guardian
+  description: Are there any children in your household for whom you are a parent
+    or legal guardian?
   type: string
-  title: Are there any children in your household for whom you are a parent or legal
-    guardian?
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: childage_04
-  type: string
-  title: '[Age 0-4] How many children living in your household for whom you are a
-    parent or legal guardian, are in the following age categories?'
-- name: childage_511
-  type: string
-  title: '[Age 5-11] How many children living in your household for whom you are a
-    parent or legal guardian, are in the following age categories?'
-- name: childage_1217
-  type: string
-  title: '[Age 12-17] How many children living in your household for whom you are
-    a parent or legal guardian, are in the following age categories?'
-- name: childage_18
-  type: string
-  title: '[Age 18 or older] How many children living in your household for whom you
+  title: Demographics household child 0 to 4 years old
+  description: '[Age 0-4] How many children living in your household for whom you
     are a parent or legal guardian, are in the following age categories?'
-- name: child5_vaxplans
   type: string
-  title: A vaccine against COVID-19 has been approved for emergency use by the FDA
-    for children 5 and older, is your child(ren) who are 5 years old and older vaccinated
-    against COVID-19?
+- name: childage_511
+  title: Demographics household child 5 to 11 years old
+  description: '[Age 5-11] How many children living in your household for whom you
+    are a parent or legal guardian, are in the following age categories?'
+  type: string
+- name: childage_1217
+  title: Demographics household child 12 to 17 years old
+  description: '[Age 12-17] How many children living in your household for whom you
+    are a parent or legal guardian, are in the following age categories?'
+  type: string
+- name: childage_18
+  title: Demographics household child 18 plus
+  description: '[Age 18 or older] How many children living in your household for whom
+    you are a parent or legal guardian, are in the following age categories?'
+  type: string
+- name: child5_vaxplans
+  title: COVID_children 5+ vaccinated
+  description: A vaccine against COVID-19 has been approved for emergency use by the
+    FDA for children 5 and older, is your child(ren) who are 5 years old and older
+    vaccinated against COVID-19?
+  type: string
   constraints:
     enum:
     - Yes, He/She/They already got vaccinated
@@ -1051,9 +1180,10 @@ fields:
     - Some of my children have/will get the vaccine and at least one of my children
       will not.
 - name: under5_vaxplans
+  title: COVID_children less than 5 to be vaccinated
+  description: If the FDA grants emergency use to a COVID-19 vaccine for children
+    younger than 5, would you plan to get your child(ren) a COVID-19 vaccine?
   type: string
-  title: If the FDA grants emergency use to a COVID-19 vaccine for children younger
-    than 5, would you plan to get your child(ren) a COVID-19 vaccine?
   constraints:
     enum:
     - I would try to get him/her/them a vaccine as soon as possible
@@ -1062,174 +1192,206 @@ fields:
     - Some of my children under 5 will get the vaccine and at least one of my children
       will not
 - name: wait_safety
+  title: COVID_young child vaccine reason wait_research safety
+  description: '[I would want to do my own research on the safety of the COVID-19
+    vaccine for children] Which of the following are reasons you would wait to vaccinate
+    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?  Select
+    all that apply'
   type: string
-  title: '[I would want to do my own research on the safety of the COVID-19 vacine
-    for children] Which of the following are reasons you would wait to vaccinate your
-    child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_effect
+  title: COVID_young child vaccine reason wait_research effectiveness
+  description: '[I would want to do my own research on the effectiveness (i.e., how
+    well it works as intended) of the COVID-19 vaccine for children] Which of the
+    following are reasons you would wait to vaccinate your child(ren) or not vaccinate
+    your child(ren) that are less than 5 years old?  Select all that apply'
   type: string
-  title: "[I would want to do my own research on the effectiveness\u2026 of the COVID-19\
-    \ vaccine for children] Which of the following are reasons you would wait to vaccinate\
-    \ your child(ren) or not vaccinate your child(ren) that are less than 5 years\
-    \ old?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_needles
-  type: string
-  title: "[He/she/they don\u2019t like needles] Which of the following are reasons\
+  title: COVID_young child vaccine reason wait_dislike needles
+  description: "[He/she/they don\u2019t like needles] Which of the following are reasons\
     \ you would wait to vaccinate your child(ren) or not vaccinate your child(ren)\
-    \ that are less than 5 years old?"
+    \ that are less than 5 years old?  Select all that apply"
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_noconern
+  title: COVID_young child vaccine reason wait_low illness concern
+  description: "[I\u2019m not concerned that my child(ren) will get seriously ill\
+    \ from COVID-19]  Which of the following are reasons you would wait to vaccinate\
+    \ your child(ren) or not vaccinate your child(ren) that are less than 5 years\
+    \ old?  Select all that apply"
   type: string
-  title: "[I\u2019m not concerned that my child(ren) will get seriously ill from COVID-19]\
-    \ Which of the following are reasons you would wait to vaccinate your child(ren)\
-    \ or not vaccinate your child(ren) that are less than 5 years old?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_notime
+  title: COVID_young child vaccine reason wait_no time
+  description: "[I won\u2019t have time to get him/her/them vaccinated] Which of the\
+    \ following are reasons you would wait to vaccinate your child(ren) or not vaccinate\
+    \ your child(ren) that are less than 5 years old?  Select all that apply"
   type: string
-  title: "[I won\u2019t have time to get him/her/them vaccinated] Which of the following\
-    \ are reasons you would wait to vaccinate your child(ren) or not vaccinate your\
-    \ child(ren) that are less than 5 years old?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_infect
-  type: string
-  title: '[I would be concerned about him/her/them getting infected with COVID-19
+  title: COVID_young child vaccine reason wait_worry infected from shot
+  description: '[I would be concerned about him/her/them getting infected with COVID-19
     from the vaccine] Which of the following are reasons you would wait to vaccinate
-    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
+    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?  Select
+    all that apply'
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_immsideeff
+  title: COVID_young child vaccine reason wait_mmediate side effects
+  description: '[I would be concerned about immediate side effects from the vaccine]
+    Which of the following are reasons you would wait to vaccinate your child(ren)
+    or not vaccinate your child(ren) that are less than 5 years old?  Select all that
+    apply'
   type: string
-  title: '[I would be concerned about immediate side effects from the vaccine] Which
-    of the following are reasons you would wait to vaccinate your child(ren) or not
-    vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_longterm
+  title: COVID_young child vaccine reason wait_unknown long-term effects
+  description: '[I am concerned about the unknown long-term side effects from the
+    vaccine] Which of the following are reasons you would wait to vaccinate your child(ren)
+    or not vaccinate your child(ren) that are less than 5 years old?  Select all that
+    apply'
   type: string
-  title: '[I am concerned about the unknown long-term side effects from the vaccine]
-    Which of the following are reasons you would wait to vaccinate your child(ren)
-    or not vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_dontwork
+  title: COVID_young child vaccine reason wait_unsure work
+  description: "[I don\u2019t think vaccines work very well] Which of the following\
+    \ are reasons you would wait to vaccinate your child(ren) or not vaccinate your\
+    \ child(ren) that are less than 5 years old?  Select all that apply"
   type: string
-  title: "[I don\u2019t think vaccines work very well] Which of the following are\
-    \ reasons you would wait to vaccinate your child(ren) or not vaccinate your child(ren)\
-    \ that are less than 5 years old?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_politics
+  title: COVID_young child vaccine reason wait_politically motivated
+  description: '[Politicians might promote a vaccine to win votes even if it is not
+    fully tested or safe] Which of the following are reasons you would wait to vaccinate
+    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?  Select
+    all that apply'
   type: string
-  title: '[Politicians might promote a vaccine to win votes even if it is not fully
-    tested or safe] Which of the following are reasons you would wait to vaccinate
-    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_notserious
+  title: COVID_young child vaccine reason wait_COVID not serious
+  description: '[The COVID-19 outbreak is not as serious as some people say it is
+    ] Which of the following are reasons you would wait to vaccinate your child(ren)
+    or not vaccinate your child(ren) that are less than 5 years old?  Select all that
+    apply'
   type: string
-  title: '[The COVID-19 outbreak is not as serious as some people say it] Which of
-    the following are reasons you would wait to vaccinate your child(ren) or not vaccinate
-    your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_toomany
+  title: COVID_young child vaccine reason wait_too many vaccines
+  description: '[Children already get too many vaccines] Which of the following are
+    reasons you would wait to vaccinate your child(ren) or not vaccinate your child(ren)
+    that are less than 5 years old?  Select all that apply'
   type: string
-  title: '[Children already get too many vaccines] Which of the following are reasons
-    you would wait to vaccinate your child(ren) or not vaccinate your child(ren) that
-    are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_heartprob
+  title: COVID_young child vaccine reason wait_heart problems
+  description: '[I am concerned about heart problems or inflammation for my child]
+    Which of the following are reasons you would wait to vaccinate your child(ren)
+    or not vaccinate your child(ren) that are less than 5 years old?  Select all that
+    apply'
   type: string
-  title: '[I am concerned about heart problems or inflammation for my child] Which
-    of the following are reasons you would wait to vaccinate your child(ren) or not
-    vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_morechild
+  title: COVID_young child vaccine reason wait_wait to see other effects
+  description: '[I would like to wait for more children to be vaccinated to see if
+    other side effects are discovered] Which of the following are reasons you would
+    wait to vaccinate your child(ren) or not vaccinate your child(ren) that are less
+    than 5 years old?  Select all that apply'
   type: string
-  title: '[I would like to wait for more children to be vaccinated to see if other
-    side effects are discovered] Which of the following are reasons you would wait
-    to vaccinate your child(ren) or not vaccinate your child(ren) that are less than
-    5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wait_other
+  title: COVID_young child vaccine reason wait_Other
+  description: '[Other, please specify:] Which of the following are reasons you would
+    wait to vaccinate your child(ren) or not vaccinate your child(ren) that are less
+    than 5 years old?  Select all that apply'
   type: string
-  title: '[Other, please specify:] Which of the following are reasons you would wait
-    to vaccinate your child(ren) or not vaccinate your child(ren) that are less than
-    5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: q19a_15_oe
+  title: COVID_young child vaccine reason wait_other TEXTBOX
+  description: '[Other TEXTBOX] Which of the following are reasons you would wait
+    to vaccinate your child(ren) or not vaccinate your child(ren) that are less than
+    5 years old?  Select all that apply'
   type: null
-  title: '[TEXTBOX] Which of the following are reasons you would wait to vaccinate
-    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
 - name: q19a_dk
+  title: COVID_young child vaccine reason wait_DON'T KNOW
+  description: '[DON''T KNOW] Which of the following are reasons you would wait to
+    vaccinate your child(ren) or not vaccinate your child(ren) that are less than
+    5 years old?  Select all that apply'
   type: string
-  title: '[DON''T KNOW] Which of the following are reasons you would wait to vaccinate
-    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: q19a_skp
+  title: 'COVID_young child vaccine reason wait_SKIPPED ON WEB '
+  description: '[SKIPPED ON WEB] Which of the following are reasons you would wait
+    to vaccinate your child(ren) or not vaccinate your child(ren) that are less than
+    5 years old?  Select all that apply'
   type: string
-  title: '[SKIPPED ON WEB] Which of the following are reasons you would wait to vaccinate
-    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: q19a_ref
+  title: COVID_young child vaccine reason wait_REFUSED
+  description: '[REFUSED] Which of the following are reasons you would wait to vaccinate
+    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?  Select
+    all that apply'
   type: string
-  title: '[REFUSED] Which of the following are reasons you would wait to vaccinate
-    your child(ren) or not vaccinate your child(ren) that are less than 5 years old?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: covidpass
+  title: COVID_know someone died from COVID
+  description: 'Do you personally know anyone who has passed away/died because of
+    getting infected with COVID-19? '
   type: string
-  title: Do you personally know anyone who has passed away/died because of getting
-    infected with COVID-19?
   constraints:
     enum:
     - Yes, someone in my household
@@ -1238,14 +1400,16 @@ fields:
     - 'Yes, other relationship, please specify:'
     - 'No'
 - name: covidpass_oe
+  title: COVID_know someone died from COVID textbox
+  description: '[Other, Please specify] Do you personally know anyone who has passed
+    away/died because of getting infected with COVID-19? '
   type: null
-  title: '[TEXTBOX] Do you personally know anyone who has passed away/died because
-    of getting infected with COVID-19?'
 - name: covidreg_private
+  title: COVID_Policy_Private companies authority to require vaccine]
+  description: Private companies should have the authority to require their employees
+    to be vaccinated. [Do you approve, disapprove, or neither approve nor disapprove
+    of the following statements.]
   type: string
-  title: '[Private companies should have the authority to require their employees
-    to be vaccinated.] Do you approve, disapprove, or neither approve nor disapprove
-    of the following statements.'
   constraints:
     enum:
     - Strongly approve
@@ -1254,10 +1418,13 @@ fields:
     - Somewhat disapprove
     - Strongly disapprove
 - name: covidreg_medcost
+  title: COVID_Policy_unvaccinated pay more medical out of pocket
+  description: People who are unvaccinated against COVID-19 should have to pay more
+    out-of-pocket for their medical costs for COVID-19 treatment than if they were
+    vaccinated (i.e., the insurance company or medical facility will cover less).
+    [Do you approve, disapprove, or neither approve nor disapprove of the following
+    statements.]
   type: string
-  title: "[People who are unvaccinated against COVID-19 should have to pay more out-of-pocket\
-    \ for their medical costs for COVID-19 treatment\u2026] Do you approve, disapprove,\
-    \ or neither approve nor disapprove of the following statements."
   constraints:
     enum:
     - Strongly approve
@@ -1266,10 +1433,11 @@ fields:
     - Somewhat disapprove
     - Strongly disapprove
 - name: covidreg_restaurants
+  title: COVID_Policy_business can refuse service to unvaccinated
+  description: "Restaurants and businesses should have the authority to refuse service\
+    \ based on a customer\u2019s COVID-19 vaccination status. [Do you approve, disapprove,\
+    \ or neither approve nor disapprove of the following statements.]"
   type: string
-  title: "[Restaurants and businesses should have the authority to refuse service\
-    \ based on a customer\u2019s COVID-19 vaccination status.] Do you approve, disapprove,\
-    \ or neither approve nor disapprove of the following statements."
   constraints:
     enum:
     - Strongly approve
@@ -1278,10 +1446,11 @@ fields:
     - Somewhat disapprove
     - Strongly disapprove
 - name: covidreg_school
+  title: COVID_Policy_public schools can require masks
+  description: The public school system should have the authority to require all students
+    and staff to wear masks. [Do you approve, disapprove, or neither approve nor disapprove
+    of the following statements.]
   type: string
-  title: '[The public school system should have the authority to require all students
-    and staff to wear masks.] Do you approve, disapprove, or neither approve nor disapprove
-    of the following statements.'
   constraints:
     enum:
     - Strongly approve
@@ -1290,10 +1459,15 @@ fields:
     - Somewhat disapprove
     - Strongly disapprove
 - name: covidreg_insurance
+  title: COVID_Policy_health insurance increase premium on unvaccinated
+  description: "Health insurance companies should have the authority to increase someone\u2019\
+    s [ADD HOVER TEXT OVER THE PHRASE INSURANCE PREMIUM: \u201CThe amount you pay\
+    \ for your health insurance every month. In addition to your premium, you usually\
+    \ have to pay other costs for your health care, including a deductible, copayments,\
+    \ and coinsurance.\u201D insurance premium] because they \_are unvaccinated against\
+    \ COVID-19. [Do you approve, disapprove, or neither approve nor disapprove of\
+    \ the following statements.]"
   type: string
-  title: "[Health insurance companies should have the authority to increase someone\u2019\
-    s insurance premium because he/she are unvaccinated against COVID-19.] Do you\
-    \ approve, disapprove, or neither approve nor disapprove of the following statements."
   constraints:
     enum:
     - Strongly approve
@@ -1302,11 +1476,10 @@ fields:
     - Somewhat disapprove
     - Strongly disapprove
 - name: covidreg_medpriority
+  title: COVID_Policy_medical center prioritze treatment for vaccinated
+  description: Emergency departments or other health care facilities should give priority
+    to vaccinated patients over unvaccinated patients who need care related to COVID-19.
   type: string
-  title: '[Emergency departments or other health care facilities should give priority
-    to vaccinated patients over unvaccinated patients who need care related to COVID-19.]
-    Do you approve, disapprove, or neither approve nor disapprove of the following
-    statements.'
   constraints:
     enum:
     - Strongly approve
@@ -1315,8 +1488,9 @@ fields:
     - Somewhat disapprove
     - Strongly disapprove
 - name: nervous_pastmonth
+  title: MHI5_nervous
+  description: Over the past month, how often have you been a very nervous person
   type: string
-  title: '[Been a very nervous person] Over the past month, how often have you:'
   constraints:
     enum:
     - All of the time
@@ -1326,8 +1500,9 @@ fields:
     - A little of the time
     - None of the time
 - name: downhearted_pastmonth
+  title: MHI5_downhearted blue
+  description: Over the past month, how often have you Felt downhearted and blue
   type: string
-  title: '[Felt downhearted and blue] Over the past month, how often have you:'
   constraints:
     enum:
     - All of the time
@@ -1337,8 +1512,9 @@ fields:
     - A little of the time
     - None of the time
 - name: calm_pastmonth
+  title: MHI5_calm peace
+  description: Over the past month, how often have you Felt calm and peaceful
   type: string
-  title: '[Felt calm and peaceful] Over the past month, how often have you:'
   constraints:
     enum:
     - All of the time
@@ -1348,9 +1524,10 @@ fields:
     - A little of the time
     - None of the time
 - name: dumps_pastmonth
+  title: MHI5_down in the dumps
+  description: Over the past month, how often have you Felt so down in the dumps that
+    nothing could cheer you up
   type: string
-  title: '[Felt so down in the dumps that nothing could cheer you up] Over the past
-    month, how often have you:'
   constraints:
     enum:
     - All of the time
@@ -1360,8 +1537,9 @@ fields:
     - A little of the time
     - None of the time
 - name: happy_pastmonth
+  title: MHI5_happy
+  description: Over the past month, how often have you Been a happy person
   type: string
-  title: '[Been a happy person] Over the past month, how often have you:'
   constraints:
     enum:
     - All of the time
@@ -1371,10 +1549,14 @@ fields:
     - A little of the time
     - None of the time
 - name: mntlhlthcr
+  title: Mental health_utilized specialist ever
+  description: Have you ever sought treatment from a mental health specialist (i.e.,
+    therapist, psychologist, licensed counselor, psychiatrist, and/or social worker)
+    or in an emergency room, hospital or outpatient mental health facility, or with
+    prescribed medication? This could include seeking services for a mental, psychological,
+    emotional, or behavioral issue in a hospital or outpatient mental health facility,
+    via telehealth, or being prescribed medication for your mental or behavioral health.
   type: string
-  title: "Have you ever sought treatment from a mental health specialist\u2026 or\
-    \ in an emergency room, hospital or outpatient mental health facility, or with\
-    \ prescribed medication?..."
   constraints:
     enum:
     - Yes, I first used mental health services before the COVID-19 pandemic began
@@ -1384,183 +1566,223 @@ fields:
     - No, but I would like to
     - 'No'
 - name: mntlhlth_increase
+  title: COVID_mental health utilization increase
+  description: Has your use of mental health services increased since the COVID-19
+    pandemic began, around March 2020?
   type: string
-  title: Has your use of mental health services increased since the COVID-19 pandemic
-    began, around March 2020?
   constraints:
     enum:
     - 'Yes'
     - No, stayed the same
     - "No, I\u2019ve used less"
 - name: mh_anxiety
+  title: Mental health_provider diagnosed anxiety disorder
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Any type of anxiety disorder, including panic disorder,
+    obsessive-compulsive disorder, and phobias'
   type: string
-  title: '[Any type of anxiety disorder, including panic disorder, obsessive-compulsive
-    disorder, and phobias] Have you EVER been told by a doctor or health professional
-    that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_depression
+  title: Mental health_provider diagnosed depression
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Any type of depression'
   type: string
-  title: '[Any type of depression] Have you EVER been told by a doctor or health professional
-    that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_bipolar
+  title: Mental health_provider diagnosed mood disorder
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Bipolar Disorder or other mood disorder'
   type: string
-  title: '[Bipolar Disorder or other mood disorder] Have you EVER been told by a doctor
-    or health professional that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_eatingdis
+  title: Mental health_provider diagnosed eating disorder
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Eating disorder'
   type: string
-  title: '[Eating disorder] Have you EVER been told by a doctor or health professional
-    that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_personalitydis
+  title: Mental health_provider diagnosed personality disorder
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Any type of personality disorder'
   type: string
-  title: '[Any type of personality disorder] Have you EVER been told by a doctor or
-    health professional that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_ptsd
+  title: Mental health_provider diagnosed PTSD
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Posttraumatic Stress Disorder'
   type: string
-  title: '[Posttraumatic Stress Disorder] Have you EVER been told by a doctor or health
-    professional that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_psychotic
+  title: Mental health_provider diagnosed psychotic disorders
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Psychotic disorders, including schizophrenia'
   type: string
-  title: '[Psychotic disorders, including schizophrenia] Have you EVER been told by
-    a doctor or health professional that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_other
+  title: Mental health_provider diagnosed other
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: Other'
   type: string
-  title: '[Other] Have you EVER been told by a doctor or health professional that
-    you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: mh_none
+  title: Mental health_provider diagnosed NONE
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: I have never been told that I had any mental health
+    condition, illness, or disorder'
   type: string
-  title: '[I have never been told that I had any mental health condition, illness,
-    or disorder] Have you EVER been told by a doctor or health professional that you
-    had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: q23b_dk
+  title: Mental health_provider diagnosed DON'T KNOW
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: DON''T KNOW'
   type: string
-  title: '[DON''T KNOW] Have you EVER been told by a doctor or health professional
-    that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: q23b_skp
+  title: Mental health_provider diagnosed SKIPPED ON WEB
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: SKIPPED ON WEB'
   type: string
-  title: '[SKIPPED ON WEB] Have you EVER been told by a doctor or health professional
-    that you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: q23b_ref
+  title: Mental health_provider diagnosed REFUSED
+  description: 'Have you EVER been told by a doctor or health professional that you
+    had any of the following: REFUSED'
   type: string
-  title: '[REFUSED] Have you EVER been told by a doctor or health professional that
-    you had any of the following:'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q24
+- name: sb_partnerw2
+  title: '5=COVID_seek new partner|
+
+    7=COVID_main romantic partner'
+  description: "5= Since the COVID-19 pandemic began (from mid-March 2020 until now)\
+    \ did you seek out and/or meet new partner(s) for dating and/or sex?|\n\n7= In\
+    \ March 2021 (13 months ago) did you have a main romantic/sexual partner? A main\
+    \ partner is one that you consider \u201Cmost important\u201D but does not necessarily\
+    \ mean exclusive."
   type: string
-  title: "In March 2021 (13 months ago) did you have a main romantic/sexual partner?\
-    \ A main partner is one that you consider \u201Cmost important\u201D but does\
-    \ not necessarily mean exclusive."
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q24a
+- name: sb_live_with_partnerw2
+  title: '5=COVID_talk with new partner online|
+
+    7= COVID_live with partner'
+  description: '5=Since the COVID-19 pandemic began (from mid-March 2020 until now)
+    have you talked with the new partner(s) on an online phone/video platform? |
+
+    7= In March 2021, were you and your main partner living together in the same household?'
   type: string
-  title: In March 2021, were you and your main partner living together in the same
-    household?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25
-  type: string
-  title: Since March 1, 2021 until now, did you seek out and/or meet new partner(s)
+- name: sb_seek_partnerw2
+  title: COVID_seek new partner
+  description: Since March 1, 2021 until now, did you seek out and/or meet new partner(s)
     for dating and/or sex?
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25a
+- name: sb_new_partner_onlinew2
+  title: COVID_talk with new partner online
+  description: Since March 1, 2021 until now, have you talked with the new partner(s)
+    on an online phone/video platform?
   type: string
-  title: Since March 1, 2021 until now, have you talked with the new partner(s) on
-    an online phone/video platform?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25a1
+- name: sb_online_dating_profile
+  title: COVID_have online dating profile
+  description: "Since March 1, 2021 [\u201CMarch 1,2021: (13 months ago)] until now,\
+    \ did you have any online dating profile(s) (e.g., on dating sites like Match.com\
+    \ or other sites/apps)?"
   type: string
-  title: Since March 1, 2021 until now, did you have any online dating profile(s)
-    (e.g., on dating sites like Match.com or other sites/apps)?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25a2
+- name: sb_online_dating_profile_vax_status
+  title: COVID_dating profile vaccination status
+  description: "Since March 1, 2021 [\u201CMarch 1,2021: (13 months ago)] until now,\
+    \ did you indicate your COVID-19 vaccination status on one or more online dating\
+    \ profile(s)?"
   type: string
-  title: Since March 1, 2021 until now, did you indicate your COVID-19 vaccination
-    status on one or more online dating profile(s)?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25b
+- name: sb_new_partner_in_personw2
+  title: COVID_new partner in person
+  description: "Since the COVID-19 pandemic began (from mid-March 2020 until now)\
+    \ have you met up with the new partner(s) in person?\n[SURVEY 7]: Since March\
+    \ 1, 2021 [\u201CMarch 1,2021: (13 months ago)] until now, have you met up with\
+    \ new partner(s) in person?"
   type: string
-  title: Since March 1, 2021 until now, have you met up with new partner(s) in person?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25b1
+- name: sb_new_partner_time_before_inpersonw2
+  title: COVID_new partner time before in person
+  description: 'Since the COVID-19 pandemic began (from mid-March 2020 until now),
+    of the new partner(s) you met in person, how long did you know each other before
+    meeting in person?
+
+    [SURVEY 7]: Since March 1, 2021 [March 1,2021: (13 months ago)] until now, of
+    the new partner(s) you met in person, how long did you know each other before
+    meeting in person? '
   type: string
-  title: Since March 1, 2021 until now, of the new partner(s) you met in person, how
-    long did you know each other before meeting in person?
   constraints:
     enum:
     - Several hours
     - Several days (less than 1 week)
     - Several weeks (less than 1 month)
     - Several months
-- name: q25b2
+- name: sb_new_partner_know_their_hiv_status
+  title: COVID_important know STD status
+  description: "How important was it to you that you knew a new partner\u2019s HIV\
+    \ status and whether they had any sexually transmitted diseases, such as chlamydia\
+    \ or gonorrhea?"
   type: string
-  title: "How important was it to you that you knew a new partner\u2019s HIV status\
-    \ and whether they had any sexually transmitted diseases, such as chlamydia or\
-    \ gonorrhea?"
   constraints:
     enum:
     - Not at all important
@@ -1568,10 +1790,11 @@ fields:
     - Moderately important
     - Important
     - Very important
-- name: q25b3
+- name: sb_new_partner_have_covid_vax
+  title: COVID_new partner COVID vaccine prior to in person
+  description: 'How important was it to you that a new partner received the COVID-19
+    vaccine before meeting in person? '
   type: string
-  title: How important was it to you that a new partner received the COVID-19 vaccine
-    before meeting in person?
   constraints:
     enum:
     - Not at all important
@@ -1579,301 +1802,371 @@ fields:
     - Moderately important
     - Important
     - Very important
-- name: q25c_1
+- name: sb_new_partner_had_sex_now2
+  title: COVID_no recent sexual activity
+  description: "[No]  Since the COVID-19 pandemic began (from mid-March 2020 until\
+    \ now) have you had sexual activity with a new partner(s)? \n[Survey 7] Since\
+    \ March 1, 2021 until now, have you had sexual activity with a new partner(s)\
+    \ [ADD HOVER TEXT TO \u201Cnew partner(s)\u201D]?"
   type: string
-  title: '[No] Since March 1, 2021 until now, have you had sexual activity with a
-    new partner(s)?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c_2
+- name: sb_new_partner_had_sex_virtuallyw2
+  title: COVID_recent virtual sexual activity new partner
+  description: "[Yes, virtually] Since the COVID-19 pandemic began (from mid-March\
+    \ 2020 until now) have you had sexual activity with a new partner(s)? Select all\
+    \ that apply\n[Survey 7] Since March 1, 2021 until now, have you had sexual activity\
+    \ with a new partner(s) [ADD HOVER TEXT TO \u201Cnew partner(s)\u201D]?"
   type: string
-  title: '[Yes, virtually] Since March 1, 2021 until now, have you had sexual activity
-    with a new partner(s)?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c_3
+- name: sb_new_partner_had_sex_inpersonw2
+  title: COVID_recent in person sexual activity new partner
+  description: "[Yes, in person] Since the COVID-19 pandemic began (from mid-March\
+    \ 2020 until now) have you had sexual activity with a new partner(s)? Select all\
+    \ that apply\n[Survey 7] Since March 1, 2021 until now, have you had sexual activity\
+    \ with a new partner(s) [ADD HOVER TEXT TO \u201Cnew partner(s)\u201D]?"
   type: string
-  title: '[Yes, in person] Since March 1, 2021 until now, have you had sexual activity
-    with a new partner(s)?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c_dk
+- name: sb_new_partner_had_sex_dkw2
+  title: "COVID_new partner sexual activity DON\u2019T KNOW"
+  description: "[DON'T KNOW] Since the COVID-19 pandemic began (from mid-March 2020\
+    \ until now) have you had sexual activity with a new partner(s)? Select all that\
+    \ apply\n[Survey 7] Since March 1, 2021 until now, have you had sexual activity\
+    \ with a new partner(s) [ADD HOVER TEXT TO \u201Cnew partner(s)\u201D]?"
   type: string
-  title: '[DON''T KNOW] Since March 1, 2021 until now, have you had sexual activity
-    with a new partner(s)?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c_skp
+- name: sb_new_partner_had_sex_skippedw2
+  title: COVID_new partner sexual activity SKIPPED ON WEB
+  description: "[SKIPPED ON WEB] Since the COVID-19 pandemic began (from mid-March\
+    \ 2020 until now) have you had sexual activity with a new partner(s)? Select all\
+    \ that apply\n[Survey 7] Since March 1, 2021 until now, have you had sexual activity\
+    \ with a new partner(s) [ADD HOVER TEXT TO \u201Cnew partner(s)\u201D]?"
   type: string
-  title: '[SKIPPED ON WEB] Since March 1, 2021 until now, have you had sexual activity
-    with a new partner(s)?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c_ref
+- name: sb_new_partner_had_sex_refusedw2
+  title: COVID_new partner sexual activity REFUSED
+  description: "[REFUSED] Since the COVID-19 pandemic began (from mid-March 2020 until\
+    \ now) have you had sexual activity with a new partner(s)? Select all that apply\n\
+    [Survey 7] Since March 1, 2021 until now, have you had sexual activity with a\
+    \ new partner(s) [ADD HOVER TEXT TO \u201Cnew partner(s)\u201D]?"
   type: string
-  title: '[REFUSED] Since March 1, 2021 until now, have you had sexual activity with
-    a new partner(s)?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_1
+- name: sb_new_partner_discuss_partner_history
+  title: COVID_prior meet discuss sexual history
+  description: "[Discuss each other\u2019s sexual partner history]  Since March 1,\
+    \ 2021 [\u201CMarch 1,2021\": (13 months ago)] before meeting up for in-person\
+    \ sexual activity (kissing, masturbation, oral/anal sex<) for the first time with\
+    \ a new partner, did you do any of the following?"
   type: string
-  title: "[Discuss each other\u2019s sexual partner history ] Since March 1, 2021\
-    \ before meeting up for in-person sexual activity... for the first time with a\
-    \ new partner(s), did you do any of the following?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_2
+- name: sb_new_partner_discuss_std
+  title: COVID_prior meet discuss STD status
+  description: "[Discuss each other\u2019s HIV and sexually transmitted disease (STDs)\
+    \ statuses]  Since March 1, 2021 [\u201CMarch 1,2021\": (13 months ago)] before\
+    \ meeting up for in-person sexual activity (kissing, masturbation, oral/anal sex<)\
+    \ for the first time with a new partner, did you do any of the following?"
   type: string
-  title: "[Discuss each other\u2019s HIV and sexually transmitted disease (STDs) statuses]\
-    \ Since March 1, 2021 before meeting up for in-person sexual activity... for the\
-    \ first time with a new partner(s), did you do any of the following?"
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_3
+- name: sb_new_partner_discuss_condoms
+  title: COVID_prior meet discuss using condoms
+  description: "[Discuss using condoms to protect against STDs] Since March 1, 2021\
+    \ [\u201CMarch 1,2021\": (13 months ago)] before meeting up for in-person sexual\
+    \ activity (kissing, masturbation, oral/anal sex<) for the first time with a new\
+    \ partner, did you do any of the following?"
   type: string
-  title: '[Discuss using condoms to protect against STDs ] Since March 1, 2021 before
-    meeting up for in-person sexual activity... for the first time with a new partner(s),
-    did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_4
+- name: sb_new_partner_get_hiv_std_tested
+  title: COVID_prior meet test for HIV and STD
+  description: "[Get tested for HIV and other STDs and/or request that the new person\
+    \ get tested for HIV and other STDs] Since March 1, 2021 [\u201CMarch 1,2021\"\
+    : (13 months ago)] before meeting up for in-person sexual activity (kissing, masturbation,\
+    \ oral/anal sex<) for the first time with a new partner, did you do any of the\
+    \ following?"
   type: string
-  title: '[Get tested for HIV and other STDs and/or request that the new person get
-    tested for HIV and other STDs] Since March 1, 2021 before meeting up for in-person
-    sexual activity...  with a new partner(s), did you do...the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_5
+- name: sb_new_partner_discuss_precautionw2
+  title: COVID_prior meet discuss COVID precautions
+  description: "[Discuss precautions you were each taking to reduce the risk of COVID-19\
+    \ ] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months ago)] before meeting\
+    \ up for in-person sexual activity (kissing, masturbation, oral/anal sex<) for\
+    \ the first time with a new partner, did you do any of the following?"
   type: string
-  title: '[Discuss precautions you were each taking to reduce the risk of COVID-19
-    ] Since March 1, 2021 before meeting up for in-person sexual activity... for the
-    first time with a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_6
+- name: sb_new_partner_minimize_outside_contactw2
+  title: COVID_prior meet limit outside contact
+  description: "[Intentionally minimize contacts outside your home for 10-14 days\
+    \ prior to meeting] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months ago)]\
+    \ before meeting up for in-person sexual activity (kissing, masturbation, oral/anal\
+    \ sex<) for the first time with a new partner, did you do any of the following?"
   type: string
-  title: '[Intentionally minimize contacts outside your home for 10-14 days prior
-    to meeting] Since March 1, 2021 before meeting up for in-person sexual activity...
-    with a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_7
+- name: sb_new_partner_either_get_covid_tested
+  title: COVID_prior meet test for COVID
+  description: "[Get tested for COVID-19 and/or request that the new person get tested\
+    \ for COVID-19] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months ago)] before\
+    \ meeting up for in-person sexual activity (kissing, masturbation, oral/anal sex<)\
+    \ for the first time with a new partner, did you do any of the following?"
   type: string
-  title: '[Get tested for COVID-19 and/or request that the new person get tested for
-    COVID-19] Since March 1, 2021 before meeting up for in-person sexual activity...  with
-    a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_8
+- name: sb_new_partner_covid_vax_booster
+  title: COVID_prior meet get COVID vaccine if needed
+  description: "[Get a COVID-19 vaccine/booster (if not fully vaccinated/boosted)\
+    \ and/or request that the new person(s) get a COVID-19 vaccine/booster (if not\
+    \ fully vaccinated/boosted)] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months\
+    \ ago)] before meeting up for in-person sexual activity (kissing, masturbation,\
+    \ oral/anal sex<) for the first time with a new partner, did you do any of the\
+    \ following?"
   type: string
-  title: '[Get a COVID-19 vaccine/booster... and/or request that the new person(s)
-    get a COVID-19 vaccine/booster (if not fully vaccinated/boosted)] Since March
-    1, 2021...  with a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_dk
+- name: sb_new_partner_activities_dkw2
+  title: "COVID_prior meet activities DON\u2019T' KNOW"
+  description: "[DON'T KNOW] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months\
+    \ ago)] before meeting up for in-person sexual activity (kissing, masturbation,\
+    \ oral/anal sex<) for the first time with a new partner, did you do any of the\
+    \ following?"
   type: string
-  title: '[DON''T KNOW] Since March 1, 2021 before meeting up for in-person sexual
-    activity... for the first time with a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_skp
+- name: sb_new_partner_skippedw2
+  title: COVID_prior meet activities SKIPPED ON WEB
+  description: "[SKIPPED ON WEB] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months\
+    \ ago)] before meeting up for in-person sexual activity (kissing, masturbation,\
+    \ oral/anal sex<) for the first time with a new partner, did you do any of the\
+    \ following?"
   type: string
-  title: '[SKIPPED ON WEB] Since March 1, 2021 before meeting up for in-person sexual
-    activity... for the first time with a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q25c1_ref
+- name: sb_new_partner_refusedw2
+  title: COVID_prior meet activities REFUSED
+  description: "[REFUSED] Since March 1, 2021 [\u201CMarch 1,2021\": (13 months ago)]\
+    \ before meeting up for in-person sexual activity (kissing, masturbation, oral/anal\
+    \ sex<) for the first time with a new partner, did you do any of the following?"
   type: string
-  title: '[REFUSED] Since March 1, 2021 before meeting up for in-person sexual activity...
-    for the first time with a new partner(s), did you do any of the following?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q26_1
-  type: string
-  title: '[Timeframe: 1; Description: Summer 2021 (May, June, July)] During which
-    of the three pandemic timeframes did you meet with any new partner(s) in person?'
-  constraints:
-    enum:
-    - 'No'
-    - 'Yes'
-- name: q26_2
-  type: string
-  title: '[Timeframe: 2; Description: Fall 2021 (August, September, October)] During
+- name: sb_new_partner_timeframe1
+  title: COVID_meet new partner May-July 2021
+  description: '[Timeframe: 1; Description: Summer 2021 (May, June, July)] During
     which of the three pandemic timeframes did you meet with any new partner(s) in
     person?'
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q26_3
-  type: string
-  title: '[Timeframe: 3; Description: Winter 2021/2022 (December, January, February)
-    ] During which of the three pandemic timeframes did you meet with any new partner(s)
+- name: sb_new_partner_timeframe2
+  title: COVID_meet new partner Aug-Oct 2021
+  description: '[Timeframe: 2; Description: Fall 2021 (August, September, October)]
+    During which of the three pandemic timeframes did you meet with any new partner(s)
     in person?'
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q26_dk
+- name: sb_new_partner_timeframe3
+  title: COVID_meet new partner Dec-Feb 2021
+  description: '[Timeframe: 3; Description: Winter 2021/2022 (December, January, February)]
+    During which of the three pandemic timeframes did you meet with any new partner(s)
+    in person?'
   type: string
-  title: '[DON''T KNOW] During which of the three pandemic timeframes did you meet
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sb_new_partner_timeframe_dk
+  title: COVID_meet new partner when DON'T KNOW
+  description: '[DON''T KNOW] During which of the three pandemic timeframes did you
+    meet with any new partner(s) in person?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sb_new_partner_timeframe_skipped
+  title: COVID_meet new partner when SKIPPED ON WEB
+  description: '[SKIPPED ON WEB] During which of the three pandemic timeframes did
+    you meet with any new partner(s) in person?'
+  type: string
+  constraints:
+    enum:
+    - 'No'
+    - 'Yes'
+- name: sb_new_partner_timeframe_refused
+  title: COVID_meet new partnerwhen REFUSED
+  description: '[REFUSED] During which of the three pandemic timeframes did you meet
     with any new partner(s) in person?'
+  type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q26_skp
+- name: sb_new_partner_timeframe1_count
+  title: COVID_number new partner May-July 2021
+  description: 'Timeframe 1 [Please indicate/estimate the number of new partner(s)
+    you met in person for each of the below pandemic phases: ]'
   type: string
-  title: '[SKIPPED ON WEB] During which of the three pandemic timeframes did you meet
-    with any new partner(s) in person?'
-  constraints:
-    enum:
-    - 'No'
-    - 'Yes'
-- name: q26_ref
-  type: string
-  title: '[REFUSED] During which of the three pandemic timeframes did you meet with
-    any new partner(s) in person?'
-  constraints:
-    enum:
-    - 'No'
-    - 'Yes'
-- name: q26aa
-  type: string
-  title: '[Summer 2021 (May, June, July)] Please indicate/estimate the number of new
-    partner(s) you met in person for each of the below pandemic phases:'
   constraints:
     enum:
     - DON'T KNOW
     - SKIPPED ON WEB
     - REFUSED
-- name: q26ab
+- name: sb_new_partner_timeframe2_count
+  title: COVID_number new partner Aug-Oct 2021
+  description: 'Timeframe 2 [Please indicate/estimate the number of new partner(s)
+    you met in person for each of the below pandemic phases: ]'
   type: string
-  title: '[Fall 2021 (Aug, September, October)] Please indicate/estimate the number
-    of new partner(s) you met in person for each of the below pandemic phases:'
   constraints:
     enum:
     - DON'T KNOW
     - SKIPPED ON WEB
     - REFUSED
-- name: q26ac
+- name: sb_new_partner_timeframe3_count
+  title: COVID_number new partner Dec-Feb 2021
+  description: 'Timeframe 3 [Please indicate/estimate the number of new partner(s)
+    you met in person for each of the below pandemic phases: ]'
   type: string
-  title: '[Winter 2021/2022 (December, January, February)] Please indicate/estimate
-    the number of new partner(s) you met in person for each of the below pandemic
-    phases:'
   constraints:
     enum:
     - DON'T KNOW
     - SKIPPED ON WEB
     - REFUSED
-- name: q27
+- name: sb_past_month_kissw2
+  title: COVID_past month kiss nonhousehold
+  description: During the past month, did you kiss anyone that lives outside your
+    home?
   type: string
-  title: During the past month, did you kiss anyone that lives outside your home?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q27a
+- name: sb_past_month_kiss_numw2
+  title: COVID_past month kiss nonhousehold count
+  description: How many people did you kiss that live outside your home?
   type: string
-  title: How many people did you kiss that live outside your home?
   constraints:
     enum:
     - DON'T KNOW
     - SKIPPED ON WEB
     - REFUSED
-- name: q28
+- name: sb_past_month_sexw2
+  title: COVID_past month sex nonhousehold
+  description: During the past month did you have oral, vaginal, or anal sex with
+    anyone that lives outside your home?
   type: string
-  title: During the past month, did you have in-person oral, vaginal, or anal sex
-    with anyone that lives outside your home?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q28a
+- name: sb_past_month_sex_condoms
+  title: COVID_past month sex nonhousehold condom use
+  description: Did you use condoms during any of these sexual encounters?
   type: string
-  title: Did you use condoms during any of these sexual encounters?
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q28b
+- name: sb_past_month_sex_numw2
+  title: COVID_past month sex nonhousehold count
+  description: How many people did you have oral, vaginal, or anal sex with that live
+    outside your home?
   type: string
-  title: How many people did you have in-person oral, vaginal, or anal sex with that
-    live outside your home?
   constraints:
     enum:
     - DON'T KNOW
     - SKIPPED ON WEB
     - REFUSED
-- name: q30b_dk
+- name: demographics_unemployed_reason_dk
+  title: COVID_unemployed reaons DON'T KNOW
+  description: '[DON''T KNOW] What would you say are the reasons for why you''re still
+    unemployed? '
   type: string
-  title: '[DON''T KNOW] What would you say are the reasons for why you''re still unemployed?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q30b_skp
+- name: demographics_unemployed_reason_skipped
+  title: COVID_unemployed reaons SKIPPED ON WEB
+  description: '[SKIPPED ON WEB] What would you say are the reasons for why you''re
+    still unemployed? '
   type: string
-  title: '[SKIPPED ON WEB] What would you say are the reasons for why you''re still
-    unemployed?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q30b_ref
+- name: demographics_unemployed_reason_refused
+  title: COVID_unemployed reaons REFUSED
+  description: '[REFUSED] What would you say are the reasons for why you''re still
+    unemployed? '
   type: string
-  title: '[REFUSED] What would you say are the reasons for why you''re still unemployed?'
   constraints:
     enum:
     - 'No'
     - 'Yes'
-- name: q30c
+- name: easy_find_job_in_6_months
+  title: COVID_ease to find job
+  description: About how easy do you think it will be for you to find a job in the
+    next 6 months? Would you say very easy, somewhat easy, or not easy at all?
   type: string
-  title: About how easy do you think it will be for you to find a job in the next
-    6 months? Would you say very easy, somewhat easy, or not easy at all?
   constraints:
     enum:
     - Very easy
     - Somewhat easy
     - Not easy at all
 - name: partyid5
+  title: Computed 5-level Party ID
+  description: 'Computed from: Do you consider yourself a Democrat, a Republican,
+    an Independent or none of the; Do you consider yourself a strong or not so strong
+    Democrat?; Do you consider yourself a strong or not so strong Republican? Do you
+    lean more toward the Democrats or the Republicans?'
   type: string
-  title: 'DATA-ONLY: Computed 5-level Party ID'
   constraints:
     enum:
     - Democrat
@@ -1882,8 +2175,8 @@ fields:
     - Lean Republican
     - Republican
 - name: partyid7
-  type: string
   title: 'DATA-ONLY: Computed 7-level Party ID'
+  type: string
   constraints:
     enum:
     - Strong Democrat
@@ -1893,34 +2186,42 @@ fields:
     - Lean Republican
     - Not so strong Republican
     - Strong Republican
+  custom:
+    exclude_from_release: true
 - name: surv_mode
+  title: Survey interview mode
+  description: Survey completed via web or phone
   type: string
-  title: Survey interview mode (online or phone)
   constraints:
     enum:
     - Phone interview
     - Web Interview
 - name: surv_lang
-  type: string
   title: Survey Interview Language
+  description: Language survey completed in (i.e., English, Spanish)
+  type: string
   constraints:
     enum:
     - English
     - Spanish
 - name: device
-  type: null
   title: Device
+  type: null
+  custom:
+    exclude_from_release: true
 - name: gender
+  title: Respondent male/female sex
+  description: Unknown, male, sex
   type: string
-  title: Respondent gender
   constraints:
     enum:
     - Unknown
     - Male
     - Female
 - name: age4
-  type: string
   title: Age - 4 Categories
+  description: 'Categories: 18-29, 30-44, 45-59, 60+'
+  type: string
   constraints:
     enum:
     - 18-29
@@ -1929,8 +2230,8 @@ fields:
     - 60+
     - Under 18
 - name: educ5
-  type: string
   title: 5-level education
+  type: string
   constraints:
     enum:
     - Less than HS
@@ -1938,9 +2239,12 @@ fields:
     - Vocational/tech school/some college/ associates
     - Bachelor's degree
     - Post grad study/professional degree
+  custom:
+    exclude_from_release: true
 - name: marital
-  type: string
   title: Marital Status
+  description: Married, Widowed, Divorced, Separated, Never married, Living with partner
+  type: string
   constraints:
     enum:
     - Married
@@ -1950,8 +2254,9 @@ fields:
     - Never married
     - Living with partner
 - name: income4
+  title: Household income (4 categories)
+  description: Less than $30,000; $30,000-$59,000; $60,000-$99,999; $100,000+
   type: string
-  title: 4-level Household Income
   constraints:
     enum:
     - Less than $30,000
@@ -1959,8 +2264,9 @@ fields:
     - $60,000 to under $100,000
     - $100,000 or more
 - name: region4
-  type: string
   title: 4-level region
+  description: Northeast, Midwest, South West
+  type: string
   constraints:
     enum:
     - Northeast
@@ -1968,37 +2274,46 @@ fields:
     - South
     - West
 - name: metro
-  type: string
   title: Metropolitan area flag
+  description: Metro Area, Non-Metro Area
+  type: string
   constraints:
     enum:
     - Non-Metro Area
     - Metro Area
 - name: internet
+  title: Internet
+  description: HH internet access via dial-up, DSL, or cable broadband at home
   type: string
-  title: HH internet access via dial-up, DSL, or cable broadband at home
   constraints:
     enum:
     - Non-internet household
     - Internet Household
 - name: housing
-  type: string
   title: Home Ownership
+  description: Owned or being bought by you or someone in your household, Rented for
+    cash, Occupied without payment of cash rent
+  type: string
   constraints:
     enum:
     - Owned
     - Rented or occupied without payment
 - name: home_type
-  type: string
   title: Type of building of panelists' residence
+  description: A one-family house detached from any other house, A one-family house
+    attached to one or more houses, A building with 2 or more apartment, A mobile
+    home or trailer; Boat, RV, van, etc.
+  type: string
   constraints:
     enum:
     - A one-family house detached from any other house
     - A one-family house attached to one or more houses
     - Apartment building, mobile home or trailer, boat, RV, or other
 - name: phoneservice
-  type: string
   title: Telephone service for the household
+  description: Landline telephone only; Have a landline, but mostly use cellphone;
+    Have cellphone, but mostly use landline; Cellphone only; No telephone service
+  type: string
   constraints:
     enum:
     - Landline telephone only
@@ -2007,9 +2322,12 @@ fields:
     - Cellphone only
     - No telephone service
 - name: hhsize
-  type: number
   title: Household size (including children)
+  description: Number of people in household
+  type: number
 - name: hh05
+  title: Number of HH members age 0-5
+  description: Number of household members age 0-5
   type: string
   constraints:
     enum:
@@ -2017,19 +2335,22 @@ fields:
     - '1'
     - 2 or more
 - name: hh612
-  type: number
   title: Number of HH members age 6-12
+  description: Number of people in household age 6-12
+  type: number
 - name: hh1317
-  type: string
   title: Number of HH members age 13-17
+  description: Number of people in household ages 13-17
+  type: string
   constraints:
     enum:
     - '0'
     - '1'
     - 2 or more
 - name: hh18ov
-  type: string
   title: Number of HH members age 18+
+  description: Number of people in household ages 18+
+  type: string
   constraints:
     enum:
     - '1'
@@ -2038,16 +2359,21 @@ fields:
     - '4'
     - 5 or more
 - name: stigma_scale_score
+  title: Stigma scale score
+  description: Average score of 6 stigma items; higher scores indicate higher stigma
   type: number
 - name: expanded_10item_stigma
   type: number
+  custom:
+    exclude_from_release: true
 - name: policyscale_6item
+  description: 6 items indicating support for OUD policies (higher score = greater
+    support for policies)
   type: number
-  title: 6 items indicating support for OUD policies (higher score = greater support
-    for policies)
+  custom:
+    exclude_from_release: true
 - name: race_5cat
   type: string
-  title: Race/ethnicity recoded into five categories
   constraints:
     enum:
     - White
@@ -2055,13 +2381,22 @@ fields:
     - Other or 2+ or more
     - Hispanic
     - Asian
+  custom:
+    exclude_from_release: true
 - name: personalcrimjust_ever
+  title: Coded_personal criminal justice involvement ever
+  description: Yes to either Have you ever been convicted of any misdemeanor or felony
+    crime? OR Have you ever been incarcerated in jail or prison?
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: familycrimjust_ever
+  title: Coded_family friend criminal justice involvement ever
+  description: 'Yes to either Have any of your family members or close friends ever
+    been convicted of any misdemeanor or felony crime? OR Have any of your family
+    members or close friends ever been incarcerated in jail or prison? '
   type: string
   constraints:
     enum:
@@ -2073,41 +2408,66 @@ fields:
     enum:
     - 'No'
     - 'Yes'
+  custom:
+    exclude_from_release: true
 - name: familycrimjust_recent
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
+  custom:
+    exclude_from_release: true
 - name: personaluse_ever
+  title: OUD misuse ever_option 1
+  description: "Have you ever used opioids/prescription pain medication illicitly\
+    \ obtained or used in a way not prescribed by a doctor?* \n[Survey 3/4/5 wording]:\
+    \ Have you ever misused opioids of any kind \u2013 such as heroin, fentanyl, or\
+    \ prescription pain medications other than exactly as prescribed for you? \n[Survey\
+    \ 6 wording: Have you ever misused (i.e., used other than exactly as prescribed\
+    \ for you) opioids of any kind \u2013 such as heroin, fentanyl, or other prescription\
+    \ pain medications?]"
   type: string
-  title: Ever misused opioids in lifetime
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: familyuse_ever
+  title: OUD misuse family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
-  title: Family/friends ever misused opioids in lifetime
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: policyscale_5item
   type: number
+  custom:
+    exclude_from_release: true
 - name: cobras_scale
   type: number
-  title: Colorblind racial attitudes, unawareness of racial privilege subscale
+  custom:
+    exclude_from_release: true
 - name: mhi5_scale
   type: number
+  custom:
+    exclude_from_release: true
 - name: mhi_100scale
   type: number
+  custom:
+    exclude_from_release: true
 - name: employ_2
   type: string
   constraints:
     enum:
     - Employed
     - Not employed or retired
+  custom:
+    exclude_from_release: true
 missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB

@@ -279,18 +279,18 @@ field_to_value_label:
   ps_minors: labels0
   ps_otc: labels0
   ps_c_mandatory: labels0
-  ps_treatment: labels0
+  laws_protect_treatment: labels0
   ps_l_jailtreatment: labels0
   req_treat_prob: labels0
-  kb_jailhelp: labels0
+  kb_l_jailhelps: labels0
   kb_b_anyuse: labels4
-  kb_f_stopbreath: labels4
+  kb_f_stopbreathing: labels4
   kb_h_medicalcondition: labels4
   kb_fentanyl: labels4
-  kb_fda: labels4
-  kb_recover: labels4
-  kb_easyfind: labels4
-  kb_recovcont: labels4
+  kb_medicationsexist: labels4
+  kb_treat_recover: labels4
+  kb_j_easyfind: labels4
+  kb_recovery_no_end: labels4
   recovery_common: labels4
   failing_common: labels4
   inst_blame: labels4
