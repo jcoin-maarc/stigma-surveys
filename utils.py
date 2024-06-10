@@ -17,7 +17,7 @@ def _chdir(path):
         os.chdir(d)
 
 def write_data_package(package, path=None):
-    """Write NSHAP data package."""
+    """Write data package with stata script"""
 
     if not path:
         path = Path('tmp') / package.name
@@ -61,3 +61,5 @@ def drop_excluded_fields(schema, df):
     df.drop(columns=fields_to_drop, inplace=True)
 
     return
+
+
