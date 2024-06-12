@@ -18,11 +18,28 @@ def _prune_duplicates(value_labels):
 
     return {"value_labels": dict(zip(names, seen)), "field_to_value_label": map}
 
+    # Write schema and labels to file
 
-# Define function to write schema and value labels
-def write_schema(df, meta, filename):
+def _write_schema(schema,filename):
+    """ Outputs a schema and associated value laels to separate files """ 
+
     schema_path = os.path.join("metadata","schemas", f"{filename}-schema.yaml")
+
+    with open(schema_path, "w") as f:
+        yaml.dump(schema, f, sort_keys=False)
+
+
+def _write_value_labels(value_labels,filename):
+    """ outputs value labels  to yaml """
     labels_path = os.path.join("metadata","value_labels","spss", f"{filename}-labels.yaml")
+    if value_labels["value_labels"]:
+        value_labels = _prune_duplicates(value_labels)
+    with open(labels_path, "w") as f:
+        yaml.dump(value_labels, f, sort_keys=False)
+    
+    
+def to_schema_and_value_labels(df, meta):
+    """ Uses the output of pyreadstat to generate a schema with value labels """ 
 
     schema = {"fields": []}
     value_labels = {}
@@ -94,16 +111,9 @@ def write_schema(df, meta, filename):
 
     # Add missing values to the schema
     schema["missingValues"] = list(dict.fromkeys(missing_values))
+    return schema,value_labels
 
-    # Write schema and labels to file
 
-    with open(schema_path, "w") as f:
-        yaml.dump(schema, f, sort_keys=False)
-
-    if value_labels["value_labels"]:
-        value_labels = _prune_duplicates(value_labels)
-        with open(labels_path, "w") as f:
-            yaml.dump(value_labels, f, sort_keys=False)
 
 # Main function to read SPSS file and write CSV and schema
 def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,excludemap=None):
@@ -174,4 +184,6 @@ def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,e
     df.to_csv(csv_path, index=False)
 
     # Write the schema and value labels to YAML
-    write_schema(df, meta, filename)
+    schema,value_labels = to_schema_and_value_labels(df,meta)
+    _write_schema(schema,filename)
+    _write_value_labels(value_labels,filename)
