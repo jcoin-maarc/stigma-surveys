@@ -71,7 +71,7 @@ def survey2(df,schema,value_labels):
     _delete_metadata_vals(df,schema,value_labels,delete_missing_vals)
     _change_duration_jcoin(df,schema)
     df = (df
-            .assign(employ=df.employ.str.replace('–','-'))
+            #.assign(employ=df.employ.str.replace('–','-'))
             .replace({'familyuse_ever':{'Don’t know':"DON'T KNOW"}})
     )
     return df,schema,value_labels
@@ -85,14 +85,17 @@ def survey3(df,schema,value_labels):
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
 
     df = (df
-             .assign(employ=df.employ.str.replace('–','-'))
-             .replace({'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
+             #.assign(employ=df.employ.str.replace('–','-'))
+             .replace({
+                #'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
                        'duration_jcoin':{'Under 1 minute':'0'}})
      )
     return df,schema,value_labels
 
 def survey4(df,schema,value_labels):
-    """Clean Survey 4 data."""
+    """Clean Survey 4 data.
+
+    """
     df = df.copy()
     schema = schema.copy()
     replace_missing_vals = {"Dont Know":"DON'T KNOW",
@@ -100,11 +103,27 @@ def survey4(df,schema,value_labels):
     "Refused":"REFUSED",
     "Unknown":"",
     "DontKnow":"DON'T KNOW"}
-    # return (df
+
+    
+    missing_lbls = {'77':"DON'T KNOW",
+                '98':'SKIPPED ON WEB',
+                '99':'REFUSED'}
+    df = (df
+            .applymap(str)
     #         .assign(employ=df.employ.str.replace('–','-'))
-    #         .replace({'familyuse_ever':{'0':'No'},
-    #                   'vaxplans':{'DontKnow':"DON'T KNOW"}})
-    # )
+            .replace({'familyuse_ever':{'0':'No',**missing_lbls},
+                      'vaxplans':{'DontKnow':"DON'T KNOW",**missing_lbls},
+                      "personalmisuse_lifetime":missing_lbls,
+                      "personalmisuse_recent":{k+".0":v for k,v in missing_lbls.items()},
+                      "famfriendmisuse_lifetime":missing_lbls,
+                      "groups10_measure":missing_lbls,
+                      "sixfeet_measure":missing_lbls,
+                      "wearmask_measure":missing_lbls,
+                      "washhands_react_01":missing_lbls
+
+
+                      })
+    )
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
     _change_duration_jcoin(df,schema)
@@ -223,7 +242,10 @@ def survey8(df,schema,value_labels):
         {
             "hh18ov":{"6":"5 or more"},
             "familyuse_ever":missing_vals,
-            "personaluse_ever":missing_vals
+            "personaluse_ever":missing_vals,
+            "persod_yn":{k+".0":v for k,v in missing_vals.items()},
+            "personaluse_yn":missing_vals,
+            "famuse_yn":missing_vals,
         }
     )
 
