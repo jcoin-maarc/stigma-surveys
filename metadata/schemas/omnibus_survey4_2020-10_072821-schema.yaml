@@ -1349,7 +1349,7 @@ fields:
 - name: duration_jcoin
   title: Time spent in survey, in minutes
   description: Time to complete survey
-  type: integer
+  type: number
 - name: surv_mode
   title: Survey interview mode
   description: Survey completed via web or phone

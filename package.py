@@ -43,3 +43,4 @@ package = Package(
 )
 
 write_data_package(package, f"tmp/jcoin-protocol1-surveys-v{VERSION}")
+print("Completed packaging")

@@ -44,7 +44,7 @@ def _change_duration_jcoin(df,schema):
     for field in schema["fields"]:
         if field["name"] == "duration_jcoin":
             del field["constraints"]
-            field["type"] = "integer"
+            field["type"] = "number"
 
 def survey1(df,schema,value_labels):
     """Clean Survey 1 data."""
@@ -70,10 +70,10 @@ def survey2(df,schema,value_labels):
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,delete_missing_vals)
     _change_duration_jcoin(df,schema)
-    # return (df
-    #         .assign(employ=df.employ.str.replace('–','-'))
-    #         .replace({'familyuse_ever':{'Don’t know':"DON'T KNOW"}})
-    # )
+    df = (df
+            .assign(employ=df.employ.str.replace('–','-'))
+            .replace({'familyuse_ever':{'Don’t know':"DON'T KNOW"}})
+    )
     return df,schema,value_labels
 
 def survey3(df,schema,value_labels):
@@ -84,11 +84,11 @@ def survey3(df,schema,value_labels):
     _change_duration_jcoin(df,schema)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
 
-    # df = (df
-    # #         .assign(employ=df.employ.str.replace('–','-'))
-    # #         .replace({'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
-    # #                   'duration_norcnd':{'Under 1 minute':'0'}})
-    #  )
+    df = (df
+             .assign(employ=df.employ.str.replace('–','-'))
+             .replace({'personaluse_last':{'6 – 12 months ago':'6-12 months ago'},
+                       'duration_jcoin':{'Under 1 minute':'0'}})
+     )
     return df,schema,value_labels
 
 def survey4(df,schema,value_labels):
@@ -114,22 +114,35 @@ def survey5(df,schema,value_labels):
     """Clean Survey 5 data."""
     df = df.copy()
     schema = schema.copy()
+    missing_lbls = {'77.0':"DON'T KNOW",
+                '98.0':'SKIPPED ON WEB',
+                '99.0':'REFUSED'}
     df = (df
-            .assign(employ=df.employ.str.replace('–','-'))
-            .replace({'personalmisuse_lifetime':{'77':"DON'T KNOW",
-                                                 '98':'SKIPPED ON WEB',
-                                                 '99':'REFUSED'},
-                      'famfriendmisuse_lifetime':{'77':"DON'T KNOW",
-                                                  '98':'SKIPPED ON WEB',
-                                                  '99':'REFUSED'},
-                      'personalmisuse_recent':{'77':"DON'T KNOW",
-                                               '98':'SKIPPED ON WEB',
-                                               '99':'REFUSED'},
+            .applymap(str)
+            #.assign(employ=df.employ.str.replace('–','-'))
+            .replace({
+                      'personalmisuse_recent':missing_lbls,
+                        "times_housing":missing_lbls,
+                        "times_medcare":missing_lbls,
+                        "times_atschool":missing_lbls,
+                        "times_police":missing_lbls,
+                        "times_hired":missing_lbls,
+                        "times_credit":missing_lbls,
+                        "times_restaurant":missing_lbls,
                       #'personaluse_last':{'7 – 12 months ago':'7-12 months ago'},
                       #'pidi':{"Don’t lean":"Don't lean"},
-                      #'vaxplans':{'Not sure':'NOT SURE'}
+                      'vaxplans':{'NOT SURE':"DON'T KNOW"},
+                      'selfhousehold_covidtested':{"0.0":0,"1.0":1}
             }
                     )
+            # was converted to ints -->
+            .replace({
+                'famfriendmisuse_lifetime':{k.replace(".0",""):v for k,v in missing_lbls.items()},
+                'personalmisuse_lifetime':{k.replace(".0",""):v for k,v in missing_lbls.items()}
+            }
+
+
+            )
     )
     dk = "DON'T KNOW"
     replace_missing_vals = {"Don\u2019t know/unsure":dk,
@@ -165,6 +178,20 @@ def survey7(df,schema,value_labels):
     }
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
+    missing_vals = {
+            "77":"DON'T KNOW",
+            "98":"SKIPPED ON WEB",
+            "99":"REFUSED"
+        }
+
+    df = df.applymap(str).replace(
+        {
+            "hh18ov":{"6":"5 or more"},
+            "familyuse_ever":missing_vals,
+            "personaluse_ever":missing_vals
+        }
+    )
+
     return df,schema,value_labels
 
 def survey8(df,schema,value_labels):
@@ -177,6 +204,30 @@ def survey8(df,schema,value_labels):
         
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
+
+
+    # add rest of hhsize categorical values
+    hhsize_enum = ["1","2","3","4","5","6 or more"]
+    for field in schema["fields"]:
+        if field["name"] == "hhsize":
+            field["constraints"]["enum"] = hhsize_enum
+    
+    value_labels["value_labels"][value_labels["field_to_value_label"]["hhsize"]] = dict(zip([1,2,3,4,5,6],hhsize_enum))
+
+    missing_vals = {
+            "77":"DON'T KNOW",
+            "98":"SKIPPED ON WEB",
+            "99":"REFUSED"
+        }
+    df = df.applymap(str).replace(
+        {
+            "hh18ov":{"6":"5 or more"},
+            "familyuse_ever":missing_vals,
+            "personaluse_ever":missing_vals
+        }
+    )
+
+
     return df,schema,value_labels
 
 
