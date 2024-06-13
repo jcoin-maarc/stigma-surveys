@@ -12,3 +12,5 @@ DATASETS = [
     {"name":"survey9","filename":"omnibus_survey9_2023-05"}
 
 ]
+
+FILENAME_TO_NAME = {d["filename"]:d["name"] for d in DATASETS}

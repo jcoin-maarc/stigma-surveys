@@ -1,7 +1,10 @@
 import os
 import pyreadstat
 import yaml
+from pathlib import Path
 
+import config
+import cleaning
 
 def _prune_duplicates(value_labels):
 
@@ -53,7 +56,7 @@ def to_schema_and_value_labels(df, meta):
     # Process each variable in the DataFrame
     for varname in df.columns:
         enum = []
-        vtype = df[varname].dtype.name
+        vtype = df[varname].convert_dtypes().dtype.name.lower()
         vformat = meta.original_variable_types.get(varname, "")
         # Determine the field type and other attributes
         #  NOTE: dates taken from https://libguides.library.kent.edu/SPSS/DatesTime
@@ -74,7 +77,7 @@ def to_schema_and_value_labels(df, meta):
                     raise Exception("Only discrete missing values are currently supported")
 
             for k, v in value_labels["value_labels"][vlname].items():
-                if k in _missing_values:
+                if k in _missing_values or k > 75: # some obvious missing values not marked as missing so > 75
                     missing_values.append(v)
                 else:
                     enum.append(v)
@@ -82,6 +85,10 @@ def to_schema_and_value_labels(df, meta):
             ftype = "integer"
         elif vtype in ["float64", "float32"]:
             ftype = "number"
+        elif vtype in ["category","string"]:
+            ftype = "string"
+        elif vtype == "object":
+            ftype = "any"
 
 
         # Create the field entry for the schema
@@ -137,22 +144,18 @@ def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,e
     df, meta = pyreadstat.read_sav(
         file_path, apply_value_formats=True, user_missing=True
     )
-
-    # TODO: refactor below into rename_variables() --> renames df/meta in place
-    # Convert to lkower case names
-    df.columns = [col.lower() for col in df.columns]
-    meta.column_names = [col.lower() for col in meta.column_names]
-    # Add descriptions to user defined (non-standard!)
+    df = df.convert_dtypes()
+    ## Add descriptions to user defined (non-standard!)
     if descriptionmap:
         meta.column_names_to_description = descriptionmap
-    # Change titles to user defined
+    ## Change titles to user defined
     if titlemap:
         meta.column_names_to_labels = titlemap
 
     if excludemap:
         meta.column_names_to_exclude = excludemap
-    
-    for attr_name in [
+
+    pyreadstat_meta_vars = [
         "missing_ranges",
         "missing_user_values",
         "original_variable_types",
@@ -162,28 +165,37 @@ def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,e
         "column_names_to_labels",
         "column_names_to_description", # NOTE: this is a custom prop (not in pyreadstat)
         "column_names_to_exclude" # NOTE: this is a custom prop (not in pyreadstat)
-    ]:
+    ]
+
+    # lower case all pyreadstat vars and data
+    df.columns = [col.lower() for col in df.columns]
+    meta.column_names = [col.lower() for col in meta.column_names]
+    for attr_name in pyreadstat_meta_vars:
         metaprop = getattr(meta, attr_name)
-        new_metaprop = {}
-        for colname in list(metaprop):
-            val = metaprop[colname]
-            newcolname = colname.lower()
-            if renamemap:
-                newcolname = renamemap.get(newcolname,newcolname)
-            
-            new_metaprop[newcolname] = val
-
-
+        new_metaprop = {colname.lower():metaprop[colname] for colname in list(metaprop)}
         setattr(meta, attr_name, new_metaprop)
 
-    
+    # add user-defined pyreadstat metadata variable replacements
+
+    # Rename all variables based on the inputted rename map 
     df.rename(columns=renamemap,inplace=True)
-
-
-    csv_path = os.path.join(output_dir, f"{filename}.csv")
-    df.to_csv(csv_path, index=False)
+    if renamemap:
+        for attr_name in pyreadstat_meta_vars:
+            metaprop = getattr(meta, attr_name)
+            new_metaprop = {renamemap.get(colname,colname):metaprop[colname] for colname in list(metaprop)}
+            setattr(meta, attr_name, new_metaprop)
 
     # Write the schema and value labels to YAML
     schema,value_labels = to_schema_and_value_labels(df,meta)
+    survey_name = config.FILENAME_TO_NAME[Path(file_path).stem]
+
+    if hasattr(cleaning,survey_name):
+        df,schema,value_labels = getattr(cleaning,survey_name)(df,schema,value_labels)
+    else:
+        raise Exception(f"No cleaning function for {survey_name}!")
+    
+    # Write data/metadata to file
+    csv_path = os.path.join(output_dir, f"{filename}.csv")
+    df.to_csv(csv_path, index=False)
     _write_schema(schema,filename)
     _write_value_labels(value_labels,filename)
