@@ -5,7 +5,6 @@ import yaml
 from datetime import datetime, timezone
 from utils import drop_excluded_fields, write_data_package
 from frictionless import Schema, Resource, Package
-import cleaning
 from config import DATASETS,VERSION
 
 resources = []
@@ -24,9 +23,7 @@ for dataset in DATASETS:
     with open(f'metadata/value_labels/spss/{dataset["filename"]}-labels.yaml') as f:
         labels = yaml.safe_load(f)
 
-    # Clean data and drop any fields marked exclude_from_release
-    f = getattr(cleaning, dataset["name"])
-    df = f(df)
+    # drop any fields marked exclude_from_release
     drop_excluded_fields(schema, df)
 
     rsrc = Resource(
