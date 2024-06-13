@@ -38,6 +38,31 @@ def _delete_metadata_vals(df,schema,value_labels,to_delete):
         if enums:
             field["constraints"]["enum"] = [item for item in enums if item not in to_delete]
 
+def _replace_field_substr(df, schema, value_labels, fieldname, substr_map):
+    """ 
+    Replaces substrings in metadata and data 
+
+    **inplace operation**
+    """
+
+    # get field value labels and enums
+    vl = value_labels["value_labels"][value_labels["field_to_value_label"][fieldname]]
+    for field in schema["fields"]:
+        if field["name"] == fieldname:
+            break
+
+    # replace substrings
+    for src,trg in substr_map.items():
+        # replace values in data
+        df[fieldname] = df[fieldname].str.replace(src,trg)
+        # replace substring in value_labels
+        for val in vl:
+            vl[val] = vl[val].replace(src,trg)
+        # replace values in enum
+        field["constraints"]["enum"] = [v.replace(src,trg) for v in field["constraints"]["enum"]]
+
+
+
 def _change_duration_jcoin(df,schema):
 
     df.replace({"duration_jcoin":{"Under 1 minute":"0"}},inplace=True)
@@ -53,7 +78,7 @@ def survey1(df,schema,value_labels):
 
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
     _change_duration_jcoin(df,schema)
-
+    _replace_field_substr(df,schema,value_labels,"employ",{"\u2013":"-"})
     # return (df
     #         .assign(employ=df.employ.str.replace('–','-'))
     # )
@@ -70,6 +95,7 @@ def survey2(df,schema,value_labels):
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,delete_missing_vals)
     _change_duration_jcoin(df,schema)
+    _replace_field_substr(df,schema,value_labels,"employ",{"\u2013":"-"})
     df = (df
             #.assign(employ=df.employ.str.replace('–','-'))
             .replace({'familyuse_ever':{'Don’t know':"DON'T KNOW"}})
@@ -83,7 +109,7 @@ def survey3(df,schema,value_labels):
 
     _change_duration_jcoin(df,schema)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
-
+    _replace_field_substr(df,schema,value_labels,"employ",{"\u2013":"-"})
     df = (df
              #.assign(employ=df.employ.str.replace('–','-'))
              .replace({
@@ -127,6 +153,7 @@ def survey4(df,schema,value_labels):
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
     _change_duration_jcoin(df,schema)
+    _replace_field_substr(df,schema,value_labels,"employ",{"\u2013":"-"})
     return df,schema,value_labels
 
 def survey5(df,schema,value_labels):
@@ -174,6 +201,7 @@ def survey5(df,schema,value_labels):
         
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
+    _replace_field_substr(df,schema,value_labels,"employ",{"\u2013":"-"})
     return df,schema,value_labels
 
 def survey7(df,schema,value_labels):
@@ -210,7 +238,6 @@ def survey7(df,schema,value_labels):
             "personaluse_ever":missing_vals
         }
     )
-
     return df,schema,value_labels
 
 def survey8(df,schema,value_labels):
@@ -223,7 +250,7 @@ def survey8(df,schema,value_labels):
         
     _replace_vals(df,schema,value_labels,replace_missing_vals)
     _delete_metadata_vals(df,schema,value_labels,["Under 18"])
-
+    _replace_field_substr(df,schema,value_labels,"employ",{"\u2013":"-"})
 
     # add rest of hhsize categorical values
     hhsize_enum = ["1","2","3","4","5","6 or more"]

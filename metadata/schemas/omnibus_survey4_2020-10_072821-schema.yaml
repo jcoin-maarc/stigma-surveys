@@ -1448,11 +1448,11 @@ fields:
   type: string
   constraints:
     enum:
-    - "Working \u2013 as a paid employee"
-    - "Working \u2013 self employed"
-    - "Not working \u2013 looking for work or on temporary layoff"
-    - "Not working \u2013 retired"
-    - "Not working \u2013 disabled"
+    - Working - as a paid employee
+    - Working - self employed
+    - Not working - looking for work or on temporary layoff
+    - Not working - retired
+    - Not working - disabled
     - Not working - other
 - name: region4
   title: 4-level region

@@ -73,11 +73,11 @@ value_labels:
     5: Never married
     6: Living with partner
   labels96:
-    1: "Working \u2013 as a paid employee"
-    2: "Working \u2013 self employed"
-    3: "Not working \u2013 looking for work or on temporary layoff"
-    4: "Not working \u2013 retired"
-    5: "Not working \u2013 disabled"
+    1: Working - as a paid employee
+    2: Working - self employed
+    3: Not working - looking for work or on temporary layoff
+    4: Not working - retired
+    5: Not working - disabled
     6: Not working - other
   labels97:
     1: Northeast
