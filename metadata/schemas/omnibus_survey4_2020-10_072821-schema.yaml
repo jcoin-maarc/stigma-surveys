@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -826,7 +826,6 @@ fields:
     - Yes, I will get a coronavirus vaccine as soon as it is available to me
     - Yes, I will get a coronavirus vaccine, but I will wait until it is proven to
       be safe and effective
-    - DontKnow
 - name: vax_protectfam
   title: COVID_vaccine reasons protect my family
   description: '[I want to protect my family] Which of the following are reasons you
@@ -1350,10 +1349,7 @@ fields:
 - name: duration_jcoin
   title: Time spent in survey, in minutes
   description: Time to complete survey
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode
   description: Survey completed via web or phone
@@ -1372,7 +1368,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -1394,7 +1390,6 @@ fields:
     - 30-44
     - 45-59
     - 60+
-    - Under 18
 - name: age7
   title: Age - 7 Categories
   description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
@@ -1408,7 +1403,6 @@ fields:
     - 55-64
     - 65-74
     - 75+
-    - Under 18
 - name: racethnicity
   title: Combined Race/Ethnicity
   description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
@@ -1521,7 +1515,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh612
   title: Number of HH members age 6-12
   description: Number of people in household age 6-12
@@ -1618,22 +1612,22 @@ fields:
     exclude_from_release: true
 - name: ss_a_historywork_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ss_c_currentwork_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ss_b_historymarry_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ss_d_currentmarry_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: stigma_scale_score
@@ -1642,12 +1636,12 @@ fields:
   type: number
 - name: ps_j_jailhealth_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ps_k_jailoverdose_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: policy_4item_scale
@@ -1730,22 +1724,22 @@ fields:
     exclude_from_release: true
 - name: usregion_northeast
   title: REGION4=Northeast
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: usregion_midwest
   title: REGION4=Midwest
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: usregion_south
   title: REGION4=South
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: usregion_west
   title: REGION4=West
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: partyid5
@@ -1800,7 +1794,4 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- Dont Know
-- Skipped on Web
-- Refused
-- Unknown
+- ''

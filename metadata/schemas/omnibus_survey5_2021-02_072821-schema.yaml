@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -45,7 +45,6 @@ fields:
     - Yes, I will get a coronavirus vaccine, but I will wait until I see more proof
       that it is safe and effective
     - No, I will not get a coronavirus vaccine
-    - Not sure
 - name: vax_protectfam
   title: COVID_vaccine reasons protect my family
   description: '[I want to protect my family] Which of the following are reasons you
@@ -245,7 +244,7 @@ fields:
   title: COVID_reasons no vaccine other
   description: '[TEXTBOX] Which of the following are reasons you would not get [Survey
     5/6: got] a coronavirus [Survey 6: COVID-19] vaccine?'
-  type: null
+  type: string
 - name: novax_willget
   title: COVID_reason no vaccine get it anyways
   description: '[I will get the coronavirus vaccine, these reasons do not outweigh
@@ -892,7 +891,7 @@ fields:
   description: '[TEXTBOX] You indicated you did not follow public health guidelines
     regarding coronavirus at least one time in the past two weeks. Please select the
     reason(s) why you did not social distance.'
-  type: null
+  type: string
 - name: socdis_dk
   title: COVID_avoid guidelines DON'T KNOW
   description: '[DON''T KNOW] You indicated you did not follow public health guidelines
@@ -1011,7 +1010,7 @@ fields:
     - 'False'
 - name: dov_tcount
   title: 'DATA ONLY VARIABLE: Number of True Q21A, Q21B, Q21E, Q21F, Q21G and Q21H'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: dov_true
@@ -1026,7 +1025,7 @@ fields:
     exclude_from_release: true
 - name: dov_fcount
   title: 'DATA ONLY VARIABLE: Number of False Q21C, Q21D, Q21I, and Q21J'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: dov_false
@@ -2315,7 +2314,7 @@ fields:
 - name: duration_jcoin
   title: Time spent in survey, in minutes
   description: Time to complete survey
-  type: number
+  type: integer
 - name: surv_mode
   title: Survey interview mode
   description: Survey completed via web or phone
@@ -2334,7 +2333,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -2356,7 +2355,6 @@ fields:
     - 30-44
     - 45-59
     - 60+
-    - Under 18
 - name: age7
   title: Age - 7 Categories
   description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
@@ -2370,7 +2368,6 @@ fields:
     - 55-64
     - 65-74
     - 75+
-    - Under 18
 - name: racethnicity
   title: Combined Race/Ethnicity
   description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
@@ -2493,7 +2490,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh612
   title: Number of HH members age 6-12
   description: Number of people in household age 6-12
@@ -2590,22 +2587,22 @@ fields:
     exclude_from_release: true
 - name: ss_a_historywork_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ss_c_currentwork_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ss_b_historymarry_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ss_d_currentmarry_rev
   title: Reverse Coded Variable
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: stigma_scale_score
@@ -2621,62 +2618,62 @@ fields:
   custom:
     exclude_from_release: true
 - name: selfhousehold_covidtested
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_white
   title: 'Race: White'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_black
   title: 'Race: Black'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_othermixed
   title: 'Race: Other/2+'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_hispanic
   title: 'Race: Hispanic'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_asian
   title: 'Race: Asian'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racewhiteadvantage_rev
   title: Reverse CoBras Scale item
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racesuccessful_rev
   title: Reverse CoBras Scale item
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: raceprison_rev
   title: Reverse CoBras Scale item
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racesocservices_rev
   title: Reverse CoBras Scale item
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: raceopportunity_rev
   title: Reverse CoBras Scale item
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racewhiteblame_rev
   title: Reverse CoBras Scale item
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: cobras_scale
@@ -2702,9 +2699,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_live_with_partnerw1
   title: COVID_live with partner
   description: In mid-March 2020 were you and your main partner living together in
@@ -2714,9 +2708,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_seek_partnerw1
   title: '5=COVID_seek new partner|
 
@@ -2731,9 +2722,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_onlinew1
   title: '5=COVID_talk with new partner online|
 
@@ -2747,9 +2735,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_in_personw1
   title: COVID_new partner in person
   description: Since the COVID-19 pandemic began (from mid-March 2020 until now) have
@@ -2759,9 +2744,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_time_before_inpersonw1
   title: COVID_new partner time before in person
   description: Since the COVID-19 pandemic began (from mid-March 2020 until now),
@@ -2774,9 +2756,6 @@ fields:
     - Several days(<1 week)
     - Several weeks (<1 month)
     - Several months
-    - I don't know
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_had_sex_now1
   title: COVID_no recent sexual activity
   description: '[No] Since the COVID-19 pandemic began (from mid-March 2020 until
@@ -2911,9 +2890,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_less_kissingw1
   title: COVID_during meet up minimize kissing
   description: '[Minimized kissing to reduce close face-to-face contact] During in-person
@@ -2925,9 +2901,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_work_maskw1
   title: COVID_ during meet up wore mask
   description: '[Wore a mask during in-person sex/masturbation with a partner] During
@@ -2939,9 +2912,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_new_positionw1
   title: COVID_ during new position less face to face
   description: '[Tried a new sexual position to reduce face-to-face contact] During
@@ -2953,9 +2923,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_masturbatew1
   title: COVID_ during masturbation less face to face
   description: '[Masturbated with a partner to reduce face-to-face contact] During
@@ -2967,9 +2934,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_sex_toysw1
   title: COVID_during use sex toys
   description: '[Used sex toys with a partner to reduce face-to-face contact] During
@@ -2981,9 +2945,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partne_glory_holew1
   title: COVID_during glory hole
   description: '[Used a glory hole or other physical barrier to reduce face-to-face
@@ -2995,9 +2956,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_otherw1
   title: COVID_during other activites to lower risk
   description: '[Other, please specify:] During in-person sexual activity...with a
@@ -3009,9 +2967,6 @@ fields:
     - Always
     - Sometimes
     - Never
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_other_textboxw1
   title: COVID_during other textbox
   description: '[TEXTBOX] During in-person sexual activity...with a new partner(s),
@@ -3028,18 +2983,10 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_past_month_kiss_numw1
   title: COVID_past month kiss nonhousehold count
   description: '[NUMBERBOX] How many people did you kiss that live outside your home?'
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_past_month_sexw1
   title: COVID_past month sex nonhousehold
   description: During the past month did you have oral, vaginal, or anal sex with
@@ -3049,24 +2996,12 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_past_month_sex_numw1
   title: COVID_past month sex nonhousehold Count
   description: '[NUMBERBOX] How many people did you have oral, vaginal, or anal sex
     with that live outside your home?'
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- "Don\u2019t know/unsure"
-- "Don\u2019t know"
-- Don't know
-- "DON\u2019T KNOW"

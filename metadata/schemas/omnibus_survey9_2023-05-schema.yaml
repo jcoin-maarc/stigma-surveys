@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -431,11 +431,6 @@ fields:
     5 years, and what are some things that influence/influenced your views around
     opioids and opioid use disorder?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: ss_a_historywork
   title: Stigma scale_history OUD work with me
   description: 'I would be willing to have a person with a past history of opioid
@@ -573,29 +568,29 @@ fields:
     - Strongly agree
 - name: race_white
   title: 'Race: White'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_black
   title: 'Race: Black'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_latino
   title: Percent with OUD Latino
   description: '[Latino] Out of 100 people with an opioid use disorder, how many do
     you think are:'
-  type: number
+  type: integer
 - name: race_asian
   title: 'Race: Asian'
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_americanindian_alaskannative
   title: Percent with OUD AIAN
   description: '[American Indian/Alaskan Native] Out of 100 people with an opioid
     use disorder, how many do you think are:'
-  type: number
+  type: integer
 - name: personaluse_feelgood
   title: OUD misuse ever_option 2
   description: "Have you ever taken a prescription opioid medication (e.g., fentanyl,\
@@ -830,7 +825,7 @@ fields:
 - name: assistprov_textbox
   title: Received help for OUD_other help textbox
   description: '[TEXTBOX] What sort of assistance did they provide?'
-  type: null
+  type: string
 - name: assistprov_dontknow
   title: Received help for OUD_help don't know
   description: '[DON''T KNOW] What sort of assistance did they provide?'
@@ -977,7 +972,7 @@ fields:
   title: Help wanted for OUD_other help textbox
   description: '[TEXTBOX] From the people who supported you in your recovery, what
     sort of assistance did you most require or hope to receive?'
-  type: null
+  type: string
 - name: successful_support
   title: Received help for OUD_how effective
   description: How effective or successful was their help in assisting your recovery?
@@ -1006,21 +1001,11 @@ fields:
   description: What would you say was the most satisfying or helpful aspect for you
     in receiving their support?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: frustrating_support
   title: Received help for OUD_most frustrating
   description: What would you say was the most frustrating or disappointing aspect
     for you in receiving their support?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: contact_supporter
   title: Received help for OUD_supporter contact
   description: Are you still in contact with your supporter(s)?
@@ -1099,7 +1084,7 @@ fields:
   title: Recovery support system_other textbox
   description: "[TEXTBOX] What activities, groups, or organizations have provided\
     \ you with a recovery support\_system?"
-  type: null
+  type: string
 - name: suppsys_donthave
   title: Recovery support system_don't have support
   description: "[I don\u2019t have a support system for recovery] What activities,\
@@ -1230,7 +1215,7 @@ fields:
   title: Substance use_textbox
   description: '[TEXTBOX] Have you ever used any of the following substances in your
     life?'
-  type: null
+  type: string
 - name: nouse
   title: Substance use_no
   description: '[NONE] Have you ever used any of the following substances in your
@@ -1537,7 +1522,7 @@ fields:
 - name: recasst_oe
   title: Help someone with OUD_other textbox
   description: '[TEXTBOX] What sort of assistance were you able to provide?'
-  type: null
+  type: string
 - name: recasst_dk
   title: Help someone with OUD_don't know
   description: '[DON''T KNOW] What sort of assistance were you able to provide?'
@@ -1695,7 +1680,7 @@ fields:
   description: "[TEXTBOX] What sort of assistance did this person most require? Please\
     \ rank the top 3. Select \u20181\u2019 for your top choice, \u20182\u2019 for\
     \ your second choice, and a \u20183\u2019 for your third choice."
-  type: null
+  type: string
 - name: recasst_eff
   title: Help someone with OUD_effective
   description: "How effective do you believe your help was in assisting this person\u2019\
@@ -1724,21 +1709,11 @@ fields:
   description: What would you say was the most satisfying aspect of helping this person
     with their recovery?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: recasst_dis
   title: Help someone with OUD_most frustrating
   description: What would you say was the most frustrating or disappointing aspect
     of helping this person with their recovery?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: recasst_contact
   title: Help someone with OUD_supportee contact
   description: Are you still in contact with this person?
@@ -1874,7 +1849,7 @@ fields:
   title: Opioid info_other textbox
   description: '[TEXTBOX] From whom/where did you get your information on the opioid
     epidemic?'
-  type: null
+  type: string
 - name: info_dk
   title: COVID_past month COVID info source_DON'T KNOW
   description: '[DON''T KNOW] In the past month, where did you get most of your information
@@ -2388,7 +2363,7 @@ fields:
   title: Most support in life_other textbox
   description: '[TEXTBOX] Who would you say provides you the most support in your
     life?'
-  type: null
+  type: string
 - name: sppt_dk
   title: Most support in life_don't know
   description: '[DON''T KNOW] Who would you say provides you the most support in your
@@ -2519,7 +2494,7 @@ fields:
   title: Helped prevent recidivsm_other textbox
   description: '[TEXTBOX] After you were released from incarceration, who helped you
     not go back to incarceration?'
-  type: null
+  type: string
 - name: spptrec_none
   title: Helped prevent recidivism_no one
   description: '[No one] After you were released from incarceration, who helped you
@@ -2668,7 +2643,7 @@ fields:
   title: Who helps avoid alcohol and drugs_other textbox
   description: '[TEXTBOX] Who in your life encourages you to avoid using alcohol or
     drugs in a problematic way?'
-  type: null
+  type: string
 - name: avoid_none
   title: Who helps avoid alcohol and drugs_no one
   description: '[No one] Who in your life encourages you to avoid using alcohol or
@@ -2799,7 +2774,7 @@ fields:
   title: Who helps use alcohol and drugs_other textbox
   description: '[TEXTBOX] Who in your life encourages you to use alcohol or drugs
     in a problematic way?'
-  type: null
+  type: string
 - name: use_none
   title: Who helps use alcohol and drugs_no one
   description: '[No one] Who in your life encourages you to use alcohol or drugs in
@@ -3050,7 +3025,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh05
   title: Number of HH members age 0-5
   description: Number of household members age 0-5
@@ -3095,19 +3070,19 @@ fields:
   title: Coded_personal criminal justice involvement ever
   description: Yes to either Have you ever been convicted of any misdemeanor or felony
     crime? OR Have you ever been incarcerated in jail or prison?
-  type: number
+  type: integer
 - name: familycrimjust_ever
   title: Coded_family friend criminal justice involvement ever
   description: 'Yes to either Have any of your family members or close friends ever
     been convicted of any misdemeanor or felony crime? OR Have any of your family
     members or close friends ever been incarcerated in jail or prison? '
-  type: number
+  type: integer
 - name: personalcrimjust_recent
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: familycrimjust_recent
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_5cat
@@ -3137,7 +3112,3 @@ missingValues:
 - SKIPPED ON WEB
 - DON'T KNOW
 - REFUSED
-- I don't know
-- "I don\u2019t recall"
-- "I don\u2019t know"
-- Under 18

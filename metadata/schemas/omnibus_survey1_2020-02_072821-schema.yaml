@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -1155,10 +1155,7 @@ fields:
 - name: duration_jcoin
   title: Time spent in survey, in minutes
   description: Time to complete survey
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode
   description: Survey completed via web or phone
@@ -1177,7 +1174,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -1199,7 +1196,6 @@ fields:
     - 30-44
     - 45-59
     - 60+
-    - Under 18
 - name: age7
   title: Age - 7 Categories
   description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
@@ -1213,7 +1209,6 @@ fields:
     - 55-64
     - 65-74
     - 75+
-    - Under 18
 - name: racethnicity
   title: Combined Race/Ethnicity
   description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
@@ -1325,7 +1320,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh612
   title: Number of HH members age 6-12
   description: Number of people in household age 6-12
@@ -1478,7 +1473,7 @@ fields:
     exclude_from_release: true
 - name: knowledgescore_new
   title: Sum of 10 knowledge-based items, with higher scores indicating more knowledge.
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: criminality_scale_score
@@ -1875,7 +1870,7 @@ fields:
     exclude_from_release: true
 - name: opioidmisandcrimjust_personal
   title: Personal opioid misuse and criminal justice experience.
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: stigma_bipolarscaleonly
@@ -1909,160 +1904,160 @@ fields:
   custom:
     exclude_from_release: true
 - name: racedummy_white1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racedummy_black1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racedummy_other1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racedummy_hispanic1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racedummy_multi1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: racedummy_asian1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: sex01
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: educationdichot_college1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employdichot_employed1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedichot_abovemed1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personalopioidmisuse_yes1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: familyopioidmisuse_yes1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: anycrimjustpersonal_yes1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: anycrimjustfamily_yes1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: educationdummy_lesshs1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: educationdummy_somecollege1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: educationdummy_hsdiploma1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: educationdummy_collegedegree1
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_less25k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_25to49k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_50to84k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_85to150k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_over150k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_1
   title: RACETHNICITY=1.0
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_2
   title: RACETHNICITY=2.0
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_3
   title: RACETHNICITY=3.0
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_4
   title: RACETHNICITY=4.0
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_5
   title: RACETHNICITY=5.0
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: race_6
   title: RACETHNICITY=6.0
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_1
   title: EMPLOY=Working - as a paid employee
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_2
   title: EMPLOY=Working - self-employed
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_3
   title: EMPLOY=Not working - on temporary layoff from a job
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_4
   title: EMPLOY=Not working - looking for work
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_5
   title: EMPLOY=Not working - retired
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_6
   title: EMPLOY=Not working - disabled
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employment_7
   title: EMPLOY=Not working - other
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: zemployment_1
@@ -2232,30 +2227,30 @@ fields:
     exclude_from_release: true
 - name: age4_1
   title: AGE4=18-29
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: age4_2
   title: AGE4=30-44
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: age4_3
   title: AGE4=45-59
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: age4_4
   title: AGE4=60+
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ps_i_seekmedical_bi_rev
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ps_i_seekmedical_uni_rev
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: zps_i_seekmedical_uni_rev
@@ -2277,11 +2272,11 @@ fields:
   custom:
     exclude_from_release: true
 - name: ps_c_mandatory_bi_rev
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: ps_c_mandatory_uni_rev
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: zps_c_mandatory_uni_rev
@@ -2355,13 +2350,13 @@ fields:
   title: Coded_personal criminal justice involvement ever
   description: Yes to either Have you ever been convicted of any misdemeanor or felony
     crime? OR Have you ever been incarcerated in jail or prison?
-  type: number
+  type: integer
 - name: familycrimjust_ever
   title: Coded_family friend criminal justice involvement ever
   description: 'Yes to either Have any of your family members or close friends ever
     been convicted of any misdemeanor or felony crime? OR Have any of your family
     members or close friends ever been incarcerated in jail or prison? '
-  type: number
+  type: integer
 - name: hh05
   title: Number of HH members age 0-5
   description: Number of household members age 0-5

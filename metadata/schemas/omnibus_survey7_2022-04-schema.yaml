@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -724,9 +724,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_inpatient
   title: Recommend family friend with OUD to inpatient programs
   description: "[They should find a hospital inpatient program\u2026] If a friend\
@@ -738,9 +735,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_pcp
   title: Recommend family friend with OUD to PCP
   description: "[They should talk to their primary care doctor about getting a prescription\
@@ -753,9 +747,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_cnslr
   title: Recommend family friend with OUD to one-on-one
   description: "[They should find a counselor, social worker, or psychologist\u2026\
@@ -768,9 +759,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_methadone
   title: Recommend family friend with OUD to methadone program
   description: '[They should contact a local methadone program] If a friend or family
@@ -782,9 +770,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_outptnt
   title: Recommend family friend with OUD to outpatient program
   description: "[They should find a group outpatient program\u2026] If a friend or\
@@ -796,9 +781,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_mtlhlp
   title: Recommend family friend with OUD to help group
   description: "[They should find a mutual help group\u2026] If a friend or family\
@@ -810,9 +792,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: rec_fthldr
   title: Recommend family friend to faith
   description: '[They should talk to their church pastor, rabbi, or other faith leader]
@@ -825,9 +804,6 @@ fields:
     - '1'
     - '2'
     - '3'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: personaluse_feelgood
   title: OUD misuse ever_option 2
   description: "Have you ever taken a prescription opioid medication (e.g., fentanyl,\
@@ -1061,9 +1037,6 @@ fields:
     - '2020'
     - '2021'
     - '2022'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: covidstgma
   title: COVID_stigma for COVID
   description: Have you experienced any stigma, or poor treatment, because people
@@ -1356,7 +1329,7 @@ fields:
   description: '[Other TEXTBOX] Which of the following are reasons you would wait
     to vaccinate your child(ren) or not vaccinate your child(ren) that are less than
     5 years old?  Select all that apply'
-  type: null
+  type: string
 - name: q19a_dk
   title: COVID_young child vaccine reason wait_DON'T KNOW
   description: '[DON''T KNOW] Which of the following are reasons you would wait to
@@ -1403,7 +1376,7 @@ fields:
   title: COVID_know someone died from COVID textbox
   description: '[Other, Please specify] Do you personally know anyone who has passed
     away/died because of getting infected with COVID-19? '
-  type: null
+  type: string
 - name: covidreg_private
   title: COVID_Policy_Private companies authority to require vaccine]
   description: Private companies should have the authority to require their employees
@@ -2053,31 +2026,16 @@ fields:
   description: 'Timeframe 1 [Please indicate/estimate the number of new partner(s)
     you met in person for each of the below pandemic phases: ]'
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_timeframe2_count
   title: COVID_number new partner Aug-Oct 2021
   description: 'Timeframe 2 [Please indicate/estimate the number of new partner(s)
     you met in person for each of the below pandemic phases: ]'
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_new_partner_timeframe3_count
   title: COVID_number new partner Dec-Feb 2021
   description: 'Timeframe 3 [Please indicate/estimate the number of new partner(s)
     you met in person for each of the below pandemic phases: ]'
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_past_month_kissw2
   title: COVID_past month kiss nonhousehold
   description: During the past month, did you kiss anyone that lives outside your
@@ -2091,11 +2049,6 @@ fields:
   title: COVID_past month kiss nonhousehold count
   description: How many people did you kiss that live outside your home?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: sb_past_month_sexw2
   title: COVID_past month sex nonhousehold
   description: During the past month did you have oral, vaginal, or anal sex with
@@ -2118,11 +2071,6 @@ fields:
   description: How many people did you have oral, vaginal, or anal sex with that live
     outside your home?
   type: string
-  constraints:
-    enum:
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: demographics_unemployed_reason_dk
   title: COVID_unemployed reaons DON'T KNOW
   description: '[DON''T KNOW] What would you say are the reasons for why you''re still
@@ -2206,7 +2154,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -2228,7 +2176,6 @@ fields:
     - 30-44
     - 45-59
     - 60+
-    - Under 18
 - name: educ5
   title: 5-level education
   type: string
@@ -2324,7 +2271,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh05
   title: Number of HH members age 0-5
   description: Number of household members age 0-5
@@ -2337,7 +2284,7 @@ fields:
 - name: hh612
   title: Number of HH members age 6-12
   description: Number of people in household age 6-12
-  type: number
+  type: integer
 - name: hh1317
   title: Number of HH members age 13-17
   description: Number of people in household ages 13-17
@@ -2472,7 +2419,4 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- Not sure
-- I don't know
-- "Don\u2019t know"
-- Unknown
+- ''

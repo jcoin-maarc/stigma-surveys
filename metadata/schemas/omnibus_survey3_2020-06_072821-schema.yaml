@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -926,7 +926,7 @@ fields:
   title: Recent treatment location_Other textbox
   description: Where did you receive treatment for your opioid/prescription pain medication
     misuse in the past 6 months?
-  type: null
+  type: string
 - name: treat_dk
   title: Recent treatment location_DON'T KNOW
   description: Where did you receive treatment for your opioid/prescription pain medication
@@ -962,9 +962,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: mat_methadone
   title: Receive MAT_Methadone
   description: '[Methadone] How is your Medication Assisted Treatment given to you?'
@@ -1011,7 +1008,7 @@ fields:
 - name: mat_othertext
   title: Receive MAT_textbox
   description: '[TEXTBOX] How is your Medication Assisted Treatment given to you?'
-  type: null
+  type: string
 - name: mat_dk
   title: Receive MAT_don't know
   description: '[DON''T KNOW] How is your Medication Assisted Treatment given to you?'
@@ -1049,9 +1046,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: personaloverdose_times
   title: Number of times overdosed
   description: How many times have you ever overdosed after taking opioids?
@@ -1062,9 +1056,6 @@ fields:
     - Twice
     - 3 times
     - 4 or more times
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: personaloverdose_last
   title: Last time overdosed
   description: When was the last time you overdosed after taking opioids?
@@ -1075,9 +1066,6 @@ fields:
     - "6 \u2013 12 months ago"
     - 1-5 years ago
     - 5+ years ago
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: narcan_personal
   title: Someone administer Narcan after overdose
   description: To your knowledge, did someone administer naloxone (Narcan) to revive
@@ -1087,9 +1075,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: personalconviction_ever
   title: Personal conviction ever
   description: Have you ever been convicted of any misdemeanor or felony crime?
@@ -1121,7 +1106,6 @@ fields:
     - Yes, within the last year
     - ' Yes, more than a year ago'
     - ' No'
-    - REFUSED
 - name: familyoverdose_ever
   title: OUD overdose family member friend
   description: "Have any family members or close friends you know ever used opioids/prescription\
@@ -1164,9 +1148,6 @@ fields:
     enum:
     - 'No'
     - 'Yes'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: protest_participant
   title: COVID_Participated in public protest
   description: In the past month, have you participated in a public protest or gathering
@@ -1176,9 +1157,6 @@ fields:
     enum:
     - 'Yes'
     - 'No'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: protest_arrested
   title: COVID_Arrested after protest participation
   description: Were you arrested as a part of your participation?
@@ -1187,9 +1165,6 @@ fields:
     enum:
     - 'Yes'
     - 'No'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: primarycare_last
   title: Last PCP visit
   description: When is the last time you saw a primary care doctor?
@@ -1203,9 +1178,6 @@ fields:
     - Between 5-6 months ago
     - Between 6-12 months ago
     - Over a year ago
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: personal_covidtest
   title: COVID_Tested for COVID
   description: Have you been tested for COVID-19 (coronavirus)? If so, what was the
@@ -1218,9 +1190,6 @@ fields:
     - I have been tested and I do not know the result
     - I had COVID-19 symptoms
     - I have not been tested
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: household_covidtest
   title: COVID_Anyone in household COVID tested
   description: Has anyone else in your household (not counting yourself) been tested
@@ -1234,16 +1203,10 @@ fields:
     - They had COVID-19 symptoms
     - They have not been tested
     - There is no one else living in my household
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
 - name: duration_jcoin
   title: Time spent in survey, in minutes
   description: Time to complete survey
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode
   description: Survey completed via web or phone
@@ -1262,7 +1225,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -1284,7 +1247,6 @@ fields:
     - 30-44
     - 45-59
     - 60+
-    - Under 18
 - name: age7
   title: Age - 7 Categories
   description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
@@ -1298,7 +1260,6 @@ fields:
     - 55-64
     - 65-74
     - 75+
-    - Under 18
 - name: racethnicity
   title: Combined Race/Ethnicity
   description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
@@ -1410,7 +1371,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh612
   title: Number of HH members age 6-12
   description: Number of people in household age 6-12
@@ -1521,66 +1482,66 @@ fields:
     exclude_from_release: true
 - name: personalmisuse_recent
   title: Personal misuse within the last 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personaloverdose_lifetime
   title: Personal history of overdose from opioids
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personaloverdose_recent
   title: Personal overdose from opioids in last 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendmisuse_lifetime
   title: Have family or friends that have ever misused opioids
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendmisuse_recent
   title: Family or friend has misused opiods in the past 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendoverdose_lifetime
   title: Have family member or friend that has ever overdosed
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendoverdose_recent
   title: Family or friend overdosed in past 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personalcrimjust_recent
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: familycrimjust_recent
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: selfhousehold_covidtested
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: selfhousehold_covidpositive
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: hotspot_survey
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: education_college
   title: At least some college education
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employed_vs_not
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: zkb_medications_recover
@@ -1646,23 +1607,23 @@ fields:
   custom:
     exclude_from_release: true
 - name: incomedummy_less25k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_25to49k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_50to84k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_85to150k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: incomedummy_over150k
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: hh05

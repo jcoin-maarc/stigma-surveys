@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -1090,7 +1090,6 @@ fields:
     enum:
     - 'Yes'
     - 'No'
-    - "Don\u2019t know"
 - name: familyuse_last
   title: Last time family member/friend use opioids
   description: '[If indicated yes to family/friend use of opioids/prescription pain
@@ -1166,10 +1165,7 @@ fields:
 - name: duration_jcoin
   title: Time spent in survey, in minutes
   description: Time to complete survey
-  type: string
-  constraints:
-    enum:
-    - Under 1 minute
+  type: integer
 - name: surv_mode
   title: Survey interview mode
   description: Survey completed via web or phone
@@ -1188,7 +1184,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -1355,7 +1351,7 @@ fields:
 - name: hhsize
   title: Household size (including children)
   description: Number of people in household
-  type: number
+  type: integer
 - name: hh612
   title: Number of HH members age 6-12
   description: Number of people in household age 6-12
@@ -1472,74 +1468,74 @@ fields:
     exclude_from_release: true
 - name: personalmisuse_lifetime
   title: Personal history of every misusing opioids
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendmisuse_lifetime
   title: Have family or friends that have ever misused opioids
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendoverdose_lifetime
   title: Have family member or friend that has ever overdosed
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personalmisuse_recent
   title: Personal misuse within the last 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendmisuse_recent
   title: Family or friend has misused opiods in the past 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: famfriendoverdose_recent
   title: Family or friend overdosed in past 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personaloverdose_lifetime
   title: Personal history of overdose from opioids
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personaloverdose_recent
   title: Personal overdose from opioids in last 12 months
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: personalcrimjust_recent
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: familycrimjust_recent
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: selfhousehold_covidtested
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: selfhousehold_covidpositive
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: covid_deathinhh
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: hotspot_survey
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: employed_vs_not
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: support_stayhome
-  type: number
+  type: integer
   custom:
     exclude_from_release: true
 - name: hh05
@@ -1566,5 +1562,3 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- "Don\u2019t know"
-- Under 18

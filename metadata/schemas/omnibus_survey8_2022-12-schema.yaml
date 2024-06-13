@@ -2,7 +2,7 @@ fields:
 - name: caseid
   title: Unique respondent ID
   description: Respondent ID, respondent can have participated in multiple surveys
-  type: number
+  type: integer
 - name: weight
   title: Survey weight
   description: Post-stratification weights - 18+ general population
@@ -2134,9 +2134,6 @@ fields:
     - Republican
     - Independent
     - None of these
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
   custom:
     exclude_from_release: true
 - name: pida
@@ -2146,9 +2143,6 @@ fields:
     enum:
     - Strong Democrat
     - Not so strong Democrat
-    - "DON\u2019T KNOW"
-    - SKIPPED ON WEB
-    - REFUSED
   custom:
     exclude_from_release: true
 - name: pidb
@@ -2158,9 +2152,6 @@ fields:
     enum:
     - Strong Republican
     - Not so strong Republican
-    - "DON\u2019T KNOW"
-    - SKIPPED ON WEB
-    - REFUSED
   custom:
     exclude_from_release: true
 - name: pidi
@@ -2171,9 +2162,6 @@ fields:
     - Lean Democrat
     - Lean Republican
     - "Don\u2019t lean"
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
   custom:
     exclude_from_release: true
 - name: partyid7
@@ -2212,9 +2200,6 @@ fields:
     enum:
     - 'Yes'
     - 'No'
-    - DON'T KNOW
-    - SKIPPED ON WEB
-    - REFUSED
   custom:
     exclude_from_release: true
 - name: pid2a_1
@@ -2298,7 +2283,7 @@ fields:
     - Spanish
 - name: device
   title: Device
-  type: null
+  type: string
   custom:
     exclude_from_release: true
 - name: gender
@@ -2320,7 +2305,6 @@ fields:
     - 30-44
     - 45-59
     - 60+
-    - Under 18
 - name: age7
   title: Age - 7 Categories
   description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
@@ -2334,7 +2318,6 @@ fields:
     - 55-64
     - 65-74
     - 75+
-    - Under 18
 - name: racethnicity
   title: Combined Race/Ethnicity
   description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
@@ -2628,4 +2611,4 @@ missingValues:
 - DON'T KNOW
 - SKIPPED ON WEB
 - REFUSED
-- Unknown
+- ''
