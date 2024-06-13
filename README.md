@@ -9,5 +9,5 @@ Schemas and files containing value labels for each wave were generated from `pyr
 `dvc pull`
 Run python files:
 `crosswalkxlsx_to_mappings.py` : creates metadata mappings from an excel file that was manually annotated by NORC Stigma Survey team with support/feedback from DASC team.
-`translate.py`: uses the source `spss` files and the mappings to generate schemas, data, and metadata.
+`translate.py`: uses the source `spss` files and the mappings to generate schemas, data, and metadata and performs curation on metadata and data from metadata mappings and manual curation from DASC not included in survey team mappings (e.g., unstandardized missing value labels, etc)
 `package.py`: packages into a data package
