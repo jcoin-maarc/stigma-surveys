@@ -137,14 +137,15 @@ def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,e
 
     """
     filename = os.path.splitext(os.path.basename(file_path))[0]
-    output_dir = f"tmp/{filename}"
+    output_dir = f"data/protocol1-omnibus"
     os.makedirs(output_dir, exist_ok=True)
 
     # Read SPSS file
     df, meta = pyreadstat.read_sav(
-        file_path, apply_value_formats=True, user_missing=True
+        file_path,user_missing=True
     )
     df = df.convert_dtypes()
+    df = pyreadstat.set_value_labels(df,meta) # set labels last separate so float --> int conversions can happen
     ## Add descriptions to user defined (non-standard!)
     if descriptionmap:
         meta.column_names_to_description = descriptionmap
@@ -187,6 +188,7 @@ def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,e
 
     # Write the schema and value labels to YAML
     schema,value_labels = to_schema_and_value_labels(df,meta)
+
     survey_name = config.FILENAME_TO_NAME[Path(file_path).stem]
 
     if hasattr(cleaning,survey_name):
@@ -194,8 +196,12 @@ def to_frictionless(file_path,renamemap=None,descriptionmap=None,titlemap=None,e
     else:
         raise Exception(f"No cleaning function for {survey_name}!")
     
+    # add default missing value (blank)
+    if not "" in schema["missingValues"]:
+        schema["missingValues"].append("")
+
     # Write data/metadata to file
-    csv_path = os.path.join(output_dir, f"{filename}.csv")
+    csv_path = os.path.join(output_dir,"csv",f"{filename}.csv")
     df.to_csv(csv_path, index=False)
     _write_schema(schema,filename)
     _write_value_labels(value_labels,filename)

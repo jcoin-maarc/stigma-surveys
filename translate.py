@@ -35,3 +35,5 @@ for dataset in DATASETS:
         descriptionmap=file_descriptionmap,
         titlemap=file_titlemap,
         excludemap=excludemap)
+
+print("Completed writing csv data, schemas,value labels")
