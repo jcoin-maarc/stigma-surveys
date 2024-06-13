@@ -67,7 +67,6 @@ for name,metadata in crosswalk.T.items():
 
 num_to_name = {d["name"].replace("survey",""):d["filename"] for d in DATASETS}
 rename_num_to_name = lambda r: {num_to_name[k]:r[k] for k in r} if isinstance(r,dict) else r
-pd.Series(renamemap).apply(rename_num_to_name)
 
 pd.Series(renamemap).apply(rename_num_to_name).to_json("renamemap.json",indent=2)
 pd.Series(descriptionmap).apply(rename_num_to_name).to_json("descriptionmap.json",indent=2)
