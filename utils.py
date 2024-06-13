@@ -41,6 +41,7 @@ def write_data_package(package, path=None):
             rsrc.format = 'csv'
             rsrc.encoding = 'utf-8'
             rsrc.bytes = os.stat(rsrc.path).st_size
+            rsrc.mediatype = "text/csv"
             rsrc.hash = hashlib.md5(open(rsrc.path,'rb').read()).hexdigest()
             write_stata_script(rsrc, path=Path('scripts') / f'{rsrc.name}.do',
                                value_labels=rsrc.value_labels,
