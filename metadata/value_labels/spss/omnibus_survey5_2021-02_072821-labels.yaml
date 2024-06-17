@@ -19,15 +19,12 @@ value_labels:
     3: Yes, I will get a coronavirus vaccine, but I will wait until I see more proof
       that it is safe and effective
     4: No, I will not get a coronavirus vaccine
-    77: NOT SURE
+    77: Not sure
     98: SKIPPED ON WEB
     99: REFUSED
   labels3:
     0: 'No'
     1: 'Yes'
-    77: DON'T KNOW
-    98: SKIPPED ON WEB
-    99: REFUSED
   labels27:
     1: 'No'
     2: 'Yes'
@@ -127,7 +124,7 @@ value_labels:
     99: REFUSED
   labels179:
     1: Past 6 months
-    2: 7-12 months ago
+    2: "7 \u2013 12 months ago"
     3: 1-5 years ago
     4: 5+ years ago
     77: DON'T KNOW
@@ -217,7 +214,7 @@ value_labels:
   labels200:
     1: Lean Democrat
     2: Lean Republican
-    3: Don't lean
+    3: "Don\u2019t lean"
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
@@ -358,6 +355,23 @@ value_labels:
     4: '4'
     5: '5'
     6: 6 or more
+  labels234:
+    1: Several hours
+    2: Several days(<1 week)
+    3: Several weeks (<1 month)
+    4: Several months
+    77: I don't know
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels248:
+    1: Always
+    2: Sometimes
+    3: Never
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels256:
+    1: AnswerCode
 field_to_value_label:
   fluvax: labels0
   fluvax_employ: labels1
@@ -604,3 +618,35 @@ field_to_value_label:
   personalcrimjust_recent: labels3
   familycrimjust_recent: labels3
   hh05: labels224
+  sb_partnerw1: labels65
+  sb_live_with_partnerw1: labels65
+  sb_seek_partnerw1: labels65
+  sb_new_partner_onlinew1: labels65
+  sb_new_partner_in_personw1: labels65
+  sb_new_partner_time_before_inpersonw1: labels234
+  sb_new_partner_had_sex_now1: labels3
+  sb_new_partner_had_sex_virtuallyw1: labels3
+  sb_new_partner_had_sex_inpersonw1: labels3
+  sb_new_partner_had_sex_dkw1: labels3
+  sb_new_partner_had_sex_skippedw1: labels3
+  sb_new_partner_had_sex_refusedw1: labels3
+  sb_new_partner_discuss_precautionw1: labels3
+  sb_new_partner_minimize_outside_contactw1: labels3
+  sb_new_partner_get_testedw1: labels3
+  sb_new_partner_they_get_testedw1: labels3
+  sb_new_partner_activities_dkw1: labels3
+  sb_new_partner_skippedw1: labels3
+  sb_new_partner_refusedw1: labels3
+  sb_new_partner_wash_before_sexw1: labels248
+  sb_new_partner_less_kissingw1: labels248
+  sb_new_partner_work_maskw1: labels248
+  sb_new_partner_new_positionw1: labels248
+  sb_new_partner_masturbatew1: labels248
+  sb_new_partner_sex_toysw1: labels248
+  sb_new_partne_glory_holew1: labels248
+  sb_new_partner_otherw1: labels248
+  sb_new_partner_other_textboxw1: labels256
+  sb_past_month_kissw1: labels65
+  sb_past_month_kiss_numw1: labels39
+  sb_past_month_sexw1: labels65
+  sb_past_month_sex_numw1: labels39

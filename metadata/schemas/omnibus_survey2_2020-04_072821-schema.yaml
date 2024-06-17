@@ -1,13 +1,17 @@
 fields:
 - name: caseid
-  title: Case ID
+  title: Unique respondent ID
+  description: Respondent ID, respondent can have participated in multiple surveys
   type: integer
 - name: weight
-  title: Post-stratification weights - 18+ general population (N=1,002)
+  title: Survey weight
+  description: Post-stratification weights - 18+ general population
   type: number
 - name: jan20_lackedcompanionship
-  title: "[That you lacked companionship] At the start of the New Year in January\
-    \ 2020\u2026h"
+  title: COVID_Lacked companionship
+  description: 'Think about your life at the start of the New Year in January 2020
+    and answer the following questions for just the month of January 2020: How often
+    did you feel . . . That you lacked companionship?'
   type: string
   constraints:
     enum:
@@ -15,8 +19,10 @@ fields:
     - Some of the time
     - Often
 - name: jan20_leftout
-  title: "[Left out] At the start of the New Year in January 2020\u2026how often did\
-    \ you feel"
+  title: COVID_Left out
+  description: 'Think about your life at the start of the New Year in January 2020
+    and answer the following questions for just the month of January 2020: How often
+    did you feel . . . Left out'
   type: string
   constraints:
     enum:
@@ -24,8 +30,10 @@ fields:
     - Some of the time
     - Often
 - name: jan20_isolated
-  title: "[Isolated from others] At the start of the New Year in January 2020\u2026\
-    how often "
+  title: COVID_Isolated
+  description: 'Think about your life at the start of the New Year in January 2020
+    and answer the following questions for just the month of January 2020: How often
+    did you feel . . . Isolated from others?'
   type: string
   constraints:
     enum:
@@ -33,7 +41,9 @@ fields:
     - Some of the time
     - Often
 - name: personal_covidtest
-  title: Have you been tested for COVID-19 (coronavirus)? If so, what was the result?
+  title: COVID_Tested for COVID
+  description: Have you been tested for COVID-19 (coronavirus)? If so, what was the
+    result?
   type: string
   constraints:
     enum:
@@ -43,8 +53,9 @@ fields:
     - I had COVID-19 symptoms, but did not get tested
     - I have not been tested
 - name: household_covidtest
-  title: Has anyone else in your household (not counting yourself) been tested for
-    COVID-
+  title: COVID_Anyone in household COVID tested
+  description: Has anyone else in your household (not counting yourself) been tested
+    for COVID-19 (coronavirus)?
   type: string
   constraints:
     enum:
@@ -54,191 +65,235 @@ fields:
     - They had COVID-19 symptoms, but did not get tested
     - They have not been tested
 - name: canceldoc_react
-  title: "[Cancelled a doctor\u2019s appointment] Which of the following have you\
-    \ done in rea"
+  title: "COVID_Cancelled a doctor\u2019s appointment"
+  description: "Which of the following have you done in reaction as a general response\
+    \ to the coronavirus pandemic (in addition to what you normally do)? Cancelled\
+    \ a doctor\u2019s (or other healthcare) appointment"
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: prayed_react
-  title: '[Prayed] Which of the following have you done in reaction as a general response '
+  title: COVID_prayed
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? Prayed
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: telehealth_react
-  title: "[Had a \u2018telehealth visit\u2019 with a doctor or other health care provider]\
-    \ Which"
+  title: COVID_telehealth
+  description: "Which of the following have you done in reaction as a general response\
+    \ to the coronavirus pandemic (in addition to what you normally do)? Had a \u201C\
+    telehealth visit\u201D with a doctor or other health care provider (such as over\
+    \ the phone or on a video chat)"
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: avoidcontact_react
-  title: '[Avoided in-person contact with friends or family] Which of the following
-    have y'
+  title: COVID_Avoided in-person contact
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)?  Avoided in-person
+    contact with friends or family
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: washhands_react
-  title: '[Washed/Sanitized hands more than usual] Which of the following have you
-    done in'
+  title: COVID_Washed/Sanitized hands more
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? Washed/sanitized
+    hands more than usual
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: isolatedhhmember_react
-  title: '[Isolated from other person(s) who lives with you] Which of the following
-    have y'
+  title: COVID_isolated from HH member
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? Isolation from
+    other person(s) who lives with you
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: cancelwork_react
-  title: '[Cancelled/postponed work or school activities] Which of the following have
-    you '
+  title: COVID_Cancelled/postponed activities
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? Cancelled/postponed
+    work or school activities
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: canceltravel_react
-  title: '[Cancelled/postponed travel] Which of the following have you done in reaction
-    as'
+  title: COVID_Cancelled/postponed travel
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? Cancelled/postponed
+    travel
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: notlefthome_react
-  title: '[Have not left my home] Which of the following have you done in reaction
-    as a ge'
+  title: COVID_Have not left my home
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? Have not left
+    my home
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: othersafe_react
-  title: '[I have done other things to keep myself safe] Which of the following have
-    you d'
+  title: COVID_done other things
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? I have done
+    other things to keep myself safe
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: none_react
-  title: '[I have not taken any of these steps] Which of the following have you done
-    in re'
+  title: COVID_no steps
+  description: Which of the following have you done in reaction as a general response
+    to the coronavirus pandemic (in addition to what you normally do)? None of the
+    above
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: limittrips_measure
-  title: '[Limiting trips out of the house to essential work or errands] Which of
-    the foll'
+  title: COVID_limiting to essential trips
+  description: '[Limiting trips out of the house to essential work or errands] Which
+    of the following measures, if any, are you taking in response to the outbreak
+    of the new coronavirus?'
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wfh_measure
-  title: '[Working from home] Which of the following measures, if any, are you taking
-    in r'
+  title: COVID_work from home
+  description: Which of the following measures, if any, are you taking in response
+    to the outbreak of the new coronavirus? Working from home
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: groups10_measure
-  title: '[Limiting interactions with others to groups of 10 or less] Which of the
-    followi'
+  title: COVID_less than 10 people
+  description: Which of the following measures, if any, are you taking in response
+    to the outbreak of the new coronavirus? Limiting interactions with others to groups
+    of 10 or less
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: sixfeet_measure
-  title: '[Keeping a 6-foot radius when interacting with people you do not live with]
-    Whic'
+  title: COVID_6 ft radius
+  description: Which of the following measures, if any, are you taking in response
+    to the outbreak of the new coronavirus? Keeping a 6-foot radius when interacting
+    with people you do not live with
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: stockfood_measure
-  title: '[Stocking up on extra food] Which of the following measures, if any, are
-    you tak'
+  title: COVID_extra food
+  description: Which of the following measures, if any, are you taking in response
+    to the outbreak of the new coronavirus? Stocking up on extra food
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: stockcleaning_measure
-  title: '[Stocking up on extra cleaning supplies] Which of the following measures,
-    if any'
+  title: COVID_extra cleaning supplies
+  description: Which of the following measures, if any, are you taking in response
+    to the outbreak of the new coronavirus?Stocking up on extra cleaning supplies
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: wearmask_measure
-  title: '[Wearing a mask when leaving home] Which of the following measures, if any,
-    are '
+  title: COVID_mask outside home
+  description: Which of the following measures, if any, are you taking in response
+    to the outbreak of the new coronavirus? Wearing a mask when leaving home
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: foodneighbors_helpcomm
-  title: '[Getting food or medicine for neighbors] Which of the following new actions
-    are '
+  title: COVID_Getting food or medicine for neighbors
+  description: 'Which of the following new actions are you taking to help your family,
+    friends or your community respond to the COVID-19 pandemic and social distancing
+    rules? [Getting food or medicine for neighbors] '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: childcare_helpcomm
-  title: '[Providing childcare] Which of the following new actions are you taking
-    to help '
+  title: COVID_Providing childcare
+  description: 'Which of the following new actions are you taking to help your family,
+    friends or your community respond to the COVID-19 pandemic and social distancing
+    rules? [Providing childcare] '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: contactfriends_helpcomm
-  title: '[Contacting friends or family to keep in touch] Which of the following new
-    actio'
+  title: COVID_Contacting friends or family
+  description: Which of the following new actions are you taking to help your family,
+    friends or your community respond to the COVID-19 pandemic and social distancing
+    rules? [Contacting friends or family to keep in touch]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: other_helpcomm
-  title: '[I have done other things to help] Which of the following new actions are
-    you ta'
+  title: COVID_other things to help
+  description: Which of the following new actions are you taking to help your family,
+    friends or your community respond to the COVID-19 pandemic and social distancing
+    rules? [I have done other things to help]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: nothing_helpcomm
-  title: '[I am not taking any new actions] Which of the following new actions are
-    you tak'
+  title: COVID_not taking any new actions to help
+  description: Which of the following new actions are you taking to help your family,
+    friends or your community respond to the COVID-19 pandemic and social distancing
+    rules? [I am not taking any new actions]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: donateblood_frequency
-  title: '[Donated blood] Since the coronavirus outbreak began in the U.S., how often
-    have'
+  title: COVID_Donated blood freq
+  description: Since the coronavirus outbreak began in the U.S., how often have you
+    done each of the following?
   type: string
   constraints:
     enum:
@@ -247,8 +302,10 @@ fields:
     - Rarely
     - Never
 - name: donatereligiousorg_frequency
-  title: '[Donated money, food, or supplies to a religious organization or group]
-    Since th'
+  title: COVID_Donated to religious group
+  description: '[Donated money, food, or supplies to a religious organization or group]
+    Since the coronavirus outbreak began in the U.S., how often have you done each
+    of the following?'
   type: string
   constraints:
     enum:
@@ -257,8 +314,10 @@ fields:
     - Rarely
     - Never
 - name: donatenonreligious_frequency
-  title: '[Donated money, food, or supplies to a non-religious organization or group]
-    Sinc'
+  title: COVID_Donated to nonreligous group
+  description: '[Donated money, food, or supplies to a non-religious organization
+    or group] Since the coronavirus outbreak began in the U.S., how often have you
+    done each of the following?'
   type: string
   constraints:
     enum:
@@ -267,8 +326,10 @@ fields:
     - Rarely
     - Never
 - name: connectsocially_days
-  title: '[Connected socially with friends or family] Out of the past seven days,
-    what is '
+  title: COVID_Days connected socially with friends or family
+  description: Connected socially with friends or family (either online or in person)
+    [Out of the past seven days, what is your best estimate of the number of days
+    that you did each of the following activities?]
   type: string
   constraints:
     enum:
@@ -281,8 +342,9 @@ fields:
     - '6'
     - '7'
 - name: relax_days
-  title: '[Made time to relax] Out of the past seven days, what is your best estimate
-    of t'
+  title: COVID_Days made time to relax
+  description: Made time to relax [Out of the past seven days, what is your best estimate
+    of the number of days that you did each of the following activities?]
   type: string
   constraints:
     enum:
@@ -295,8 +357,9 @@ fields:
     - '6'
     - '7'
 - name: exercise_days
-  title: '[Exercised] Out of the past seven days, what is your best estimate of the
-    number'
+  title: COVID_Days exercised
+  description: 'Exercised [Out of the past seven days, what is your best estimate
+    of the number of days that you did each of the following activities? ] '
   type: string
   constraints:
     enum:
@@ -309,8 +372,9 @@ fields:
     - '6'
     - '7'
 - name: meditated_days
-  title: '[Meditated] Out of the past seven days, what is your best estimate of the
-    number'
+  title: COVID_Days meditated
+  description: Meditated [Out of the past seven days, what is your best estimate of
+    the number of days that you did each of the following activities?]
   type: string
   constraints:
     enum:
@@ -323,8 +387,9 @@ fields:
     - '6'
     - '7'
 - name: alcohol_days
-  title: '[Drank alcohol] Out of the past seven days, what is your best estimate of
-    the nu'
+  title: COVID_Days drank alcohol
+  description: Drank alcohol [Out of the past seven days, what is your best estimate
+    of the number of days that you did each of the following activities?]
   type: string
   constraints:
     enum:
@@ -337,8 +402,10 @@ fields:
     - '6'
     - '7'
 - name: cannabis_days
-  title: '[Used cannabis products such as marijuana] Out of the past seven days, what
-    is y'
+  title: COVID_Days used cannabis products such as marijuana
+  description: Used cannabis products such as marijuana [Out of the past seven days,
+    what is your best estimate of the number of days that you did each of the following
+    activities?]
   type: string
   constraints:
     enum:
@@ -351,8 +418,10 @@ fields:
     - '6'
     - '7'
 - name: otherrecdrug_days
-  title: '[Used recreational drugs other than alcohol or cannabis products] Out of
-    the pas'
+  title: COVID_Days used other recreational drugs
+  description: Used recreational drugs other than alcohol or cannabis products  [Out
+    of the past seven days, what is your best estimate of the number of days that
+    you did each of the following activities?]
   type: string
   constraints:
     enum:
@@ -365,118 +434,144 @@ fields:
     - '6'
     - '7'
 - name: unemployedprior_covidemployment
-  title: "[Someone was\_unemployed prior to the pandemic] Have you or has someone\
-    \ in your "
+  title: COVID_unemployed prior
+  description: Someone was unemployed prior to the pandemic [Have you or someone in
+    your household experienced any of the following employement-related and financial-related
+    changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: nochanges_covidemployment
-  title: "[Someone is\_working in the same job and has experienced no changes] Have\
-    \ you or"
+  title: COVID_no employement changes
+  description: Someone is working in the same job and has experienced no changes  [Have
+    you or someone in your household experienced any of the following employement-related
+    and financial-related changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: onleave_covidemployment
-  title: '[Someone is on sick leave or other leave from the same job] Have you or
-    has some'
+  title: COVID_on leave
+  description: Someone is on sick leave or other leave from the same job [Have you
+    or someone in your household experienced any of the following employement-related
+    and financial-related changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: laidoff_covidemployment
-  title: "[Someone has been\_laid off from the same job] Have you or has someone in\
-    \ your h"
+  title: COVID_laidoff
+  description: 'Someone has been laid off from the same job [Have you or someone in
+    your household experienced any of the following employement-related and financial-related
+    changes directly or indirectly due to the coronavirus pandemic?] '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: fewerhours_covidemployment
-  title: '[Someone has been scheduled for fewer hours from the same job] Have you
-    or has s'
+  title: COVID_fewer hours
+  description: Someone has been scheduled for fewer hours from the same job [Have
+    you or someone in your household experienced any of the following employement-related
+    and financial-related changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: wfh_covidemployment
-  title: '[Someone has chosen to work from home for the same job] Have you or has
-    someone '
+  title: COVID_work from home
+  description: Someone has chosen to work from home for the same job [Have you or
+    someone in your household experienced any of the following employement-related
+    and financial-related changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: unpaidto_covidemployment
-  title: '[Someone has taken unpaid time off from the same job] Have you or has someone
-    in'
+  title: COVID_unpaid time off
+  description: Someone has taken unpaid time off from the same job [Have you or someone
+    in your household experienced any of the following employement-related and financial-related
+    changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: reducedpay_covidemployment
-  title: '[Someone had their wages or salary reduced from the same job] Have you or
-    has so'
+  title: COVID_reduce pay same job
+  description: Someone had their wages or salary reduced from the same job [Have you
+    or someone in your household experienced any of the following employement-related
+    and financial-related changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: newjob_covidemployment
-  title: '[Someone is now working at a different job] Have you or has someone in your
-    hous'
+  title: COVID_new job
+  description: Someone is now working at a different [Have you or someone in your
+    household experienced any of the following employement-related and financial-related
+    changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: cantwork_covidemployment
-  title: '[Someone is not looking for work and/or unavailable to work] Have you or
-    has som'
+  title: COVID_not looking or can't work
+  description: Someone is not looking for work and/or unavailable to work  (such as,
+    retired or disabled or caring for others in household) [Have you or someone in
+    your household experienced any of the following employement-related and financial-related
+    changes directly or indirectly due to the coronavirus pandemic?]
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: paymortgage
-  title: Have you had any issues being able to pay your rent or mortgage due to the
-    coron
+  title: COVID_trouble paying mortgage
+  description: 'Have you had any issues being able to pay your rent or mortgage due
+    to due to the coronavirus pandemic? '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: hh_death_covid
-  title: Has anyone in your household passed away/died related to COVID-19 (coronavirus)?
+  title: COVID_HH member died
+  description: Has anyone in your household passed away/died related to COVID-19 (coronavirus)?
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: newguest
-  title: Do you have a friend or family member staying in your home now who does not
-    ordi
+  title: COVID_family friend staying with you
+  description: Do you have a friend or family member staying in your home now who
+    does not ordinarily stay with you?
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: newguest_covid
-  title: Is this person living with you because of a financial challenge or other
-    persona
+  title: COVID_family friend staying because COVID
+  description: 'Is this person living with you because of a financial challenge or
+    other personal circumstances related to COVID-19? '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: newguest_lengthofstay
-  title: How long do you expect this person to live with you?
+  title: COVID_family friend expected length
+  description: How long do you expect this person to live with you?
   type: string
   constraints:
     enum:
@@ -485,22 +580,26 @@ fields:
     - A few months
     - Longer
 - name: newguest_mentalhealth
-  title: Has this friend ever been told by a doctor that they have a mental health
-    condit
+  title: COVID_family friend stay mental health
+  description: Has this friend ever been told by a doctor that they have a mental
+    health condition (e.g. anxiety, depression)?
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: newguest_sud
-  title: Does this friend currently have a substance use disorder (for example, substance
+  title: COVID_family friend SUD
+  description: 'Does this friend currently have a substance use disorder (i.e., substance
+    addiction, abuse or dependence)? '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: nervous_pastmonth
-  title: '[Been a very nervous person] Over the past month how often have you:'
+  title: MHI5_nervous
+  description: Over the past month, how often have you been a very nervous person
   type: string
   constraints:
     enum:
@@ -511,7 +610,8 @@ fields:
     - A little of the time
     - None of the time
 - name: downhearted_pastmonth
-  title: '[Felt downhearted and blue] Over the past month how often have you:'
+  title: MHI5_downhearted blue
+  description: Over the past month, how often have you Felt downhearted and blue
   type: string
   constraints:
     enum:
@@ -522,7 +622,8 @@ fields:
     - A little of the time
     - None of the time
 - name: calm_pastmonth
-  title: '[Felt calm and peaceful] Over the past month how often have you:'
+  title: MHI5_calm peace
+  description: Over the past month, how often have you Felt calm and peaceful
   type: string
   constraints:
     enum:
@@ -533,8 +634,9 @@ fields:
     - A little of the time
     - None of the time
 - name: dumps_pastmonth
-  title: '[Felt so down in the dumps that nothing could cheer you up] Over the past
-    month '
+  title: MHI5_down in the dumps
+  description: Over the past month, how often have you Felt so down in the dumps that
+    nothing could cheer you up
   type: string
   constraints:
     enum:
@@ -545,7 +647,8 @@ fields:
     - A little of the time
     - None of the time
 - name: happy_pastmonth
-  title: '[Been a happy person] Over the past month how often have you:'
+  title: MHI5_happy
+  description: Over the past month, how often have you Been a happy person
   type: string
   constraints:
     enum:
@@ -556,7 +659,8 @@ fields:
     - A little of the time
     - None of the time
 - name: pastmonth_lackedcompanionship
-  title: "[That you lacked companionship] In the past month, how often did you feel\u2026"
+  title: Loneliness_lack companioship
+  description: First how often did you feelthat you lacked companionship?
   type: string
   constraints:
     enum:
@@ -564,7 +668,8 @@ fields:
     - Some of the time
     - Often
 - name: pastmonth_leftout
-  title: "[Left out] In the past month, how often did you feel\u2026"
+  title: Loneliness_felt left out
+  description: How often did you feel left out?
   type: string
   constraints:
     enum:
@@ -572,7 +677,8 @@ fields:
     - Some of the time
     - Often
 - name: pastmonth_isolated
-  title: "[Isolated from others] In the past month, how often did you feel\u2026"
+  title: Loneliness_isolated
+  description: How often did you feel Isolated from others?
   type: string
   constraints:
     enum:
@@ -580,8 +686,10 @@ fields:
     - Some of the time
     - Often
 - name: communication_changed
-  title: Compared to the month of January 2020, before the outbreak began, how has
-    the fr
+  title: COVID_communication changed with family and friends
+  description: 'Compared to the month of January 2020, before the outbreak began,
+    how has the frequency of your communication with close friends and family to provide/receive
+    social support changed? '
   type: string
   constraints:
     enum:
@@ -589,8 +697,9 @@ fields:
     - I communicate with them about the same as before
     - I communicate with them less often than before
 - name: obtainfood_difficulty
-  title: '[Obtaining the food that you need because of the COVID-19 pandemic or social
-    dis'
+  title: COVID_difficulty obtaining food
+  description: "Obtaining the food that you need because of the COVID-19 pandemic\
+    \ or social distancing rules? [How much difficulty do you have \u2026]"
   type: string
   constraints:
     enum:
@@ -599,8 +708,9 @@ fields:
     - Much
     - Unable or very difficult
 - name: obtainmedicine_difficulty
-  title: '[Obtaining the medicine that you need because of the COVID-19 pandemic or
-    social'
+  title: COVID_difficulty obtaining medicine
+  description: "Obtaining the medicine that you need because of the COVID-19 pandemic\
+    \ or social distancing rules? [How much difficulty do you have \u2026]"
   type: string
   constraints:
     enum:
@@ -609,8 +719,10 @@ fields:
     - Much
     - Unable or very difficult
 - name: routinemedcare_difficulty
-  title: '[With getting routine medical care that you need because of the COVID-19
-    pandemi'
+  title: COVID_difficulty receiving routine medical care
+  description: "With getting routine medical care that you need because of the COVID-19\
+    \ pandemic or social distancing rules? [How much difficulty do you have \u2026\
+    ]"
   type: string
   constraints:
     enum:
@@ -619,7 +731,9 @@ fields:
     - Much
     - Unable or very difficult
 - name: hesitatemedicalcare
-  title: Would you hesitate to seek care if you needed medical care for a health conditio
+  title: COVID_hesitate to seek care
+  description: Would you hesitate to seek care if you needed medical care for a health
+    condition?  Please select one statement below that you most agree with.
   type: string
   constraints:
     enum:
@@ -631,8 +745,9 @@ fields:
     - Yes, I would hesitate to seek care for some other reason
     - No, I would not hesitate to seek care
 - name: stayhomeorder_agreement
-  title: Do you live in a city/town with a stay-at-home or shelter-in-place order,
-    and do
+  title: COVID_live with stay at home order
+  description: Do you live in a city/town with a stay-at-home or shelter-in-place
+    order, and do you agree with the order?
   type: string
   constraints:
     enum:
@@ -641,8 +756,9 @@ fields:
     - No we do not have an order, and I think we should have an order
     - No we do not have an order, and I agree with not having an order
 - name: paincontrol_difficulty
-  title: Since the beginning of March 2020, have you noticed any difficulties getting
-    ade
+  title: COVID_difficulty obtaining pain medication
+  description: Since March 2020, have you noticed any difficulties getting adequate
+    pain control for acute or chronic health conditions?
   type: string
   constraints:
     enum:
@@ -654,8 +770,14 @@ fields:
     - I have had conditions that needed pain management but couldn't get medicine
       for reasons that don't have to do w/ COVID
 - name: ps_a_medicaid
-  title: '[I favor expanding Medicaid insurance benefits for low income families to
-    provid'
+  title: Policy scale_expand Medicaid for OUD treatment
+  description: '[Survey 1/2/5/6/10] I favor expanding Medicaid  insurance benefits
+    for low income families to provide coverage for treatment of opioid use disorders/addiction
+    problems, including addiction to prescription pain medications.
+
+
+    [Survey 3/4/7/8/9 wording]: I favor expanding Medicaid insurance benefits for
+    low income families to provide coverage for treatment of opioid use disorders. '
   type: string
   constraints:
     enum:
@@ -665,8 +787,16 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_b_naloxone
-  title: "[I favor making naloxone\u2026widely available and affordable without a\
-    \ prescriptio"
+  title: Policy scale_Naloxone availability
+  description: "I favor making naloxone (also known as \u201CNarcan\u201D), a medication\
+    \ that can quickly reverse the effects of a person experiencing an opioid overdose\
+    \ [Survey 7/8: (i.e., taken a high dose of opioids leading to the slowing or stopping\
+    \ of breathing)], widely available and affordable without a prescription.\n[Survey\
+    \ 9, 10 wording]: I support the FDA approving the first over the counter (i.e.,\
+    \ without a prescription) naloxone nasal spray (also known as \"Narcan\u201D),\
+    \ a medication that can quickly reverse the effects of a person experiencing an\
+    \ opioid overdose (i.e., taken a high dose of opioids leading to the slowing or\
+    \ stopping of breathing)."
   type: string
   constraints:
     enum:
@@ -676,8 +806,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_c_mandatory
-  title: '[I believe that making drug treatment mandatory is an effective way to help
-    peop'
+  title: Policy scale_mandatory drug treatment
+  description: I believe that making drug treatment mandatory is an effective way
+    to help people with an opioid use disorder
   type: string
   constraints:
     enum:
@@ -687,8 +818,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ps_d_govspend
-  title: '[I favor increasing government spending to improve treatment of opioid use
-    disor'
+  title: Policy scale_increase govt spend for OUD treatment
+  description: "I favor increasing government spending to improve treatment of opioid\
+    \ use disorder/addiction \n[Survey 3/4/7/8/9: deleted addiction]."
   type: string
   constraints:
     enum:
@@ -698,8 +830,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ds_e_schools
-  title: '[High schools and colleges should be allowed to dismiss or expel a person
-    with a'
+  title: Discrimination scale_schools can dismiss or expel
+  description: 'High schools and colleges should be allowed to dismiss or expel a
+    person with an opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: string
   constraints:
     enum:
@@ -709,8 +842,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ds_f_physicians
-  title: '[Physicians and other healthcare providers should be allowed to refuse to
-    treat '
+  title: Discrimination scale_physicians can refuse to treat OUD
+  description: 'Physicians and other healthcare providers should be allowed to refuse
+    to treat a person with an opioid use disorder/addiction. [Survey 6/10: deleted
+    addiction]'
   type: string
   constraints:
     enum:
@@ -720,8 +855,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ds_g_employers
-  title: '[Employers should be allowed to deny employment to a person with a current
-    opioi'
+  title: Discrimination scale_employers can deny because OUD
+  description: 'Employers should be allowed to deny employment to a person with a
+    current opioid use disorder/addiction. [Survey 6/10: deleted addiction]'
   type: string
   constraints:
     enum:
@@ -731,8 +867,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ds_h_landlords
-  title: '[Landlords should be allowed to deny housing to a person with a current
-    opioid u'
+  title: Discrimination scale_landlords can deny because OUD
+  description: 'Landlords should be allowed to deny housing to a person with a current
+    opioid use disorder/addiction.  [Survey 6/10: deleted addiction]'
   type: string
   constraints:
     enum:
@@ -742,8 +879,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: release_incarcerated
-  title: '[Jails and Prisons should evaluate whether those convicted of non-violent
-    crimes'
+  title: COVID_release nonviolent to stop spread
+  description: I believe jails and prisons should consider whether those convicted
+    of non-violent crimes should be released to prevent the spread of COV-ID 19 within
+    jails/prisons.
   type: string
   constraints:
     enum:
@@ -753,7 +892,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_a_historywork
-  title: '[I would be willing to have a person with a past history of opioid use disorder '
+  title: Stigma scale_history OUD work with me
+  description: 'I would be willing to have a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction]start working closely
+    with me on a job. '
   type: string
   constraints:
     enum:
@@ -763,8 +905,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_b_historymarry
-  title: '[I am comfortable having a person with a past history of opioid use disorder
-    mar'
+  title: Stigma scale_history OUD marry into family
+  description: 'I would be comfortable having a person with a past history of opioid
+    use disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my  [Survey
+    4/5/6/7/8/9: close or immediate]family.'
   type: string
   constraints:
     enum:
@@ -774,8 +918,9 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_c_currentwork
-  title: '[I would be willing to have a person with a current opioid use disorder
-    start wo'
+  title: Stigma scale_current OUD work with me
+  description: 'I would be willing to have a person with a current opioid use disorder/addiction
+    [Survey 7/8/9/10: deleted addiction] start working closely with me on a job. '
   type: string
   constraints:
     enum:
@@ -785,8 +930,10 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_d_currentmarry
-  title: '[I would be comfortable having a person with a current opioid use disorder
-    marry'
+  title: Stigma scale_current OUD marry into family
+  description: 'I would be comfortable to have a person with a current opioid use
+    disorder/addiction [Survey 7/8/9/10: deleted addiction] marry into my [Survey
+    4/5/6/7/8/9: close or immediate] family.'
   type: string
   constraints:
     enum:
@@ -796,8 +943,15 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_e_dangerous
-  title: "[People with a current opioid use disorder\u2026are more dangerous than\
-    \ the general"
+  title: Stigma scale_Current OUD more dangerous
+  description: 'People with a current addiction to opioids/prescription pain medications
+    are more dangerous than the general population.
+
+
+    Survey 7/8/9/10:
+
+    People with a current opioid use disorder are more dangerous than the general
+    population.'
   type: string
   constraints:
     enum:
@@ -807,8 +961,14 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: ss_f_trust
-  title: "[A person who currently has opioid use disorder\u2026cannot be trusted]\
-    \ Do you disa"
+  title: Stigma scale_Can't trust current OUD
+  description: 'A person who is currently addicted to opioids/prescription pain medication
+    cannot be trusted.
+
+
+    Survey 7/8/9/10:
+
+    A person who currently has an opioid use disorder cannot be trusted.'
   type: string
   constraints:
     enum:
@@ -818,21 +978,33 @@ fields:
     - Somewhat agree
     - Strongly agree
 - name: personaluse_ever
-  title: In your lifetime, have you ever misused opioids/prescription pain medication?
+  title: OUD misuse ever_option 1
+  description: "Have you ever used opioids/prescription pain medication illicitly\
+    \ obtained or used in a way not prescribed by a doctor?* \n[Survey 3/4/5 wording]:\
+    \ Have you ever misused opioids of any kind \u2013 such as heroin, fentanyl, or\
+    \ prescription pain medications other than exactly as prescribed for you? \n[Survey\
+    \ 6 wording: Have you ever misused (i.e., used other than exactly as prescribed\
+    \ for you) opioids of any kind \u2013 such as heroin, fentanyl, or other prescription\
+    \ pain medications?]"
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: covid_increasemisuse
-  title: Do you think the COVID-19 pandemic will increase the misuse of opioids/prescript
+  title: COVID_increase use of opioids
+  description: Do you think the COVID-19 pandemic will increase the misuse of opioids/prescription
+    pain medication?
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: personaluse_last
-  title: When was the last time?
+  title: Last time personal opioid use
+  description: "[If indicated personal use of opioids/prescription pain medication]\
+    \ When was the last time? \n\n[Survey 6]: When was the last time you used heroin,\
+    \ other illegally obtained opioids, or prescription opioids?"
   type: string
   constraints:
     enum:
@@ -841,35 +1013,47 @@ fields:
     - 1 to 5 years ago
     - Over 5 years ago
 - name: personaluse_first
-  title: Is this your first time misusing opioids/prescription pain medications?
+  title: COVID_first time using opioids
+  description: '[If the last time used was in the past 6 months] Is this your first
+    time misusing opioids/prescription pain medications? '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: personaluse_covid
-  title: Was this due to COVID-19 (directly or indirectly)?
+  title: COVID_related to recent opioid use
+  description: '[If the last time used was in the past 6 months] Was this due to COVID-19
+    (directly or indirectly)? '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: treat_6mos
-  title: During the past 6 months, have you received treatment for your opioid/prescripti
+  title: Received treatment for OUD past 6 months
+  description: During the past 6 months, have you received treatment for your opioid/prescription
+    pain medication misuse?
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: treat_covid_difficult
-  title: Has COVID-19 made it difficult or impossible to continue this treatment?
+  title: COVID_difficulty access OUD treatment
+  description: 'Has COVID-19 made it difficult or impossible to continue this treatment? '
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: personaloverdose_ever
-  title: Have you ever overdosed after taking opioids/prescription pain medication?
+  title: OUD overdose
+  description: 'Have you ever overdosed from opioids/prescription pain medication?
+    [Survey 6: deleted prescription pain medication]
+
+    [Survey 7/8/9/10 wording: Have you ever overdosed (i.e., taken a high dose of
+    opioids leading to the slowing or stopping of breathing) from using opioids?]'
   type: string
   constraints:
     enum:
@@ -877,7 +1061,8 @@ fields:
     - Yes, most recently over a year ago
     - 'No'
 - name: personalconviction_ever
-  title: Have you ever been convicted of any misdemeanor or felony crime?
+  title: Personal conviction ever
+  description: Have you ever been convicted of any misdemeanor or felony crime?
   type: string
   constraints:
     enum:
@@ -885,7 +1070,8 @@ fields:
     - Yes, most recently over a year ago
     - 'No'
 - name: personalincarceration_ever
-  title: Have you ever been incarcerated in jail or prison?
+  title: Personal incarcerated ever
+  description: Have you ever been incarcerated in jail or prison?
   type: string
   constraints:
     enum:
@@ -893,14 +1079,21 @@ fields:
     - Yes, most recently over a year ago
     - 'No'
 - name: familyuse_ever
-  title: Have any family members or close friends you know ever misused opioids/prescript
+  title: OUD misuse family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyuse_last
-  title: When was the last time?
+  title: Last time family member/friend use opioids
+  description: '[If indicated yes to family/friend use of opioids/prescription pain
+    medication] When was the last time? '
   type: string
   constraints:
     enum:
@@ -909,21 +1102,29 @@ fields:
     - 1 to 5 years ago
     - Over 5 years ago
 - name: familyuse_first
-  title: Is this their first time misusing opioids/prescription pain medications?
+  title: Family member/friend first time opioid use
+  description: '[If the last time used was in the past 6 months] Is this their first
+    time misusing opioids/prescription pain medications? (family use)'
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyoverdose_ever
-  title: Have any of your family members or close friends ever overdosed from opioids/pre
+  title: OUD overdose family member friend
+  description: "Have any family members or close friends you know ever used opioids/prescription\
+    \ pain medication illicitly obtained or used in a way not prescribed by a doctor?\
+    \ \n[Survey 3/4/5/6/7/8/9/10]\nHave any family members or close friends ever had\
+    \ an opioid use disorder or misused opioids (for example, used in a way other\
+    \ than prescribed/intended or developed a problem with them)?"
   type: string
   constraints:
     enum:
     - 'Yes'
     - 'No'
 - name: familyoverdose_last
-  title: When was the last time?
+  title: Family member/friend last time overdose
+  description: '[If indicatedyes to family/friend use] When was the last time [overdosed]? '
   type: string
   constraints:
     enum:
@@ -932,8 +1133,9 @@ fields:
     - 1 to 5 years ago
     - Over 5 years ago
 - name: familyconviction_ever
-  title: Have any of your family members or close friends ever been convicted of any
-    misd
+  title: Family friend conviction ever
+  description: Have any of your family members or close friends ever been convicted
+    of any misdemeanor or felony crime?
   type: string
   constraints:
     enum:
@@ -941,8 +1143,9 @@ fields:
     - Yes, most recently over a year ago
     - 'No'
 - name: familyincarceration_ever
-  title: 'Have any of your family members or close friends ever been incarcerated
-    in jail '
+  title: Family friend incarcerated ever
+  description: Have any of your family members or close friends ever been incarcerated
+    in jail or prison?
   type: string
   constraints:
     enum:
@@ -950,22 +1153,22 @@ fields:
     - Yes, most recently over a year ago
     - 'No'
 - name: startdt_jcoin
-  title: NORC-PH Section start date/time
+  title: JCOIN section start date/time
   type: datetime
   custom:
-    jcoin:
-      exclude_from_release: true
+    exclude_from_release: true
 - name: enddt_jcoin
-  title: NORC-PH Section end date/time
+  title: JCOIN section end date/time
   type: datetime
   custom:
-    jcoin:
-      exclude_from_release: true
+    exclude_from_release: true
 - name: duration_jcoin
-  title: 'NORC-PH Omnibus Section: Interview duration in minutes'
-  type: integer
+  title: Time spent in survey, in minutes
+  description: Time to complete survey
+  type: number
 - name: surv_mode
-  title: Survey interview mode (online or phone)
+  title: Survey interview mode
+  description: Survey completed via web or phone
   type: string
   constraints:
     enum:
@@ -973,6 +1176,7 @@ fields:
     - Web Interview
 - name: surv_lang
   title: Survey Interview Language
+  description: Language survey completed in (i.e., English, Spanish)
   type: string
   constraints:
     enum:
@@ -980,8 +1184,12 @@ fields:
     - Spanish
 - name: device
   title: Device
+  type: string
+  custom:
+    exclude_from_release: true
 - name: gender
-  title: Respondent gender
+  title: Respondent male/female sex
+  description: Unknown, male, sex
   type: string
   constraints:
     enum:
@@ -990,20 +1198,20 @@ fields:
     - Female
 - name: age4
   title: Age - 4 Categories
+  description: 'Categories: 18-29, 30-44, 45-59, 60+'
   type: string
   constraints:
     enum:
-    - Under 18
     - 18-29
     - 30-44
     - 45-59
     - 60+
 - name: age7
   title: Age - 7 Categories
+  description: 'Categories: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+'
   type: string
   constraints:
     enum:
-    - Under 18
     - 18-24
     - 25-34
     - 35-44
@@ -1013,6 +1221,8 @@ fields:
     - 75+
 - name: racethnicity
   title: Combined Race/Ethnicity
+  description: 'Combined race and ethnicity questions: White, non-Hispanic, Black,
+    non-Hispanic, Other, non-Hispanic, Hispanic, 2+, non-Hispanic, Asian, non-Hispanic'
   type: string
   constraints:
     enum:
@@ -1024,6 +1234,8 @@ fields:
     - Asian, non-Hispanic
 - name: educ
   title: Education (Highest Degree Received)
+  description: What is the highest level of school you have completed? 14 response
+    options for highest degree received. See codebook for response options
   type: string
   constraints:
     enum:
@@ -1043,6 +1255,8 @@ fields:
     - Professional or Doctorate degree
 - name: educ4
   title: 4-level education
+  description: 'Highest degree received: No HS diploma, HS graduate or equivalent,
+    Some college, BA or above'
   type: string
   constraints:
     enum:
@@ -1052,6 +1266,7 @@ fields:
     - BA or above
 - name: marital
   title: Marital Status
+  description: Married, Widowed, Divorced, Separated, Never married, Living with partner
   type: string
   constraints:
     enum:
@@ -1062,7 +1277,10 @@ fields:
     - Never married
     - Living with partner
 - name: employ
-  title: Current Employment Status
+  title: Demographic_Employment Status
+  description: Working - as a paid employee, Working - self employed, Not working
+    - on temporary layoff from a job or looking for work, Not working - retired, Not
+    working - disabled, Not working - other
   type: string
   constraints:
     enum:
@@ -1074,6 +1292,7 @@ fields:
     - Not working - other
 - name: region4
   title: 4-level region
+  description: Northeast, Midwest, South West
   type: string
   constraints:
     enum:
@@ -1083,13 +1302,15 @@ fields:
     - West
 - name: metro
   title: Metropolitan area flag
+  description: Metro Area, Non-Metro Area
   type: string
   constraints:
     enum:
     - Non-Metro Area
     - Metro Area
 - name: internet
-  title: HH internet access via dial-up, DSL, or cable broadband at home
+  title: Internet
+  description: HH internet access via dial-up, DSL, or cable broadband at home
   type: string
   constraints:
     enum:
@@ -1097,6 +1318,8 @@ fields:
     - Internet Household
 - name: housing
   title: Home Ownership
+  description: Owned or being bought by you or someone in your household, Rented for
+    cash, Occupied without payment of cash rent
   type: string
   constraints:
     enum:
@@ -1104,6 +1327,9 @@ fields:
     - Rented or occupied without payment
 - name: home_type
   title: Type of building of panelists' residence
+  description: A one-family house detached from any other house, A one-family house
+    attached to one or more houses, A building with 2 or more apartment, A mobile
+    home or trailer; Boat, RV, van, etc.
   type: string
   constraints:
     enum:
@@ -1112,6 +1338,8 @@ fields:
     - Apartment building, mobile home or trailer, boat, RV, or other
 - name: phoneservice
   title: Telephone service for the household
+  description: Landline telephone only; Have a landline, but mostly use cellphone;
+    Have cellphone, but mostly use landline; Cellphone only; No telephone service
   type: string
   constraints:
     enum:
@@ -1122,9 +1350,11 @@ fields:
     - No telephone service
 - name: hhsize
   title: Household size (including children)
+  description: Number of people in household
   type: integer
 - name: hh612
   title: Number of HH members age 6-12
+  description: Number of people in household age 6-12
   type: string
   constraints:
     enum:
@@ -1134,6 +1364,7 @@ fields:
     - 3 or more
 - name: hh1317
   title: Number of HH members age 13-17
+  description: Number of people in household ages 13-17
   type: string
   constraints:
     enum:
@@ -1142,6 +1373,7 @@ fields:
     - 2 or more
 - name: hh18ov
   title: Number of HH members age 18+
+  description: Number of people in household ages 18+
   type: string
   constraints:
     enum:
@@ -1153,20 +1385,25 @@ fields:
     - '5'
     - 6 or more
 - name: stigma_scale_score
-  title: 'Stigma scale: average score of 6 stigma items; higher scores indicate higher
-    sti'
+  title: Stigma scale score
+  description: Average score of 6 stigma items; higher scores indicate higher stigma
   type: number
 - name: discrimination_scale_score
-  title: Discrimination scale score from average of four discrimination variables.
-    Higher
+  title: Acceptance of discrimination scale score from average of four items. Higher
+    scores indicate more acceptance of discrimination.
   type: number
+  custom:
+    exclude_from_release: true
 - name: income_relativemedian
-  title: Income coded into above/below median for state.
+  title: Income variable coded into approximately above and below the median for their
+    state.
   type: string
   constraints:
     enum:
     - Below median
     - Above median
+  custom:
+    exclude_from_release: true
 - name: any_covidtest
   title: Either self or household member tested for COVID.
   type: string
@@ -1174,6 +1411,8 @@ fields:
     enum:
     - 'Yes'
     - 'No'
+  custom:
+    exclude_from_release: true
 - name: positive_covidtest
   title: Either self or household tested postivie.
   type: string
@@ -1181,21 +1420,34 @@ fields:
     enum:
     - 'No'
     - 'Yes'
+  custom:
+    exclude_from_release: true
 - name: loneliness_precovid
   type: number
+  custom:
+    exclude_from_release: true
 - name: loneliness_duringcovid
   type: number
+  custom:
+    exclude_from_release: true
 - name: policy_4item_scale
   type: number
+  custom:
+    exclude_from_release: true
 - name: personalcrimjust_ever
-  title: Combined personal history of conviction or incarceration.
+  title: Coded_personal criminal justice involvement ever
+  description: Yes to either Have you ever been convicted of any misdemeanor or felony
+    crime? OR Have you ever been incarcerated in jail or prison?
   type: string
   constraints:
     enum:
     - 'No'
     - 'Yes'
 - name: familycrimjust_ever
-  title: Combined family or friend history of conviction or incarceration.
+  title: Coded_family friend criminal justice involvement ever
+  description: 'Yes to either Have any of your family members or close friends ever
+    been convicted of any misdemeanor or felony crime? OR Have any of your family
+    members or close friends ever been incarcerated in jail or prison? '
   type: string
   constraints:
     enum:
@@ -1203,6 +1455,8 @@ fields:
     - 'Yes'
 - name: mh5_scale
   type: number
+  custom:
+    exclude_from_release: true
 - name: covidsymptoms
   title: Had COVID symptoms but was not tested, self or household.
   type: string
@@ -1210,47 +1464,83 @@ fields:
     enum:
     - n/a
     - COVID symptoms, no test
+  custom:
+    exclude_from_release: true
 - name: personalmisuse_lifetime
   title: Personal history of every misusing opioids
   type: integer
+  custom:
+    exclude_from_release: true
 - name: famfriendmisuse_lifetime
   title: Have family or friends that have ever misused opioids
   type: integer
+  custom:
+    exclude_from_release: true
 - name: famfriendoverdose_lifetime
   title: Have family member or friend that has ever overdosed
   type: integer
+  custom:
+    exclude_from_release: true
 - name: personalmisuse_recent
   title: Personal misuse within the last 12 months
   type: integer
+  custom:
+    exclude_from_release: true
 - name: famfriendmisuse_recent
   title: Family or friend has misused opiods in the past 12 months
   type: integer
+  custom:
+    exclude_from_release: true
 - name: famfriendoverdose_recent
   title: Family or friend overdosed in past 12 months
   type: integer
+  custom:
+    exclude_from_release: true
 - name: personaloverdose_lifetime
   title: Personal history of overdose from opioids
   type: integer
+  custom:
+    exclude_from_release: true
 - name: personaloverdose_recent
   title: Personal overdose from opioids in last 12 months
   type: integer
+  custom:
+    exclude_from_release: true
 - name: personalcrimjust_recent
   type: integer
+  custom:
+    exclude_from_release: true
 - name: familycrimjust_recent
   type: integer
+  custom:
+    exclude_from_release: true
 - name: selfhousehold_covidtested
   type: integer
+  custom:
+    exclude_from_release: true
 - name: selfhousehold_covidpositive
   type: integer
+  custom:
+    exclude_from_release: true
 - name: covid_deathinhh
   type: integer
+  custom:
+    exclude_from_release: true
 - name: hotspot_survey
   type: integer
+  custom:
+    exclude_from_release: true
 - name: employed_vs_not
   type: integer
+  custom:
+    exclude_from_release: true
 - name: support_stayhome
   type: integer
+  custom:
+    exclude_from_release: true
 - name: hh05
+  title: Number of HH members age 0-5
+  description: Number of household members age 0-5
   type: string
   constraints:
     enum:
@@ -1260,6 +1550,7 @@ fields:
     - 3 or more
 - name: income4
   title: Household income (4 categories)
+  description: Less than $30,000; $30,000-$59,000; $60,000-$99,999; $100,000+
   type: string
   constraints:
     enum:
@@ -1272,4 +1563,3 @@ missingValues:
 - SKIPPED ON WEB
 - REFUSED
 - ''
-primaryKey: caseid

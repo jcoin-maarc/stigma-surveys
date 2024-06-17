@@ -38,7 +38,7 @@ value_labels:
     1: Yes, I will get a coronavirus vaccine as soon as it is available to me
     2: Yes, I will get a coronavirus vaccine, but I will wait until it is proven to
       be safe and effective
-    77: DON'T KNOW
+    77: DontKnow
   labels62:
     1: Yes, I already got the vaccine this year
     2: Yes, I plan to get the vaccine this year
@@ -90,6 +90,8 @@ value_labels:
     77: DON'T KNOW
     98: SKIPPED ON WEB
     99: REFUSED
+  labels83:
+    0: Under 1 minute
   labels84:
     1: Phone interview
     2: Web Interview
@@ -215,7 +217,7 @@ field_to_value_label:
   ps_b_naloxone: labels0
   ps_c_mandatory: labels0
   ps_d_govspend: labels0
-  ps_treatment: labels0
+  laws_protect_treatment: labels0
   ps_l_jailtreatment: labels0
   ps_j_jailhealth: labels0
   ps_k_jailoverdose: labels0
@@ -259,7 +261,7 @@ field_to_value_label:
   hh_dk: labels31
   hh_skp: labels31
   hh_ref: labels31
-  hh_coviddeath: labels27
+  hh_death_covid: labels27
   washhands: labels41
   avoidtransit: labels41
   lessgroups10: labels41
@@ -330,6 +332,7 @@ field_to_value_label:
   familyuse_ever: labels78
   familyconviction_ever: labels78
   familyincarceration_ever: labels78
+  duration_jcoin: labels83
   surv_mode: labels84
   surv_lang: labels85
   gender: labels86

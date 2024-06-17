@@ -168,11 +168,11 @@ value_labels:
     4: Separated
     5: Never married
   labels198:
-    1: "Working \u2013 as a paid employee"
-    2: "Working \u2013 self employed"
-    3: "Not working \u2013 looking for work or on temporary layoff"
-    4: "Not working \u2013 retired"
-    5: "Not working \u2013 disabled"
+    1: Working - as a paid employee
+    2: Working - self employed
+    3: Not working - looking for work or on temporary layoff
+    4: Not working - retired
+    5: Not working - disabled
     6: Not working - other
   labels199:
     1: Less than $30,000
@@ -232,23 +232,23 @@ field_to_value_label:
   ps_b_naloxone: labels1
   ps_c_mandatory: labels1
   ps_d_govspend: labels1
-  ps_treatment: labels1
+  laws_protect_treatment: labels1
   ps_l_jailtreatment: labels1
   req_treat_prob: labels1
-  kb_jailhelp: labels1
+  kb_l_jailhelps: labels1
   kb_b_anyuse: labels1
-  kb_stopbreath: labels1
-  kb_medcondition: labels1
-  kb_fda: labels1
-  kb_recover: labels1
-  kb_easyfind: labels1
+  kb_f_stopbreathing: labels1
+  kb_h_medicalcondition: labels1
+  kb_medicationsexist: labels1
+  kb_treat_recover: labels1
+  kb_j_easyfind: labels1
   treatment_separate_healthcare: labels1
   generalhcp_treatment: labels1
   generalhcp_trained: labels1
-  kb_recovcont: labels1
+  kb_recovery_no_end: labels1
   recovery_common: labels1
   failing_common: labels1
-  kb_rockbottom: labels1
+  kb_rock_bottom_s8: labels1
   kb_c_selfcontrol: labels1
   kb_e_quitanytime: labels1
   kb_usemore: labels1

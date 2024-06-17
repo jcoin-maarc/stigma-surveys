@@ -20,7 +20,7 @@ value_labels:
     99: REFUSED
   labels67:
     1: Past 6 months
-    2: 6-12 months ago
+    2: "6 \u2013 12 months ago"
     3: 1-5 years ago
     4: 5+ years ago
     77: DON'T KNOW
@@ -211,7 +211,7 @@ field_to_value_label:
   kb_l_jailhelps: labels0
   kb_seekprofessional: labels0
   kb_longterm: labels0
-  kb_medications_recover: labels0
+  kb_medsrecov: labels0
   kb_recovery_no_end: labels0
   kb_painmeds_dangerous: labels0
   heroin_seektreatment: labels0
@@ -251,7 +251,7 @@ field_to_value_label:
   ps_c_mandatory: labels0
   ps_d_govspend: labels0
   laws_protect_treatment: labels0
-  access_med_jail: labels0
+  ps_l_jailtreatment: labels0
   req_treat_prob: labels0
   ss_a_historywork: labels0
   ss_c_currentwork: labels0
@@ -304,7 +304,7 @@ field_to_value_label:
   primarycare_last: labels103
   personal_covidtest: labels104
   household_covidtest: labels105
-  duration_norcnd: labels106
+  duration_jcoin: labels106
   surv_mode: labels107
   surv_lang: labels108
   gender: labels109

@@ -1,0 +1,561 @@
+value_labels:
+  labels0:
+    1: Strongly disagree
+    2: Somewhat disagree
+    3: Neither disagree nor agree
+    4: Somewhat agree
+    5: Strongly agree
+    98: SKIPPED ON WEB
+  labels4:
+    1: Strongly disagree
+    2: Somewhat disagree
+    3: Neither disagree nor agree
+    4: Somewhat agree
+    5: Strongly agree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels268:
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels37:
+    1: Yes, within the last year
+    2: Yes, more than a year ago
+    3: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels38:
+    1: 'Yes'
+    2: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels39:
+    1: Yes, I am currently recovering
+    2: Yes, I recovered in the past
+    3: Yes, I am currently recovering and I have in the past
+    4: 'No'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels41:
+    0: 'No'
+    1: 'Yes'
+  labels65:
+    1: '1'
+    2: '2'
+    3: '3'
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels76:
+    1: Very effective
+    2: Relatively effective
+    3: Helpful, though at times less effective than I had hoped
+    4: Relatively ineffective
+    5: Very ineffective
+    77: I don't know
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels77:
+    1: Not very much of a burden
+    2: A mild burden
+    3: Moderate burden
+    4: Heavy burden
+    5: A very heavy burden
+    77: I don't know
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels78:
+    1: Very frequent contact
+    2: Regular contact
+    3: Occasional contact
+    4: Very little contact
+    5: No contact at all
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels99:
+    4: None of the above
+  labels100:
+    1: 1 or 2 days
+    2: 3 to 5 days
+    3: 6 to 9 days
+    4: 10 to 19 days
+    5: 20 to 29 days
+    6: All 30 days
+    7: Have not used in the past 30 days
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels113:
+    1: Currently
+    2: Within past year
+    3: Within past 2 years
+    4: Within 3-5 years
+    5: Over 5 years ago
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels114:
+    1: Parent
+    2: Sibling
+    3: Child
+    4: Other relative
+    5: Close friend
+    6: Spouse/romantic partner
+    7: Other
+    8: Prefer not to answer
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels141:
+    1: Not very much of a burden
+    2: A mild burden
+    3: Moderate burden
+    4: Heavy burden
+    5: A very heavy burden
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels159:
+    1: Strongly disagree
+    2: Disagree
+    3: Neither agree nor disagree
+    4: Agree
+    5: Strongly agree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels168:
+    1: Not at all
+    2: One or two times
+    3: Three times or more
+    77: "I don\u2019t recall"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels181:
+    1: All of the time
+    2: Most of the time
+    3: A good bit of the time
+    4: Some of the time
+    5: A little of the time
+    6: None of the time
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels244:
+    1: 'Yes'
+    2: 'No'
+    3: More than one place
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels246:
+    1: 'Yes'
+    2: 'No'
+    77: "I don\u2019t know"
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels247:
+    1: Very comfortable
+    2: Somewhat comfortable
+    3: Somewhat uncomfortable
+    4: Very uncomfortable
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels249:
+    1: Strongly agree
+    2: Agree
+    3: Disagree
+    4: Strongly disagree
+    77: DON'T KNOW
+    98: SKIPPED ON WEB
+    99: REFUSED
+  labels250:
+    -1: Unknown
+    1: Democrat
+    2: Lean Democrat
+    3: Don't Lean/Independent/None
+    4: Lean Republican
+    5: Republican
+  labels251:
+    -1: Unknown
+    1: Strong Democrat
+    2: Not so strong Democrat
+    3: Lean Democrat
+    4: Don't Lean/Independent/None
+    5: Lean Republican
+    6: Not so strong Republican
+    7: Strong Republican
+  labels252:
+    0: Unknown
+    1: Male
+    2: Female
+  labels253:
+    1: 18-29
+    2: 30-44
+    3: 45-59
+    4: 60+
+    99: Under 18
+  labels254:
+    1: Less than HS
+    2: HS graduate or equivalent
+    3: Some college/ associates degree
+    4: Bachelor's degree
+    5: Post grad study/professional degree
+  labels255:
+    1: Married
+    2: Widowed
+    3: Divorced
+    4: Separated
+    5: Never married
+  labels256:
+    1: Less than $5,000
+    2: $5,000 to $9,999
+    3: $10,000 to $14,999
+    4: $15,000 to $19,999
+    5: $20,000 to $24,999
+    6: $25,000 to $29,999
+    7: $30,000 to $34,999
+    8: $35,000 to $39,999
+    9: $40,000 to $49,999
+    10: $50,000 to $59,999
+    11: $60,000 to $74,999
+    12: $75,000 to $84,999
+    13: $85,000 to $99,999
+    14: $100,000 to $124,999
+    15: $125,000 to $149,999
+    16: $150,000 to $174,999
+    17: $175,000 to $199,999
+    18: $200,000 or more
+  labels257:
+    1: Less than $30,000
+    2: $30,000 to under $60,000
+    3: $60,000 to under $100,000
+    4: $100,000 or more
+  labels258:
+    1: Northeast
+    2: Midwest
+    3: South
+    4: West
+  labels259:
+    0: Non-Metro Area
+    1: Metro Area
+  labels260:
+    1: Owned
+    2: Rented or occupied without payment
+  labels261:
+    1: A one-family house detached from any other house
+    2: A one-family house attached to one or more houses
+    3: Apartment building, mobile home or trailer, boat, RV, or other
+  labels262:
+    0: '0'
+    1: '1'
+    2: 2 or more
+  labels265:
+    0: '0'
+    1: '1'
+    2: '2'
+    3: '3'
+    4: '4'
+    5: '5'
+    6: 6 or more
+  labels266:
+    1: White
+    2: Black
+    3: Other or 2+ or more
+    4: Hispanic
+    5: Asian
+  labels267:
+    1: Employed
+    2: Not employed or retired
+field_to_value_label:
+  ps_a_medicaid: labels0
+  ps_prevent: labels0
+  ps_minors: labels0
+  ps_otc: labels0
+  ps_c_mandatory: labels0
+  laws_protect_treatment: labels0
+  ps_l_jailtreatment: labels0
+  req_treat_prob: labels0
+  kb_l_jailhelps: labels0
+  kb_b_anyuse: labels4
+  kb_f_stopbreathing: labels4
+  kb_h_medicalcondition: labels4
+  kb_fentanyl: labels4
+  kb_medicationsexist: labels4
+  kb_treat_recover: labels4
+  kb_j_easyfind: labels4
+  kb_recovery_no_end: labels4
+  recovery_common: labels4
+  failing_common: labels4
+  inst_blame: labels4
+  kb_c_selfcontrol: labels4
+  kb_e_quitanytime: labels4
+  kb_seekprofessional: labels4
+  kb_longterm: labels4
+  kb_medsrecov: labels4
+  family_know_treatment: labels4
+  friend_know_respond: labels4
+  friend_tell_treatment: labels4
+  encourage_friend_treatment: labels4
+  generalhcp_notreat: labels4
+  opinion_changed: labels4
+  at_risk: labels4
+  how_opinions_changed: labels268
+  ss_a_historywork: labels4
+  ss_c_currentwork: labels4
+  ss_d_currentmarry: labels4
+  ss_b_historymarry: labels4
+  ss_e_dangerous: labels4
+  ss_f_trust: labels4
+  ss_currentsteal: labels4
+  ss_historysteal: labels4
+  ss_currenthighrisk: labels4
+  ss_historyhighrisk: labels4
+  personaluse_feelgood: labels37
+  personaloverdose_ever: labels38
+  personalmisuse_recovering: labels39
+  personalhelp_others: labels38
+  parent_helped: labels41
+  sibling_helped: labels41
+  child_helped: labels41
+  otherrelative_helped: labels41
+  closefriend_helped: labels41
+  spouse_helped: labels41
+  other_helped: labels41
+  noanswer_helped: labels41
+  dontknow_helped: labels41
+  skipped_helped: labels41
+  fin_assist: labels41
+  housing_assist: labels41
+  transp_assist: labels41
+  legal_assist: labels41
+  childcare_assist: labels41
+  emotional_support: labels41
+  log_medassist: labels41
+  log_progassist: labels41
+  log_harmreduc: labels41
+  assistprov_naloxnarc: labels41
+  assistprov_other: labels41
+  assistprov_dontknow: labels41
+  assistprov_skipped: labels41
+  assistprov_refused: labels41
+  assistreceive_financial: labels65
+  assistreceive_housing: labels65
+  assistreceive_transpo: labels65
+  assistreceive_legal: labels65
+  assistreceive_childcare: labels65
+  assistreceive_emotionalsupp: labels65
+  assistreceive_medication: labels65
+  assistreceive_helpprog: labels65
+  assistreceive_harmred: labels65
+  assistreceive_naloxnarc: labels65
+  assistreceive_other: labels65
+  successful_support: labels76
+  burden_support: labels77
+  satisfying_support: labels268
+  frustrating_support: labels268
+  contact_supporter: labels78
+  suppsys_work: labels41
+  suppsys_school: labels41
+  suppsys_volunteerwork: labels41
+  suppsys_church: labels41
+  suppsys_supportgroup: labels41
+  suppsys_counseling: labels41
+  suppsys_other: labels41
+  suppsys_donthave: labels41
+  suppsys_dontknow: labels41
+  suppsys_skipped: labels41
+  suppsys_refused: labels41
+  alcoholuse: labels37
+  cannabisuse: labels37
+  heroinuse: labels37
+  fentanyluse: labels37
+  otheropioiduse: labels37
+  crackuse: labels37
+  methuse: labels37
+  xanaxuse: labels37
+  otheruse: labels37
+  nouse: labels99
+  alcohol_month: labels100
+  cannabis_month: labels100
+  heroin_month: labels100
+  fentanyl_month: labels100
+  opioids_month: labels100
+  cocaine_month: labels100
+  meth_month: labels100
+  xanax_month: labels100
+  other_month: labels100
+  familyoud: labels37
+  familyoverdose_ever: labels38
+  familyoverdose_died: labels38
+  recproc_help: labels38
+  recproc_when: labels113
+  recproc_who: labels114
+  recasst_finance: labels41
+  recasst_hous: labels41
+  recasst_trans: labels41
+  recasst_legal: labels41
+  recasst_child: labels41
+  recasst_emsppt: labels41
+  recasst_med: labels41
+  recasst_12stp: labels41
+  recasst_hrmrdct: labels41
+  recasst_narcn: labels41
+  recasst_othr: labels41
+  recasst_dk: labels41
+  recasst_skp: labels41
+  recasst_ref: labels41
+  req_finance: labels65
+  req_hous: labels65
+  req_trans: labels65
+  req_legal: labels65
+  req_child: labels65
+  req_emsppt: labels65
+  req_med: labels65
+  req_12step: labels65
+  req_hrmrdct: labels65
+  req_narcn: labels65
+  req_othr: labels65
+  recasst_eff: labels76
+  recasst_brdn: labels141
+  recasst_stsfy: labels268
+  recasst_dis: labels268
+  recasst_contact: labels78
+  personalconviction_ever: labels37
+  personalincarceration_ever: labels37
+  familyconviction_ever: labels37
+  familyincarceration_ever: labels37
+  info_opepid: labels38
+  info_doc: labels41
+  info_fam: labels41
+  info_tv: labels41
+  info_radio: labels41
+  info_nwspr: labels41
+  info_intsrch: labels41
+  info_socmed: labels41
+  info_othr: labels41
+  info_dk: labels41
+  info_skp: labels41
+  info_ref: labels41
+  rely_doc: labels159
+  rely_fam: labels159
+  rely_tv: labels159
+  rely_radio: labels159
+  rely_nwspr: labels159
+  rely_intsrch: labels159
+  rely_socmed: labels159
+  rely_othr: labels159
+  hearinfo: labels38
+  hear_doc: labels168
+  hear_fam: labels168
+  hear_tv: labels168
+  hear_radio: labels168
+  hear_nwspr: labels168
+  hear_intsrch: labels168
+  hear_socmed: labels168
+  hear_othr: labels168
+  race_discrimination: labels38
+  race_learnability: labels38
+  race_education: labels38
+  race_motivation: labels38
+  race_whiteadvantage: labels4
+  race_successful: labels4
+  race_prison: labels4
+  race_socservices: labels4
+  race_opportunity: labels4
+  race_minadvantage: labels4
+  race_rich: labels4
+  race_whiteblame: labels4
+  nervous_pastmonth: labels181
+  downhearted_pastmonth: labels181
+  calm_pastmonth: labels181
+  dumps_pastmonth: labels181
+  happy_pastmonth: labels181
+  sppt_mthr: labels41
+  sppt_fthr: labels41
+  sppt_prtnr: labels41
+  sppt_chldrn: labels41
+  sppt_othrrel: labels41
+  sppt_frnds: labels41
+  sppt_crrctnsprf: labels41
+  sppt_grp: labels41
+  sppt_cowrkr: labels41
+  sppt_othr: labels41
+  sppt_dk: labels41
+  sppt_skp: labels41
+  sppt_ref: labels41
+  spptrec: labels38
+  spptrec_mthr: labels41
+  spptrec_fthr: labels41
+  spptrec_prtnr: labels41
+  spptrec_chldrn: labels41
+  spptrec_othrrel: labels41
+  spptrec_frnds: labels41
+  spptrec_crrctnsprf: labels41
+  spptrec_grp: labels41
+  spptrec_cowrkr: labels41
+  spptrec_othr: labels41
+  spptrec_none: labels41
+  spptrec_dk: labels41
+  spptrec_skp: labels41
+  spptrec_ref: labels41
+  talk_physical: labels38
+  talk_mental: labels38
+  avoid_mthr: labels41
+  avoid_fthr: labels41
+  avoid_prtnr: labels41
+  avoid_chldrn: labels41
+  avoid_othrrel: labels41
+  avoid_frnds: labels41
+  avoid_crrctnsprf: labels41
+  avoid_grp: labels41
+  avoid_cowrkr: labels41
+  avoid_othr: labels41
+  avoid_none: labels41
+  avoid_dk: labels41
+  avoid_skp: labels41
+  avoid_ref: labels41
+  use_mthr: labels41
+  use_fthr: labels41
+  use_prtnr: labels41
+  use_chldrn: labels41
+  use_othrrel: labels41
+  use_frnds: labels41
+  use_crrctnsprf: labels41
+  use_grp: labels41
+  use_cowrkr: labels41
+  use_othr: labels41
+  use_none: labels41
+  use_dk: labels41
+  use_skp: labels41
+  use_ref: labels41
+  pcp_have: labels244
+  pcp_visit: labels38
+  pcp_treatoud: labels246
+  pcp_referoud: labels247
+  pcp_seektreat: labels247
+  pcp_agreetreat: labels249
+  partyid5: labels250
+  partyid7: labels251
+  gender: labels252
+  age4: labels253
+  educ5: labels254
+  marital: labels255
+  income: labels256
+  income4: labels257
+  region4: labels258
+  metro: labels259
+  housing: labels260
+  home_type: labels261
+  hh05: labels262
+  hh612: labels262
+  hh1317: labels262
+  hh18ov: labels265
+  race_5cat: labels266
+  employ_2: labels267
